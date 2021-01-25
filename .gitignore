@@ -1,0 +1,14 @@
+# hidden files
+.*
+!.github
+
+# jekyll cache
+_site
+vendor
+
+# rubygem
+*.gem
+
+# npm dependencies
+node_modules
+package-lock.json
