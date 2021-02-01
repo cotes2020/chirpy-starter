@@ -2,32 +2,20 @@
 
 The startup template for [**Jekyll Theme Chirpy**][chirpy].
 
-When installing the `jekyll-theme-chirpy` through [RubyGem][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of variables of the file `_config.yml` from the theme's gem (use the command `bundle info --path jekyll-theme-chirpy` to locate). To fully use all the features of `jekyll-theme-chirpy`, you also need to copy other files/directories and site variables from the theme's gem to your Jekyll site. This will be boring, so we extract all the other required things of the theme's gem to help you quickly use `jekyll-theme-chirpy`.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-
-**File Directory Struct**
+When installing the Chirpy through [RubyGems][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem (use the command `bundle info --path jekyll-theme-chirpy` to locate). To fully use all the features of Chirpy, you also need to copy other files/directories and config options from the theme's gem to your Jekyll site. So we extract all the required things of the theme's gem to help you quickly use Chirpy.
 
 ```shell
-.
-├── .github
-│   └── workflows
-│       └── pages-deploy.yml    # the GitHub Actions workflow
-├── Gemfile
-├── LICENSE
-├── README.md                   # this file
-├── _config.yml                 # all variables are from the theme's gem, except the option `theme`
-├── _data                       # from the theme's gem
-├── _plugins                    # idem
-├── _tabs                       # idem
-├── app.js                      # idem
-├── feed.xml                    # idem
-├── index.html                  # idem
-├── 404.html                    # idem
-├── robots.txt                  # idem
-└── sw.js                       # idem
-
+# The critical files/directories to run the theme
+├── _data
+├── _plugins
+├── _tabs
+├── _config.yml
+├── app.js
+├── feed.xml
+├── index.html
+├── robots.txt
+├── sw.js
+└── 404.html
 ```
 
 ## Installation
@@ -59,7 +47,7 @@ And then add the following content:
 
 ### Changing the Number of Tabs
 
-When adding or deleting files in the `_tabs` folder, you need to complete [Custom Stylesheet](#custom-stylesheet) first, and then add a new line before `@import`:
+When adding or deleting files in the `_tabs` folder, you need to complete the section [Customing Stylesheet](#customing-stylesheet) first, and then add a new line before `@import`:
 
 ```scss
 $tab-count: {{ site.tabs | size | plus: 1 }};
@@ -86,3 +74,6 @@ See the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#document
 ## License
 
 This work is published under [MIT](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE) License.
+
+[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
+[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
