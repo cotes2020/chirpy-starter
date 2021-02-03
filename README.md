@@ -5,7 +5,7 @@ The startup template for [**Jekyll Theme Chirpy**][chirpy].
 When installing the Chirpy through [RubyGems][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem (use the command `bundle info --path jekyll-theme-chirpy` to locate). To fully use all the features of Chirpy, you also need to copy other files/directories and config options from the theme's gem to your Jekyll site. So we extract all the required things of the theme's gem to help you quickly use Chirpy.
 
 ```shell
-# The critical files/directories to run the theme
+# The critical files/directories to run Chirpy theme
 ├── _data
 ├── _plugins
 ├── _tabs
