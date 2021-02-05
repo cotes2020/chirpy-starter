@@ -1,8 +1,11 @@
 # Chirpy Starter
 
+[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy)
+[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+
 The startup template for [**Jekyll Theme Chirpy**][chirpy].
 
-When installing the Chirpy through [RubyGems][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem (use the command `bundle info --path jekyll-theme-chirpy` to locate). To fully use all the features of Chirpy, you also need to copy other files/directories and config options from the theme's gem to your Jekyll site. So we extract all the required things of the theme's gem to help you quickly use Chirpy.
+When installing the Chirpy through [RubyGems][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem (use the command `bundle info --path jekyll-theme-chirpy` to locate). To fully use all the features of Chirpy, you also need to copy other critical files/directories from the theme's gem to your Jekyll site.
 
 ```shell
 # The critical files/directories to run Chirpy theme
@@ -17,6 +20,8 @@ When installing the Chirpy through [RubyGems][gem], Jekyll can only read files i
 ├── sw.js
 └── 404.html
 ```
+
+We extracted all the necessary content of **Chirpy** theme's gem to help you quickly use the theme.
 
 ## Installation
 
@@ -73,7 +78,8 @@ See the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#document
 
 ## License
 
-This work is published under [MIT](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE) License.
+This work is published under [MIT](mit) License.
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
+[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
