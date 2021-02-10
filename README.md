@@ -78,7 +78,7 @@ See the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#document
 
 ## License
 
-This work is published under [MIT](mit) License.
+This work is published under [MIT][mit] License.
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
