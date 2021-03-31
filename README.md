@@ -60,7 +60,7 @@ $tab-count: {{ site.tabs | size | plus: 1 }};
 
 ### Publishing to GitHub Pages
 
-See the `jekyll-theme-chirpy`'s [deployment instructions](https://github.com/cotes2020/jekyll-theme-chirpy#deployment). Note that in order to use GitHub Actions caching to speed up the deployment, you should add the `Gemfile.lock` file to your repository.
+See the [deployment instructions](https://github.com/cotes2020/jekyll-theme-chirpy#deployment) of `jekyll-theme-chirpy`.
 
 ### Updating
 
