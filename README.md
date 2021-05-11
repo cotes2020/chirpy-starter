@@ -42,7 +42,7 @@ And then add the following content:
 ---
 ---
 
-@import {{ site.theme }}
+@import "{{ site.theme }}";
 
 // add your style below
 ```
