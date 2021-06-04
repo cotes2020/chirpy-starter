@@ -1,6 +1,8 @@
 # hidden files
 .*
-!.github
+!.git*
+!.editorconfig
+!.nojekyll
 
 # bundler cache
 _site
