@@ -7,7 +7,7 @@ The startup template for [**Jekyll Theme Chirpy**][chirpy].
 
 When installing the **Chirpy** theme through [RubyGems][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. (You can find the gem files by using the command `bundle info --path jekyll-theme-chirpy`). To fully use all the features of **Chirpy**, you need to copy the other critical files/directories from the theme's gem to your Jekyll site.
 
-The key files/directories to run/build the **Chirpy** theme are as follows:
+The critical files/directories to run or build the **Chirpy** theme are as follows:
 
 ```shell
 .
@@ -59,11 +59,11 @@ $tab-count: {{ site.tabs | size | plus: 1 }};
 
 See the [deployment instructions](https://github.com/cotes2020/jekyll-theme-chirpy#deployment) of `jekyll-theme-chirpy`.
 
-### Updating
+### Upgrading
 
-Please note that files and directories in this project may change as the [`jekyll-theme-chirpy`][chirpy] is updated. When updating, please ensure that the file directory structure of your Jekyll site is the same as that of this project.
+First, please modify the target version number of `jekyll-theme-chirpy` in the `Gemfile` (e.g., `gem "jekyll-theme-chirpy", "~> 4.0", ">= 4.0.1"`). In addition, if the major version number is updated, you need to update the critical files to keep them the same as this project.
 
-And then execute:
+After that, execute the following command:
 
 ```console
 $ bundle update jekyll-theme-chirpy
