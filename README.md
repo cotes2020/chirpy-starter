@@ -1,7 +1,5 @@
-# Chirpy Starter
+# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy)
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
 The startup template for [**Jekyll Theme Chirpy**][chirpy].
 
@@ -32,36 +30,11 @@ $ bundle
 
 ## Usage
 
-### Customing Stylesheet
+Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#usage).
 
-Creare a new file `/assets/css/style.scss` in your Jekyll site.
+## Upgrading
 
-And then add the following content:
-
-```scss
----
----
-
-@import "{{ site.theme }}";
-
-// add your style below
-```
-
-### Changing the Number of Tabs
-
-When adding or deleting files in the `_tabs` folder, you need to complete the section [Customing Stylesheet](#customing-stylesheet) first, and then add a new line before `@import`:
-
-```scss
-$tab-count: {{ site.tabs | size | plus: 1 }};
-```
-
-### Publishing to GitHub Pages
-
-See the [deployment instructions](https://github.com/cotes2020/jekyll-theme-chirpy#deployment) of `jekyll-theme-chirpy`.
-
-### Upgrading
-
-First, please modify the target version number of `jekyll-theme-chirpy` in the `Gemfile` (e.g., `gem "jekyll-theme-chirpy", "~> 4.0", ">= 4.0.1"`). In addition, if the major version number is updated, you need to update the critical files to keep them the same as this project.
+First, please modify the target version number of `jekyll-theme-chirpy` in the `Gemfile` (e.g., `gem "jekyll-theme-chirpy", "~> 4.0", ">= 4.0.1"`).
 
 After that, execute the following command:
 
@@ -69,9 +42,7 @@ After that, execute the following command:
 $ bundle update jekyll-theme-chirpy
 ```
 
-## Documentation
-
-See the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+As the version upgrades, the critical files and configuration options will change. Please refer to the [Upgrade Guide](https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide) to keep your website files in sync with the latest version of the theme.
 
 ## License
 
