@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 4.1", ">= 4.1.0"
+gem "jekyll-theme-chirpy", "~> 4.1", ">= 4.1.1"
 
 group :jekyll_plugins do
   # If you have any plugins, put them here!
