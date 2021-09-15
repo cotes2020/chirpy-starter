@@ -16,10 +16,11 @@ tabs:
   archives: Archives
   about: About
 
-# text displayed in the search bar
+# the text displayed in the search bar & search results
 search:
   hint: search
   cancel: Cancel
+  no_results: Oops! No result founds.
 
 panel:
   lastmod: Recent Update
@@ -75,9 +76,7 @@ post:
   button:
     next: Newer
     previous: Older
-    copy:
-      title: Copy link
-      succeed: Link copied successfully!
+    copy: Copied!
   # pinned prompt of posts list on homepage
   pin_prompt: Pinned
 
