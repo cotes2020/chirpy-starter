@@ -12,8 +12,11 @@ baseurl: ''
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
+# Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
+prefer_datetime_locale:
+
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -23,9 +26,7 @@ title: Chirpy                          # the main title
 tagline: A text-focused Jekyll theme   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
@@ -49,13 +50,13 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification:               # fill in to your verification string
 
 # ↑ --------------------------
-
+# The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: ''              # fill in your Google Analytics ID
+  id:                 # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -96,6 +97,23 @@ comments:
   utterances:
     repo:         # <gh-username>/<repo>
     issue_term:   # < url | pathname | title | ...>
+  # Giscus options › https://giscus.app
+  giscus:
+    repo:             # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping:          # optional, default to 'pathname'
+    input_position:   # optional, default to 'bottom'
+    lang:             # optional, default to the value of `site.lang`
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled:      # boolean, keep empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env:          # [development|production]
 
 paginate: 10
 
@@ -118,8 +136,7 @@ collections:
     sort_by: order
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ''          # An empty string here means all files in the project
       type: posts
     values:
@@ -129,18 +146,24 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
-  -
-    scope:
+  - scope:
       path: _drafts
     values:
       comments: false
-  -
-    scope:
+  - scope:
       path: ''
       type: tabs             # see `site.collections`
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
 sass:
   style: compressed
@@ -158,7 +181,6 @@ exclude:
   - '*.gem'
   - '*.gemspec'
   - tools
-  - docs
   - README.md
   - LICENSE
   - gulpfile.js
