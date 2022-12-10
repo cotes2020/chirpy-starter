@@ -24,6 +24,4 @@ Then you have python installed but it may not be the latest version.
 
 So there are a few options for setting up python.
 The first one is from the Microsoft store but i would not recommend that as it is a lot harder to setup integrations with IDE's like VSCode.
-The second one is from [Python](https://www.python.org/downloads/)
-
-TESTTTTTTTT
+T
