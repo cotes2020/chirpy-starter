@@ -26,3 +26,7 @@ So there are a few options for setting up python.
 The first one is from the Microsoft store but i would not recommend that as it is a lot harder to setup integrations with IDE's like VSCode.
 
 So once you have run the installer and set python up you can do something called virtual environments.
+
+So to use Virtual Environments (venvs) you need to run the command:
+
+`venv`
