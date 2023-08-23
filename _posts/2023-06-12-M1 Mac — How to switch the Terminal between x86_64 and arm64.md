@@ -22,15 +22,16 @@ So let’s look at what’s behind it, and how you too can easily set it up!
 
 The main command which does the magic is the one below:
 
+```
 $env /usr/bin/arch -<architecture> /bin/zsh --login
-
+```
 … just replace the _<architecture>_ with your preferred one..
 
 **For example:**
 
 - To see your current architecture, type:
 
-$arch
+`$arch`
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*BFSzZUxZ2RAIDrOS9ncMJA.png)
 
@@ -40,7 +41,9 @@ As we see in the image above, I am currently using arm64, hence any code I compi
 
 - To switch to x86_64, type:
 
+```shell
 ==$env /usr/bin/arch -x86_64 /bin/zsh —-login==
+```
 
 Now if you type the arch command again, you will see that the target architecture has been changed. Now you can go ahead and compile your code using Rosetta 2 for the x86_64 architecture.
 
