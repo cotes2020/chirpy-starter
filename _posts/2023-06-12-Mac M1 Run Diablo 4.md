@@ -5,7 +5,10 @@ catagories: [macOS, macbook pro, M1]
 tags: [terminal, diablo 4, apple silicon, M1]
 ---
 
-Resources: 
+> Resources that can help you get started with the Game Porting Tool Kit to run Diablo 4 on Mac M1 architecture.
+{: .prompt-info }
+
+### Resources: 
 
 https://www.outcoldman.com/en/archive/2023/06/07/playing-diablo-4-on-macos
 
