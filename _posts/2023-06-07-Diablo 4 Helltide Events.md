@@ -1,6 +1,6 @@
 ---
 title: Diablo 4 HellTide Events
-date: 06-07-2023
+date: 2023-08-23 15:36:03
 catagories: [Diablo 4, Gaming, ARPG]
 tags: [diablo, diablo 4, docs]
 ---

@@ -1,6 +1,6 @@
 ---
 title: Mac M1 Run Diablo 4 - Links
-date: 06-12-2023
+date: 2023-08-23 15:36:19
 catagories: [macOS, macbook pro, M1]
 tags: [terminal, diablo 4, apple silicon, M1]
 ---

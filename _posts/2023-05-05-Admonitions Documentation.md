@@ -1,6 +1,6 @@
 ---
 title: Admonitions Documentation  
-date: 08-23-2023
+date: 2023-08-23 15:33:39
 catagories: [cheatsheets, documentation]
 tags: [docs, cheatsheets]
 ---

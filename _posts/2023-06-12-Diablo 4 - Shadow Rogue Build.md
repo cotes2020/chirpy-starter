@@ -1,6 +1,6 @@
 ---
 title: Diablo 4 - Shadow Rouge Build
-date: 06-12-2023
+date: 2023-08-23 15:36:08
 catagories: [Diablo 4, Gaming, ARPG]
 tags: [diablo, diablo 4, docs]
 ---

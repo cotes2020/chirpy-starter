@@ -1,6 +1,6 @@
 ---
 title: Adding Admonitions to Jekyll
-date: 08-22-2023
+date: 02023-08-23 15:36:27
 catagories: [minima, Themes, Jekyll, GitHub Pages]
 tags: [minima, jekyll, github pages, themes, admonitions, docs]
 ---

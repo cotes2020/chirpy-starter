@@ -1,6 +1,6 @@
 ---
 title: SANS SEC 504 - Resources
-date: 06-05-2023
+date: 2023-08-23 15:35:56
 catagories: [cybersecurity, malware, red team tools]
 tags: [SANS, SEC504, GCIH, cybersecurity]
 ---
