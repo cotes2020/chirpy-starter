@@ -72,7 +72,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://cdn.myanimelist.net/images/about_me/ranking_items/13754149-0b09a8dd-ac4d-4481-909d-5248c4eb6e28.jpg?t=1689714274
 
 # boolean type, the global switch for TOC in posts.
 toc: true
