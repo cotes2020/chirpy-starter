@@ -5,12 +5,15 @@ catagories: [cybersecurity, malware, red team tools]
 tags: [SANS, SEC504, GCIH, cybersecurity]
 ---
 
-#### Malware stuff
+> Here are some valuable resouces that were recommended when taking the SANS SEC504 course. 
+{: .prompt-info }
+
+## Malware stuff
 https://digitalcommons.lsu.edu/cgi/viewcontent.cgi?article=6527&context=gradschool_theses
 
 https://github.com/volatilityfoundation/volatility/wiki/Mac
 
-#### Volatility
+## Volatility
 A few volatility resources:  
 
 - [https://github.com/volatilityfoundation/volatility/wiki](https://github.com/volatilityfoundation/volatility/wiki)
@@ -25,21 +28,50 @@ Andrea Fortuna
 
 A very brief post, just a reminder about a very useful volatility feature. The process on a VMware machine is more simple than VirtualBox, just 4 simple steps: Suspend the virtual machine Navigate to the virtual machine's directory and identify the `*.vmem` file Copy the vmem image to you analysis workstation  Finally use the following Volatility command to convert the memory image to a dump ready for analysis: `$ volatility -f memory_image.vmem -O raw_image --profile=Win8SP0x86 raw2dmp` Now the memory dump can be analyzed with the usual methods. 
 
-#### Berkley Packet Filters
+## Berkley Packet Filters
+
+Berkeley packet filters
+
+Berkeley Packet Filters (BPF) provide a powerful tool for intrusion detection analysis. Use BPF filtering to quickly reduce large packet captures to a reduced set of results by filtering based on a specific type of traffic. Both admin and non-admin users can create BPF filters.
+
+Review the following sections to learn more about creating BPF filters:
+
+-   [Primitives](https://www.ibm.com/docs/en/qsip/7.5?topic=queries-berkeley-packet-filters#c_forensics_bpf__primitives)
+-   [Protocols and operators](https://www.ibm.com/docs/en/qsip/7.5?topic=queries-berkeley-packet-filters#c_forensics_bpf__prot_operators)
+-   [BPF filter examples](https://www.ibm.com/docs/en/qsip/7.5?topic=queries-berkeley-packet-filters#c_forensics_bpf__bpf_examples)
+
+### Primitives
+
+Primitives are references to fields in a network protocol header, such as host, port, or TCP port. The BPF syntax consists of one or more primitives, which usually consist of an ID, typically a name or number, which is preceded by one or more qualifiers.
+
+**Type qualifiers**
+
+Type qualifiers identify the kind of information that the ID name or number refers to. For example, the type might refer to `host`, `net`, `port`, or `portrange`. When no type qualifier exists, `host` is assumed.
+
+**Dir qualifiers**
+
+`Dir` qualifiers specify the transfer direction in relation to the ID. For example, the dir qualifier might be `src`, `dst`, or `src` or `dst`.
+
+**Proto qualifiers**
+
+The `proto` qualifier restricts the match to a particular protocol. Possible protocols are `ether`, `fddi`, `tr`, `wlan`, `ip`, `ip6`, `arp`, `rarp`, `decnet`, `TCP`, or `UDP`.
+
+
+#### References: 
 
 https://www.ibm.com/docs/en/qsip/7.4?topic=queries-berkeley-packet-filters
 
 https://github.com/sbabicz/tcpdump-bpf-cheatsheet
 
-#### Grouped Managed Service Accounts Overview
+## Grouped Managed Service Accounts Overview
 
 https://learn.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview
 
-#### Placeholder
 
 
 
-#### How much does a DDoS cost?
+
+## How much does a DDoS cost?
 
 As per the Dark Web Price Index 2022, a 24-hour DDoS attack with 20-50k requests per second can cost the attacker as little as $200 USD. This low cost of entry means that even small-time attackers can launch devastating DDoS attacks that can cripple businesses and cause significant financial losses. Mar 10, 2023
 
@@ -66,21 +98,15 @@ PO Box 26
 Mountain Home, Texas 78058  
 Texas Private Security Bureau License #A19867
 
-```ad-important
-OSINT on employees without permission will bite you big time if they ever bring up a LABOR board issue or lawsuit
-```
+> OSINT on employees without permission will bite you big time if they ever bring up a LABOR board issue or lawsuit.
+{: .prompt-tip }
 
-
-#### Cheat sheets
+## Cheat sheets
 
 https://packetlife.net/library/cheat-sheets/
 
-##### Amazon Books
 
-
-
-
-#### What 2 Log
+## What 2 Log
 
 https://what2log.com/
 
