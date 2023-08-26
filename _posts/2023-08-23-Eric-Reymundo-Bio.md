@@ -4,7 +4,7 @@ author: Eric Reymundo
 date: 2023-08-23 22:13:07
 pin: true
 catagories: [introduction]
-tags: [bio, markdown, docs]
+tags: [bio, markdown, docs, blog]
 img_path: /assets/images/
 ---
 
