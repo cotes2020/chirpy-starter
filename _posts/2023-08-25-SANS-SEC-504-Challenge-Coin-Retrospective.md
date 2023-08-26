@@ -22,3 +22,6 @@ Paired with 5 Live Exercises going over the following in order respectively:
 - Cloud investigation
 
 ### Recon, Scanning, and Enumeration Attacks
+
+> Important: This is a work in progress and will be updated soon
+{: .prompt-info }
