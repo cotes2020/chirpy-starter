@@ -1,6 +1,5 @@
 ---
 title: Introduction
-author: Eric Reymundo
 date: 2023-08-23 22:13:07
 pin: true
 catagories: [introduction]
