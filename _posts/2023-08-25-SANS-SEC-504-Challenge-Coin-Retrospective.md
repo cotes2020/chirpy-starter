@@ -5,6 +5,8 @@ date: 2023-08-25 22:52:14
 categories: [blog]
 tags: [blog, markdown, docs]
 img_path: /assets/images/
+image:
+  lqip: /assets/images/IMG_7168.JPG 
 ---
 
 ## SANS SEC 504 - Winning the SEC 504 CTF Challenge Coin
