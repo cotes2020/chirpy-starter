@@ -29,6 +29,7 @@ Gone are these days though, while this tool in particular has been around for aw
 
  
  ## Downloading YouTube MP4
+ 
  So maybe you are a data hoarder and want to save a video from YouTube before it gets taken down OR you have a favorite music video you'd like to have a personal copy of. I got you, here is the basic syntax to run to download an MP4. 
 
  In the terminal you would run the following syntax. 
