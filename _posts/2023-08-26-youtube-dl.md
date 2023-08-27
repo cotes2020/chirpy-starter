@@ -25,7 +25,7 @@ Gone are these days though, while this tool in particular has been around for aw
 > This assumes you have already installed youtube-dl from the command line on your computer and installed all dependencies. For documentation on installation go here: https://github.com/ytdl-org/youtube-dl#installation 
 {: .prompt-warning}
 
- ## Downloading YouTube MP4's 
+ ## Downloading YouTube MP4
  So maybe you are a data hoarder and want to save a video from YouTube before it gets taken down OR you have a favorite music video you'd like to have a personal copy of. I got you, here is the basic syntax to run to download an MP4. 
 
  In the terminal you would run the following syntax. 
@@ -38,7 +38,7 @@ An example of how this looks is the following screenshot of this running:
 ![Desktop View](/assets/images/youtube-dl.png){: width="972" height="589" }
 _Downloading a full defcon 31 conference talk_
 
-## Downloading YouTube MP3's
+## Downloading YouTube MP3
 This can come in handy if you have a song that may not be found else where and can be only found on YouTube and you desperately need to download it for safe keeping. Totally understandable by the way. 
 
 You would run this command: 
