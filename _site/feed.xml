@@ -1,0 +1,227 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>neo's brain</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2023-08-23T16:54:25-05:00</updated>
+  <author>
+    <name>Eric Reymundo</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 Eric Reymundo </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Flaws.cloud walkthrough</title>
+    <link href="http://localhost:4000/posts/Flaws.cloud-AWS/" rel="alternate" type="text/html" title="Flaws.cloud walkthrough" />
+    <published>2023-08-23T15:36:23-05:00</published>
+  
+    <updated>2023-08-23T16:07:17-05:00</updated>
+  
+    <id>http://localhost:4000/posts/Flaws.cloud-AWS/</id>
+    <content src="http://localhost:4000/posts/Flaws.cloud-AWS/" />
+    <author>
+      <name>Eric Reymundo</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Flaws.cloud walkthrough
+
+DayCyberWox Walkthrough: https://www.youtube.com/watch?v=fEjAryrzLSQ
+Write up: https://daycyberwox.com/exploiting-aws-1-a-beginners-guide-flawscloud#heading-level1
+
+Through a series of levels you'll learn about common mistakes and gotchas when using Amazon Web Services (AWS). There are no SQL injection, XSS, buffer overflows, or many of the other vulnerabilities you mig...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Building a Custom Malware Analysis Lab Enviornment</title>
+    <link href="http://localhost:4000/posts/Building-a-Custom-Malware-Analysis-Lab-Environment/" rel="alternate" type="text/html" title="Building a Custom Malware Analysis Lab Enviornment" />
+    <published>2023-08-23T15:33:46-05:00</published>
+  
+    <updated>2023-08-23T15:37:29-05:00</updated>
+  
+    <id>http://localhost:4000/posts/Building-a-Custom-Malware-Analysis-Lab-Environment/</id>
+    <content src="http://localhost:4000/posts/Building-a-Custom-Malware-Analysis-Lab-Environment/" />
+    <author>
+      <name>Eric Reymundo</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      https://www.sentinelone.com/labs/building-a-custom-malware-analysis-lab-environment/
+
+
+Introduction
+
+Building the right malware analysis environment is the first step for every malware researcher. When all system configurations and software installations are complete, you’re able to analyze and investigate malware properly. In this post, I wanted to share my own experiences and scripts to help ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Mac M1 Run Diablo 4 - Links</title>
+    <link href="http://localhost:4000/posts/Mac-M1-Run-Diablo-4/" rel="alternate" type="text/html" title="Mac M1 Run Diablo 4 - Links" />
+    <published>2023-08-23T10:36:19-05:00</published>
+  
+    <updated>2023-08-23T16:39:47-05:00</updated>
+  
+    <id>http://localhost:4000/posts/Mac-M1-Run-Diablo-4/</id>
+    <content src="http://localhost:4000/posts/Mac-M1-Run-Diablo-4/" />
+    <author>
+      <name>Eric Reymundo</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  Resources that can help you get started with the Game Porting Tool Kit to run Diablo 4 on Mac M1 architecture.
+
+
+Resources:
+
+https://www.outcoldman.com/en/archive/2023/06/07/playing-diablo-4-on-macos
+
+https://vineethbharadwaj.medium.com/m1-mac-switching-terminal-between-x86-64-and-arm64-e45f324184d9
+
+https://stackoverflow.com/questions/17980759/xcode-select-active-developer-directory-error
+
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>M1 Mac - How to Switch the Terminal between x86_64 and arm64</title>
+    <link href="http://localhost:4000/posts/M1-Mac-How-to-switch-the-Terminal-between-x86_64-and-arm64/" rel="alternate" type="text/html" title="M1 Mac - How to Switch the Terminal between x86_64 and arm64" />
+    <published>2023-08-23T10:36:14-05:00</published>
+  
+    <updated>2023-08-23T15:57:13-05:00</updated>
+  
+    <id>http://localhost:4000/posts/M1-Mac-How-to-switch-the-Terminal-between-x86_64-and-arm64/</id>
+    <content src="http://localhost:4000/posts/M1-Mac-How-to-switch-the-Terminal-between-x86_64-and-arm64/" />
+    <author>
+      <name>Eric Reymundo</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      How to Switch the Terminal between x86_64 and arm64
+https://vineethbharadwaj.medium.com/m1-mac-switching-terminal-between-x86-64-and-arm64-e45f324184d9
+
+Here is a simple writeup on how I switch between x86_64 and arm64 in the Terminal app on my MacBook Pro with Apple Silicon.
+
+So you have the new Mac with Apple Silicon. However, a lot of your projects are compiled in x86 and/or you are still bu...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Diablo 4 - Shadow Rouge Build</title>
+    <link href="http://localhost:4000/posts/Diablo-4-Shadow-Rogue-Build/" rel="alternate" type="text/html" title="Diablo 4 - Shadow Rouge Build" />
+    <published>2023-08-23T10:36:08-05:00</published>
+  
+    <updated>2023-08-23T15:37:29-05:00</updated>
+  
+    <id>http://localhost:4000/posts/Diablo-4-Shadow-Rogue-Build/</id>
+    <content src="http://localhost:4000/posts/Diablo-4-Shadow-Rogue-Build/" />
+    <author>
+      <name>Eric Reymundo</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      This is a beginner friendly build.
+
+
+Skill Tree
+
+https://d4builds.gg/builds/a175bae2-7adf-4155-a347-509d4efbb86c/
+
+Skill Tree Guide
+
+https://fextralife.com/diablo-4-shadow-rogue-build-twisting-blades/
+
+Youtube Video: https://www.youtube.com/watch?v=IRgXnTgvZiE
+
+Diablo 4 Shadow Rogue Build – Twisting Blades
+
+ May 31, 2023,  Ryuga,  0
+
+Diablo 4 Shadow Rogue Build Guide: In this Diablo 4 Rogue Cla...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
