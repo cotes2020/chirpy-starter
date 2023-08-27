@@ -1,8 +1,6 @@
 ---
 title: Downloading YouTube Videos and Audio using youtube-dl
 date: 2023-08-26 21:19:14
-author: Eric Reymundo
-
 categories: [Blogging]
 tags: [youtube, blog]
 pin: true
