@@ -12,6 +12,8 @@ image:
 > youtube-dl is a command-line program to download videos from YouTube.com and a few more sites. It requires the Python interpreter, version 2.6, 2.7, or 3.2+, and it is not platform specific. It should work on your Unix box, on Windows or on macOS. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
 {: .prompt-info }
 
+## Introduction
+
 At one point going to sketchy Youtube downloader websites just became too much with all the ADs and overall suspicious pop ups you would get while trying to either download an mp3 or mp4 from YouTube. 
 
 Gone are these days though, while this tool in particular has been around for awhile it has it's perks. 
