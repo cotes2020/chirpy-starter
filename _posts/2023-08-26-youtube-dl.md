@@ -22,7 +22,7 @@ Gone are these days though, while this tool in particular has been around for aw
 
  So now the question you're probably asking is; How do I use it?
 
- Easy, if you are like me and just want to have a copy and paste-able way to do either YouTube MP3's or MP4's I have two commands which can assist with that: 
+ Easy, if you are like me and just want to have a copy and paste-able way to do either YouTube MP3's or MP4's I have two commands which can assist with that.
 
 > This assumes you have already installed youtube-dl from the command line on your computer and installed all dependencies. For documentation on installation go here: https://github.com/ytdl-org/youtube-dl#installation 
 {: .prompt-warning}
