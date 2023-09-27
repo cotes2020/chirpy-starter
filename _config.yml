@@ -5,7 +5,7 @@ theme: jekyll-theme-chirpy
 
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
-baseurl: "postoaklab.github.io"
+baseurl: "/postoaklab"
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   A place where I document my IT and networking projects. Also a way for me to learn Git and Markdown.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "postoaklab.github.io"
+url: "https://postoaklab.github.io"
 
 github:
   username: PostOakLab # change to your github username
