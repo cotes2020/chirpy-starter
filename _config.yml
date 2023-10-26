@@ -20,7 +20,7 @@ timezone: America/Chicago
 
 title: Post Oak Lab # the main title
 
-tagline: Welcome to my IT Lab # it will display as the sub-title
+tagline: Welcome to my IT Lab! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A place where I document my IT and networking projects. Also a way for me to learn Git and Markdown.
