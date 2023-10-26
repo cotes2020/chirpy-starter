@@ -5,6 +5,6 @@ categories: [cheatsheet,Linux]
 tags: [Linux, cli, commands, cheatsheet]
 ---
 
-# Linux Cheat Sheet
+# Linux Cheat Sheet (Work in Progress)
 
 This is a list of common Linux commands for my own personal use
