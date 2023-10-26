@@ -12,12 +12,14 @@ Using [this guide](https://github.com/AdguardTeam/AdGuardHome/wiki/Raspberry-Pi)
 This assumes you already have an OS installed on your Pi and you can ssh to the pi using the IP address.
 
 1. Download with this command:
-`cd
+```cd
 wget 'https://static.adguard.com/adguardhome/release/AdGuardHome_linux_armv6.tar.gz'
-tar -f AdGuardHome_linux_armv6.tar.gz -x -v``
+tar -f AdGuardHome_linux_armv6.tar.gz -x -v
+```
 
 2. Install with this command:
-`cd ./AdGuardHome/
-sudo ./AdGuardHome -s install``
+```cd ./AdGuardHome/
+sudo ./AdGuardHome -s install
+```
 
  
