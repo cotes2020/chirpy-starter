@@ -5,7 +5,7 @@ categories: [DNS,homelab, AdGuard, projects]
 tags: [DNS,homelab,raspberrypi, AdGuard]
 ---
 
-# AdGuard Home on Raspberry Pi
+# AdGuard Home on Raspberry Pi (work in progress)
 
 Using [this guide](https://github.com/AdguardTeam/AdGuardHome/wiki/Raspberry-Pi) I installed AdGuard home on a Raspberry Pi in order to run a home DNS server that will block ads and malicious websites.
 
