@@ -49,8 +49,9 @@ google_site_verification: # fill in to your verification string
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: # fill in your Google Analytics ID
+analytics:
+  google:
+    id: : # fill in your Google Analytics ID
 
 goatcounter:
   id: # fill in your Goatcounter ID
