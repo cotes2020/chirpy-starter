@@ -1,0 +1,43 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for more information:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://containers.dev/guide/dependabot
+
+version: 2
+updates:
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # From: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/.github/dependabot.yml
+
+  - package-ecosystem: "bundler"
+    directory: "/"
+    versioning-strategy: increase
+    groups:
+      bundler:
+        dependency-type: "production"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    versioning-strategy: increase
+    groups:
+      npm:
+        dependency-type: "development"
+    schedule:
+      interval: "weekly"
