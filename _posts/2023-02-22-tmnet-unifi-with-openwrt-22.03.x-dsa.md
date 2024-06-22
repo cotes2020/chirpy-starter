@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Configuring OpenWrt via Command Line
 subtitle: A Step-by-Step Guide for TMNet UniFi Users
-share-img: 'https://i.imgur.com/7Rheosq.png'
+image: 'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/openwrt-cli.png'
 tags:
   - OpenWrt
   - Networking
@@ -11,8 +11,6 @@ permalink: /2023-02-22-tmnet-unifi-with-openwrt-22.03.x-dsa/
 date: '2023-02-22'
 ---
 I'll be sharing my personal experience on how to configure OpenWrt via command line for TMnet ISP. With just a few simple commands, you can easily set up your router to work with your ISP and get your network up and running in no time.
-
-![cover](https://i.imgur.com/7Rheosq.png)
 
 When configuring OpenWrt via command line for TMnet ISP, I prefer to use Windows PowerShell (**Win** + **X** >> **Windows Powershell**). Here are the steps I follow:
 
