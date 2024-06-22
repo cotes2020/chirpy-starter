@@ -4,21 +4,14 @@ published: true
 title: What is Chocolatey?
 subtitle: Want to save time? Do yourself a favor and install Chocolatey!
 date: '2020-05-13'
-Tags:
-  - Software
-  - Microsoft Edge
-  - Download
-Share-img:
-  - 'https://i.imgur.com/fpdfcRV.png'
-share-img: 'https://i.imgur.com/fpdfcRV.png'
+image:
+   'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/fpdfcRV.png'
 tags:
   - How-to
   - Software
   - Windows
 ---
 **Chocolatey** is command line package manager for Windows just like Google Play Store in your phone but it does not come with graphical user interface. However, there's optional user interface available for those who needed. 
-
-![Chocolatey branding](https://i.imgur.com/fpdfcRV.png)
 
 ## Why Chocolatey is useful.
 
@@ -71,13 +64,13 @@ cuninst googlechrome
 ~~~
 cup all
 ~~~
-![upgrade-example](https://i.imgur.com/cz4stS4.png)
+![upgrade-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/cz4stS4.png)
 
 ### To list all installed packages:
 ~~~
 clist -l
 ~~~
-![list-example](https://i.imgur.com/PhBS9mO.png)
+![list-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/PhBS9mO.png)
 
 ## Research
 

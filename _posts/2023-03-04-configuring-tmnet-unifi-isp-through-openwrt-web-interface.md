@@ -1,7 +1,8 @@
 ---
 published: true
 subtitle: Step-by-step guide
-share-img: 'https://i.imgur.com/7Rheosq.png'
+image: 
+  'https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/owrt.png'
 tags:
   - OpenWrt
   - Networking
