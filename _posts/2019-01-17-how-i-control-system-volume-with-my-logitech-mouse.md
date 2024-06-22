@@ -6,12 +6,12 @@ subtitle: Simple trick I use
 tags:
   - Tips
   - Windows
-share-img: 'https://i.imgur.com/pVN3hAo.png'
+share-img: 'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/pVN3hAo.png'
 date: '2019-03-04'
 ---
 It's so frustrating to keep adjusting volume everytime video you are watching is suddenly louder/quitter. 
 
-![](https://i.imgur.com/VRAcFjz.jpg)
+![](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/VRAcFjz.jpg)
 
 Even more, annoying if your keyboard doesn't have a dedicated volume button or you need to press both keys in order to adjust the volume. 
 
@@ -20,7 +20,7 @@ Even more, annoying if your keyboard doesn't have a dedicated volume button or y
 So, I created a hotkey using the Right Mouse button and Scroll Wheel to control the volume. [__Learn more about it here__](https://github.com/AzimsTech/MyAhkList/blob/master/description/ClickScrollVolume.md)
 
 
-![Repo](https://i.imgur.com/kohaT2o.png)
+![Repo](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/kohaT2o.png)
 
 Download & run [**ClickScrollVolume.exe**](https://github.com/AzimsTech/MyAhkList/releases/tag/v1)  
 
@@ -34,7 +34,7 @@ Move **ClickScrollVolume.exe** into this directory:
 
 By doing this simple setup, now I can use my Right-click and Scroll Wheel anywhere to increase or decrease system volume. Nice!
 
-![It Works!](https://i.imgur.com/kcap3L7.gif)
+![It Works!](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/kcap3L7.gif)
 
 # Research
 - [https://autohotkey.com/board/topic/80118-issue-with-rbutton/](https://autohotkey.com/board/topic/80118-issue-with-rbutton/)
