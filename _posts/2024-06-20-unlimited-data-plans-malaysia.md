@@ -1,7 +1,8 @@
 ---
 title: “Unlimited” Data Plans in Malaysia
 date: 2024-06-20 07:20:00 +0800
-tags: [tips]
+categories: 
+tags: Tips     # TAG names should always be lowercase
 image: 
   path: /assets/img/posts/2024-06-20/them.jpg
 ---
