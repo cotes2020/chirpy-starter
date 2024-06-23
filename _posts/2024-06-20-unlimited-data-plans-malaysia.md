@@ -1,7 +1,7 @@
 ---
 title: “Unlimited” Data Plans in Malaysia
 description: Comparison of speed caps, Fair Usage Policy (FUP), prices, and more.
-author: AzimsTech
+author: 
 date: 2024-06-20 07:20:00 +0800
 categories: [Tips]
 tags: [mobile data]
