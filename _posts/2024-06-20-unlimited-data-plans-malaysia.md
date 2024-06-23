@@ -1,11 +1,20 @@
 ---
 title: “Unlimited” Data Plans in Malaysia
+description: Comparison of speed caps, Fair Usage Policy (FUP), prices, and more.
+author: AzimsTech
 date: 2024-06-20 07:20:00 +0800
-categories: 
-tags: Tips     # TAG names should always be lowercase
+categories: [Tips]
+tags: [tips]
+pin: false
+math: false
+mermaid: false
 image: 
   path: /assets/img/posts/them.jpg
+  alt: 
 ---
+
+
+
 
 In Malaysia, unlimited data plans don’t really mean unlimited. Apart from the ridiculously low 3Mbps data caps, they also introduce the very famous “fair usage policy” (FUP).
 
