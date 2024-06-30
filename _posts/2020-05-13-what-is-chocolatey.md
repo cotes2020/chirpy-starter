@@ -2,15 +2,14 @@
 layout: post
 published: true
 title: What is Chocolatey?
-subtitle: Want to save time? Do yourself a favor and install Chocolatey!
+description: Want to save time? Do yourself a favor and install Chocolatey!
 date: '2020-05-13'
+categories: [How-to, Software, Windows]
 image:
    'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/fpdfcRV.png'
-tags:
-  - How-to
-  - Software
-  - Windows
+tags: [chocolatey cheat sheet]
 ---
+
 **Chocolatey** is command line package manager for Windows just like Google Play Store in your phone but it does not come with graphical user interface. However, there's optional user interface available for those who needed. 
 
 ## Why Chocolatey is useful.
@@ -37,38 +36,43 @@ choco feature enable -n allowGlobalConfirmation
 
 ### To find a package in command line use:
 ~~~
-clist googlechrome
+choco search googlechrome
 ~~~
 
 ### To  install a package:
 ~~~
-cinst googlechrome
+choco install googlechrome
 ~~~ 
 
 ### To install multiple packages:
 ~~~
-cinst googlechrome 7zip mpcbe
+choco install googlechrome 7zip mpcbe
 ~~~
 
-### To ignore dependencies during install
+### Pin a package to suppress upgrades:
 ~~~
-cinst paint.net -i
+choco pin add --name paint.net
+~~~
+
+### To unpin a package:
+~~~
+choco pin remove --name paint.net
 ~~~
 
 ### To uninstall a package:
 ~~~
-cuninst googlechrome
+choco uninstall googlechrome
 ~~~
 
 ### To update all installed packages:
 ~~~
-cup all
+choco upgrade all
 ~~~
 ![upgrade-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/cz4stS4.png)
 
 ### To list all installed packages:
 ~~~
-clist -l
+choco list
 ~~~
 ![list-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/PhBS9mO.png)
 
