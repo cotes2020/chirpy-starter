@@ -24,10 +24,10 @@ Here’s why I’m making one here:
 | Plan			| Speed   	| FUP       | Pricing   | Details                       |
 | :------------ | :-------: | --------- | --------- | ----------------------------- |
 | 🟧 UMobile
-| U25         	| 3 Mbps  	| 30 GB     | RM12/mo   | Uncapped speed 1 hr/day       |
-| U35         	| 6 Mbps  	| 200 GB    | RM35/mo   | Uncapped speed Sat-Su         |
-| U40         	| 6 Mbps  	| 200 GB    | RM40/mo   | Uncapped speed Sat-Sun        |
-| U50         	| 12 Mbps 	| 200 GB    | RM50/mo	| Uncapped speed Sat-Sun        |
+| U25         	| 6 Mbps  	| 40 GB     | RM12/mo   | Uncapped speed 1 hr/day       |
+| U35         	| 12 Mbps  	| 200 GB    | RM35/mo   | Uncapped speed Sat-Su         |
+| U40         	| 12 Mbps  	| 200 GB    | RM40/mo   | Uncapped speed Sat-Sun        |
+| U50         	| 24 Mbps 	| 200 GB    | RM50/mo	| Uncapped speed Sat-Sun        |
 | 🟦 Celcom
 | 5G 25 Biru	| 1 Mbps  	| 80 GB     | RM25/mo	| 15 GB @ 100 Mbps				|
 | 5G 35 Biru	| 3 Mbps  	| 80 GB     | RM35/mo	| -								|
