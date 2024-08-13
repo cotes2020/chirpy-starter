@@ -13,12 +13,9 @@ layout: compress
 {% endif %}
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-      {% include analytics.html %}
-  {% endif %}
-</head>
+
   <body>
     {% include sidebar.html lang=lang %}
 
@@ -78,13 +75,8 @@ layout: compress
     {% endif %}
 
     <!-- JavaScripts -->
+    {% include js-selector.html lang=lang %}
 
-    {% include js-selector.html %}
-
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
-
-    {% include_cached search-loader.html %}
+    {% include_cached search-loader.html lang=lang %}
   </body>
 </html>
