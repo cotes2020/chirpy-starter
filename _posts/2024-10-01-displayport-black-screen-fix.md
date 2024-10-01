@@ -10,10 +10,9 @@ tags:
 pin: false
 math: false
 mermaid: false
-image:
-  path: /assets/img/posts/them.jpg
-  alt: null
 ---
+### Background:
+
 Let me tell you about my first experience using DisplayPort on my Nvidia GPU! I’ve never had the luxury of owning a high-res or ultrawide monitor, so DisplayPort was totally new to me. 
 
 I finally got a brand new monitor, but to my surprise, the screen stayed blank during the first few seconds of boot! Turns out, it wouldn’t show anything in the BIOS. After a quick Google search, I found the fix, and here's how:
