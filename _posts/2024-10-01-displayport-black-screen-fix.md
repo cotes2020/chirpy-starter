@@ -1,3 +1,19 @@
+---
+title: DisplayPort Black Screen Fix
+description: Fix black screen on boot with DisplayPort 1.3/1.4 and NVIDIA GPU
+author: null
+date: '2024-09-21 07:20:00 +0800'
+categories:
+  - Tips
+tags:
+  - PC
+pin: false
+math: false
+mermaid: false
+image:
+  path: /assets/img/posts/them.jpg
+  alt: null
+---
 Let me tell you about my first experience using DisplayPort on my Nvidia GPU! I’ve never had the luxury of owning a high-res or ultrawide monitor, so DisplayPort was totally new to me. 
 
 I finally got a brand new monitor, but to my surprise, the screen stayed blank during the first few seconds of boot! Turns out, it wouldn’t show anything in the BIOS. After a quick Google search, I found the fix, and here's how:
