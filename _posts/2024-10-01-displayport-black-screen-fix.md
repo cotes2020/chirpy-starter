@@ -11,13 +11,8 @@ pin: false
 math: false
 mermaid: false
 ---
-### Background:
 
-Let me tell you about my first experience using DisplayPort on my Nvidia GPU! I’ve never had the luxury of owning a high-res or ultrawide monitor, so DisplayPort was totally new to me. 
-
-I finally got a brand new monitor, but to my surprise, the screen stayed blank during the first few seconds of boot! Turns out, it wouldn’t show anything in the BIOS. After a quick Google search, I found the fix, and here's how:
-
-**The Issue:**  
+### The Issue: 
 Black screen during boot when using a DisplayPort 1.3/1.4 monitor with an NVIDIA GPU.  
 **So, What Causing This?**  
 Outdated GPU firmware can’t handle the DisplayPort standard until the OS loads.
@@ -32,8 +27,12 @@ Outdated GPU firmware can’t handle the DisplayPort standard until the OS loads
 **1. Download NVIDIA’s Firmware Update Tool:**  
 [Get it here](https://www.nvidia.com/en-us/drivers/nv-uefi-update-x64/).
 
+![alt text](www.nvidia.com_en-us_drivers_nv-uefi-update-x64_.png)
+
 **2. Run the Tool:**  
 It will check if your GPU firmware is outdated. Follow the prompts to update it.
+
+![alt text](image-2.png)
 
 **3. Restart:**  
 Once updated, your black screen issue during boot should be resolved.
