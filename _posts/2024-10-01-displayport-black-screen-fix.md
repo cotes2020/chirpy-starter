@@ -28,9 +28,8 @@ Outdated GPU firmware can’t handle the DisplayPort standard until the OS loads
 [Get it here](https://www.nvidia.com/en-us/drivers/nv-uefi-update-x64/).
 
 **2. Run the Tool:**  
+![alt text](/assets/img/posts/image-2.png){: width="972" height="589" .w-50 .right}  
 It will check if your GPU firmware is outdated. Follow the prompts to update it.
-
-![alt text](/assets/img/posts/image-2.png)
 
 **3. Restart:**  
 Once updated, your black screen issue during boot should be resolved.
