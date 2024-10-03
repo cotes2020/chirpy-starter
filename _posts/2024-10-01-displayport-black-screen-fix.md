@@ -12,33 +12,33 @@ math: false
 mermaid: false
 ---
 
-### The Issue: 
+## The Issue: 
 Black screen during boot when using a DisplayPort 1.3/1.4 monitor with an NVIDIA GPU.  
 **So, What Causing This?**  
 Outdated GPU firmware can’t handle the DisplayPort standard until the OS loads.
 
-### Symptoms:
+## Symptoms:
 - Screen stays black during boot but works after OS loads.
 - System may hang on boot.
 - Switching to HDMI temporarily fixes it.
 
-### The Fix (Step-by-Step):
+## The Fix (Step-by-Step):
 
-**1. Download NVIDIA’s Firmware Update Tool:**  
+1. **Download NVIDIA’s Firmware Update Tool:**  
 [Get it here](https://www.nvidia.com/en-us/drivers/nv-uefi-update-x64/).
 
-**2. Run the Tool:**  
+2. **Run the Tool:**  
 ![alt text](/assets/img/posts/image-2.png){: width="972" height="589" .w-50 .right}  
 It will check if your GPU firmware is outdated. Follow the prompts to update it.
 
-**3. Restart:**  
+3. **Restart:**  
 Once updated, your black screen issue during boot should be resolved.
 
-### Quick Tips:
+## Quick Tips:
 - **Temporary Fix:** Use HDMI until you can update the firmware.
 - **Keep Drivers Updated:** Regular updates help prevent future issues.
 
-### Conclusion:  
+## Conclusion:  
 Updating your firmware will fix the issue, making your DisplayPort connection work seamlessly from boot to desktop.
 
 
