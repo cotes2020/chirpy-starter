@@ -71,7 +71,7 @@ You can proceed to flash the BIOS that you have modified.
 
 | Before | After |
 | --- | ----- |
-| ![MSI_SnapShot.bmp](../assets/img/posts/MSI_SnapShot.bmp) | ![MSI_SnapShot_01.bmp](../assets/img/posts/MSI_SnapShot_01.bmp) |
+| ![MSI_SnapShot.bmp](/assets/img/posts/MSI_SnapShot.bmp) | ![MSI_SnapShot_01.bmp](/assets/img/posts/MSI_SnapShot_01.bmp) |
 
 ## Research  
 - [Update Your CPU BIOS Microcode - More Performance - Less Consumption - BIOS Modding - Overclocking](https://www.youtube.com/watch?v=MzGGIkLFO8A)
