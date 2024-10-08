@@ -10,6 +10,9 @@ tags:
 pin: false
 math: false
 mermaid: false
+image: 
+  path: /assets/img/posts/displayport-art.png
+  alt: 
 ---
 
 ## The Issue: 
