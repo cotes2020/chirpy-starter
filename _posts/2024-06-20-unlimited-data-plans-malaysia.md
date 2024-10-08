@@ -9,7 +9,7 @@ pin: false
 math: false
 mermaid: false
 image: 
-  path: /assets/img/posts/them.jpg
+  path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/them.jpg
   alt: 
 ---
 
