@@ -77,11 +77,6 @@ analytics:
 pageviews:
   provider: # now only supports 'goatcounter'
 
-google_adsense:
-  client_id: ca-pub-8814021057171673         # adsense client id, ex: ca-pub-0000000000000000
-  slot_id: 5237143877           # adsense slot id, ex: 0000000000
-  enabled: true
-
 # Prefer color scheme setting.
 #
 # Note: Keep empty will follow the system prefer color by default,
