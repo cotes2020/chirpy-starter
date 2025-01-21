@@ -2,7 +2,7 @@
 title: Disable Virtualization on Gigabyte Motherboard
 description: Without Flashing Modded BIOS
 author: null
-date: '2024-10-22 13:20:00 +0800'
+date: '2025-10-22 1:20:00 +0800'
 categories: [How-to, Software, Hardware]
 tags:
   - Windows
@@ -41,10 +41,11 @@ This is the easiest way to do it. It is also quite safe. If something goes wrong
    ```
    setup_var_cv CpuSetup 0xB9 0x1 0x1
    ```
- 6. Type `reboot` when you're done
+ 6. Type `reboot` when you're done  
+ 
+ ![result](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/vm-disabled-result.png)
 
-
-## Where do I get these commands?
-I followd this guide: https://github.com/BoringBoredom/UEFI-Editor
+## Where do I get these commands from? and how do I do it on a variety of different Gigabtye motherboards?
+Just follow this guide: https://github.com/BoringBoredom/UEFI-Editor
 
 ![image](https://gist.github.com/user-attachments/assets/8fae0846-326d-4b14-80fb-ec11b6a73bc2)
