@@ -20,11 +20,11 @@ This is the easiest way to do it. It is also quite safe. If something goes wrong
 
 ## Note
 
+This guide is only for MSI H410M H3 (rev. 1.0). For other motherboards, [see here.](#where-do-i-get-these-commands-from)
+
 > This was tested on Gigabyte H410M H V3 (rev. 1.0)  
 > BIOS version: F9 (Dec 20, 2023)
 {: .prompt-info }
-
-This guide is only for MSI H410M H3 (rev. 1.0). For other motherboards, [see here.](#where-do-i-get-these-commands-from)
 
 ## Preparation
 
