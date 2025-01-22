@@ -28,16 +28,16 @@ This guide is only for MSI H410M H3 (rev. 1.0). For other motherboards, [see her
 
 ## Preparation
 
-- The [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) file
+- [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases)
 - A USB stick
 
 ## Here's the way I do it:
 
 1. Format the USB stick to `FAT32`
-2. Place the file `modGRUBShell.efi` on the USB stick in this directory, so it looks like this `X:\EFI\BOOT\modGRUBShell.efi`.
+2. Download the file `modGRUBShell.efi` and rename it to `BOOTX64.EFI`. Then put it on the USB stick so it looks like this `X:\EFI\BOOT\BOOTX64.EFI`. (X: is the USB drive letter)
 3. Disable `Secure Boot` and then enable `CSM` in the BIOS.
-4. Press `F12` to boot from the USB stick. Select the one with `UEFI:` at the beginning.
-5. Now type this command:  
+4. Press `F12` to boot the EFI shell from the USB stick. Select the one with `UEFI:` at the beginning.
+5. In EFI shell mode, type this command:  
 
    To **disable** virtualization:  
 
