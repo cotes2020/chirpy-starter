@@ -58,6 +58,6 @@ This guide is only for MSI H410M H3 (rev. 1.0). For other motherboards, [see her
 
 ## Where do I get these commands from?
 
-Just follow this guide: https://github.com/BoringBoredom/UEFI-Editor
+Just follow this guide: [https://github.com/BoringBoredom/UEFI-Editor](https://github.com/BoringBoredom/UEFI-Editor)
 
 ![image](https://gist.github.com/user-attachments/assets/8fae0846-326d-4b14-80fb-ec11b6a73bc2)
