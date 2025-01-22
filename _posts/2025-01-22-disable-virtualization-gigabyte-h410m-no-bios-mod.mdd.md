@@ -16,7 +16,7 @@ alt:
 
 I can't believe Gigabyte doesn't let you disable virtualization in the BIOS for some Intel motherboards. Many Reddit posts ask about this, and I found an easy way to do it that isn't widely discussed.
 
-This is the easiest way to do it. It is also quite safe. If something goes wrong, you can just delete the cmos and everything's back to normal.
+This is the easiest way to do it. It is also quite safe. If something goes wrong, you can just clear the cmos and everything's back to normal.
 
 ## Note
 
