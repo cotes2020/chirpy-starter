@@ -2,7 +2,7 @@
 title: 'How to Fix Winget "Uninstall failed with exit code: 1603" Error'
 description: The easy way!
 author: null
-date: '2025-01-22 15:00:00 +0800'
+date: '2025-01-23 15:00:00 +0800'
 categories: [How-to, Software]
 tags:
   - Windows
@@ -25,4 +25,4 @@ alt:
   ![img4](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter4.png)
 6. Check if the program is uninstalled, if its working, its done you can close it.  
   ![img5](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter5.png)  
-  
+
