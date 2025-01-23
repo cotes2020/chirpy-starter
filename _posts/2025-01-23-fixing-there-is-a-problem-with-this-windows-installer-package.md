@@ -1,5 +1,6 @@
 ---
-title: 'How to Fix Winget "Uninstall failed with exit code: 1603" Error'
+title: >
+  How to Fix Winget "Uninstall failed with exit code: 1603" Error
 description: The easy way!
 author: null
 date: '2025-01-23 15:00:00 +0800'
