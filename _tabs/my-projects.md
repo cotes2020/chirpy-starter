@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: book-bookmark fa-info-circle
+icon: fa-fw fa-solid fa-book-bookmark
 order: 4
 ---
 
