@@ -17,13 +17,12 @@ alt:
 
 1. [Download](https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d) & Run the `Program Install and Uninstall troubleshooter` from Microsoft.  
 2. `Next`  
-  ![img1](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter1.png)
+  ![img1](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter1.png){: h="250" }  
 3. Choose `Uninstalling`  
-  ![img2](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter2.png)
+  ![img2](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter2.png){: h="240" }  
 4. Select Program you want to uninstall --> `Next`  
-  ![img3](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter3.png)  
+  ![img3](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter3.png){: h="240" }
 5. `Yes, try uninstall`  
-  ![img4](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter4.png)
+  ![img4](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter4.png){: h="240" }  
 6. Check if the program is uninstalled, if its working, its done you can close it.  
-  ![img5](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter5.png)  
-
+  ![img5](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/troubleshooter5.png){: h="240" }
