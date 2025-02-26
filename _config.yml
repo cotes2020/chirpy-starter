@@ -148,6 +148,7 @@ pwa:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
       - "/mysoftwarelist"
       - "/OpenWrt-Builder"
+      - "/OpenWrt-Builder/*"
 
 paginate: 10
 
