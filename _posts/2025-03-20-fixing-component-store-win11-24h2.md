@@ -12,7 +12,7 @@ image:
 
 After the Windows 11 24H2 update, a bug prevents the cleanup tool from removing two reclaimable packages in the WinSxS folder. Even after running cleanup commands, the “Number of Reclaimable Packages” remains at 2. Microsoft has not yet provided a fix.
 
-```PowerShell
+```powershell
 PS C:\> Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 
 Deployment Image Servicing and Management tool
@@ -45,11 +45,11 @@ The operation completed successfully.
 Remove the problematic package by executing (replace the package name if it differs on your system):
 
 
-```PowerShell
+```powershell
 dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 ```
 
-```PowerShell
+```powershell
 PS C:\> dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 
 Deployment Image Servicing and Management tool
@@ -73,7 +73,7 @@ The operation completed successfully.
 
 After removal, run the cleanup command to finalize the process:
 
-```PowerShell
+```powershell
 PS C:\Users\AzimsTech> dism /online /cleanup-image /startcomponentcleanup
 
 Deployment Image Servicing and Management tool
@@ -89,7 +89,7 @@ The operation completed successfully.
 
 Re-run the analyze command to ensure all reclaimable packages are cleared:
 
-```PowerShell
+```powershell
 PS C:\> Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 
 Deployment Image Servicing and Management tool
