@@ -1,18 +1,23 @@
 ---
 title: Fixing Component Store (WinSxS folder) in Windows 11 24H2
-date: 2025-03-20 21:00:00 +0800
-categories: [How-to, Software]
-tags: [win11]     # TAG names should always be lowercase
-image: 
+date: '2025-03-20 21:00:00 +0800'
+categories:
+  - How-to
+  - Software
+tags:
+  - win11
+image: null
+description: >-
+  Get started with Chirpy basics in this comprehensive overview. You will learn
+  how to install, configure, and use your first Chirpy-based website, as well as
+  deploy it to a web server.
 ---
-
-# Fixing Component Store (WinSxS folder) in Windows 11 24H2
 
 ## Problem
 
-After the Windows 11 24H2 update, a bug prevents the cleanup tool from removing two reclaimable packages in the WinSxS folder. Even after running cleanup commands, the “Number of Reclaimable Packages” remains at 2. Microsoft has not yet provided a fix.
+After the Windows 11 24H2 update, a bug prevents the cleanup tool from removing two WinSxS packages. Cleanup commands don’t work, and Microsoft hasn’t fixed it yet.
 
-```powershell
+```console
 PS C:\> Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 
 Deployment Image Servicing and Management tool
@@ -45,11 +50,11 @@ The operation completed successfully.
 Remove the problematic package by executing (replace the package name if it differs on your system):
 
 
-```powershell
+```console
 dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 ```
 
-```powershell
+```console
 PS C:\> dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 
 Deployment Image Servicing and Management tool
@@ -73,7 +78,11 @@ The operation completed successfully.
 
 After removal, run the cleanup command to finalize the process:
 
-```powershell
+```console
+PS C:\Users\AzimsTech> dism /online /cleanup-image /startcomponentcleanup
+```
+
+```console
 PS C:\Users\AzimsTech> dism /online /cleanup-image /startcomponentcleanup
 
 Deployment Image Servicing and Management tool
@@ -89,7 +98,7 @@ The operation completed successfully.
 
 Re-run the analyze command to ensure all reclaimable packages are cleared:
 
-```powershell
+```console
 PS C:\> Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 
 Deployment Image Servicing and Management tool
