@@ -6,7 +6,8 @@ categories:
   - Software
 tags:
   - win11
-image: null
+image: >-
+  https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/CES-Blog-Banner-1600x1067.jpg
 ---
 
 ## Problem
