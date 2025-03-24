@@ -16,10 +16,10 @@ timezone:
 
 title: Taszid Chowdhury # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: My Personal Portfolio # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  I'm a passionate and dedicated developer with experience in building web applications, managing cloud infrastructure, and exploring the intersection of technology and problem-solving. This site showcases my projects, skills, and experiences—from front-end development to cloud architecture. Take a look around to see what I’ve been working on, and feel free to connect!.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://media.licdn.com/dms/image/v2/D4E03AQH7kndKHFJn3w/profile-displayphoto-shrink_800_800/B4EZU1b1hEHcAc-/0/1740358245425?e=1748476800&v=beta&t=58_VzNT-jq4xwTaWoY1KVxFQ41tvmvhtftp7clmapPk
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
