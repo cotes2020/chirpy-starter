@@ -47,11 +47,11 @@ Remove the problematic package by executing (replace the package name if it diff
 
 
 ```console
-dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
+Dism.exe /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 ```
 
 ```console
-PS C:\> dism /online /remove-package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
+PS C:\> Dism.exe /online /Remove-Package /packagename:Package_for_RollupFix~31bf3856ad364e35~amd64~~26100.1742.1.10
 
 Deployment Image Servicing and Management tool
 Version: 10.0.26100.1150
@@ -75,11 +75,11 @@ The operation completed successfully.
 After removal, run the cleanup command to finalize the process:
 
 ```console
-PS C:\Users\AzimsTech> dism /online /cleanup-image /startcomponentcleanup
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
 ```
 
 ```console
-PS C:\Users\AzimsTech> dism /online /cleanup-image /startcomponentcleanup
+PS C:\> Dism.exe /online /Cleanup-Image /StartComponentCleanup
 
 Deployment Image Servicing and Management tool
 Version: 10.0.26100.1150
