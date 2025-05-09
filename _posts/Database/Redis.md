@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Redis"
+categories: [Database]
+tags: [NoSQL]
+---
+
+<br>
+
+이전 회사에서 야구장 혼잡도 프로젝트를 진행한 적이 있다. 프로젝트 목표는 실시간 야구장 혼잡도를 나타내는 것이였고 이를 위해 Message Queue로 Redis를 사용했다. 당시 기한이 길지 않았기에 간단하고 빠른 Redis를 선택했었는데 조금 더 알아보고자 한다.
+
+<br>
+
+## Redis란?
+
+- Redis는 **R**edis **D**ictionary **S**erver의 약자로 인메모리 기반의 Key-Value 저장소
+- 빠른 속도와 다양한 자료구조(String, List, Set, Hash 등)를 지원하며, **캐시**, **세션 관리**, **실시간 데이터 처리**, **메시지 큐** 등 사용
+- NoSQL 계열의 데이터베이스로, **RDB**, **AOF** 방식의 영속성(persistence), **복제(replication)**, **클러스터(cluster)** 등 기능도 제공
+
+## For Message Queue
+
+- Redis는 단순히 Key-Value 저장소를 넘어, **Message Queue**로도 매우 효과적으로 사용됨
+- 기본으로 제공하는 자료구조 중 List, Stream을 활용하면 간단하게 Message Queue 구축 가능
+- List
+    - LPUSH, RPOP
+    - 간단한 FIFO 큐
+    - RPOP으로 꺼내는 순간 삭제되기 때문에 데이터 유실 가능성
+    - 재전송, 재처리하는 기능이 별도로 없음
+    ```python
+    r.lpush(QUEUE_NAME, message_dict)
+    r.rpop(QUEUE_NAME)
+    ```
+- Stream
+    - XADD, XREADGROUP
+    - 메세지에 고유 ID가 부여되어 추적 가능
+    - 소비자 그룹을 지원해 병렬 처리가 가능
+    - 메세지를 읽어도 자동으로 삭제되지 않음
+    ```python
+    r.xadd(QUEUE_NAME, {'message': message_json})
+    r.xreadgroup('task_group', 'consumer', {QUEUE_NAME: '>'}, block=0, count=1)
+    r.xack(QUEUE_NAME, 'task_group', message_id)
+    ```
+
+## 정리
+- Redis는 빠르고 간단하게 설정없이 Message Queue 시스템을 구성할 수 있음
+- 기본적으로 제공되는 List, Stream을 활용해 목적에 맞게 사용 가능
+- 야구장 혼잡도 프로젝트와 같이 간단한 실시간 큐 처리에는 List도 적합
+- 메세지 추적, 재처리 등 신뢰성있는 Message Queue 시스템을 구성하려면 Stream
