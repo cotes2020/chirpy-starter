@@ -7,7 +7,7 @@ categories:
 tags:
   - win11
 image: >-
-  https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/CES-Blog-Banner-1600x1067.jpg
+  https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/windows11-update-cover.png
 ---
 
 ## Problem
