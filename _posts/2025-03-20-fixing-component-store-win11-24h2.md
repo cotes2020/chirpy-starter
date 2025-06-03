@@ -96,6 +96,10 @@ The operation completed successfully.
 Re-run the analyze command to ensure all reclaimable packages are cleared:
 
 ```console
+Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
+```
+
+```console
 PS C:\> Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 
 Deployment Image Servicing and Management tool
