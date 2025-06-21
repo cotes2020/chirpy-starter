@@ -5,8 +5,7 @@ date: 2025-06-21 15:00:00 +0800
 categories: How-to, Tizen]
 tags: [jellyfin]     # TAG names should always be lowercase
 image:
-  path: /path/to/image
-  alt: image alternative text
+  path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/jellfin-plus-tizen.png
 ---
 
 ## Simple Step-by-Step Instructions
@@ -44,6 +43,6 @@ There's many other ways of installing it but I found this is the easiest way tha
 
 ---
 
-> [!NOTE]
 > Tested on Samsung UHD 4K AU7002 TV (Tizen 6.0) as of June 2025.  
 > For detailed information about Jellyfin widget, refer to [eppevinkel/jellyfin-tizen-builds](https://github.com/jeppevinkel/jellyfin-tizen-builds?tab=readme-ov-file#jellyfin-tizen-builds)
+{: .prompt-info }
