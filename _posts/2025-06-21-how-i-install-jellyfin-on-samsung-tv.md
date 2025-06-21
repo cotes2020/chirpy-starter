@@ -8,8 +8,6 @@ image:
   path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/jellfin-plus-tizen.png
 ---
 
-## Simple Step-by-Step Instructions
-
 There's many other ways of installing it but I found this is the easiest way that nobody talked about.
 
 ## Tools & Downloads
