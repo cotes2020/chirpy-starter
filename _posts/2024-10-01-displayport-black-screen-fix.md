@@ -10,8 +10,9 @@ tags:
 pin: false
 math: false
 mermaid: false
-image: 
-  path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/displayport-art.png
+media_subpath: /azimstech.github.io/
+image:
+  path: displayport-art.png
   alt: 
 ---
 

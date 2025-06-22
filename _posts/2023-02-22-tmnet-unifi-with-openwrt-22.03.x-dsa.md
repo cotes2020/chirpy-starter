@@ -3,7 +3,10 @@ layout: post
 published: true
 title: Configuring OpenWrt via Command Line
 subtitle: A Step-by-Step Guide for TMNet UniFi Users
-image: 'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/openwrt-cli.png'
+media_subpath: /azimstech.github.io/
+image:
+  path: openwrt-cli.png
+  alt:
 tags:
   - OpenWrt
   - Networking

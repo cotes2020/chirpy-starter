@@ -9,8 +9,9 @@ tags:
 pin: false
 math: false
 mermaid: false
+media_subpath: /azimstech.github.io/
 image:
-    path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/unsupportedw11.png
+  path: unsupportedw11.png
 alt:
 ---
 

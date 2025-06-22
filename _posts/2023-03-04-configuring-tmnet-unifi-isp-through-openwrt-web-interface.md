@@ -1,8 +1,10 @@
 ---
 published: true
 subtitle: Step-by-step guide
-image: 
-  'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/owrt.png'
+media_subpath: /azimstech.github.io/
+image:
+  path: owrt.png
+  alt:
 tags:
   - OpenWrt
   - Networking
@@ -18,44 +20,44 @@ Connect your computer to the router via Ethernet cable or Wi-Fi, and access the 
 
 From the web interface, navigate to **Network » Interfaces**. Here, you can configure your router's network interfaces.
 
-![status](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/status_network_interface.webp "Network>Interfaces")
+![status](status_network_interface.webp "Network>Interfaces")
 
 ## Step 3: Configure WAN interface
 
 Under the WAN section, click on **Edit**.
 
-![wan_edit](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan_edit.webp "Edit WAN Interface")
+![wan_edit](wan_edit.webp "Edit WAN Interface")
 
 In the General settings tab, set the following:
 
 Protocol: **PPPoE**  
 Click on **Switch protocol**  
 
-![wan_protocol](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan_protocol.webp "Interfaces » WAN, Protocol: PPPoE")
+![wan_protocol](wan_protocol.webp "Interfaces » WAN, Protocol: PPPoE")
 
 Under the **Device** section, you will need to manually type the device name **wan.500** & hit **Enter**.
 
-![wan_device_vlan500](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan_device_vlan500.webp "Interfaces » WAN, Device: wan.500")
+![wan_device_vlan500](wan_device_vlan500.webp "Interfaces » WAN, Device: wan.500")
 
 In the PAP/CHAP username field, enter your UniFi account login, for example, **adbdulwahub69@unifi**. In the PAP/CHAP password field, enter your UniFi account password.
 
 Click on **Save** to save your settings.
 
-![wan_pppoe_info](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan_pppoe_info.webp "Interfaces » WAN, PPPoE username & password")
+![wan_pppoe_info](wan_pppoe_info.webp "Interfaces » WAN, PPPoE username & password")
 
 ## Step 4: Configure WAN6 interface
 
 Under the WAN6 section, click on **Edit**. 
 
-![wan6_edit](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan6_edit.webp "Edit WAN6 Interface")  
+![wan6_edit](wan6_edit.webp "Edit WAN6 Interface")  
 
 Under the **Device** section, select **Alias Interface: @wan**.
 
-![wan6_device](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/wan6_device.webp "Interfaces » WAN6, Device: @wan")
+![wan6_device](wan6_device.webp "Interfaces » WAN6, Device: @wan")
 
 Click on **Save** and then click on **Save & Apply** to apply the changes.
 
-![save_apply](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/save_apply.webp "Save & Apply")
+![save_apply](save_apply.webp "Save & Apply")
 
 ## Step 5: Verify connection
 
@@ -63,7 +65,7 @@ To verify that your UniFi connection is working, navigate to **Network » Diagno
 
 Congratulations, you have successfully configured your UniFi connection on your OpenWrt router!
 
-![network_diagnostics](https://cdn.statically.io/gh/AzimsTech/compress/master/tmnet_unifi-openwrt-setup/network_diagnostics.webp "Network » Diagnostics")
+![network_diagnostics](network_diagnostics.webp "Network » Diagnostics")
 
 ## Research
 

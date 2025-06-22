@@ -9,8 +9,9 @@ tags:
 pin: false
 math: false
 mermaid: false
+media_subpath: /azimstech.github.io/
 image:
-    path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/Giga-H410-H-V3-banner.jpg
+  path: Giga-H410-H-V3-banner.jpg
 alt:
 ---
 
@@ -54,7 +55,7 @@ This guide is only for MSI H410M H3 (rev. 1.0). For other motherboards, [see her
 6. Type `reboot` when you're done/
 7. Now its virtualization is disabled:
 
-   ![result](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/vm-disabled-result.png)
+   ![result](vm-disabled-result.png)
 
 ## Where do I get these commands from?
 

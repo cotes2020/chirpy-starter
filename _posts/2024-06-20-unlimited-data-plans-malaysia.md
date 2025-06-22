@@ -8,8 +8,9 @@ tags: [mobile data]
 pin: false
 math: false
 mermaid: false
-image: 
-  path: https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/them.jpg
+media_subpath: /azimstech.github.io/
+image:
+  path: them.jpg
   alt: 
 ---
 

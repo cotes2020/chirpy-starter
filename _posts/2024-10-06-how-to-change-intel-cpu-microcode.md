@@ -10,6 +10,10 @@ tags:
 pin: false
 math: false
 mermaid: false
+media_subpath: /azimstech.github.io/
+image:
+  path: 
+alt:
 ---
 
 If you need to change the microcode but still want the latest BIOS features and fixes, you're in luck! I'll share how I managed to do this relatively easily.
@@ -71,7 +75,7 @@ You can proceed to flash the BIOS that you have modified.
 
 | Before | After |
 | --- | ----- |
-| ![MSI_SnapShot.jpg](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/MSI_SnapShot.jpg) | ![MSI_SnapShot_01.jpg](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/MSI_SnapShot_01.jpg) |
+| ![MSI_SnapShot.jpg](MSI_SnapShot.jpg) | ![MSI_SnapShot_01.jpg](MSI_SnapShot_01.jpg) |
 
 ## Research  
 - [Update Your CPU BIOS Microcode - More Performance - Less Consumption - BIOS Modding - Overclocking](https://www.youtube.com/watch?v=MzGGIkLFO8A)
