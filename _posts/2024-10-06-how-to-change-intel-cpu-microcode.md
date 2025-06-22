@@ -11,9 +11,8 @@ pin: false
 math: false
 mermaid: false
 media_subpath: /azimstech.github.io/
-image:
-  path: 
-alt:
+image: https://img.youtube.com/vi/DUPY8S8B-04/maxresdefault.jpg
+alt: 'Youtube thumbnail'
 ---
 
 If you need to change the microcode but still want the latest BIOS features and fixes, you're in luck! I'll share how I managed to do this relatively easily.
