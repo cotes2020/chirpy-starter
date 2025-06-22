@@ -1,7 +1,7 @@
 ---
 published: true
 subtitle: Step-by-step guide
-media_subpath: /azimstech.github.io/
+media_subpath: /tmnet_unifi-openwrt-setup/
 image:
   path: owrt.png
   alt:

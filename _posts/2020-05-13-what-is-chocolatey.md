@@ -5,8 +5,10 @@ title: What is Chocolatey?
 description: Want to save time? Do yourself a favor and install Chocolatey!
 date: '2020-05-13'
 categories: [How-to, Software, Windows]
+media_subpath: /azimstech.github.io/
 image:
-   'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/fpdfcRV.png'
+  path: fpdfcRV.png
+  alt:
 tags: [chocolatey cheat sheet]
 ---
 
@@ -68,13 +70,13 @@ choco uninstall googlechrome
 ~~~
 choco upgrade all
 ~~~
-![upgrade-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/cz4stS4.png)
+![upgrade-example](cz4stS4.png)
 
 ### To list all installed packages:
 ~~~
 choco list
 ~~~
-![list-example](https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/PhBS9mO.png)
+![list-example](PhBS9mO.png)
 
 ## Research
 

@@ -5,7 +5,10 @@ title: This is Why I Stopped Using The Google Drive App
 Tags:
   - Apps
   - Android
-image: 'https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/jPxTDKW.png'
+media_subpath: /azimstech.github.io/
+image:
+  path: jPxTDKW.png
+  alt:
 subtitle: Manage Your Google Drive Storage Directly From File Explorer
 tags:
   - Apps
