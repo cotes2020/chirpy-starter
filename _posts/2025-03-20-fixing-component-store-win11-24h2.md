@@ -6,8 +6,9 @@ categories:
   - Software
 tags:
   - win11
-image: >-
-  https://cdn.statically.io/gh/AzimsTech/compress/master/azimstech.github.io/windows11-update-cover.png
+media_subpath: /azimstech.github.io/
+image:
+  path: windows11-update-cover.png
 ---
 
 ## Problem
