@@ -4,7 +4,7 @@ description: Running TizenOS 6.0
 date: 2025-06-21 15:00:00 +0800
 categories: How-to, Tizen]
 tags: [jellyfin]     # TAG names should always be lowercase
-cdn: https://cdn.jsdelivr.net/gh/AzimsTech/compress/azimstech.github.io
+media_subpath: /azimstech.github.io/
 image:
   path: jellfin-plus-tizen.png
 ---
