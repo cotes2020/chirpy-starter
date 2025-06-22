@@ -4,9 +4,9 @@ description: Running TizenOS 6.0
 date: 2025-06-21 15:00:00 +0800
 categories: How-to, Tizen]
 tags: [jellyfin]     # TAG names should always be lowercase
-cdn: https://cdn.jsdelivr.net/gh/AzimsTech/compress/azimstech.github.io/
+cdn: https://cdn.jsdelivr.net/gh/AzimsTech/compress/
 image:
-  path: jellfin-plus-tizen.png
+  path: ./azimstech.github.io/jellfin-plus-tizen.png
 ---
 
 There's many other ways of installing it but I found this is the easiest way that nobody talked about.
