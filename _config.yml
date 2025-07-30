@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: ko-KR
+lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: CanaCode # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: 카나코드 블로그입니다. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -28,8 +28,11 @@ url: "https://canach3.github.io"
 github:
   username: canach3 # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+#twitter:
+#  username: twitter_username # change to your Twitter username
+
+instagram:
+  username: canach3
 
 social:
   # Change to your full name.
@@ -38,11 +41,12 @@ social:
   email: canach3@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+#    - https://twitter.com/username # change to your Twitter homepage
     - https://github.com/canach3 # change to your GitHub homepage
+    - https://www.instagram.com/canach3
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/username
 
 # Site Verification Settings
 webmaster_verifications:
