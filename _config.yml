@@ -188,7 +188,7 @@ defaults:
     values:
       comments: false
   - scope:
-      path: ""
+      path: "_tabs/about.me"
       type: tabs # see `site.collections`
     values:
       layout: page
