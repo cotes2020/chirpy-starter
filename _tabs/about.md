@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# ABOUT ME
-
 I’m Shaimaa Khattab, a security explorer, bug hunter, and lifelong learner. 
 
 This blog is my personal space to document and share:  
