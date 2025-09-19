@@ -173,6 +173,28 @@ collections:
     sort_by: order
 
 defaults:
+ # 自定义文件夹
+  #- scope:
+     # path: "_posts/算法/程序员面试金典(第六版)"
+    #values:
+     #
+     #categories: [算法, 程序员面试金典(第六版)]
+     # tags: [程序员面试金典(第六版)]
+    #  image:
+   #     path: /assets/preview_image/algoriathm.webp
+
+  #- scope:
+     # path: "_posts/音乐/吉他谱"
+    #values:
+      #categories: [音乐, 吉他谱]
+      #tags: [吉他谱]
+
+ # - scope:
+  #    path: "_posts/安装配置/Jekyll"
+   # values:
+    #  image:
+     #   path: /assets/preview_image/Jekyll.webp
+# global
   - scope:
       path: "" # An empty string here means all files in the project
       type: posts
