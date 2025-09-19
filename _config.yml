@@ -121,10 +121,10 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: lacrypto/lacrypto.github.io
-    repo_id: "1058230634"
+    repo_id: 1059738754
 
     category: Announcements
-    category_id: "46025053"
+    category_id: 46041789
     mapping: pathname # optional, default to 'pathname'
     strict: 0 # optional, default to '0'
     input_position: 'bottom' # optional, default to 'bottom'
@@ -164,7 +164,7 @@ kramdown:
     css_class: highlight
     # default_lang: console
     span:
-      line_numbers: false
+      line_numbers: true
     block:
       line_numbers: true
       start_line: 1
