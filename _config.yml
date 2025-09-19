@@ -212,7 +212,7 @@ defaults:
     values:
       comments: false
   - scope:
-      path: "_tabs/about.md"
+      path: _tabs/about.md
       type: tabs # see `site.collections`
     values:
       layout: page
@@ -245,7 +245,7 @@ exclude:
   - tools
   - README.md
   - LICENSE
- # - purgecss.js
+  - purgecss.js
   - rollup.config.js
   - package*.json
  # - "*.sh"
