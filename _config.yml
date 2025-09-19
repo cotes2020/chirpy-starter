@@ -210,7 +210,7 @@ defaults:
     values:
       comments: false
   - scope:
-      path: "_tabs/about.me"
+      path: "_tabs/about.md"
       type: tabs # see `site.collections`
     values:
       layout: page
