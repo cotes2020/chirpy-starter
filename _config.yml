@@ -14,12 +14,12 @@ timezone: Africa/Cairo
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: LaCryptora # the main title
+title: La Cryptora # the main title
 
 tagline: "Break. Learn. Share." # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-   Break. Learn. Share.
+   Break. Learn. Share. cryptora, lacryptora, Shaimaa, Khattab, Cyber, blog,
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -154,7 +154,7 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 #plugins:
-  - jemoji
+ # - jemoji
 # ------------ The following options are not recommended to be modified ----------------
 
 kramdown:
@@ -217,14 +217,14 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-  #- scope:
-   #   path: assets/img/favicons
-    #values:
-     # swcache: true
-  #- scope:
-   #   path: assets/js/dist
-    #values:
-     # swcache: true
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
 sass:
   style: compressed
@@ -247,7 +247,7 @@ exclude:
   - LICENSE
   - purgecss.js
   - rollup.config.js
-  - "package*".json
+  - package*.json
  # - "*.sh"
 
 jekyll-archives:
