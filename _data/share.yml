@@ -21,4 +21,5 @@ platforms:
   #
   # - type: Weibo
   #   icon: "fab fa-weibo"
+
   #   link: "https://service.weibo.com/share/share.php?title=TITLE&url=URL"
