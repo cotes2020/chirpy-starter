@@ -24,7 +24,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://cryptora.github.io"
+url: "https://lacryptora.github.io"
 
 github:
   username: lacryptora # change to your GitHub username
@@ -154,8 +154,6 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
-#plugins:
- # - jemoji
 plugins:
   - jemoji
   - jekyll-remote-theme
@@ -258,6 +256,18 @@ exclude:
   - rollup.config.js
   - package*.json
   - "*.sh"
+  - _javascript
+  - _layouts
+  - _plugins
+  - assets/lib
+  - tools
+  - .husky
+  - .jekyll-cache
+  - eslint.config.js
+  - .stylelintrc.json
+  - .markdownlint.json
+  - jekyll-theme-chirpy.gemspec
+
 
 jekyll-archives:
   enabled: [categories, tags]
