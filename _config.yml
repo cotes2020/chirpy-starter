@@ -154,7 +154,6 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
-<<<<<<< HEAD
 #plugins:
  # - jemoji
 plugins:
