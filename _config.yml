@@ -1,49 +1,49 @@
 # The Site Configuration
 
 # Import the theme
-theme: jekyll-theme-chirpy
+
+remote_theme: cotes2020/jekyll-theme-chirpy
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+# Change to your timezone › https://zones.arilyn.cc
+timezone: Africa/Cairo
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Shaimaa Khattab # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: "Break. Learn. Share." # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+   Break. Learn. Share. cryptora, lacryptora, Shaimaa, Khattab, Cyber, blog,
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://lacryptora.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: lacryptora # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: lacryptora # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Shaimaa Khattab
+  #email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/lacryptora # change to your Twitter homepage
+    - https://github.com/lacryptora # change to your GitHub homepage
+    - https://www.linkedin.com/in/shaimaa-khattab
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
-
 # Site Verification Settings
 webmaster_verifications:
   google: # fill in your Google verification code
@@ -51,7 +51,7 @@ webmaster_verifications:
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+  facebook: # fill in your Facebook verification codestring
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -59,23 +59,23 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
-  goatcounter:
-    id: # fill in your GoatCounter ID
-  umami:
-    id: # fill in your Umami ID
-    domain: # fill in your Umami domain
-  matomo:
-    id: # fill in your Matomo ID
-    domain: # fill in your Matomo domain
-  cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
-  fathom:
-    id: # fill in your Fathom Site ID
+    id: "G-5CDS3F4LDT" # fill in your Google Analytics ID
+  #goatcounter:
+   # id: # fill in your GoatCounter ID
+  #umami:
+   # id: # fill in your Umami ID
+    #domain: # fill in your Umami domain
+  #matomo:
+   # id: # fill in your Matomo ID
+    #domain: # fill in your Matomo domain
+  #cloudflare:
+   # id: # fill in your Cloudflare Web Analytics token
+  #fathom:
+   # id: # fill in your Fathom Site ID
 
 # Page views settings
-pageviews:
-  provider: # now only supports 'goatcounter'
+#pageviews:
+ # provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -98,36 +98,39 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "/assets/img/avatar.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: "/assets/img/avatar.jpg" # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: "giscus" # [disqus | utterances | giscus]
   # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  #disqus:
+    #shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  #utterances:
+   # repo: lacrypto/lacrypto.github.io # <gh-username>/<repo>
+    #issue_term: pathname # < url | pathname | title | ...>
+  
+
+# Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
+    repo: "lacrypto/lacrypto.github.io"
+    repo_id: "R_kgDOPypUgg"
+    category: "General"
+    category_id: "DIC_kwDOPypUgs4Cvoq9"
+    mapping: "title" # optional, default to 'pathname'
+    strict: "1" # optional, default to '0'
+    input_position: "top" # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    reactions_enabled: "1" # optional, default to the value of `1`
+    crossorigin: "anonymous"
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
@@ -151,8 +154,17 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
-
-# ------------ The following options are not recommended to be modified ------------------
+plugins:
+  - jemoji
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-read-time
+  - jekyll-remote-theme
+# ------------ The following options are not recommended to be modified ----------------
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
@@ -172,6 +184,8 @@ collections:
     sort_by: order
 
 defaults:
+
+# global
   - scope:
       path: "" # An empty string here means all files in the project
       type: posts
@@ -192,6 +206,14 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
 sass:
   style: compressed
@@ -209,13 +231,24 @@ exclude:
   - "*.gem"
   - "*.gemspec"
   - docs
-  - tools
   - README.md
   - LICENSE
   - purgecss.js
-  - "*.config.js"
-  - "package*.json"
-
+  - rollup.config.js
+  - package*.json
+  - "*.sh"
+  - _javascript
+  - _layouts
+  - _plugins
+  - assets/lib
+  - tools
+  - .husky
+  - .jekyll-cache
+  - eslint.config.js
+  - .stylelintrc.json
+  - .markdownlint.json
+  - jekyll-theme-chirpy.gemspec
+  - vendor
 jekyll-archives:
   enabled: [categories, tags]
   layouts:

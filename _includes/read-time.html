@@ -1,0 +1,9 @@
+{% comment %}
+  Safe read-time calculation for posts
+  - Counts words in page content
+  - Assumes 200 words per minute reading speed
+{% endcomment %}
+
+{% assign words = page.content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{{ minutes | ceil }} min read

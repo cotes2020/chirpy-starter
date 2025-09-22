@@ -1,40 +1,42 @@
-#  The contact options.
+# The contact options.
 
 - type: github
   icon: "fab fa-github"
+  url: "https://github.com/lacryptora"
 
 - type: twitter
   icon: "fa-brands fa-x-twitter"
+  url: "https://x.com/lacryptora"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+- type: linkedin
+  icon: "fab fa-linkedin"   # icons powered by <https://fontawesome.com/>
+  url: "https://www.linkedin.com/in/shaimaa-khattab"
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
-# Uncomment and complete the url below to enable more contact options
+#- type: email
+#  icon: "fas fa-envelope"
+#  noblank: true # open link in current tab
+#  url: "mailto:shaimaakhattab95@gmail.com"
+
+#- type: rss
+#  icon: "fas fa-rss"
+#  noblank: true
 #
 # - type: mastodon
-#   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
-#
-# - type: linkedin
-#   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Linkedin homepage
+#   icon: 'fab fa-mastodon'
+#   url: ''
 #
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
+#   url: ''
 #
 # - type: bluesky
 #   icon: 'fa-brands fa-bluesky'
-#   url: ''                   # Fill with your Bluesky profile link
+#   url: ''
 #
 # - type: reddit
 #   icon: 'fa-brands fa-reddit'
-#   url: ''                   # Fill with your Reddit profile link
+#   url: ''
 #
 # - type: threads
 #   icon: 'fa-brands fa-threads'
-#   url: ''                   # Fill with your Threads profile link
+#   url: ''
