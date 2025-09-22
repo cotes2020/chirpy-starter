@@ -3,6 +3,9 @@
 # Import the theme
 
 remote_theme: cotes2020/jekyll-theme-chirpy
+
+
+remote_theme: cotes2020/jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
@@ -153,16 +156,24 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
+<<<<<<< HEAD
 #plugins:
  # - jemoji
 plugins:
+=======
+plugins:
+  - jemoji
+>>>>>>> a8efb09459dbc1573edbdbc1650d3397661a8145
   - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-archives
+<<<<<<< HEAD
  
+=======
+>>>>>>> a8efb09459dbc1573edbdbc1650d3397661a8145
 # ------------ The following options are not recommended to be modified ----------------
 
 kramdown:
@@ -256,7 +267,7 @@ exclude:
   - purgecss.js
   - rollup.config.js
   - package*.json
- # - "*.sh"
+  - "*.sh"
 
 jekyll-archives:
   enabled: [categories, tags]
