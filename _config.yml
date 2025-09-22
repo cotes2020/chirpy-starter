@@ -162,6 +162,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-archives
+  - jekyll-read-time
 # ------------ The following options are not recommended to be modified ----------------
 
 kramdown:
