@@ -9,40 +9,41 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: America/New_York
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Sharon Kipsang # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: SOC L1 | Security Analyst | Purple Team # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Cybersecurity professional specializing in Security Operations, Threat Detection, and Purple Team operations. 
+  Passionate about defensive security, incident response, and continuous learning in the cybersecurity field.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://kipc-sharon.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: kipc-sharon # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: sharon_kipc # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Sharon Kipsang
+  email: sharon.kipsang@example.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/sharon_kipc # change to your Twitter homepage
+    - https://github.com/kipc-sharon # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/sharon-kipsang # change to your LinkedIn profile
 
 # Site Verification Settings
 webmaster_verifications:
@@ -98,6 +99,10 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
+# TO ADD YOUR PHOTO: 
+# 1. Place your photo in /assets/img/ folder (e.g., /assets/img/avatar.jpg)
+# 2. Then uncomment and update the line below with your photo path
+# avatar: /assets/img/avatar.jpg
 avatar:
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
