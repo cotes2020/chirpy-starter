@@ -35,10 +35,10 @@ script_includes:
       {% else %}{%- assign cite_enabled = site.juncture.cite -%}{%- endif -%}
     {%- else -%}{%- assign cite_enabled = page.juncture.cite -%}{%- endif -%}
 
-    {%- if page.juncture.toolbar.pdf == nil -%}
+    {%- if page.toolbar.pdf == nil -%}
       {%- if site.juncture.pdf == nil -%}{%- assign pdf_download_enabled = true -%}
-      {% else %}{%- assign pdf_download_enabled = site.toolbar.pdf -%}{%- endif -%}
-    {%- else -%}{%- assign pdf_download_enabled = page.toolbar.pdf -%}{%- endif -%}
+      {% else %}{%- assign pdf_download_enabled = site.juncture.pdf -%}{%- endif -%}
+    {%- else -%}{%- assign pdf_download_enabled = page.juncture.pdf -%}{%- endif -%}
 
     <!-- toolbar_enabled={{toolbar_enabled}} mode_toggle_enabled={{mode_toggle_enabled}} cite_enabled={{cite_enabled}} pdf_download_enabled={{pdf_download_enabled}} -->
     {% if toolbar_enabled %}

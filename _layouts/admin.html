@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{{ content }}
+
 {% include lang.html %}
 
 {% assign posts = site.admin | where_exp:"item", "item.relative_path != '_admin/index.md'" | sort: "title" %}
