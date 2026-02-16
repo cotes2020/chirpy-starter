@@ -170,7 +170,7 @@ collections:
   tabs:
     output: true
     sort_by: order
-  docs:
+  admin:
     output: true
     sort_by: order
 
@@ -197,9 +197,9 @@ defaults:
       permalink: /:title/
   - scope:
       path: ""
-      type: docs
+      type: admin
     values:
-      layout: page 
+      layout: post 
 
 sass:
   style: compressed
