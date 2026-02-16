@@ -29,7 +29,7 @@ FILES_TO_SYNC = [
     "_admin/2019-08-08-write-a-new-post.md",
     "_admin/2019-08-09-getting-started.md",
     "_admin/2019-08-11-customize-the-favicon.md",
-    "_admin/2019-08-08-juncture-image-viewer.md",
+    "_admin/2026-02-15-juncture-image-viewer.md",
     "_admin/index.md",
     "_includes/embed/iframe.html",
     "_includes/embed/image-compare.html",

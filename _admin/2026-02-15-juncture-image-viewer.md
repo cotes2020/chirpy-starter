@@ -2,7 +2,7 @@
 title: Adding Zoomable Images with Juncture
 description: How to use the Juncture image viewer in your Markdown posts.
 permalink: /docs/juncture-image-viewer
-date: 2019-08-08
+date: 2026-02-15
 order: 4
 juncture:
     mode: 2col
