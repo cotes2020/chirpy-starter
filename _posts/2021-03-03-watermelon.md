@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/watermelon
 image:
   path: wc:Albert_Eckhout_1610-1666_Brazilian_fruits.jpg
-layout: juncture
+juncture: true
 ---
 
 

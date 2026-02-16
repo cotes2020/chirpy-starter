@@ -1,0 +1,236 @@
+---
+layout: default
+panel_includes:
+  - toc
+tail_includes:
+  - related-posts
+  - post-nav
+script_includes:
+  - comment
+---
+
+{% include lang.html %}
+
+{% include toc-status.html %}
+
+{% if page.juncture %}
+  <link rel="stylesheet" href="{{ '/assets/css/juncture.css' | relative_url }}">
+{% endif %}
+
+<article class="px-1" data-toc="{{ enable_toc }}">
+  
+  {% if page.juncture %}
+    {%- if page.juncture.toolbar == nil -%}
+      {%- if site.juncture.toolbar == nil -%}{%- assign toolbar_enabled = true -%}
+      {% else %}{%- assign toolbar_enabled = site.juncture.toolbar -%}{%- endif -%}
+    {%- else -%}{%- assign toolbar_enabled = page.juncture.toolbar -%}{%- endif -%}
+
+    {%- if page.juncture.mode_toggle == nil -%}
+      {%- if site.juncture.mode_toggle == nil -%}{%- assign mode_toggle_enabled = true -%}
+      {% else %}{%- assign mode_toggle_enabled = site.juncture.mode_toggle -%}{%- endif -%}
+    {%- else -%}{%- assign mode_toggle_enabled = page.juncture.mode_toggle -%}{%- endif -%}
+
+    {%- if page.juncture.cite == nil -%}
+      {%- if site.juncture.cite == nil -%}{%- assign cite_enabled = true -%}
+      {% else %}{%- assign cite_enabled = site.juncture.cite -%}{%- endif -%}
+    {%- else -%}{%- assign cite_enabled = page.juncture.cite -%}{%- endif -%}
+
+    {%- if page.juncture.toolbar.pdf == nil -%}
+      {%- if site.juncture.pdf == nil -%}{%- assign pdf_download_enabled = true -%}
+      {% else %}{%- assign pdf_download_enabled = site.toolbar.pdf -%}{%- endif -%}
+    {%- else -%}{%- assign pdf_download_enabled = page.toolbar.pdf -%}{%- endif -%}
+
+    <!-- toolbar_enabled={{toolbar_enabled}} mode_toggle_enabled={{mode_toggle_enabled}} cite_enabled={{cite_enabled}} pdf_download_enabled={{pdf_download_enabled}} -->
+    {% if toolbar_enabled %}
+      <div id="toolbar">
+        {% if mode_toggle_enabled %} {% include col2-toggle.html %} {% endif %}
+        {% if cite_enabled %} {% include cite-this.html %} {% endif %}
+        {% if pdf_download_enabled %} {% include pdf-download.html %} {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <header>
+    <h1 data-toc-skip>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-desc fw-light mb-4">{{ page.description }}</p>
+    {% endif %}
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        {{ site.data.locales[lang].post.posted }}
+        {% include datetime.html date=page.date tooltip=true lang=lang %}
+      </span>
+
+      <!-- lastmod date -->
+      {% if page.last_modified_at and page.last_modified_at != page.date %}
+        <span>
+          {{ site.data.locales[lang].post.updated }}
+          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+        </span>
+      {% endif %}
+
+      {% if page.image %}
+        {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
+        {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
+        {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
+
+        {% if page.image.lqip %}
+          {%- capture lqip -%}lqip="{{ page.image.lqip }}"{%- endcapture -%}
+        {% endif %}
+
+        <div class="mt-3 mb-3">
+          <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }}>
+          {%- if page.image.alt -%}
+            <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
+          {%- endif -%}
+        </div>
+      {% endif %}
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          {% if page.author %}
+            {% assign authors = page.author %}
+          {% elsif page.authors %}
+            {% assign authors = page.authors %}
+          {% endif %}
+
+          {{ site.data.locales[lang].post.written_by }}
+
+          <em>
+            {% if authors %}
+              {% for author in authors %}
+                {% if site.data.authors[author].url -%}
+                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                {%- else -%}
+                  {{ site.data.authors[author].name }}
+                {%- endif %}
+                {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
+              {% endfor %}
+            {% else %}
+              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+            {% endif %}
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+            <span>
+              <em id="pageviews">
+                <i class="fas fa-spinner fa-spin small"></i>
+              </em>
+              {{ site.data.locales[lang].post.pageview_measure }}
+            </span>
+          {% endif %}
+
+          <!-- read time -->
+          {% include read-time.html content=content prompt=true lang=lang %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {% if enable_toc %}
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">{{ page.title }}</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">{{- site.data.locales[lang].panel.toc -}}</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">{{- page.title -}}</div>
+        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  {% endif %}
+
+  <main>
+    <div class="content post-content">{{ content }}</div>
+    <div class="viewer"></div>
+  </main>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    {% if page.categories.size > 0 %}
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        {% for category in page.categories %}
+          <a href="{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/">{{ category }}</a>
+          {%- unless forloop.last -%},{%- endunless -%}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- tags -->
+    {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        {% for tag in page.tags %}
+          <a
+            href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
+            class="post-tag no-text-decoration"
+          >
+            {{- tag -}}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        {% if site.data.locales[lang].copyright.license.template %}
+          {% capture _replacement %}
+        <a href="{{ site.data.locales[lang].copyright.license.link }}">
+          {{ site.data.locales[lang].copyright.license.name }}
+        </a>
+        {% endcapture %}
+
+          {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+        {% endif %}
+      </div>
+
+      {% include post-sharing.html lang=lang %}
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+
+{% if page.juncture %}
+  <script type="module">
+
+    import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks } from "{{ '/assets/js/juncture.js' | relative_url }}";
+
+    let mode = '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat';
+    let mode_toggle = ('{{ page.juncture.mode_toggle }}' || '{{ site.juncture.mode_toggle }}' || 'true').toLowerCase() === 'true';
+    let doAutoFloat = ('{{ page.juncture.auto_float }}' || '{{ site.juncture.auto_float }}' || 'true').toLowerCase() === 'true';
+    let groupEmbeds = ('{{ page.juncture.group_embeds }}' || '{{ site.juncture.group_embeds }}' || 'true').toLowerCase() === 'true';
+    let wikidataInfoPopups = ('{{ page.juncture.wikidata_info_popups }}' || '{{ site.juncture.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
+
+    console.log(`Juncture: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
+
+    if (wikidataInfoPopups) makeEntityPopups();
+    if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
+    addActionLinks();
+    if (doAutoFloat && !isMobile) autoFloat();
+
+  </script>
+{% endif %}

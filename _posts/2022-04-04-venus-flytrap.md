@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/venus-flytrap
 image:
   path: banner.jpg
-layout: juncture
+juncture: true
 ---
 
 

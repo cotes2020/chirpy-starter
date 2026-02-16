@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/heliconia
 image:
   path: monographTrochi2Goul_0286.jpg
-layout: juncture
+juncture: true
 ---
 
 

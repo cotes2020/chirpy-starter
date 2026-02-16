@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/pelargonium
 image:
   path: pelargonium_harvard.jpg
-layout: juncture
+juncture: true
 ---
 
 

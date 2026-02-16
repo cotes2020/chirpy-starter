@@ -1,32 +1,27 @@
-{%- if page.layout == "juncture" -%}
-
 {%- if page.juncture.mode_toggle == nil -%}
-{%- if site.juncture.mode_toggle == nil -%}
-{%- assign toggle_enabled = true -%}
-{% else %}
-{%- assign toggle_enabled = site.juncture.mode_toggle -%}
-{%- endif -%}
+    {%- if site.juncture.mode_toggle == nil -%}
+        {%- assign toggle_enabled = true -%}
+    {% else %}
+        {%- assign toggle_enabled = site.juncture.mode_toggle -%}
+    {%- endif -%}
 {%- else -%}
-{%- assign toggle_enabled = page.juncture.mode_toggle -%}
-{%- endif -%}
-{%- else -%}
-{%- assign toggle_enabled = false -%}
+    {%- assign toggle_enabled = page.juncture.mode_toggle -%}
 {%- endif -%}
 
-{%- if page.juncture.mode == nil -%}
-{%- if site.juncture.mode == nil -%}
-{%- assign default_mode = 'flat' -%}
-{% else %}
-{%- assign default_mode = site.juncture.mode -%}
-{%- endif -%}
+{%- if page.juncture.mode == nil -%}    
+    {%- if site.juncture.mode == nil -%}
+        {%- assign default_mode = 'flat' -%}
+    {% else %}
+        {%- assign default_mode = site.juncture.mode -%}
+    {%- endif -%}
 {%- else -%}
-{%- assign default_mode = page.juncture.mode -%}
+    {%- assign default_mode = page.juncture.mode -%}
 {%- endif -%}
 
 {%- if default_mode == 'flat' -%}
-{%- assign default_class = 'col1' -%}
+    {%- assign default_class = 'col1' -%}
 {%- else -%}
-{%- assign default_class = 'col2' -%}
+    {%- assign default_class = 'col2' -%}
 {%- endif -%}
 
 

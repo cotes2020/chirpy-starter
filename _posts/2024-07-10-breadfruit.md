@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/breadfruit
 image:
   path: wc:Breadfruit_1.jpg
-layout: juncture
+juncture: true
 ---
 
 The breadfruit tree is magnificent when mature, tall and broad branched, with large glossy leaves.  It provides shade and through its impressive spherical fruit, nutritious food.[^1]

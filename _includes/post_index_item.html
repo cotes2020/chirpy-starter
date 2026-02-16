@@ -7,6 +7,7 @@ Enclosing container class controls layout:
 - .post-index.view-grid
 {%- endcomment -%}
 
+<!-- post.image {{ post.image }} -->
 {%- if post.image -%}
 
     {% assign src = post.image.path | default: post.image %}

@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/arbor-vitae
 image:
   path: wc:Neuchâtel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg
-layout: juncture
+juncture: true
 ---
 
 

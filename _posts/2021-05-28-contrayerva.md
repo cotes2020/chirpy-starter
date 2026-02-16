@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/contrayerva
 image:
   path: Contrayerva_Header.jpg
-layout: juncture
+juncture: true
 ---
 
 

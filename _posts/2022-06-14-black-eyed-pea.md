@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/black-eyed-pea
 image:
   path: banner.jpg
-layout: juncture
+juncture: true
 ---
 
 

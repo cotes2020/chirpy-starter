@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/mimosa-pudica
 image:
   path: wc:Mimosa_pudica_kian-siau-chhau.jpg
-layout: juncture
+juncture: true
 ---
 
 
