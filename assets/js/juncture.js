@@ -815,7 +815,7 @@ function qs(sel, root = document) {
 function setActive(el) {
     const prior = qs(".active");
     if (prior) prior.classList.remove("active");
-    el.classList.add("active");
+    el?.classList.add("active");
 }
 
 /**

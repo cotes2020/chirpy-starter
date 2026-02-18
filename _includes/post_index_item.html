@@ -7,25 +7,45 @@ Enclosing container class controls layout:
 - .post-index.view-grid
 {%- endcomment -%}
 
-<!-- post.image {{ post.image }} -->
 {%- if post.image -%}
 
     {% assign src = post.image.path | default: post.image %}
-    {% if post.media_subpath %}
-        {%- assign p3 = src | slice: 0, 3 -%}
-        {%- assign is_wc = false -%}
-        {%- if p3 == "wc:" or src contains "commons.wikimedia.org" -%}
-            {%- assign is_wc = true -%}
-        {%- endif -%}
-        {% unless src contains '://' or is_wc %}
-            {% assign src = post.media_subpath
-                | append: '/'
-                | append: src
-                | replace: '///', '/'
-                | replace: '//', '/'
-            %}
-        {% endunless %}
+
+    {%- assign p4 = src | slice: 0, 4 -%}
+    {%- assign is_abs = false -%}
+    {%- if p4 == "http" -%}
+        {%- assign is_abs = true -%}
+    {%- endif -%}
+
+    {%- assign p3 = src | slice: 0, 3 -%}
+    {%- assign is_wc = false -%}
+    {%- if p3 == "wc:" or src contains "commons.wikimedia.org" -%}
+        {%- assign is_wc = true -%}
+    {%- endif -%}
+
+    {%- assign is_dev = false -%}
+    {%- if jekyll.environment == "development" -%}
+        {%- assign is_dev = true -%}
+    {%- endif -%}
+        
+    {%- assign is_cloudinary_cdn = false -%}
+        {%- if site.cdn contains 'res.cloudinary.com' -%}
+        {%- assign is_cloudinary_cdn = true -%}
+    {%- endif -%}
+
+    {% if post.media_subpath and is_abs == false and is_wc == false %}
+        {% assign src = post.media_subpath | append: '/' | append: src %}
+        {% if is_dev == false and is_cloudinary_cdn == true %}
+            {% assign src = site.url | append: site.baseurl | append: src %}
+        {% endif %}
     {% endif %}
+
+    {% if is_dev == false and is_cloudinary_cdn == true and is_wc == false %}
+      {%- assign src = site.cdn | append: '/' | append: src -%}
+    {% endif %}
+
+    {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
+    {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
 
     {%- if post.image.lqip -%}
         {% assign lqip = post.image.lqip %}

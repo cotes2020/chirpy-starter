@@ -13,12 +13,21 @@
 {% assign url = include.src %}
 
 {%- if url -%}
-  {%- assign url = url | strip -%}
 
   {%- assign p3 = url | slice: 0, 3 -%}
   {%- assign is_wc = false -%}
   {%- if p3 == "wc:" or url contains "commons.wikimedia.org" -%}
     {%- assign is_wc = true -%}
+  {%- endif -%}
+
+  {%- assign is_dev = false -%}
+  {%- if jekyll.environment == "development" -%}
+    {%- assign is_dev = true -%}
+  {%- endif -%}
+    
+  {%- assign is_cloudinary_cdn = false -%}
+    {%- if site.cdn contains 'res.cloudinary.com' -%}
+    {%- assign is_cloudinary_cdn = true -%}
   {%- endif -%}
 
   {%- if is_wc -%}
@@ -48,47 +57,39 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/{{ _md5 | slice: 0, 1 }}/{{
     {%- endcapture -%}
 
     {%- assign url = mw_url | strip -%}
-
-  {%- else -%}
-
-    {%- comment -%} Add media resources subpath prefix {%- endcomment -%}
-    {% assign url = include.subpath | default: '' | append: '/' | append: url %}
+  {% else %}
     
-    {%- assign is_dev = false -%}
-    {%- if jekyll.environment == "development" -%}
-      {%- assign is_dev = true -%}
-    {%- endif -%}
-    
-    {%- assign is_cloudinary_cdn = false -%}
-    {%- if site.cdn contains 'res.cloudinary.com' -%}
-      {%- assign is_cloudinary_cdn = true -%}
-    {%- endif -%}
+    {% unless url contains ':' %}
+      {%- comment -%} Add media resources subpath prefix {%- endcomment -%}
+      {% assign url = include.subpath | default: '' | append: '/' | append: url %}
 
-    {% assign url = url | replace: '///', '/' | replace: '//', '/' | replace: ':/', '://' %}
-
-    {% unless url contains '://' %}
-
-      {%- if include.absolute -%}
-        {% assign url = site.url | append: site.baseurl | append: url %}
-      {% else %}
-        {% if is_dev or is_cloudinary_cdn == false %}
-          {% assign url = site.baseurl | append: url %}
-        {% endif %}
+      {%- comment -%} Prepend CND URL {%- endcomment -%}
+      {% if site.cdn and is_cloudinary_cdn == false %}
+        {% assign url = site.cdn | append: '/' | append: url %}
       {% endif %}
 
-    {% endunless %}
-    
-    {%- if site.cdn -%}
-      {%- if is_cloudinary_cdn == true -%}
-        {%- if is_dev == false -%}
-          {%- assign url = site.cdn | append: '/' | append: site.url | append: url -%}
-        {%- endif -%}
-      {%- else -%}
-        {%- assign url = site.cdn | append: '/' | append: url -%}
-      {%- endif -%}
-    {%- endif -%}
+      {% assign url = url | replace: '///', '/' | replace: '//', '/' | replace: ':/', '://' %}
 
+      {% unless url contains '://' %}
+        {% if include.absolute %}
+          {% assign url = site.url | append: site.baseurl | append: url %}
+        {% else %}
+          {% if is_dev == false and is_cloudinary_cdn == true %}
+            {% assign url = site.url | append: site.baseurl | append: url %}
+          {% else %}
+            {% assign url = site.baseurl | append: url %}
+          {% endif %}
+        {% endif %}        
+      {% endunless %}
+    
+    {% endunless %}
+
+    {% if is_dev == false and is_cloudinary_cdn == true %}
+      {%- assign url = site.cdn | append: '/' | append: url -%}
+    {% endif %}
+  
   {%- endif -%}
+
 {%- endif -%}
 
 {{- url -}}

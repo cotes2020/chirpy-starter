@@ -132,6 +132,8 @@
       {% include media-url.html src=_src subpath=page.media_subpath %}
     {%- endcapture -%}
 
+    <!-- refactor-content.html: _img_url={{_img_url}} -->
+
     {% assign _path_prefix = _img_url | remove: _src %}
 
     {% unless _src contains '//' %}

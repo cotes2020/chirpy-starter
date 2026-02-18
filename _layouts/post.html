@@ -72,7 +72,31 @@ script_includes:
       {% endif %}
 
       {% if page.image %}
-        {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
+
+        {% assign src = page.image.path | default: page.image %}
+        
+        {%- assign p4 = src | slice: 0, 4 -%}
+        {%- assign is_abs = false -%}
+        {%- if p4 == "http" -%}
+            {%- assign is_abs = true -%}
+        {%- endif -%}
+
+        {%- assign is_dev = false -%}
+        {%- if jekyll.environment == "development" -%}
+            {%- assign is_dev = true -%}
+        {%- endif -%}
+            
+        {%- assign is_cloudinary_cdn = false -%}
+            {%- if site.cdn contains 'res.cloudinary.com' -%}
+            {%- assign is_cloudinary_cdn = true -%}
+        {%- endif -%}
+
+        {% if is_abs == true and is_dev == false and is_cloudinary_cdn == true %}
+          {%- assign src = site.cdn | append: '/' | append: src -%}
+        {%- endif -%}
+
+        {% capture src %}src="{{ src }}"{% endcapture %}
+
         {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
         {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
 

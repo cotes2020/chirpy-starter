@@ -14,8 +14,8 @@ from typing import List, Optional
 # ----------------------------
 # Config: source repo + branch
 # ----------------------------
-SRC_USER = "rdsnyder"
-SRC_REPO = "chirpy-starter"
+SRC_USER = "rsnyder"
+SRC_REPO = "chirpy-juncture-starter"
 SRC_BRANCH = "main"
 
 # Optional: GitHub token (env var) to avoid rate limits / access private repos
@@ -47,6 +47,7 @@ FILES_TO_SYNC = [
     "_layouts/juncture-home.html",
     "_layouts/post.html",
     "_plugins/md5_filter.rb",
+    "_posts/.template.md",
     "_tabs/admin.md",
     "assets/components/image-compare.html",
     "assets/components/image.html",
