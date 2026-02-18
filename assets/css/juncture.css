@@ -279,17 +279,90 @@ figure.iframe-wrapper figcaption {
 
 #toolbar .toolbar-inner {
     margin-left: auto;
+    margin-right: .75rem;
+
     display: flex;
     align-items: center;
     gap: .5rem;
 
-    padding: .35rem .5rem;
-    margin-right: .75rem;
+    padding: .3rem 0 .3rem 1rem;
 
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, .92);
     border: 1px solid rgba(0, 0, 0, .10);
     border-radius: 999px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+}
+
+/* Tooltip anchor wrapper */
+#toolbar .toolbar-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Normalize common controls inside includes */
+#toolbar .toolbar-inner a,
+#toolbar .toolbar-inner button,
+#toolbar .toolbar-inner sl-button::part(base) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+
+    height: 2.2rem;
+    padding: 0 .65rem;
+
+    border-radius: .6rem;
+    text-decoration: none;
+}
+
+/* If your includes are plain <a> or <button> (not sl-button) */
+#toolbar .toolbar-inner a,
+#toolbar .toolbar-inner button {
+    border: 1px solid rgba(0, 0, 0, .12);
+    background: rgba(255, 255, 255, .9);
+    color: inherit;
+    font: inherit;
+    font-size: .9rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#toolbar .toolbar-inner a:hover,
+#toolbar .toolbar-inner button:hover,
+#toolbar .toolbar-inner sl-button:hover::part(base) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+#toolbar .toolbar-inner a:active,
+#toolbar .toolbar-inner button:active {
+    transform: translateY(1px);
+}
+
+#toolbar .toolbar-inner a:focus-visible,
+#toolbar .toolbar-inner button:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, .35);
+    outline-offset: 2px;
+}
+
+/* Small screens: keep it from feeling cramped */
+@media (max-width: 500px) {
+    #toolbar {
+        height: auto;
+        padding: .4rem .5rem;
+    }
+
+    #toolbar .toolbar-inner {
+        margin-right: .5rem;
+        gap: .35rem;
+        padding: .3rem .4rem;
+    }
+
+    #toolbar .toolbar-inner a,
+    #toolbar .toolbar-inner button,
+    #toolbar .toolbar-inner sl-button::part(base) {
+        height: 2rem;
+        padding: 0 .5rem;
+    }
 }
 
 #search {

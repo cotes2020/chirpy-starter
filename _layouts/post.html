@@ -15,6 +15,8 @@ script_includes:
 
 {% if page.juncture %}
   <link rel="stylesheet" href="{{ '/assets/css/juncture.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/themes/light.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/shoelace.js"></script>
 {% endif %}
 
 <article class="px-1" data-toc="{{ enable_toc }}">
@@ -43,11 +45,33 @@ script_includes:
 
     <!-- toolbar_enabled={{toolbar_enabled}} mode_toggle_enabled={{mode_toggle_enabled}} cite_enabled={{cite_enabled}} pdf_download_enabled={{pdf_download_enabled}} -->
     {% if toolbar_enabled %}
-      <div id="toolbar">
+      <div id="toolbar" role="toolbar" aria-label="Post tools">
         <div class="toolbar-inner">
-          {% if mode_toggle_enabled %}{% include col2-toggle.html %}{% endif %}
-          {% if cite_enabled %}{% include cite-this.html %}{% endif %}
-          {% if pdf_download_enabled %}{% include pdf-download.html %}{% endif %}
+
+          {% if mode_toggle_enabled %}
+            <sl-tooltip content="Toggle reading mode" placement="bottom" hoist>
+              <span class="toolbar-item">
+                {% include col2-toggle.html %}
+              </span> 
+            </sl-tooltip>
+          {% endif %}
+
+          {% if cite_enabled %}
+            <sl-tooltip content="Cite this page" placement="bottom" hoist>
+              <span class="toolbar-item">
+                {% include cite-this.html %}
+              </span>
+            </sl-tooltip>
+          {% endif %}
+
+          {% if pdf_download_enabled %}
+            <sl-tooltip content="Download PDF" placement="bottom" hoist>
+              <span class="toolbar-item">
+                {% include pdf-download.html %}
+              </span>
+            </sl-tooltip>
+          {% endif %}
+
         </div>
       </div>
     {% endif %}
