@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#142036"/>
+      <stop offset="55%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#070B14"/>
+    </radialGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#46C2FF"/>
+      <stop offset="100%" stop-color="#7C4DFF"/>
+    </linearGradient>
+
+    <clipPath id="clipCircle">
+      <circle cx="512" cy="512" r="480"/>
+    </clipPath>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.45 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#clipCircle)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+
+    <!-- subtle grid -->
+    <g opacity="0.10">
+      <path d="M0 192 H1024 M0 384 H1024 M0 576 H1024 M0 768 H1024" stroke="#9FB3C8" stroke-width="2"/>
+      <path d="M192 0 V1024 M384 0 V1024 M576 0 V1024 M768 0 V1024" stroke="#9FB3C8" stroke-width="2"/>
+    </g>
+
+    <!-- circuit ring -->
+    <g fill="none" stroke="url(#accent)" stroke-width="10" opacity="0.90" filter="url(#softGlow)">
+      <circle cx="512" cy="512" r="360" />
+      <circle cx="512" cy="512" r="338" opacity="0.35"/>
+    </g>
+
+    <!-- circuit nodes -->
+    <g fill="url(#accent)" opacity="0.95" filter="url(#softGlow)">
+      <circle cx="512" cy="152" r="12"/>
+      <circle cx="800" cy="292" r="10"/>
+      <circle cx="872" cy="512" r="12"/>
+      <circle cx="800" cy="732" r="10"/>
+      <circle cx="512" cy="872" r="12"/>
+      <circle cx="224" cy="732" r="10"/>
+      <circle cx="152" cy="512" r="12"/>
+      <circle cx="224" cy="292" r="10"/>
+    </g>
+
+    <!-- connections -->
+    <g fill="none" stroke="#46C2FF" stroke-width="6" opacity="0.35">
+      <path d="M512 152 L512 248"/>
+      <path d="M800 292 L732 340"/>
+      <path d="M872 512 L772 512"/>
+      <path d="M800 732 L732 684"/>
+      <path d="M512 872 L512 776"/>
+      <path d="M224 732 L292 684"/>
+      <path d="M152 512 L252 512"/>
+      <path d="M224 292 L292 340"/>
+    </g>
+
+    <!-- central "foundry anvil" mark -->
+    <g transform="translate(0,8)" filter="url(#softGlow)">
+      <!-- top plate -->
+      <path d="M340 420 C380 378, 458 360, 512 360 C566 360, 644 378, 684 420
+               L684 456 C644 472, 566 484, 512 484 C458 484, 380 472, 340 456 Z"
+            fill="#E8EEF6" opacity="0.92"/>
+      <!-- horn -->
+      <path d="M684 432 C752 438, 800 470, 816 512 C800 554, 752 586, 684 592 Z"
+            fill="#E8EEF6" opacity="0.90"/>
+      <!-- body -->
+      <path d="M370 484 L654 484 L626 612 C612 678, 560 712, 512 712 C464 712, 412 678, 398 612 Z"
+            fill="#C9D6E6" opacity="0.95"/>
+      <!-- base -->
+      <path d="M420 712 L604 712 L632 784 C638 804, 624 824, 604 824 L420 824
+               C400 824, 386 804, 392 784 Z"
+            fill="url(#accent)" opacity="0.95"/>
+      <!-- tiny "automation dots" -->
+      <circle cx="466" cy="556" r="7" fill="#0B1220" opacity="0.60"/>
+      <circle cx="512" cy="540" r="7" fill="#0B1220" opacity="0.60"/>
+      <circle cx="558" cy="556" r="7" fill="#0B1220" opacity="0.60"/>
+    </g>
+
+    <!-- vignette -->
+    <radialGradient id="v" cx="50%" cy="50%" r="60%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.40"/>
+    </radialGradient>
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#v)"/>
+  </g>
+
+  <!-- outer border -->
+  <circle cx="512" cy="512" r="480" fill="none" stroke="#1D2A3D" stroke-width="12"/>
+</svg>
+

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#142036"/>
+      <stop offset="60%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#070B14"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#46C2FF"/>
+      <stop offset="100%" stop-color="#7C4DFF"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="clip">
+      <circle cx="512" cy="512" r="480"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+
+    <!-- subtle grid -->
+    <g opacity="0.10" stroke="#9FB3C8" stroke-width="2">
+      <path d="M0 192 H1024 M0 384 H1024 M0 576 H1024 M0 768 H1024"/>
+      <path d="M192 0 V1024 M384 0 V1024 M576 0 V1024 M768 0 V1024"/>
+    </g>
+
+    <!-- home outline -->
+    <g fill="none" stroke="#E8EEF6" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+      <path d="M220 470 L512 240 L804 470"/>
+      <path d="M280 450 V800 H744 V450"/>
+    </g>
+
+    <!-- "enterprise rack" inside the home -->
+    <g filter="url(#softGlow)">
+      <rect x="388" y="468" width="248" height="290" rx="24" fill="#C9D6E6" opacity="0.95"/>
+      <rect x="410" y="500" width="204" height="46" rx="14" fill="#0B1220" opacity="0.38"/>
+      <rect x="410" y="560" width="204" height="46" rx="14" fill="#0B1220" opacity="0.38"/>
+      <rect x="410" y="620" width="204" height="46" rx="14" fill="#0B1220" opacity="0.38"/>
+      <rect x="410" y="680" width="204" height="46" rx="14" fill="#0B1220" opacity="0.38"/>
+
+      <!-- status lights -->
+      <circle cx="438" cy="523" r="7" fill="url(#accent)"/>
+      <circle cx="438" cy="583" r="7" fill="url(#accent)"/>
+      <circle cx="438" cy="643" r="7" fill="url(#accent)"/>
+      <circle cx="438" cy="703" r="7" fill="url(#accent)"/>
+    </g>
+
+    <!-- circuit nodes around the home (automation/connection) -->
+    <g fill="url(#accent)" opacity="0.95" filter="url(#softGlow)">
+      <circle cx="512" cy="170" r="10"/>
+      <circle cx="860" cy="512" r="10"/>
+      <circle cx="512" cy="860" r="10"/>
+      <circle cx="164" cy="512" r="10"/>
+      <circle cx="780" cy="300" r="8"/>
+      <circle cx="780" cy="724" r="8"/>
+      <circle cx="244" cy="724" r="8"/>
+      <circle cx="244" cy="300" r="8"/>
+    </g>
+    <g fill="none" stroke="#46C2FF" stroke-width="6" opacity="0.28">
+      <path d="M512 170 L512 240"/>
+      <path d="M860 512 L804 512"/>
+      <path d="M512 860 L512 800"/>
+      <path d="M164 512 L220 512"/>
+      <path d="M780 300 L740 340"/>
+      <path d="M780 724 L740 684"/>
+      <path d="M244 724 L284 684"/>
+      <path d="M244 300 L284 340"/>
+    </g>
+
+    <!-- vignette -->
+    <radialGradient id="v" cx="50%" cy="50%" r="60%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.42"/>
+    </radialGradient>
+    <rect width="1024" height="1024" fill="url(#v)"/>
+  </g>
+
+  <circle cx="512" cy="512" r="480" fill="none" stroke="#1D2A3D" stroke-width="12"/>
+</svg>
+

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#142036"/>
+      <stop offset="60%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#070B14"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#46C2FF"/>
+      <stop offset="100%" stop-color="#7C4DFF"/>
+    </linearGradient>
+    <clipPath id="clip"><circle cx="512" cy="512" r="480"/></clipPath>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.40 0" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+
+    <!-- faint ring -->
+    <g fill="none" stroke="url(#accent)" stroke-width="12" opacity="0.35">
+      <circle cx="512" cy="512" r="360"/>
+    </g>
+
+    <!-- pipeline graph -->
+    <g filter="url(#glow)">
+      <path d="M340 320 V704" stroke="#E8EEF6" stroke-width="16" stroke-linecap="round" opacity="0.85"/>
+      <path d="M340 448 C420 448, 468 512, 548 512 H684" stroke="#E8EEF6" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <path d="M340 576 C420 576, 468 512, 548 512" stroke="#E8EEF6" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.55"/>
+      <path d="M684 512 V676" stroke="#C9D6E6" stroke-width="16" stroke-linecap="round" opacity="0.65"/>
+
+      <!-- nodes -->
+      <circle cx="340" cy="320" r="22" fill="url(#accent)"/>
+      <circle cx="340" cy="448" r="22" fill="url(#accent)"/>
+      <circle cx="340" cy="576" r="22" fill="url(#accent)"/>
+      <circle cx="340" cy="704" r="22" fill="url(#accent)"/>
+
+      <circle cx="548" cy="512" r="26" fill="#E8EEF6" opacity="0.95"/>
+      <circle cx="684" cy="512" r="26" fill="#E8EEF6" opacity="0.95"/>
+      <circle cx="684" cy="676" r="22" fill="url(#accent)"/>
+
+      <!-- check mark (release-ready) -->
+      <path d="M605 515 L662 572 L780 448"
+            fill="none" stroke="url(#accent)" stroke-width="18"
+            stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    </g>
+
+    <!-- vignette -->
+    <radialGradient id="v" cx="50%" cy="50%" r="60%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.42"/>
+    </radialGradient>
+    <rect width="1024" height="1024" fill="url(#v)"/>
+  </g>
+
+  <circle cx="512" cy="512" r="480" fill="none" stroke="#1D2A3D" stroke-width="12"/>
+</svg>
+

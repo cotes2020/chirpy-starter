@@ -3,15 +3,13 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
 
 - type: rss
   icon: "fas fa-rss"
+
+- type: feedback
+  icon: "fas fa-comments"
+  url: "https://github.com/codefoundry-io/codefoundry-io.github.io/issues/new/choose"
   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
