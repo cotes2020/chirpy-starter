@@ -1,0 +1,50 @@
+name: Feedback
+description: 블로그 피드백 오타 개선 제안
+title: "[Feedback] "
+labels:
+  - feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        감사합니다. 오타, 개선 제안, 질문 등 어떤 내용이든 남겨주세요.
+
+  - type: input
+    id: url
+    attributes:
+      label: 어떤 글 또는 페이지에 대한 피드백인가요
+      description: 해당 글 또는 페이지의 URL을 붙여주세요
+      placeholder: https://codefoundry-io.github.io/posts/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 내용
+      description: 무엇이 문제인지 또는 어떤 개선을 원하는지 적어주세요
+      placeholder: 예) 코드 블록이 깨져 보여요 / 설명이 부족해요 / 오타가 있어요 ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 분류
+      options:
+        - 오타/문장
+        - 코드/명령어 오류
+        - 내용 보완 요청
+        - 질문
+        - 기타
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 환경(선택)
+      description: 재현에 도움이 되는 정보가 있으면 적어주세요
+      placeholder: OS, 브라우저, 기기(모바일/PC) 등
+    validations:
+      required: false
