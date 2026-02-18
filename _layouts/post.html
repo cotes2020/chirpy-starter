@@ -20,6 +20,7 @@ script_includes:
 <article class="px-1" data-toc="{{ enable_toc }}">
   
   {% if page.juncture %}
+
     {%- if page.juncture.toolbar == nil -%}
       {%- if site.juncture.toolbar == nil -%}{%- assign toolbar_enabled = true -%}
       {% else %}{%- assign toolbar_enabled = site.juncture.toolbar -%}{%- endif -%}
@@ -43,11 +44,14 @@ script_includes:
     <!-- toolbar_enabled={{toolbar_enabled}} mode_toggle_enabled={{mode_toggle_enabled}} cite_enabled={{cite_enabled}} pdf_download_enabled={{pdf_download_enabled}} -->
     {% if toolbar_enabled %}
       <div id="toolbar">
-        {% if mode_toggle_enabled %} {% include col2-toggle.html %} {% endif %}
-        {% if cite_enabled %} {% include cite-this.html %} {% endif %}
-        {% if pdf_download_enabled %} {% include pdf-download.html %} {% endif %}
+        <div class="toolbar-inner">
+          {% if mode_toggle_enabled %}{% include col2-toggle.html %}{% endif %}
+          {% if cite_enabled %}{% include cite-this.html %}{% endif %}
+          {% if pdf_download_enabled %}{% include pdf-download.html %}{% endif %}
+        </div>
       </div>
     {% endif %}
+
   {% endif %}
 
   <header>
