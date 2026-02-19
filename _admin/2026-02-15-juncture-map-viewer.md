@@ -3,6 +3,9 @@ title: "Juncture: Map Viewer"
 description: How to use the Juncture map viewer in your Markdown posts.
 permalink: /admin/juncture-map-viewer
 date: 2026-02-15
+media_subpath: /assets/posts/juncture
+image: map.png
+show_header_image: false
 order: 12
 juncture:
     mode: 2col

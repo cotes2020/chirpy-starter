@@ -66,6 +66,8 @@ FILES_TO_SYNC = [
     "assets/img/mockup.png",
     "assets/img/pages-source-dark.png",
     "assets/img/pages-source-light.png",
+    "assets/posts/juncture/image.png",
+    "assets/posts/juncture/map.png",
     "tools/sync_code.py",
 ]
 

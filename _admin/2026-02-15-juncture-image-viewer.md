@@ -3,6 +3,9 @@ title: "Juncture: Image Viewer"
 description: How to use the Juncture image viewer in your Markdown posts.
 permalink: /admin/juncture-image-viewer
 date: 2026-02-15
+media_subpath: /assets/posts/juncture
+image: image.png
+show_header_image: false
 order: 11
 juncture:
     mode: 2col

@@ -99,7 +99,7 @@ script_includes:
         </span>
       {% endif %}
 
-      {% if page.image %}
+      {% if page.image and page.show_header_image != false %}
 
         {% assign src = page.image.path | default: page.image %}
         
