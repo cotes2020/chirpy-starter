@@ -1,12 +1,12 @@
 ---
-title: Text and Typography
+title: "Chirpy: Text and Typography"
 description: Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.
 author: cotes
 date: 2019-08-08 11:33:00 +0800
 math: true
 mermaid: true
 media_subpath: /assets/img
-permalink: /docs/text-and-typography
+permalink: /admin/text-and-typography
 order: 2
 ---
 
