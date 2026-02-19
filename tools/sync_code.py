@@ -25,6 +25,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 # Files to sync (relative paths)
 # ----------------------------
 FILES_TO_SYNC = [
+    "_admin/index.md",
     "_admin/2019-08-08-text-and-typography.md",
     "_admin/2019-08-08-write-a-new-post.md",
     "_admin/2019-08-09-getting-started.md",
