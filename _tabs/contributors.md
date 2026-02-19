@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fa-solid fa-people-group
-order: 4
+order: 2
 media_subpath: /assets/posts/contributors
 ---
 

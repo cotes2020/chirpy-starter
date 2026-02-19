@@ -154,10 +154,14 @@ script_includes:
           <em>
             {% if authors %}
               {% for author in authors %}
-                {% if site.data.authors[author].url -%}
-                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                {% if site.data.authors[author] -%}
+                  {% if site.data.authors[author].url -%}
+                    <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                  {%- else -%}
+                    {{ site.data.authors[author].name }}
+                  {%- endif %}
                 {%- else -%}
-                  {{ site.data.authors[author].name }}
+                  {{ author }}
                 {%- endif %}
                 {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
               {% endfor %}

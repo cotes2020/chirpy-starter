@@ -5,20 +5,10 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/juncture.css' | relative_url }}">
 
 <script>
-  let sidebar = document.querySelector('div.sidebar-bottom');
-  let modeToggle = document.createElement('a');
-  modeToggle.id = 'view-toggle';
-  modeToggle.setAttribute('aria-label', 'Column Mode Toggle');
-  modeToggle.setAttribute('rel', 'noopener noreferrer');
-  modeToggle.style.cursor = 'pointer';
-  let icon = document.createElement('i');
-  icon.className = 'fa-solid fa-grip';
-  modeToggle.appendChild(icon);
-
-  const ghLink = sidebar.children[2];
-  if (ghLink) {
-    ghLink.replaceWith(modeToggle);
-  }
+  let modeToggle = document.getElementById('view-toggle');
+  console.log(modeToggle.style.display);
+  modeToggle.style.display = 'unset';
+  modeToggle.firstChild.className = 'fa-solid fa-grip';
 </script>
 
 {{ content }}
