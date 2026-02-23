@@ -275,18 +275,23 @@ script_includes:
 
     import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks } from "{{ '/assets/js/juncture.js' | relative_url }}";
 
-    let mode = '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat';
-    let mode_toggle = ('{{ page.juncture.mode_toggle }}' || '{{ site.juncture.mode_toggle }}' || 'true').toLowerCase() === 'true';
-    let doAutoFloat = ('{{ page.juncture.auto_float }}' || '{{ site.juncture.auto_float }}' || 'true').toLowerCase() === 'true';
-    let groupEmbeds = ('{{ page.juncture.group_embeds }}' || '{{ site.juncture.group_embeds }}' || 'true').toLowerCase() === 'true';
-    let wikidataInfoPopups = ('{{ page.juncture.wikidata_info_popups }}' || '{{ site.juncture.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
+    let isJuncture = '{{ page.juncture }}';
+    console.log(isJuncture);
 
-    console.log(`Juncture: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
+    if (isJuncture) {
+      let mode = '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat';
+      let mode_toggle = ('{{ page.juncture.mode_toggle }}' || '{{ site.juncture.mode_toggle }}' || 'true').toLowerCase() === 'true';
+      let doAutoFloat = ('{{ page.juncture.auto_float }}' || '{{ site.juncture.auto_float }}' || 'true').toLowerCase() === 'true';
+      let groupEmbeds = ('{{ page.juncture.group_embeds }}' || '{{ site.juncture.group_embeds }}' || 'true').toLowerCase() === 'true';
+      let wikidataInfoPopups = ('{{ page.juncture.wikidata_info_popups }}' || '{{ site.juncture.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
+      console.log(`Juncture: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
+      document.getElementById('main-wrapper').classList.add(mode === 'flat' ? 'col1' : 'col2');
 
-    if (wikidataInfoPopups) makeEntityPopups();
-    if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
-    addActionLinks();
-    if (doAutoFloat && !isMobile) autoFloat();
+      if (wikidataInfoPopups) makeEntityPopups();
+      if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
+      addActionLinks();
+      if (doAutoFloat && !isMobile) autoFloat();
+    }
 
   </script>
 {% endif %}

@@ -24,11 +24,15 @@ Build query string
 {%- assign qs = qs | append: "&caption=" | append: include.caption | uri_escape -%}
 {%- endif -%}
 
+{%- if include.aspect -%}
+{%- assign qs = qs | append: "&aspect=" | append: include.aspect | uri_escape -%}
+{%- endif -%}
+
 <iframe id="{{ include.id }}" class="embed-image-compare" loading="lazy" title="Image comparison"
   allow="clipboard-write"
   src="{{ '/assets/components/image-compare.html' | relative_url }}?{{ qs }}"
   {% if include.width %} width="{{ include.width }}" {% endif %}
   {% if include.height %} height="{{ include.height }}" {% endif %}
-  style="aspect-ratio: {{ include.aspect | default: 1 }};"
+  style="aspect-ratio: {{ include.aspect | default: 1.5 }};"
   allowfullscreen>
 </iframe>

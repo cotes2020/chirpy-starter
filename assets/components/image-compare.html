@@ -6,27 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Image Compare</title>
 
-    <!-- Shoelace (CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace.js"></script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
         :root {
             color-scheme: light;
+            --panel-bg: #1a1a1f;
+            --panel-border: rgba(255,255,255,0.08);
+            --panel-border-outer: rgba(0,0,0,0.13);
+            --panel-text: #e8e8ec;
+            --panel-muted: #888;
+            --accent: #f0c060;
+            --accent-dim: rgba(240,192,96,0.15);
+            --tab-active: rgba(255,255,255,0.07);
+            --slider-track: rgba(255,255,255,0.12);
+            --panel-radius: 10px;
         }
 
-        html,
-        body {
-            height: 100%;
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html, body {
             margin: 0;
+            height: auto;
         }
 
         body {
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 12px;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            background: #f0ede8;
         }
 
         figure {
@@ -36,117 +49,621 @@
             gap: 10px;
         }
 
-        /* Keep the comparer responsive and avoid overflow in narrow iframes */
         sl-image-comparer {
             width: 100%;
             max-width: 100%;
+            display: block;
         }
 
-        /* Shoelace draws the images; these help ensure they scale nicely */
+        /* Wrapper gives the overlay a light-DOM positioning root */
+        .comparer-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+        /* ── Max mode — fill the dialog fully ── */
+        body.is-max {
+            padding: 0;
+        }
+
+        body.is-max figure,
+        body.is-max #align-panel {
+            width: 100%;
+            max-width: 100%;
+        }
+        .click-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            cursor: zoom-in;
+            background: transparent;
+        }
+
         sl-image-comparer::part(base) {
             width: 100%;
         }
 
+        #imgBefore, #imgAfter {
+            width: 100%;
+            display: block;
+        }
+
+        #imgAfter {
+            transition: opacity 0.4s ease;
+        }
+
+        #imgAfter.align-mode {
+            opacity: 0.6;
+        }
+
         figcaption {
-            font-size: 0.95rem;
-            line-height: 1.35;
-            color: rgba(0, 0, 0, 0.8);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: rgba(0,0,0,0.5);
+            font-family: system-ui, sans-serif;
         }
 
         .error {
             width: min(1100px, 100%);
             padding: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            background: rgba(0, 0, 0, 0.03);
-            font-size: 0.95rem;
-            line-height: 1.35;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: var(--panel-radius);
+            background: rgba(0,0,0,0.03);
+            font-size: 0.9rem;
+            font-family: system-ui, sans-serif;
         }
 
-        code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        /* ── Alignment panel — sits in flow below figure ── */
+        #align-panel {
+            width: min(1100px, 100%);
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border-outer);
+            border-radius: var(--panel-radius);
+            overflow: hidden;
+            color: var(--panel-text);
+            font-size: 0.78rem;
+
+            /* Collapsed by default */
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+            margin-top: 0;
+            transition:
+                max-height 0.3s cubic-bezier(0.4,0,0.2,1),
+                opacity    0.25s ease,
+                margin-top 0.3s ease;
+        }
+
+        #align-panel.open {
+            max-height: 320px;
+            opacity: 1;
+            pointer-events: auto;
+            margin-top: 10px;
+        }
+
+        /* ── Panel header: tabs + close ── */
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 9px 12px;
+            border-bottom: 1px solid var(--panel-border);
+        }
+
+        .panel-tabs {
+            display: flex;
+            gap: 3px;
+        }
+
+        .panel-tab {
+            padding: 4px 12px;
+            cursor: pointer;
+            color: var(--panel-muted);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: transparent;
+            font-family: inherit;
+            transition: color 0.12s, background 0.12s, border-color 0.12s;
+        }
+
+        .panel-tab:hover { color: var(--panel-text); }
+
+        .panel-tab.active {
+            background: var(--tab-active);
+            border-color: var(--panel-border);
+            color: var(--accent);
+        }
+
+        #btn-close {
+            background: none;
+            border: none;
+            color: var(--panel-muted);
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: color 0.12s, background 0.12s;
+        }
+
+        #btn-close:hover { color: var(--panel-text); background: rgba(255,255,255,0.06); }
+        #btn-close svg { width: 13px; height: 13px; }
+
+        /* ── Panes ── */
+        .panel-pane { display: none; padding: 14px 16px 6px; }
+        .panel-pane.active { display: block; }
+
+        .ctrl-section-label {
+            font-size: 0.66rem;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: var(--panel-muted);
+            margin: 0 0 9px;
+        }
+
+        .ctrl-row {
+            display: grid;
+            grid-template-columns: 48px 1fr 46px;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ctrl-label {
+            font-size: 0.71rem;
+            color: var(--panel-muted);
+            letter-spacing: 0.04em;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 3px;
+            background: var(--slider-track);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: none;
+            box-shadow: 0 0 0 2px rgba(240,192,96,0.22);
+        }
+
+        input[type=range]::-moz-range-thumb {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: none;
+        }
+
+        .ctrl-val {
+            font-size: 0.7rem;
+            color: var(--panel-text);
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ── Footer ── */
+        .panel-footer {
+            display: flex;
+            gap: 8px;
+            padding: 8px 16px 12px;
+            justify-content: flex-end;
+        }
+
+        .panel-btn {
+            padding: 5px 14px;
+            border: 1px solid var(--panel-border);
+            border-radius: 5px;
+            background: transparent;
+            color: var(--panel-text);
+            font-family: inherit;
+            font-size: 0.71rem;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: background 0.12s, border-color 0.12s;
+        }
+
+        .panel-btn:hover { background: rgba(255,255,255,0.06); }
+
+        .panel-btn.primary {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .panel-btn.primary:hover { background: var(--accent-dim); }
+
+        /* ── Toast ── */
+        #toast {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            background: var(--panel-bg);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 7px 16px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-family: inherit;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+            z-index: 200;
+        }
+
+        #toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
     </style>
 </head>
 
 <body>
     <figure id="figure" hidden>
-        <!-- Note: per your spec:
-         - before = bottom image
-         - after  = top image
-    -->
-        <!--
-        <sl-image-comparer id="cmp">
-            <img id="imgBefore" slot="before" alt="Before image" />
-            <img id="imgAfter" slot="after" alt="After image" />
-        </sl-image-comparer>
-        -->
-
-        <sl-image-comparer id="comparer" style="width:100%; height:100%;">
-            <img id="imgBefore" slot="before" style="width:100%;"
-                src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80&sat=-100&bri=-5"
-                alt="Grayscale version of kittens in a basket looking around." />
-            <img id="imgAfter" slot="after" style="width:100%;""
-                src="
-                https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                alt="Color version of kittens in a basket looking around." />
-        </sl-image-comparer>
-
+        <div class="comparer-wrap">
+            <sl-image-comparer id="comparer" style="width:100%;">
+                <img id="imgBefore" slot="before" alt="Before image" />
+                <img id="imgAfter"  slot="after"  alt="After image"  />
+            </sl-image-comparer>
+            <!-- Overlay injected here by JS in normal mode -->
+        </div>
         <figcaption id="caption"></figcaption>
     </figure>
 
     <div id="error" class="error" hidden></div>
 
+    <!-- Alignment panel — in document flow, below the figure -->
+    <div id="align-panel">
+
+        <div class="panel-header">
+            <div class="panel-tabs">
+                <button class="panel-tab active" data-pane="before">Before</button>
+                <button class="panel-tab"        data-pane="after">After</button>
+            </div>
+            <button id="btn-close" title="Close (or double-click image)">
+                <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                    <line x1="2" y1="2" x2="12" y2="12"/>
+                    <line x1="12" y1="2" x2="2" y2="12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Before pane -->
+        <div class="panel-pane active" id="pane-before">
+            <p class="ctrl-section-label">Offset</p>
+            <div class="ctrl-row">
+                <span class="ctrl-label">X</span>
+                <input type="range" id="bx" min="-50" max="50" value="0" step="0.5">
+                <span class="ctrl-val" id="bx-val">0%</span>
+            </div>
+            <div class="ctrl-row">
+                <span class="ctrl-label">Y</span>
+                <input type="range" id="by" min="-50" max="50" value="0" step="0.5">
+                <span class="ctrl-val" id="by-val">0%</span>
+            </div>
+            <p class="ctrl-section-label" style="margin-top:2px">Scale</p>
+            <div class="ctrl-row">
+                <span class="ctrl-label">Zoom</span>
+                <input type="range" id="bs" min="0.5" max="3" value="1" step="0.01">
+                <span class="ctrl-val" id="bs-val">1.00×</span>
+            </div>
+        </div>
+
+        <!-- After pane -->
+        <div class="panel-pane" id="pane-after">
+            <p class="ctrl-section-label">Offset</p>
+            <div class="ctrl-row">
+                <span class="ctrl-label">X</span>
+                <input type="range" id="ax" min="-50" max="50" value="0" step="0.5">
+                <span class="ctrl-val" id="ax-val">0%</span>
+            </div>
+            <div class="ctrl-row">
+                <span class="ctrl-label">Y</span>
+                <input type="range" id="ay" min="-50" max="50" value="0" step="0.5">
+                <span class="ctrl-val" id="ay-val">0%</span>
+            </div>
+            <p class="ctrl-section-label" style="margin-top:2px">Scale</p>
+            <div class="ctrl-row">
+                <span class="ctrl-label">Zoom</span>
+                <input type="range" id="as" min="0.5" max="3" value="1" step="0.01">
+                <span class="ctrl-val" id="as-val">1.00×</span>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <button class="panel-btn" id="btn-reset">Reset all</button>
+            <button class="panel-btn primary" id="btn-copy">Copy tag</button>
+        </div>
+    </div>
+
+    <div id="toast">Link copied!</div>
+
     <script>
-        (function () {
-            const params = new URLSearchParams(location.search);
+    (function () {
+        const params    = new URLSearchParams(location.search);
+        const beforeUrl = params.get("before") || "";
+        const afterUrl  = params.get("after")  || "";
+        const caption   = params.get("caption") || "";
+        const position  = params.get("position");
+        const aspect    = params.get("aspect");
 
-            // Required args per your spec:
-            // before: bottom image URL
-            // after:  top image URL
-            // caption: figcaption text
-            const beforeUrl = params.get("before") || "";
-            const afterUrl = params.get("after") || "";
-            const caption = params.get("caption") || "";
-            const position = params.get("position");
+        // True when loaded inside the parent's expanded dialog
+        const isMax = params.has("max") && params.get("max") !== "false" && params.get("max") !== "0";
 
-            const $figure = document.getElementById("figure");
-            const $error = document.getElementById("error");
+        if (isMax) document.body.classList.add("is-max");
 
-            if (!beforeUrl || !afterUrl) {
-                $error.hidden = false;
-                $error.innerHTML =
-                    "Missing required query parameters.<br><br>" +
-                    "Expected: <code>?before=…&after=…&caption=…</code><br>" +
-                    "Where <code>before</code> is the bottom image and <code>after</code> is the top image.";
-                return;
+        const defaults = { bx:0, by:0, bs:1, ax:0, ay:0, as:1 };
+        const align = {};
+        for (const k of Object.keys(defaults)) {
+            align[k] = parseFloat(params.get(k) ?? defaults[k]);
+        }
+
+        const $figure   = document.getElementById("figure");
+        const $error    = document.getElementById("error");
+        const $panel    = document.getElementById("align-panel");
+        const $toast    = document.getElementById("toast");
+
+        // ── Height signaling to parent iframe ────────────────────────────
+        // Sends { type:"image-compare:height", height:<px> } via postMessage.
+        // Parent page should listen and set iframe.style.height accordingly.
+        //
+        // WHY NOT scrollHeight:
+        //   scrollHeight on documentElement counts the *content* height of every
+        //   element, even those clipped by overflow:hidden — so a max-height:0
+        //   panel with overflow:hidden still contributes its full content height.
+        //   offsetHeight on body respects the visual/clipped box and gives the
+        //   true rendered height including body padding.
+        //
+        // WHY NOT a fixed setTimeout:
+        //   We filter transitionend to the 'max-height' property so we fire
+        //   exactly once, after the slowest/most important dimension is done.
+
+        function notifyHeight() {
+            requestAnimationFrame(() => {
+                // body.offsetHeight sees the clipped panel box, not its scrollable content
+                const h = document.body.offsetHeight;
+                window.parent.postMessage({ type: "image-compare:height", height: h }, "*");
+            });
+        }
+
+        function notifyHeightAfterTransition() {
+            // transitionend fires once per property; we only want the max-height one
+            function onTransitionEnd(e) {
+                if (e.propertyName !== "max-height") return;
+                $panel.removeEventListener("transitionend", onTransitionEnd);
+                notifyHeight();
+            }
+            $panel.addEventListener("transitionend", onTransitionEnd);
+        }
+
+        if (!beforeUrl || !afterUrl) {
+            $error.hidden = false;
+            $error.innerHTML =
+                "Missing required query parameters.<br><br>" +
+                "Expected: <code>?before=…&after=…&caption=…</code><br>" +
+                "Where <code>before</code> is the bottom image and <code>after</code> is the top image.";
+            notifyHeight();
+            return;
+        }
+
+        const $comparer  = document.getElementById("comparer");
+        const $imgBefore = document.getElementById("imgBefore");
+        const $imgAfter  = document.getElementById("imgAfter");
+        const $caption   = document.getElementById("caption");
+
+        if (position) $comparer.setAttribute("position", position);
+        $imgBefore.src = beforeUrl;
+        $imgAfter.src  = afterUrl;
+        $caption.textContent = caption;
+        if (caption.trim()) {
+            $imgBefore.alt = `Before: ${caption}`;
+            $imgAfter.alt  = `After: ${caption}`;
+        }
+
+        $figure.hidden = false;
+
+        // Notify height once images settle
+        let loadCount = 0;
+        [$imgBefore, $imgAfter].forEach(img => {
+            const done = () => { if (++loadCount === 2) notifyHeight(); };
+            img.addEventListener("load", done);
+            img.addEventListener("error", done);
+        });
+        window.addEventListener("load", notifyHeight);
+
+        // ── Mode behaviour ───────────────────────────────────────────────
+        //
+        // NORMAL MODE (no ?max):
+        //   A transparent overlay covers the comparer. Any click posts a
+        //   showDialog message to the parent, which opens this component
+        //   in a larger dialog with ?max appended. The alignment panel is
+        //   hidden and non-interactive.
+        //
+        // MAX MODE (?max):
+        //   No overlay. Double-clicking the comparer opens/closes the
+        //   alignment panel below the viewer.
+
+        if (!isMax) {
+            // Hide the alignment panel entirely in normal mode
+            $panel.style.display = "none";
+
+            // Append overlay to the light-DOM wrapper — no shadow DOM access needed
+            const $wrap = document.querySelector(".comparer-wrap");
+            const overlay = document.createElement("div");
+            overlay.className = "click-overlay";
+            overlay.setAttribute("aria-label", "Click to enlarge");
+            overlay.addEventListener("click", onPreviewClick);
+            $wrap.appendChild(overlay);
+
+            function onPreviewClick() {
+                const maxParams = new URLSearchParams(location.search);
+                maxParams.set("max", "true");
+                const maxSrc = `${location.pathname}?${maxParams.toString()}`;
+                const dialogAspect = aspect ? parseFloat(aspect) : null;
+                window.parent.postMessage({
+                    type:   "showDialog",
+                    src:    maxSrc,
+                    aspect: dialogAspect,
+                }, "*");
             }
 
-            const $comparer = document.getElementById("comparer");
-            const $imgBefore = document.getElementById("imgBefore");
-            const $imgAfter = document.getElementById("imgAfter");
-            const $caption = document.getElementById("caption");
+        } else {
+            // MAX MODE — double-click toggles the alignment panel
+            let panelOpen = false;
 
-            if (position) {
-                $comparer.setAttribute('position', position);
+            function openPanel() {
+                if (panelOpen) return;
+                panelOpen = true;
+                $panel.classList.add("open");
+                $imgAfter.classList.add("align-mode");
+                notifyHeightAfterTransition();
             }
 
-            // Set sources
-            $imgBefore.src = beforeUrl;
-            $imgAfter.src = afterUrl;
-
-            // Basic, predictable caption handling (treat as plain text)
-            $caption.textContent = caption;
-
-            // Improve accessibility a bit: reuse caption text if available
-            if (caption.trim()) {
-                $imgBefore.alt = `Before: ${caption}`;
-                $imgAfter.alt = `After: ${caption}`;
+            function closePanel() {
+                if (!panelOpen) return;
+                panelOpen = false;
+                $panel.classList.remove("open");
+                $imgAfter.classList.remove("align-mode");
+                notifyHeightAfterTransition();
             }
 
-            $figure.hidden = false;
-        })();
+            $comparer.addEventListener("dblclick", (e) => {
+                e.preventDefault();
+                panelOpen ? closePanel() : openPanel();
+            });
+
+            document.getElementById("btn-close").addEventListener("click", closePanel);
+        }
+
+        // ── Apply alignment transforms ───────────────────────────────────
+        function applyAlignment() {
+            $imgBefore.style.transform       = `translate(${align.bx}%, ${align.by}%) scale(${align.bs})`;
+            $imgBefore.style.transformOrigin = "center center";
+            $imgAfter.style.transform        = `translate(${align.ax}%, ${align.ay}%) scale(${align.as})`;
+            $imgAfter.style.transformOrigin  = "center center";
+        }
+
+        applyAlignment();
+
+        // ── Sliders ──────────────────────────────────────────────────────
+        const sliders = {
+            bx: { fmt: v => `${+v > 0 ? "+" : ""}${parseFloat(v).toFixed(1)}%` },
+            by: { fmt: v => `${+v > 0 ? "+" : ""}${parseFloat(v).toFixed(1)}%` },
+            bs: { fmt: v => `${parseFloat(v).toFixed(2)}×` },
+            ax: { fmt: v => `${+v > 0 ? "+" : ""}${parseFloat(v).toFixed(1)}%` },
+            ay: { fmt: v => `${+v > 0 ? "+" : ""}${parseFloat(v).toFixed(1)}%` },
+            as: { fmt: v => `${parseFloat(v).toFixed(2)}×` },
+        };
+
+        for (const [id, cfg] of Object.entries(sliders)) {
+            const input = document.getElementById(id);
+            const valEl = document.getElementById(`${id}-val`);
+            input.value = align[id];
+            valEl.textContent = cfg.fmt(align[id]);
+            input.addEventListener("input", () => {
+                align[id] = parseFloat(input.value);
+                valEl.textContent = cfg.fmt(input.value);
+                applyAlignment();
+            });
+        }
+
+        // ── Tabs ─────────────────────────────────────────────────────────
+        document.querySelectorAll(".panel-tab").forEach(tab => {
+            tab.addEventListener("click", () => {
+                document.querySelectorAll(".panel-tab").forEach(t => t.classList.remove("active"));
+                document.querySelectorAll(".panel-pane").forEach(p => p.classList.remove("active"));
+                tab.classList.add("active");
+                document.getElementById(`pane-${tab.dataset.pane}`).classList.add("active");
+            });
+        });
+
+        // ── Reset ────────────────────────────────────────────────────────
+        document.getElementById("btn-reset").addEventListener("click", () => {
+            for (const [k, v] of Object.entries(defaults)) {
+                align[k] = v;
+                document.getElementById(k).value = v;
+                document.getElementById(`${k}-val`).textContent = sliders[k].fmt(v);
+            }
+            applyAlignment();
+        });
+
+        // ── Copy tag ──────────────────────────────────────────────────────
+        document.getElementById("btn-copy").addEventListener("click", () => {
+
+            // Build alignment query suffix for before and after independently.
+            // Only non-default values are included, matching the format:
+            //   before="image.jpg&bx=-4&by=-2&bs=1.17"
+            function alignSuffix(xKey, yKey, sKey) {
+                const parts = [];
+                if (align[xKey] !== defaults[xKey]) parts.push(`${xKey}=${align[xKey]}`);
+                if (align[yKey] !== defaults[yKey]) parts.push(`${yKey}=${align[yKey]}`);
+                if (align[sKey] !== defaults[sKey]) parts.push(`${sKey}=${align[sKey]}`);
+                return parts.length ? "&" + parts.join("&") : "";
+            }
+
+            // For relative URLs, keep only the last path segment (filename) plus
+            // any query string. Absolute URLs (http/https) are left as-is.
+            function tagUrl(url) {
+                if (/^https?:\/\//i.test(url)) return url;
+                // Strip leading path segments, preserve everything from the
+                // last '/' onward (including query string / hash if any)
+                return url.replace(/^.*\//, "");
+            }
+
+            const beforeVal = tagUrl(beforeUrl) + alignSuffix("bx", "by", "bs");
+            const afterVal  = tagUrl(afterUrl)  + alignSuffix("ax", "ay", "as");
+
+            // Assemble liquid tag lines, omitting optional params when absent
+            const lines = [`{% include embed/image-compare.html`];
+            lines.push(`    before="${beforeVal}"`);
+            lines.push(`    after="${afterVal}"`);
+            if (caption)  lines.push(`    caption="${caption}"`);
+            lines.push(`    aspect="${aspect || ""}"`);
+            lines.push(`    position="${position || "50"}"`);
+            lines.push(`%}`);
+
+            const tag = lines.join("\n");
+
+            navigator.clipboard.writeText(tag).then(() => {
+                $toast.textContent = "Tag copied!";
+                $toast.classList.add("show");
+                setTimeout(() => $toast.classList.remove("show"), 2000);
+            });
+        });
+
+    })();
     </script>
-</body>
 
+    <!--
+    ═══════════════════════════════════════════════════════════════════
+    PARENT PAGE INTEGRATION — iframe auto-resize
+    ═══════════════════════════════════════════════════════════════════
+    Add to your host page to let the iframe grow/shrink when the
+    alignment panel opens or closes:
+
+        window.addEventListener("message", (e) => {
+            if (e.data?.type === "image-compare:height") {
+                const iframe = document.getElementById("your-iframe-id");
+                if (iframe) iframe.style.height = e.data.height + "px";
+            }
+        });
+
+    Message payload: { type: "image-compare:height", height: <number> }
+    ═══════════════════════════════════════════════════════════════════
+    -->
+</body>
 </html>

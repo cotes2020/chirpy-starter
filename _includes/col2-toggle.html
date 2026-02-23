@@ -54,6 +54,7 @@
     document.addEventListener('DOMContentLoaded', async () => {
 
         const mainWrapper = document.getElementById('main-wrapper');
+
         const btn = toggleEnabled && document.querySelector('.js-col2-toggle');
         const icon = toggleEnabled && btn.querySelector('i');
 
@@ -64,6 +65,7 @@
         async function setViewMode(mode) {
             const effectiveMode = isMobile ? 'col1' : mode;
             const toCol2 = effectiveMode === 'col2';
+            console.log(`setViewMode: mode=${mode} effectiveMode=${effectiveMode}`);
 
             mainWrapper.classList.toggle('col2', toCol2);
             mainWrapper.classList.toggle('col1', !toCol2);
@@ -91,7 +93,8 @@
         });
 
         const saved = localStorage.getItem(STORAGE_KEY);
-        await setViewMode(
-            toggleEnabled ? saved === 'col2' ? 'col2' : defaultClass : defaultClass);
+        const mode = toggleEnabled ? saved === 'col2' ? 'col2' : defaultClass : defaultClass;
+        console.log(`saved=${saved} defaultClass=${defaultClass} mode=${mode}`);
+        await setViewMode(mode);
     });
 </script>

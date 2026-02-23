@@ -1,7 +1,7 @@
 ---
 layout: admin
 title: Admin
-permalink: /admin
+permalink: /admin/
 order: 0
 ---
 
@@ -14,7 +14,7 @@ This area brings together two things:
 
 If you are creating or editing content for this site, this is where you should start.
 
-## What This Section Covers
+## What This Covers
 
 Chirpy provides the foundation: how to create posts, manage front matter, insert images, embed media, configure previews, and control layout. If you are new to the theme, begin with:
 
@@ -27,7 +27,13 @@ These documents explain the core conventions that everything else builds on.
 
 The Juncture documentation then shows you how to go beyond standard posts — adding interactive image viewers, maps, comparisons, and other embedded components using simple Markdown and Liquid include tags.
 
-A complete list of documents is found in the [Guides](#guides) section below.
+* **[Juncture Overview](juncture-overview)** 
+* **[Image Viewer](juncture-image-viewer)** 
+* **[Map Viewer](juncture-map-viewer)** 
+* **[Image Compare Viewer](juncture-image-compare-viewer)** 
+* **[YouTube Viewer](juncture-youtube-viewer)** 
+
+A complete list of documents is found in the **[Guides](#guides)** section below.
 
 ## Who This Is For
 
@@ -63,4 +69,4 @@ This section exists to make that straightforward.
 
 ---
 
-# Guides
+# All Guides

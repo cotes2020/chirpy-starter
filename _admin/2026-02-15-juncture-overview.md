@@ -1,406 +1,222 @@
 ---
 title: "Juncture: Overview"
-description: How to use the Juncture image viewer in your Markdown posts.
+description: An introduction to Juncture — a Markdown-first framework for adding interactive viewers and text-driven media interactions to a Jekyll + Chirpy site. This overview explains Juncture’s origins, how it fits into the existing architecture, and how it is enabled and configured for individual posts.
 permalink: /admin/juncture-overview
 date: 2026-02-15
 order: 10
 juncture:
-    mode: 2col
+    mode: flat
     toolbar: false
 ---
-<style>
-    @media (min-width: 1650px) {
-    #main-wrapper>.container {
-            max-width: 1600px;
-            padding-left: 1.75rem !important;
-            padding-right: 1.75rem !important;
-        }
-    }
-    .example {
-        display: grid;
-        gap: 1rem;
-    }
 
-    @media (min-width: 640px) {
-        .example {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    iframe {
-        width: 100%;
-    }
-    pre .s2,
-    pre .sx {
-        white-space: pre-wrap;
-        word-break: break-word;
-    }
-    .attribute {
-        color: red;
-        font-weight: bold;
-    }
-</style>
 
-Juncture lets you add **zoomable, interactive images** to your Markdown posts using a simple include. You do not need to write HTML, CSS, or JavaScript.
+## What Is Juncture?
+
+**Juncture** is a Markdown-based authoring extension for Jekyll that enables the creation of interactive, media-rich essays without requiring users to write HTML, CSS, or JavaScript.
+
+At its core, Juncture allows authors to:
+
+* Add interactive viewers (images, maps, and more) using simple, Markdown-friendly tags
+* Trigger actions in those viewers directly from links in the text
+* Compose visual narratives that combine media and prose in a coordinated way
+
+Juncture is designed for content authors. If you can write basic Markdown and are comfortable editing a web page in a text editor, you can use Juncture.
 
 ---
 
-# The Simplest Example
+## Where Juncture Came From
 
-This creates an image that when clicked will open a dialog with an image at full resolution with zoom and pan features enabled.
+Juncture evolved from a 2018 digital humanities collaboration between **JSTOR Labs** and **Dumbarton Oaks**. The original goal was straightforward:
 
-<div class="example">
+> Enable students and scholars to create interactive visual narratives using Markdown — without requiring coding skills.
 
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-%}
-```
-{: .nolineno }
-{% endraw %}
+The initial framework allowed authors to:
 
-Click on the image to open the dialog.
+* Write essays in Markdown
+* Insert interactive image and map viewers
+* Coordinate text and media through simple action links
 
-</div>
+After the completion of that project, the underlying ideas were generalized into a framework named **Juncture**.
 
-<div>
-{% include embed/image.html
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-    cover="true"
-%}
-</div>
-
-</div>
+Over time, the implementation went through several iterations. The current architecture reflects a shift away from a heavily customized codebase toward a cleaner, more maintainable structure built directly on **Jekyll**.
 
 ---
 
-# Example with a Custom Caption
+## Juncture + Jekyll + Chirpy
 
-In this example a custom caption is defined
+Juncture does not replace Jekyll or the Chirpy theme. It extends and complements them.
 
-<div class="example">
+* **Jekyll** provides the static site engine.
+* **Chirpy** provides the theme, layout, typography, navigation, and core documentation model (see “Getting Started”  and “Writing a New Post” ).
+* **Juncture** adds interactive media components and text-driven interactions on top of that foundation.
 
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-    caption="A Custom Caption"
-%}
-```
-{: .nolineno }
-{% endraw %}
+The result is:
 
-</div>
+* A standard Jekyll site structure
+* A robust, well-maintained theme (Chirpy)
+* A lightweight layer of interactive enhancements
 
-<div>
-{% include embed/image.html
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-    caption="A Custom Caption"
-%}
-</div>
+Earlier versions of Juncture relied on substantial custom JavaScript and infrastructure. The current Jekyll-based architecture removes much of that complexity while preserving the core concepts:
 
-Note that when using Wikimedia Commons images, a generated attribution statement is applied to custom captions when needed.
+* Markdown-first authoring
+* Media viewers embedded through simple tags
+* Text-triggered interaction with those viewers
 
-</div>
+This makes the system more robust, easier to maintain, and more extensible over time.
 
 ---
 
-# IIIF Examples
+## What Juncture Adds
 
-In addition to displaying regular images, the image viewer can also display a IIIF image.  The IIIF image is referenced using a manifest URL.
+When enabled for a post, Juncture provides:
 
-<div class="example">
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-%}
-```
-{: .nolineno }
-{% endraw %}
+### 1. Viewer Components
 
-</div>
+You can insert interactive components such as:
 
-<div>
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-%}
-</div>
-</div>
+* Image viewers
+* Map viewers
+* Other iframe-based components
 
+These are added using Liquid include tags that are designed to feel natural within a Markdown workflow. Authors do not need to understand the underlying HTML or JavaScript implementation.
 
-By default, the first image in a manifest is displayed.  If multiple images are defined in a manifest others can be referenced using the `seq` attribute.  In this example the 2nd image in the manifest is displayed.
+### 2. Action Links
 
-<div class="example">
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-    seq="2"
-%}
-```
-{: .nolineno }
-{% endraw %}
+One of Juncture’s distinguishing features is **text-driven interaction**.
 
-</div>
+Within your narrative, you can include action links that:
 
-<div>
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-    seq="2"
-%}
-</div>
-</div>
+* Zoom to a specific region of an image
+* Move a map to a defined location
+* Trigger other component behaviors
+
+This allows prose and media to work together — the text becomes part of the interface.
 
 ---
 
-# Action Link Example
+## Configuration Model
 
-When an image includes an `id` attribute it may be referenced in an action link.  An action link is a standard Markdown link where the URL is formatted with information needed trigger an action on the referenced item when clicked.  In tbe example below that `zoomto` action is triggered on the image with the `image` id.
+Juncture functionality is controlled in two places:
 
-<div class="example">
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    id="img1"
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-%}
+### Global Configuration
+
+Site-wide settings are defined in `_config.yml`. This determines:
+
+* Which Juncture features are available
+* How components behave by default
+
+If Juncture is not configured in `_config.yml`, its functionality is effectively inactive.
+
+### Per-Post Enablement
+
+Juncture is **not enabled by default**.
+
+To use Juncture features in a post, you must explicitly enable it in that post’s Front Matter:
+
+```yaml
+---
+title: Example Post
+juncture: true
+---
 ```
-{: .nolineno }
-{% endraw %}
 
-Note the addition of the `id` attribute with the value `img1`.
+Only posts that include the `juncture` field in their Front Matter will activate the additional scripts and behaviors.
+
+This design keeps the base site lightweight and ensures that standard posts behave exactly like normal Chirpy posts unless Juncture is intentionally enabled.
+
+---
+
+## Design Philosophy
+
+Juncture is guided by a few core principles:
+
+* **Markdown first** — Authors work in familiar, simple syntax.
+* **No required coding** — HTML, CSS, and JavaScript are abstracted away.
+* **Text and media integration** — Prose can directly control visual elements.
+* **Incremental enhancement** — A post still works as a normal page even if interactive features are minimal.
+
+In short, Juncture turns a standard Jekyll + Chirpy site into a platform for interactive visual essays — without compromising maintainability or forcing authors into a technical workflow.
+
+---
+
+## Attribute Blocks and Entity Information
+
+### Kramdown Attribute Blocks
+
+Jekyll (and therefore Chirpy) uses **kramdown** as its Markdown processor. One of kramdown’s most useful features is the *attribute block*. An attribute block lets you attach additional properties — such as classes or IDs — to a Markdown element without writing raw HTML.
+
+A simple example looks like this:
 
 ```markdown
-[zoomto example](img1/zoomto/pct:45.45,39.44,13.25,18.56)
+This is a paragraph.
+{: .highlight }
 ```
-{: .nolineno }
 
-in this action link the first segment of the URL contains the `id` of the image to target in the action.  The second segment (`zoomto`) is the action to perform.  The third segment is action argument, in this case the image region to zoom into.  Click the link below to trigger the action.
+The second line attaches the CSS class `highlight` to the paragraph above it.
 
+In standard Jekyll/Chirpy usage, attribute blocks are commonly used to:
 
-[zoomto example](img1/zoomto/pct:45.45,39.44,13.25,18.56)
+* Apply layout or formatting classes
+* Add custom styling
+* Control alignment or width
+* Add IDs for linking
 
-Note that in this example the label for the zoomed region is taken from the link text.
+Juncture builds on this existing capability rather than introducing something entirely new. In Juncture-enabled posts, attribute blocks are also used to:
 
-</div>
+* Assign IDs to viewer components
+* Attach action behaviors to links
+* Provide custom labels or parameters for interactive elements
 
-<div>
-{% include embed/image.html
-    id="img1"
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-%}
-</div>
-</div>
+In other words, attribute blocks are a general Markdown feature — but Juncture uses them as a structured way to connect text and media behavior without exposing authors to JavaScript.
 
-# Action Link Example With Custom Label
+---
 
-<div class="example">
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    id="img2"
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-%}
+### Entity Information Popups (Wikidata)
+
+Another key Juncture feature is the ability to create **Entity Information Boxes** by linking text to a Wikidata entity ID.
+
+When an author links a term to a Wikidata identifier (for example, a person, place, or concept), Juncture can automatically generate a small information popup. This popup typically includes:
+
+* A short description
+* An image (when available)
+* Basic structured facts
+
+This allows authors to enrich their essays with contextual information without manually writing sidebars or summaries.
+
+---
+
+### What Is Wikidata?
+
+For many users, Wikidata will be unfamiliar.
+
+**Wikidata** is a free, collaboratively edited knowledge base maintained by the Wikimedia Foundation (the same organization behind Wikipedia). Instead of storing narrative articles, Wikidata stores *structured data* about entities:
+
+* People
+* Places
+* Organizations
+* Works of art
+* Scientific concepts
+* Historical events
+* And more
+
+Each entity in Wikidata has a unique identifier, such as:
+
 ```
-{: .nolineno }
-{% endraw %}
-
-Note the addition of the `id` attribute with the value `img1`.
-
-```markdown
-[zoomto example](img2/zoomto/pct:45.45,39.44,13.25,18.56){: label="Custom Label"}
+Q42
 ```
-{: .nolineno }
 
-in this action link the first segment of the URL contains the `id` of the image to target in the action.  The second segment (`zoomto`) is the action to perform.  The third segment is action argument, in this case the image region to zoom into.  Click the link below to trigger the action.
+These identifiers represent structured records containing names, descriptions, images, dates, relationships, and other properties.
 
-[zoomto example](img2/zoomto/pct:45.45,39.44,13.25,18.56){: label="Custom Label"}
-
-Note that in this example the label for the zoomed region is taken from the custom attributes appended to the link.
-
-</div>
-
-<div>
-{% include embed/image.html
-    id="img2"
-    src="wc:Monument_Valley,_Utah,_USA.jpg"
-%}
-</div>
-</div>
+Because Wikidata is structured and machine-readable, it can be used programmatically. Juncture leverages this structure to dynamically generate entity information popups directly within your content.
 
 ---
 
-# Required Attribute
+### Why This Matters
 
-You must provide either a **src** or **manifest** attribute to the image tag.
+Together, attribute blocks and Wikidata-powered entity popups illustrate an important design principle of Juncture:
 
-## src
-{: .attribute }
+* Authors write simple Markdown.
+* Structured enhancements are layered on top.
+* Interactive and contextual features are added without requiring custom HTML or scripting.
 
-The for the image src attribute.
-
-You can use:
-
-**A local image**
-
-    src="/assets/posts/my-post/photo.jpg"
-
-**A full web URL**
-
-    src="https://example.org/image.jpg"
-
-**A Wikimedia shortcut**
-
-    src="wc:File_Name.jpg"
-
-## manifest
-{: .attribute }
-
-The for the image manifest attribute a full URL to an IIIF manifest must b provided.
-
-For example, 
-
-<div class="example">
-<div markdown="1">
-{% raw %}
-```liquid
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-%}
-```
-{: .nolineno }
-{% endraw %}
-
-</div>
-
-<div>
-{% include embed/image.html
-    manifest="https://iiif.harvardartmuseums.org/manifests/object/299843"
-%}
-</div>
-</div>
-
----
-
-# Optional Attributes
-
-These improve presentation but are not required.
-
----
-
-## caption
-{: .attribute }
-
-Text displayed below the image.
-
-    caption="Monument Valley, UT"
-
-Keep captions short and descriptive.
-
----
-
-## `cover="true"`
-{: .attribute }
-
-Makes the image fill its space more dramatically, similar to a cover photo.
-
-    cover="true"
-
-This works well for wide landscape images.
-
----
-
-## `aspect`
-
-Controls the image shape.
-
-    aspect="1200/630"
-
-You usually don’t need to change this unless you want a taller or more square presentation.
-
----
-
-## `region`
-
-Starts the viewer zoomed into a specific area.
-
-    region="pct:10,20,30,40"
-
-Most users won’t type this manually. You can use the viewer’s selection tool to generate region values.
-
----
-
-## `rotate`
-
-Rotates the image.
-
-    rotate="90"
-
----
-
-# Linking to a Specific Part of an Image
-
-To create interactive zoom links, your image must have an `id`.
-
-Example image:
-
-    {% include embed/image.html
-      id="valley"
-      src="/assets/posts/monument-valley/Monument_Valley.jpg"
-      caption="Monument Valley"
-    %}
-
-Then in your text:
-
-    Notice the dramatic formations like 
-    [West Mitten Butte](image/zoomto/pct:10,20,30,40).
-
-When a reader clicks that link:
-
-- The image zooms to that region  
-- The selected area is highlighted  
-
-This allows you to guide the reader’s attention while telling a visual story.
-
----
-
-# Complete Example
-
-    {% include embed/image.html
-      id="valley"
-      src="/assets/posts/monument-valley/Monument_Valley.jpg"
-      caption="Monument Valley"
-      cover="true"
-    %}
-
-If you are not using zoom links, you can remove the `id` entirely.
-
----
-
-# Tips for Visual Essays
-
-- Use zoomable images when detail matters.
-- Place images near the text that discusses them.
-- Add an `id` only when you plan to use interactive links.
-- Use zoom links sparingly to guide attention.
-- Keep captions concise.
-
----
-
-# When to Use This Viewer
-
-Use the Juncture image viewer when:
-
-- The image contains fine detail  
-- You want readers to explore  
-- You want to direct attention to specific areas  
-- You’re creating an interactive visual essay  
-
-For simple decorative images, a standard Markdown image may be sufficient.
+The result is content that remains readable and maintainable, while still supporting rich interaction and contextual depth.

@@ -228,6 +228,10 @@
       /* Critical: ensure it captures events */
       pointer-events: auto;
     }
+
+    #osd:not(.max) {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -247,13 +251,15 @@
 
       <button id="caption-expand" type="button" class="caption-action" aria-label="Open fullscreen"
         title="Open fullscreen">
-        <i class="fa-solid fa-expand" aria-hidden="true"></i>
+        <!-- <i class="fa-solid fa-expand" aria-hidden="true"></i> -->
       </button>
     </figcaption>
   </figure>
 
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js';
+
+    console.log(location);
 
     // =========================================================================
     // DOM
@@ -290,12 +296,12 @@
       max: ['', 'true', '1'].includes(params.get("max")),
     };
 
+    console.log(cfg);
+
     if (!cfg.src && !cfg.manifest) {
       showMsg(`Missing <code>?src=</code> or <code>?manifest=</code> parameter.`);
       throw new Error("Missing src or manifest");
     }
-
-    console.log(cfg)
 
     setContainerHeight();
 
@@ -695,6 +701,8 @@
       const iframe = window.frameElement;
       const caption = document.getElementById('caption')
       let width = document.getElementById('osd').clientWidth;
+      console.log(`Setting container height: imageAspectRatio=${imageAspectRatio}, width=${width}`);
+      console.log(iframe);
       if (width) {
         if (!imageAspectRatio) {
           const raw = iframe?.style.getPropertyValue("aspect-ratio");
@@ -703,7 +711,7 @@
         if (imageAspectRatio) {
           let captionHeight = caption.clientHeight || parseInt(caption?.style.height?.slice(0, -2)) || 24
           let containerHeight = width / imageAspectRatio + captionHeight
-          // (`imageAspectRatio=${imageAspectRatio} width=${width} captionHeight=${captionHeight} computedHeight=${containerHeight}`)
+          console.log(`imageAspectRatio=${imageAspectRatio} width=${width} captionHeight=${captionHeight} computedHeight=${containerHeight}`)
           if (iframe) iframe.style.height = `${containerHeight}px`
         }
       }
@@ -1327,14 +1335,17 @@
     }
 
     // Static mode: click opens parent dialog + modifier wheel zoom
-    if (!cfg.max) {
-      els.captionExpand.addEventListener("click", (e) => {
+    if (cfg.max) {
+      document.getElementById('osd').classList.add('max');
+    } else {
+      // els.captionExpand.addEventListener("click", (e) => {
+      document.getElementById('osd').addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
 
         // Same behavior you already use in static mode:
         window.parent.postMessage(
-          { type: "showDialog", props: { aspect: 1.0, src: `${location.href}&max` } },
+          { type: "showDialog", aspect: 1.0, src: `${location.href}&max` },
           "*"
         );
       });

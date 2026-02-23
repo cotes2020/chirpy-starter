@@ -1,11 +1,72 @@
 <!DOCTYPE html>
+<!--
+  youtube.html — YouTube video viewer component
+  ==============================================
+  Designed to be embedded as an <iframe> inside a parent page. Supports two
+  display modes, controlled by the 'max' query parameter:
+
+  NON-MAX MODE (default):
+    Renders a static, non-playing preview of the video. A transparent overlay
+    intercepts all clicks and posts a 'showDialog' message to the parent,
+    asking it to open an expanded dialog loaded with this same component in
+    max mode. No playback occurs in this mode.
+
+  MAX MODE (?max):
+    Renders inside the parent's expanded dialog. Playback params (autoplay,
+    start, end) are active. The click overlay is absent so the YouTube player
+    is fully interactive.
+
+  ─── Query Parameters ────────────────────────────────────────────────────────
+
+    vid       (required) YouTube video ID, e.g. ?vid=dQw4w9WgXcQ
+
+    max       (bool) Enables max mode. Set by the parent when opening the
+              dialog; not intended to be authored manually.
+
+    autoplay  (bool) Auto-starts playback when in max mode. Requires the
+              parent's dialog <iframe> to include allow="autoplay".
+
+    start     (number | h:mm:ss) Time to begin playback. Defaults to 0.
+              Passed to YouTube's embed URL so seeking happens before the
+              first frame. Examples: start=90  start=1:30  start=1:02:30
+
+    end       (number | h:mm:ss) Time to stop playback. Passed to YouTube's
+              embed URL and also enforced precisely via the iframe API's
+              infoDelivery time events.
+
+    caption   (string) Caption text shown in the figcaption bar. If omitted,
+              the video title is fetched from YouTube's oembed API.
+
+  ─── Messages TO this component (from parent) ────────────────────────────────
+
+    Sent via: target.contentWindow.postMessage(JSON.stringify(msg), '*')
+
+    { event: 'action', action: 'playat', args: ['start,end'] }
+      Opens the expanded dialog and begins playing at the given time range.
+      args[0] is a comma-separated string of start and optional end times.
+      Examples:
+        args: ['90']          → play from 1:30
+        args: ['1:30,2:45']   → play from 1:30, stop at 2:45
+
+    { event: 'action', action: 'play', args: ['start'] }
+      Plays the already-visible max-mode player from an optional start time.
+
+    { event: 'action', action: 'pause' }
+      Pauses the already-visible max-mode player.
+
+  ─── Messages FROM this component (to parent) ────────────────────────────────
+
+    { type: 'showDialog', src: '...', aspect: 1.7 }
+      Requests the parent open an expanded dialog containing this component
+      loaded at the given src URL (which includes ?max=true and any playback
+      params). aspect is the suggested width/height ratio for the dialog.
+-->
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css" />
   <style>
     *,
     *::before,
@@ -13,161 +74,69 @@
       box-sizing: border-box;
     }
 
-    @keyframes fadeInOpacity {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
     body {
       margin: 0;
       padding: 0;
       font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-      animation: fadeInOpacity ease 1s;
-      background-color: white;
+      background: white;
     }
 
     main {
       display: flex;
       flex-direction: column;
       width: 100%;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.5s ease-out;
     }
 
     figure {
-      display: grid;
-      grid-template-rows: 1fr auto;
       margin: 0;
+      display: flex;
+      flex-direction: column;
     }
 
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+    /* Holds the 16:9 video area and acts as the positioning root for the
+       YouTube iframe and the non-max click overlay */
+    .video-wrapper {
+      position: relative;
       width: 100%;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    /* The YouTube embed fills the wrapper completely */
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Transparent div injected over the iframe in non-max mode.
+       Captures clicks so the YouTube player is never interactive
+       in preview mode — clicks instead trigger the expanded dialog. */
+    .click-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      cursor: pointer;
+      background: transparent;
     }
 
     figcaption {
-      padding: 6px;
+      padding: 6px 8px;
       font-size: 0.9rem;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       display: flex;
       align-items: center;
-      gap: 0.5em;
-      height: 100%;
     }
 
-    .expandToggle {
-      width: 1.3rem;
-      height: 1.3rem;
-      cursor: pointer;
-      margin-left: auto;
-      flex-shrink: 0;
-    }
-
-    .info .title {
-      font-weight: bold;
-      margin-bottom: 0.5em;
-    }
-
-    .info .thumbnail {
-      width: 40%;
-      max-width: 200px;
-      float: left;
-      margin-right: 0.5em;
-    }
-
-    svg.drawer-toggle {
-      width: 1.3em;
-      height: 1.3em;
-    }
-
-    .drawer-toggle {
-      cursor: pointer;
-    }
-
-    sl-drawer::part(body) {
-      padding: 0;
-      border: 1px solid #ddd;
-    }
-
-    sl-tab::part(base) {
-      padding: 0.5em 1em;
-    }
-
-    sl-tab-panel::part(base) {
-      padding: 0.5em;
-    }
-
-    sl-tab-panel::part(base) div,
-    sl-tab-panel div {
-      margin-bottom: 0.5em;
-    }
-
-    sl-copy-button::part(button) {
-      padding-top: 0;
-    }
-
-    pre {
-      margin: 0;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
-
-    .wrap {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      -ms-word-break: break-all;
-      word-break: break-all;
-    }
-
-    .clamp {
+    /* Single-line clamped title */
+    .caption-label {
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
-    }
-
-    .embed {
-      display: flex;
-      margin-bottom: 1em;
-    }
-
-    .videoThumbnail {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-      cursor: pointer;
-    }
-
-    .videoThumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .playOverlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 64px;
-      height: 64px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background 0.3s ease;
     }
   </style>
 </head>
@@ -175,287 +144,223 @@
 <body>
 
   <main>
-
-    <figure style="height: 100%;">
-
-      <!-- Thumbnail container (conditionally shown) -->
-      <div class="videoThumbnail">
-        <img class="thumbnailImg" src="https://img.youtube.com/vi/${props.vid}/hqdefault.jpg" alt="YouTube thumbnail">
-        <div class="playOverlay">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="36" height="36" fill="#fff">
-            <polygon points="70,55 70,145 145,100" />
-          </svg>
-        </div>
+    <figure>
+      <div class="video-wrapper">
+        <div id="youtubePlayer"></div>
+        <!-- In non-max mode, JS appends a .click-overlay div here -->
+        <!-- In max mode, the YT.Player API targets the div above -->
       </div>
-
-      <iframe id="youtubePlayer" class="content" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <figcaption>
-        <svg class="drawer-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
-          <path
-            d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
-        </svg>
-        <div class="label clamp"></div>
-        <svg class="expandToggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path
-            d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z" />
-        </svg>
+        <span class="caption-label" id="videoTitle"></span>
       </figcaption>
-
-      <sl-drawer contained class="drawer" no-header
-        style="--size: calc(100% - 32px); display: flex; flex-direction: column; height: 100%;">
-        <sl-tab-group>
-          <sl-tab slot="nav" active panel="info">Video info</sl-tab>
-          <sl-tab slot="nav" panel="embed">Embed</sl-tab>
-          <sl-tab-panel active name="info">
-            <div class="info">
-              <!-- img class="thumbnail" src="" alt="Info thumbnail"></img> -->
-              <div class="title"></div>
-              <div class="author"></div>
-            </div>
-          </sl-tab-panel>
-          <sl-tab-panel name="embed">
-            <div class="embed wrap">
-              <pre><code id="embed-code"></code></pre>
-              <sl-copy-button from="embed-code"></sl-copy-button>
-            </div>
-            For more information, visit <span id="juncture-link">https://juncture-digital.io</span><sl-copy-button
-              from="juncture-link"></sl-copy-button>
-            <div>
-          </sl-tab-panel>
-        </sl-tab-group>
-      </sl-drawer>
     </figure>
-
   </main>
+
+  <script>
+    // ── YouTube IFrame Player API bootstrap ──────────────────────────────────────
+    // The API script is loaded dynamically. Once ready it calls onYouTubeIframeAPIReady.
+    const ytApiScript = document.createElement('script')
+    ytApiScript.src = 'https://www.youtube.com/iframe_api'
+    document.head.appendChild(ytApiScript)
+  </script>
 
   <script type="module">
 
-    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js"
+    // ── Utilities ───────────────────────────────────────────────────────────────
 
-    // import any needed Shoelace components (https://shoelace.style/)
-    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/copy-button/copy-button.js';
-    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/drawer/drawer.js';
-    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tab/tab.js';
-    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tab-group/tab-group.js';
-    import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tab-panel/tab-panel.js';
+    /**
+     * Returns true if a URL query param is present with no value (?key),
+     * the value "true", or the value "1". Returns `def` if the param is absent.
+     */
+    const boolParam = (params, key, def = false) => {
+      if (!params.has(key)) return def
+      const v = params.get(key)
+      return v === '' || v === 'true' || v === '1'
+    }
 
-    const main = document.querySelector('main')
-    const figure = main.querySelector('figure')
-    const youtubePlayer = figure.querySelector('#youtubePlayer')
-    const videoThumbnail = figure.querySelector('.videoThumbnail')
-    const thumbnailImg = figure.querySelector('.thumbnailImg')
-    const captionEl = figure.querySelector('figcaption')
-    const captionLabel = captionEl.querySelector('.label')
-    const drawerToggle = captionEl.querySelector('.drawer-toggle')
+    /**
+     * Converts a time value to seconds.
+     * Accepts:
+     *   null / undefined  → null
+     *   numeric string    → float (e.g. "90" → 90)
+     *   h:mm:ss string    → seconds (e.g. "1:30" → 90, "1:02:30" → 3750)
+     */
+    const toSeconds = str => {
+      if (str === null || str === undefined) return null
+      if (!isNaN(str)) return parseFloat(str)
+      return str.split(':').slice(0, 3).map(Number).reduce((acc, v) => acc * 60 + v, 0)
+    }
 
-    const drawer = document.querySelector('.drawer')
-    const tabGroup = drawer.querySelector('sl-tab-group')
-    // tabGroup.addEventListener('sl-tab-show', e => { console.log(e) })
+    /**
+     * Safely parses a postMessage event payload.
+     * Returns the parsed object or null if parsing fails.
+     */
+    const parseMessage = event => {
+      try { return JSON.parse(event.data) } catch { return null }
+    }
 
-    drawerToggle?.addEventListener('click', e => drawer.open = !drawer.open)
+    // ── Props — parsed from URL query string ────────────────────────────────────
+
+    const params = new URLSearchParams(location.search)
 
     const props = {
-      ...{              // default properties
-        alt: null,
-        autoplay: false,
-        caption: null,
-        end: null,
-        muted: false,
-        nocaption: false,
-        poster: null,
-        start: 0,
-        static: false,
-        vid: null  // YouTube video id
-      },
-      ...Object.fromEntries( // URLSearchParams to object
-        Array.from(new URLSearchParams(location.search).entries())
-          .map(([key, value]) => [key, (value === 'true' || !value) ? true : value === 'false' ? false : value])
-      )
-    }
-    console.log(props)
-
-    const expandToggle = figure.querySelector('.expandToggle')
-    if (props['in-dialog']) expandToggle.style.display = 'none'
-    else {
-      expandToggle.addEventListener('click', e => {
-        window.parent.postMessage(
-          { type: "showDialog", props: { aspect: 1.0, src: `${location.href}&max` } },
-          "*"
-        );
-      })
+      vid: params.get('vid'),                      // YouTube video ID (required)
+      max: boolParam(params, 'max'),               // true when loaded inside the expanded dialog
+      autoplay: boolParam(params, 'autoplay'),          // auto-start playback in max mode
+      caption: params.get('caption') || null,          // override caption; falls back to YouTube title
+      start: toSeconds(params.get('start')),         // playback start time in seconds (null = 0)
+      end: toSeconds(params.get('end')),           // playback end time in seconds (null = play to end)
     }
 
-    thumbnailImg.src = `https://img.youtube.com/vi/${props.vid}/hqdefault.jpg`
-    youtubePlayer.src = `https://www.youtube-nocookie.com/embed/${props.vid}?enablejsapi=1`;
-    if (props.static) youtubePlayer.style.display = 'none'
-    else videoThumbnail.style.display = 'none'
+    // ── Element references ──────────────────────────────────────────────────────
 
-    let inIframe = window.location !== window.parent.location // flag indicating if the page is in an iframe
-    const md2Html = (md) => marked.parse(md).slice(3, -5) // convert markdown to HTML
+    const wrapper = document.querySelector('.video-wrapper')
+    const videoTitle = document.getElementById('videoTitle')
 
-    const setWindowAspect = () => {
-      let contentAspect = youtubePlayer.clientWidth / youtubePlayer.clientHeight
-      let aspect = main.clientWidth / (main.clientWidth / contentAspect + captionEl.clientHeight)
-      window.parent.postMessage({ type: 'setAspect', aspect }, '*');
-    }
+    // ytPlayer holds the YT.Player instance once the API is ready
+    let ytPlayer = null
 
-    let pauseAt
+    // ── YouTube IFrame Player API ───────────────────────────────────────────────
+    // onYouTubeIframeAPIReady is called automatically by the API script once loaded.
+    // It replaces the #youtubePlayer div with a fully functional YT.Player instance,
+    // giving us direct access to getCurrentTime(), playVideo(), pauseVideo(), etc.
 
-    const youtubeMetadata = async (videoId) => {
-      let videoUrl = encodeURI(`https://www.youtube.com/watch?v=${videoId}`)
-      let url = `https://youtube.com/oembed?url=${videoUrl}&format=json`
-      let resp = await fetch(url)
-      let data = await resp.json()
-      data.aspect = data.width / data.height
-      return data
-    }
+    window.onYouTubeIframeAPIReady = () => {
+      const playerVars = { enablejsapi: 1 }
 
-    const updateInfoPanel = (metadata) => {
-      // if (metadata.thumbnail_url) document.querySelector('.info .thumbnail').src = metadata.thumbnail_url
-      if (metadata.title) document.querySelector('.info .title').innerHTML = metadata.title
-      if (metadata.author_name && metadata.author_url) document.querySelector('.info .author').innerHTML = `<a href="${metadata.author_url}" target="_blank">${metadata.author_name}</a>`
-      drawer.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', e => {
-          e.stopPropagation()
-          e.preventDefault()
-          window.parent.postMessage({ type: 'openLink', url: a.href }, '*');
-        })
-      })
-    }
-
-    youtubeMetadata(props.vid).then(metadata => {
-      // console.log(metadata)
-      captionLabel.innerHTML = metadata.title
-      updateInfoPanel(metadata)
-    })
-    youtubePlayer.addEventListener('load', e => {
-      youtubePlayer.contentWindow.postMessage('{"event": "listening"}', '*')
-      // setWindowAspect()
-      main.style.visibility = 'visible'
-      main.style.opacity = '1'
-      // new ResizeObserver(() => setWindowAspect() ).observe(document.body)
-    })
-
-    const sendMsg = (func, args) => {
-      youtubePlayer.contentWindow.postMessage(
-        JSON.stringify({ event: 'command', func, args: args || [] }),
-        '*'
-      );
-    }
-
-    const play = (start, end) => {
-      if (start !== null) sendMsg('seekTo', [start, true])
-      pauseAt = end ? end : null
-      sendMsg('playVideo')
-    }
-
-    const pause = () => sendMsg('pauseVideo')
-
-    let playerStates = {
-      '-1': 'unstarted',
-      '0': 'ended',
-      '1': 'playing',
-      '2': 'paused',
-      '3': 'buffering',
-      '5': 'video cued',
-    }
-    let playerState
-    const watch = (event) => {
-      // console.log(event)
-      if (event.playerState !== undefined && event.playerState !== playerState) {
-        playerState = event.playerState
-        // console.log(playerStates[`${playerState}`])
-      }
-      if (pauseAt !== null && event.currentTime > pauseAt) {
-        pauseAt = null
-        pause()
-      }
-    }
-
-    window.addEventListener('message', (event) => {
-      let eventData = JSON.parse(event.data)
-      if (eventData.event === 'infoDelivery') watch(eventData.info)
-      if (eventData.channel === 'widget') return
-
-      let action = eventData.action?.toLowerCase()
-      let args = eventData.args
-
-      if ('play' === action) {
-        let start = args.length > 0 ? hmsToSeconds(args[0]) : null
-        let end = args.length > 1 ? hmsToSeconds(args[1]) : null
-        play(start, end)
-      } else if ('pause' === action) pause()
-
-    });
-
-
-    const monitor = async () => {
-      getCurrentTime().then(time => EventBus.emit('video-at-time', { time: Math.round(time) }))
-
-      setInterval(async () => {
-        isMuted = await getIsMuted()
-        isPlaying = await getIsPlaying()
-
-        if (isPlaying) getCurrentTime().then(time => EventBus.emit('video-at-time', { time: Math.round(time) }))
-
-      }, 1000)
-    }
-
-    const getIsPlaying = async () => await mediaPlayer.getPlayerState() === 1
-
-    const getIsMuted = async () => await mediaPlayer.isMuted()
-
-    const setMuted = (mute) => {
-      if (mute) mediaPlayer.mute()
-      else mediaPlayer.unMute()
-    }
-
-    const getCurrentTime = async () => mediaPlayer.getCurrentTime()
-
-    const hmsToSeconds = (str) => {
-      var p = str.split(':').slice(0, 3).map(pe => parseInt(pe, 10))
-      let secs = 0, m = 1
-      while (p.length > 0) {
-        let val = p.pop() || 0
-        secs += m * val
-        m *= 60
-      }
-      return secs
-    }
-
-    let timeoutId = null
-    let forceMuteOnPlay = false
-
-    const seekTo = (start, end) => {
-      end = end || ''
-      let startSecs = hmsToSeconds(start)
-      let endSecs = end ? hmsToSeconds(end) + 1 : -1
-
-      // clear delayed pause
-      if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
+      if (props.max) {
+        // Playback params only apply in max mode.
+        // In non-max mode the embed is a static preview — no playing occurs.
+        if (props.autoplay) playerVars.autoplay = 1  // requires allow="autoplay" on parent <iframe>
+        if (props.start) playerVars.start = Math.floor(props.start)
+        // Note: we intentionally do NOT pass 'end' to YouTube. YouTube treats it
+        // as a hard stop that prevents resume. We enforce end time ourselves via
+        // a getCurrentTime poll and pause + clear props.end on arrival.
       }
 
-      let wasMuted = isMuted
-
-      mediaPlayer.playVideo()
-      mediaPlayer.seekTo(startSecs).then((_) => {
-        if (endSecs >= startSecs) {
-          timeoutId = setTimeout(() => {
-            mediaPlayer.pauseVideo().then((_) => {
-              timeoutId = null
-              if (!wasMuted && forceMuteOnPlay) setMuted(false)
-            })
-          }, endSecs === startSecs ? 200 : (endSecs - startSecs) * 1000)
+      ytPlayer = new YT.Player('youtubePlayer', {
+        videoId: props.vid,
+        playerVars,
+        host: 'https://www.youtube-nocookie.com',
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange,
         }
       })
 
+      // Ensure the generated iframe has the right permissions
+      ytPlayer.a?.setAttribute('allow', 'autoplay; encrypted-media')
+      ytPlayer.a?.setAttribute('allowfullscreen', '')
     }
 
-    // initYoutubePlayer()
+    // Called when the player is fully initialised and ready to receive commands
+    const onPlayerReady = () => {
+      // In non-max mode, inject the click overlay over the player iframe
+      if (!props.max) {
+        const overlay = document.createElement('div')
+        overlay.className = 'click-overlay'
+        wrapper.appendChild(overlay)
+        overlay.addEventListener('click', onPreviewClick)
+      }
+    }
+
+    // Called whenever the player state changes (playing, paused, ended, etc.)
+    const onPlayerStateChange = event => {
+      if (event.data === YT.PlayerState.PLAYING && props.end !== null) {
+        startEndPoll()
+      }
+    }
+
+    // ── End-time enforcement ────────────────────────────────────────────────────
+    // Polls getCurrentTime() while playing and pauses precisely at props.end.
+    // Clears props.end after pausing so the user can freely resume or replay.
+
+    let endPollInterval = null
+
+    const startEndPoll = () => {
+      if (endPollInterval) return  // already running
+      endPollInterval = setInterval(() => {
+        if (!ytPlayer || props.end === null) {
+          clearInterval(endPollInterval)
+          endPollInterval = null
+          return
+        }
+        if (ytPlayer.getCurrentTime() >= props.end) {
+          ytPlayer.pauseVideo()
+          props.end = null
+          clearInterval(endPollInterval)
+          endPollInterval = null
+        }
+      }, 200)
+    }
+
+    // ── Preview click — ask parent to open expanded dialog ──────────────────────
+    // Passes the current URL with ?max=true so the dialog instance inherits all
+    // props (vid, caption, autoplay, start, end).
+
+    const onPreviewClick = () => {
+      const maxParams = new URLSearchParams(location.search)
+      maxParams.set('max', 'true')
+      const maxSrc = `${location.pathname}?${maxParams.toString()}`
+      window.parent.postMessage({ type: 'showDialog', src: maxSrc, aspect: 1.7 }, '*')
+    }
+
+    // ── Caption ─────────────────────────────────────────────────────────────────
+
+    if (props.caption) {
+      // Use the explicitly provided caption without any network request
+      videoTitle.textContent = props.caption
+    } else {
+      // Fall back to the video title from YouTube's oembed API
+      const oembedUrl =
+        `https://youtube.com/oembed?url=${encodeURIComponent('https://www.youtube.com/watch?v=' + props.vid)}&format=json`
+      fetch(oembedUrl)
+        .then(r => r.json())
+        .then(d => { videoTitle.textContent = d.title })
+        .catch(() => { /* silently ignore — caption just stays blank */ })
+    }
+
+    // ── Inbound postMessage handler ─────────────────────────────────────────────
+    // Handles action messages sent from the parent page to this component.
+
+    window.addEventListener('message', event => {
+      const data = parseMessage(event)
+      if (!data) return
+      if (data.channel === 'widget') return  // ignore Shoelace internal messages
+
+      const action = String(data.action || '').toLowerCase()
+
+      if (action === 'playat') {
+        // Open the expanded dialog and play from a specified time range.
+        // args[0] is a comma-separated "start" or "start,end" string.
+        // Example data-args values: "90"  "1:30"  "1:30,2:45"
+        if (!Array.isArray(data.args) || !data.args[0]) return
+        const parts = data.args[0].split(',').map(s => s.trim())
+        const start = toSeconds(parts[0])
+        const end = parts[1] ? toSeconds(parts[1]) : null
+
+        const maxParams = new URLSearchParams(location.search)
+        maxParams.set('max', 'true')
+        maxParams.set('autoplay', 'true')
+        maxParams.set('start', start !== null ? start : 0)
+        if (end !== null) maxParams.set('end', end)
+        else maxParams.delete('end')
+
+        const maxSrc = `${location.pathname}?${maxParams.toString()}`
+        window.parent.postMessage({ type: 'showDialog', src: maxSrc, aspect: 1.7 }, '*')
+
+      } else if (action === 'play') {
+        // Play the max-mode player, optionally seeking to a start time first.
+        if (!ytPlayer) return
+        const start = data.args?.[0] ? toSeconds(data.args[0]) : null
+        if (start !== null) ytPlayer.seekTo(start, true)
+        ytPlayer.playVideo()
+
+      } else if (action === 'pause') {
+        // Pause the max-mode player.
+        ytPlayer?.pauseVideo()
+      }
+    })
 
   </script>
 </body>
-
-</html>

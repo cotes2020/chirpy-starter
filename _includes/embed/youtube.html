@@ -5,8 +5,16 @@
 {%- assign qs = qs | append: "&caption=" | append: include.caption | uri_escape -%}
 {%- endif -%}
 
-{%- if include.attribution -%}
-{%- assign qs = qs | append: "&attribution=" | append: include.attribution | uri_escape -%}
+{%- if include.autoplay -%}
+{%- assign qs = qs | append: "&autoplay=" | append: include.autoplay | uri_escape -%}
+{%- endif -%}
+
+{%- if include.start -%}
+{%- assign qs = qs | append: "&start=" | append: include.start | uri_escape -%}
+{%- endif -%}
+
+{%- if include.end -%}
+{%- assign qs = qs | append: "&end=" | append: include.end | uri_escape -%}
 {%- endif -%}
 
 {%- assign class = "embed-youtube" -%}

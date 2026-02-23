@@ -4,8 +4,8 @@ description: How to use the Juncture map viewer in your Markdown posts.
 permalink: /admin/juncture-map-viewer
 date: 2026-02-15
 media_subpath: /assets/posts/juncture
-image: map.png
-show_header_image: false
+# image: map.png
+# show_header_image: false
 order: 12
 juncture:
     mode: 2col
@@ -162,10 +162,36 @@ These improve presentation but are not required.
 
 ---
 
+## allmaps
+{: .attribute }
+
+Defines an Allmaps ID referencing an IIIF image to use as a map layer.  This is often used to create a historical map overlay.
+
+## basemap
+{: .attribute }
+
+Defines a basemap to add to the map.
+
 ## caption
 {: .attribute }
 
+Defines a caption to add to the map viewer.
+
+## geojson
+{: .attribute }
+
+Defines a URL to a GeoJSON file to apply as a map layer.
+
+## markers
+{: .attribute }
+
+Defines markers to add to the map.  Multiple markers are delimited with the pipe ('|') character.  A marker can be defined using a Wikidata ID or lat/lon position coordinates.  When using coordinates a label and image can also be provided using a tilde ('~') delimited values for the marker.
+
 ## zoom
 {: .attribute }
+
+Defines initial zoom level.  This is a number between 1 and 20, where the higher number reveals more detail.
+
+    zoom="10"
 
 ---
