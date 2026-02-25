@@ -3,6 +3,8 @@ title: "Juncture: Authoring Workflow"
 description: A step-by-step guide for writing and previewing Chirpy blog posts using GitHub's web editor and the live preview tool, covering one-time setup and the ongoing edit-commit-preview workflow.
 permalink: /admin/juncture-authoring-workflow
 date: 2026-02-15
+toc: true
+published: false
 order: 20
 ---
 

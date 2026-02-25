@@ -4,6 +4,7 @@ author: cotes
 date: 2019-08-08 14:10:00 +0800
 render_with_liquid: false
 permalink: /admin/write-a-new-post
+toc: true
 order: 3
 ---
 

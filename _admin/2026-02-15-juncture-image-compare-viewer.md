@@ -4,7 +4,8 @@ description: How to use the Juncture Image Compare viewer in your Markdown posts
 permalink: /admin/juncture-image-compare-viewer
 date: 2026-02-22
 media_subpath: /assets/posts/image-compare
-order: 13
+toc: true
+order: 23
 juncture:
     mode: flat
     toolbar: false

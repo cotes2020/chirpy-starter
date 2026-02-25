@@ -1,0 +1,1286 @@
+<!doctype html>
+<!--
+  preview.html  —  Client-side Jekyll/Chirpy post previewer
+  ══════════════════════════════════════════════════════════════════════════════
+  PURPOSE
+    Renders a Chirpy-themed Jekyll markdown post in the browser without waiting
+    for a GitHub Pages build. Fetches the post, its layout chain, includes, and
+    config directly from the GitHub API, then runs Liquid templating and markdown
+    rendering client-side.
+
+  USAGE
+    Open this file with a URL hash containing a JSON payload:
+      preview.html#{o:"owner",r:"repo",ref:"branch",p:"_posts/your-post.md"}
+    The bookmarklet (preview-bookmarklet.md) generates this URL automatically
+    when clicked from a GitHub file page.
+
+  ARCHITECTURE
+    1. Parse the hash payload to identify repo + file
+    2. Fetch post source via GitHub Contents API (falls back to raw.githubusercontent)
+    3. Fetch _config.yml, _data/locales, layout chain, and any {% include %} files
+    4. Build a LiquidJS engine with all Jekyll filters registered
+    5. Expand Liquid tags in the post body, then render Markdown via markdown-it
+    6. Apply the layout chain (post → default), wrapping content at each level
+    7. Rewrite relative URLs to point to the deployed GitHub Pages site
+    8. Inject Font Awesome, footnote CSS, and the preview banner
+    9. Write the complete HTML into a full-page <iframe> via srcdoc
+
+  DEPENDENCIES (loaded from CDN)
+    · LiquidJS 10       — Liquid template engine
+    · markdown-it 14    — Markdown renderer
+    · markdown-it-footnote, -sub, -sup  — Kramdown extensions
+    · js-yaml 4         — YAML parser for front matter and _config.yml
+
+  KNOWN LIMITATIONS
+    · Server-side-only Jekyll tags are stubbed: {% seo %}, {% highlight %}, etc.
+    · The "compress" layout (whitespace minification) is skipped — no visual impact
+    · site.posts / site.pages / site.tags are empty arrays (no site-wide build)
+    · raw.githubusercontent.com content may lag ~5 min after a commit (CDN cache)
+    · 60 API requests/hour unauthenticated; set a GitHub PAT via ⚙ to get 5000/hr
+
+  EXTENDING / DEBUGGING
+    · To add a new Liquid filter: engine.registerFilter() in buildLiquidEngine()
+    · To add a new stub tag:      the loop at the bottom of buildLiquidEngine()
+    · To support a new gem file:  add its path to repoMissCache
+    · For debugging: temporarily re-enable the console.log calls that have been
+      left as comments throughout the render() function
+
+  VERSION HISTORY
+    Initial working version after resolving:
+    · GitHub API rate limiting (smart fallback to raw + PAT support)
+    · include_cached tag (jekyll-include-cache plugin)
+    · compress layout producing empty output
+    · content variable scope in layout context
+    · kramdown IAL attribute blocks ({: .class #id key="val"})
+    · media_subpath front matter for post image URL prefixing
+    · uri_escape behaviour for accumulated query strings (image.html / media-url.html)
+    · md5 filter for Wikimedia Commons URL construction
+    · include parameter parsing for quoted values with spaces
+    · evalLiquidValue distinguishing variable refs from literal strings
+    · multi-line HTML tags mangled by markdown-it (youtube.html, image.html)
+    · footnotes, subscript, superscript via markdown-it plugins
+    · Font Awesome injection (Chirpy's head.html is gem-only and stubbed)
+    · URL rewriting in <script> blocks (import ... from "/path")
+    · baseurl double-prepend for paths already containing the baseurl prefix
+    · query string preservation in URL rewriter (avoids encoding ? and &)
+══════════════════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jekyll Preview</title>
+
+  <!-- ── Preview chrome styles ──────────────────────────────────────────────
+       These styles apply to the outer preview shell (banner bar, loading state).
+       Chirpy's own CSS loads inside the iframe and is completely separate. -->
+  <style>
+    /* Preview banner — fixed at top, floats above everything */
+    #__preview-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 6px 14px;
+      background: rgba(15,15,20,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #c9d1d9;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    #__preview-bar .pb-badge {
+      background: #238636;
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      font-size: 11px;
+    }
+    #__preview-bar .pb-badge.warn { background: #9e6a03; }
+    #__preview-bar .pb-badge.err  { background: #b62324; }
+    #__preview-bar .pb-file {
+      opacity: .75;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 380px;
+    }
+    #__preview-bar .pb-status {
+      flex: 1;
+      opacity: .65;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #__preview-bar button {
+      padding: 3px 9px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.07);
+      border-radius: 5px;
+      cursor: pointer;
+      color: #c9d1d9;
+      font-size: 11px;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    #__preview-bar button:hover { background: rgba(255,255,255,0.14); }
+
+    /* Unsupported-tag placeholder styling — shown for server-side-only tags */
+    .include-placeholder {
+      border: 1px dashed rgba(127,127,127,.45);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      opacity: .8;
+      color: #e3b341;
+    }
+  </style>
+
+  <!-- ── Client-side libraries ──────────────────────────────────────────────
+       Pinned to major versions for stability. Update deliberately, not automatically. -->
+  <script src="https://cdn.jsdelivr.net/npm/liquidjs@10/dist/liquid.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@14/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3/dist/markdown-it-footnote.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-sub@1/dist/markdown-it-sub.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-sup@1/dist/markdown-it-sup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+</head>
+<body>
+
+<!-- ── Preview banner ───────────────────────────────────────────────────────
+     Rendered in the outer page, overlaid on top of the iframe. -->
+<div id="__preview-bar">
+  <span class="pb-badge" id="pb-badge">PREVIEW</span>
+  <span class="pb-file"  id="pb-file">—</span>
+  <span class="pb-status" id="pb-status">Loading…</span>
+  <button id="pb-reload">⟳ Reload</button>
+  <button id="pb-config">⚙ Config</button>
+</div>
+
+<!-- ── Preview iframe ───────────────────────────────────────────────────────
+     The rendered Chirpy HTML is written into this iframe via srcdoc.
+     Using srcdoc (rather than innerHTML) is the only way to write a complete
+     <!doctype html> document client-side without the browser stripping
+     <html>, <head>, and <body> tags.
+     Sandbox flags: allow-scripts needed for Chirpy's JS; allow-same-origin
+     needed so scripts inside the srcdoc document can fetch external resources.
+     WARNING: allow-scripts + allow-same-origin together allow the iframe to
+     escape sandboxing in theory — acceptable here because the content is from
+     a trusted GitHub repo, not user-supplied arbitrary HTML. -->
+<iframe id="__preview-frame"
+  style="position:fixed;top:36px;left:0;right:0;bottom:0;width:100%;height:calc(100vh - 36px);border:none;"
+  sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+></iframe>
+
+<script>
+'use strict';
+
+// ════════════════════════════════════════════════════════════════════════════
+//  MARKDOWN ENGINE
+//  markdown-it with Kramdown-compatible plugins loaded from CDN.
+//  Extensions: footnotes ([^1] refs), subscript (H~2~O), superscript (x^2^)
+// ════════════════════════════════════════════════════════════════════════════
+
+const md = window.markdownit({ html: true, linkify: true, typographer: true });
+if (window.markdownitFootnote) md.use(window.markdownitFootnote);
+if (window.markdownitSub)      md.use(window.markdownitSub);
+if (window.markdownitSup)      md.use(window.markdownitSup);
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  PREVIEW BAR HELPERS
+// ════════════════════════════════════════════════════════════════════════════
+
+const pbBadge  = document.getElementById('pb-badge');
+const pbFile   = document.getElementById('pb-file');
+const pbStatus = document.getElementById('pb-status');
+
+/**
+ * Update the preview bar status text and badge colour.
+ * @param {string} msg  — text to show in the status area
+ * @param {string} kind — '' (normal) | 'warn' (amber) | 'err' (red)
+ */
+function setStatus(msg, kind = '') {
+  pbStatus.textContent = msg;
+  pbBadge.className = 'pb-badge' + (kind ? ' ' + kind : '');
+  pbBadge.textContent = kind === 'err' ? 'ERROR' : kind === 'warn' ? 'WARN' : 'PREVIEW';
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  GITHUB AUTHENTICATION
+//  A PAT is optional for public repos but raises rate limit from 60 → 5000/hr.
+//  Store via ⚙ Config → option 1. Saved in localStorage, never sent anywhere
+//  except GitHub's API directly.
+// ════════════════════════════════════════════════════════════════════════════
+
+function getToken()  { return localStorage.getItem('jekyllPreviewPAT') || ''; }
+function apiHeaders() {
+  const h = { Accept: 'application/vnd.github.v3+json' };
+  const t = getToken();
+  if (t) h['Authorization'] = `token ${t}`;
+  return h;
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  HASH PAYLOAD PARSER
+//  The bookmarklet encodes {o, r, ref, p} as JSON in the URL hash.
+//  e.g. #%7B%22o%22%3A%22owner%22%2C...%7D
+// ════════════════════════════════════════════════════════════════════════════
+
+function parsePayload() {
+  const h = (location.hash || '').replace(/^#/, '').trim();
+  if (!h) return null;
+  try { return JSON.parse(decodeURIComponent(h)); } catch { return null; }
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  FRONT MATTER PARSER
+//  Splits a Jekyll file into {data, body} where data is the parsed YAML
+//  front matter object and body is everything after the closing ---.
+// ════════════════════════════════════════════════════════════════════════════
+
+function parseFrontMatter(text) {
+  if (!text.trimStart().startsWith('---')) return { data: {}, body: text };
+  const lines = text.split(/\r?\n/);
+  let end = -1;
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim() === '---') { end = i; break; }
+  }
+  if (end === -1) return { data: {}, body: text };
+  const yamlText = lines.slice(1, end).join('\n');
+  const body     = lines.slice(end + 1).join('\n');
+  let data = {};
+  try { data = jsyaml.load(yamlText) || {}; } catch { data = {}; }
+  return { data, body };
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  FETCHING  —  GitHub API → raw fallback → Chirpy CDN
+//
+//  Strategy:
+//    fetchRepoFile  — tries GitHub Contents API first (freshest data), falls
+//                     back to raw.githubusercontent.com on rate-limit (may be
+//                     up to ~5 min stale). 404 responses populate repoMissCache
+//                     so the same path is never tried again this session.
+//    fetchChirpyCDN — fetches from jsDelivr for Chirpy gem-only files.
+//    fetchFile      — tries repo first, then Chirpy CDN. Used for layouts,
+//                     includes, and data files that might be in either place.
+//
+//  Rate limiting:
+//    Unauthenticated: 60 req/hr. Once hit, apiRateLimited=true causes all
+//    subsequent requests to skip the API and use raw directly. The flag resets
+//    automatically when the GitHub rate-limit window expires.
+//    Set a PAT (⚙ Config → 1) for 5000 req/hr.
+// ════════════════════════════════════════════════════════════════════════════
+
+const fetchCache = new Map();   // in-memory cache: key → text content
+
+/**
+ * Paths known to be absent from the user repo (pre-seeded with Chirpy gem files).
+ * These skip the GitHub API entirely and go straight to jsDelivr CDN, conserving
+ * the 60 req/hr unauthenticated quota for actual repo files.
+ *
+ * TO ADD NEW GEM FILES: append their paths here. Any path that 404s on the
+ * repo during a session is also added dynamically.
+ */
+const repoMissCache = new Set([
+  // Layouts — live in the Chirpy gem, not the user repo
+  '_layouts/default.html', '_layouts/compress.html', '_layouts/page.html',
+  '_layouts/home.html',    '_layouts/archives.html', '_layouts/categories.html',
+  '_layouts/tags.html',
+
+  // Core Chirpy includes — gem-only
+  '_includes/lang.html',           '_includes/toc-status.html',
+  '_includes/datetime.html',       '_includes/read-time.html',
+  '_includes/post-sharing.html',   '_includes/head.html',
+  '_includes/sidebar.html',        '_includes/topbar.html',
+  '_includes/footer.html',         '_includes/comments.html',
+  '_includes/toc.html',            '_includes/trending-tags.html',
+  '_includes/panel.html',          '_includes/post-nav.html',
+  '_includes/magic-round.html',    '_includes/related-posts.html',
+  '_includes/recently-updated.html','_includes/no-linenos.html',
+  '_includes/img-extra.html',      '_includes/embed-video.html',
+  '_includes/schema.html',         '_includes/origin-type.html',
+  '_includes/favicons.html',       '_includes/js-selector.html',
+  '_includes/jsdelivr-combine.html','_includes/metadata-hook.html',
+  '_includes/update-list.html',    '_includes/search-results.html',
+  '_includes/notification.html',   '_includes/search-loader.html',
+
+  // Data files — gem-only
+  '_data/locales/en.yml',
+  '_data/origin/default.yml',
+]);
+
+// Set true when the GitHub API rate limit is hit this session.
+// Reset automatically when the rate-limit window expires.
+let apiRateLimited = false;
+
+/**
+ * Fetch a file from the user's GitHub repo.
+ * Tries the GitHub Contents API first; falls back to raw.githubusercontent.com
+ * if rate-limited. Throws if the file is not found in either location.
+ */
+async function fetchRepoFile(o, r, ref, path) {
+  const key = `${o}/${r}/${ref}/${path}`;
+  if (fetchCache.has(key))      return fetchCache.get(key);
+  if (repoMissCache.has(path))  throw new Error(`Not found in repo: ${path}`);
+
+  // ── Step 1: GitHub Contents API ────────────────────────────────────────
+  // Freshest data, no CDN lag. Requires authentication for private repos or
+  // if the unauthenticated rate limit (60 req/hr) has been exhausted.
+  if (!apiRateLimited) {
+    const apiUrl = `https://api.github.com/repos/${o}/${r}/contents/${path}?ref=${ref}`;
+    try {
+      const resp = await fetch(apiUrl, { headers: apiHeaders(), cache: 'no-store' });
+      if (resp.ok) {
+        const json = await resp.json();
+        if (json.encoding === 'base64' && json.content) {
+          const text = decodeBase64Utf8(json.content);
+          fetchCache.set(key, text);
+          return text;
+        }
+      } else if (resp.status === 404) {
+        repoMissCache.add(path);
+        throw new Error(`Not found in repo: ${path}`);
+      } else if (resp.status === 403) {
+        // Distinguish rate-limit 403 from auth-failure 403
+        let isRateLimit = false;
+        try {
+          const errJson = await resp.clone().json();
+          isRateLimit = errJson.message?.toLowerCase().includes('rate limit') ||
+                        resp.headers.get('x-ratelimit-remaining') === '0';
+        } catch { /* ignore parse error */ }
+
+        if (isRateLimit) {
+          apiRateLimited = true;
+          // Auto-reset when the window expires (GitHub sends Unix timestamp in header)
+          const resetTs = parseInt(resp.headers.get('x-ratelimit-reset') || '0', 10);
+          const resetMs = resetTs ? (resetTs * 1000 - Date.now()) : 3600000;
+          setTimeout(() => { apiRateLimited = false; }, Math.max(resetMs, 0));
+          setStatus('⚠ GitHub API rate limited — using raw fallback (may be slightly stale). Set a PAT via ⚙ Config to avoid this.', 'warn');
+          // Fall through to raw fallback below
+        } else {
+          // Auth failure — private repo or bad PAT. Raw fallback won't help.
+          setStatus(`⚠ GitHub API access denied for ${path}. Add a PAT with repo read scope via ⚙ Config.`, 'warn');
+          throw new Error(`API auth failure: ${path}`);
+        }
+      }
+    } catch (e) {
+      // Re-throw errors we generated ourselves; swallow network errors (fall through to raw)
+      if (e.message.startsWith('Not found') || e.message.startsWith('API auth')) throw e;
+    }
+  }
+
+  // ── Step 2: raw.githubusercontent.com fallback ──────────────────────────
+  // Used when the API is rate-limited. Content may be up to ~5 minutes stale
+  // due to GitHub's CDN caching. cache:'no-store' avoids browser caching on top.
+  const rawUrl = `https://raw.githubusercontent.com/${o}/${r}/${ref}/${path}`;
+  try {
+    const resp = await fetch(rawUrl, { cache: 'no-store' });
+    if (resp.ok) {
+      const text = await resp.text();
+      fetchCache.set(key, text);
+      return text;
+    } else if (resp.status === 404) {
+      repoMissCache.add(path);
+    } else if (resp.status === 403) {
+      setStatus('⚠ Repository appears private — add a GitHub PAT via ⚙ Config.', 'warn');
+    }
+  } catch { /* network error — fall through to throw */ }
+
+  throw new Error(`Not found in repo: ${path}`);
+}
+
+/**
+ * Base64-decode a GitHub API response, handling UTF-8 multibyte characters.
+ * The standard atob() only handles Latin-1; this converts to proper UTF-8.
+ */
+function decodeBase64Utf8(b64) {
+  return decodeURIComponent(
+    atob(b64.replace(/\n/g, ''))
+      .split('')
+      .map(c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0'))
+      .join('')
+  );
+}
+
+/** Fetch a file from the Chirpy gem via jsDelivr CDN. */
+const CHIRPY_VERSION = 'v7.4.1';  // update when upgrading the gem
+const cdnCache = new Map();
+async function fetchChirpyCDN(repoPath) {
+  if (cdnCache.has(repoPath)) return cdnCache.get(repoPath);
+  const url = `https://cdn.jsdelivr.net/gh/cotes2020/jekyll-theme-chirpy@${CHIRPY_VERSION}/${repoPath}`;
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`CDN 404: ${repoPath}`);
+  const text = await resp.text();
+  cdnCache.set(repoPath, text);
+  return text;
+}
+
+/**
+ * Fetch a file from either the user repo or the Chirpy CDN.
+ * Repo takes priority (user overrides beat gem defaults).
+ */
+async function fetchFile(o, r, ref, repoPath) {
+  try   { return await fetchRepoFile(o, r, ref, repoPath); }
+  catch { /* not in repo — try CDN */ }
+  return fetchChirpyCDN(repoPath); // throws if CDN also 404s
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  CONFIG + DATA LOADERS
+// ════════════════════════════════════════════════════════════════════════════
+
+/** Load and parse _config.yml. Returns {} on failure (non-fatal). */
+async function loadSiteConfig(o, r, ref) {
+  try {
+    const raw = await fetchRepoFile(o, r, ref, '_config.yml');
+    return jsyaml.load(raw) || {};
+  } catch { return {}; }
+}
+
+/**
+ * Load Chirpy's _data files (i18n strings, CDN origins).
+ * Falls back gracefully — missing data files are non-fatal.
+ */
+async function loadDataDir(o, r, ref, lang) {
+  const data = {};
+
+  // _data/locales/<lang>.yml — Chirpy i18n strings
+  for (const candidate of [lang || 'en', 'en']) {
+    try {
+      const raw = await fetchFile(o, r, ref, `_data/locales/${candidate}.yml`);
+      data.locales = jsyaml.load(raw) || {};
+      break;
+    } catch { /* try next */ }
+  }
+
+  // _data/origin/default.yml — Chirpy CDN/asset origin config
+  try {
+    const raw = await fetchFile(o, r, ref, '_data/origin/default.yml');
+    data.origin = { default: jsyaml.load(raw) || {} };
+  } catch { /* optional */ }
+
+  return data;
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  LAYOUT CHAIN RESOLUTION
+//  Jekyll layouts can chain: a layout can itself specify a parent layout via
+//  its own front matter `layout:` key. This function walks the chain from the
+//  innermost (post-specific) layout to the outermost (usually 'default').
+//  Returns an array ordered innermost-first:
+//    [{name:'post', src:'...', fm:{...}}, {name:'default', src:'...', fm:{...}}]
+// ════════════════════════════════════════════════════════════════════════════
+
+async function resolveLayoutChain(o, r, ref, startLayout, maxDepth = 8) {
+  const chain = [];
+  let current = startLayout;
+
+  for (let i = 0; i < maxDepth; i++) {
+    if (!current || current === 'null' || current === 'none') break;
+
+    let src;
+    try {
+      src = await fetchFile(o, r, ref, `_layouts/${current}.html`);
+    } catch {
+      break; // layout not found in repo or CDN — stop here
+    }
+
+    const { data: fm, body } = parseFrontMatter(src);
+    chain.push({ name: current, src: body, fm });
+    current = fm.layout || null;
+  }
+
+  return chain; // innermost first
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  LIQUID ENGINE
+//  LiquidJS is a JavaScript port of the Liquid template engine but lacks many
+//  Jekyll/Ruby-specific filters and tags. We register them all here.
+//
+//  ADDING NEW FILTERS:
+//    engine.registerFilter('filter_name', (value, ...args) => result);
+//  ADDING NEW TAGS (stubs or real):
+//    engine.registerTag('tag_name', { parse(token){...}, render(ctx){...} });
+// ════════════════════════════════════════════════════════════════════════════
+
+function buildLiquidEngine(o, r, ref, context) {
+  const engine = new liquidjs.Liquid({ strictFilters: false, strictVariables: false });
+
+  const baseurl  = context.site.baseurl || '';
+  const siteUrl  = (context.site.url || location.origin).replace(/\/$/, '');
+  const deployedBase = (siteUrl + baseurl).replace(/\/$/, '');
+
+  // ── md5 filter ───────────────────────────────────────────────────────────
+  // Used by media-url.html to construct Wikimedia Commons thumbnail URLs.
+  // The URL format is: /commons/thumb/A/AB/Filename.jpg/1200px-Filename.jpg
+  // where A and AB are the first 1 and 2 chars of md5(filename).
+  // LiquidJS has no built-in md5; we use a self-contained pure-JS implementation.
+  function md5(str) {
+    function safeAdd(x,y){const lsw=(x&0xffff)+(y&0xffff);return(((x>>16)+(y>>16)+(lsw>>16))<<16)|(lsw&0xffff);}
+    function bitRotateLeft(num,cnt){return(num<<cnt)|(num>>>(32-cnt));}
+    function md5cmn(q,a,b,x,s,t){return safeAdd(bitRotateLeft(safeAdd(safeAdd(a,q),safeAdd(x,t)),s),b);}
+    function md5ff(a,b,c,d,x,s,t){return md5cmn((b&c)|((~b)&d),a,b,x,s,t);}
+    function md5gg(a,b,c,d,x,s,t){return md5cmn((b&d)|(c&(~d)),a,b,x,s,t);}
+    function md5hh(a,b,c,d,x,s,t){return md5cmn(b^c^d,a,b,x,s,t);}
+    function md5ii(a,b,c,d,x,s,t){return md5cmn(c^(b|(~d)),a,b,x,s,t);}
+    function md5blks(s){const blks=[];const l=s.length;for(let i=0;i<l+64;i+=64){blks[i>>5]=0;}for(let i=0;i<l;i++){blks[i>>5]|=(s.charCodeAt(i)&0xff)<<((i%4)*8);}blks[l>>5]|=0x80<<((l%4)*8);blks[(((l+64)>>>9)<<4)+14]=l*8;return blks;}
+    function rhex(n){let s='',j=0;for(;j<4;j++)s+=('0'+((n>>>(j*8+4))&0x0f).toString(16))+('0'+((n>>>(j*8))&0x0f).toString(16));return s;}
+    const x=md5blks(str);let a=1732584193,b=-271733879,c=-1732584194,d=271733878;
+    for(let i=0;i<x.length;i+=16){const[oa,ob,oc,od]=[a,b,c,d];
+      a=md5ff(a,b,c,d,x[i],7,-680876936);d=md5ff(d,a,b,c,x[i+1],12,-389564586);c=md5ff(c,d,a,b,x[i+2],17,606105819);b=md5ff(b,c,d,a,x[i+3],22,-1044525330);
+      a=md5ff(a,b,c,d,x[i+4],7,-176418897);d=md5ff(d,a,b,c,x[i+5],12,1200080426);c=md5ff(c,d,a,b,x[i+6],17,-1473231341);b=md5ff(b,c,d,a,x[i+7],22,-45705983);
+      a=md5ff(a,b,c,d,x[i+8],7,1770035416);d=md5ff(d,a,b,c,x[i+9],12,-1958414417);c=md5ff(c,d,a,b,x[i+10],17,-42063);b=md5ff(b,c,d,a,x[i+11],22,-1990404162);
+      a=md5ff(a,b,c,d,x[i+12],7,1804603682);d=md5ff(d,a,b,c,x[i+13],12,-40341101);c=md5ff(c,d,a,b,x[i+14],17,-1502002290);b=md5ff(b,c,d,a,x[i+15],22,1236535329);
+      a=md5gg(a,b,c,d,x[i+1],5,-165796510);d=md5gg(d,a,b,c,x[i+6],9,-1069501632);c=md5gg(c,d,a,b,x[i+11],14,643717713);b=md5gg(b,c,d,a,x[i],20,-373897302);
+      a=md5gg(a,b,c,d,x[i+5],5,-701558691);d=md5gg(d,a,b,c,x[i+10],9,38016083);c=md5gg(c,d,a,b,x[i+15],14,-660478335);b=md5gg(b,c,d,a,x[i+4],20,-405537848);
+      a=md5gg(a,b,c,d,x[i+9],5,568446438);d=md5gg(d,a,b,c,x[i+14],9,-1019803690);c=md5gg(c,d,a,b,x[i+3],14,-187363961);b=md5gg(b,c,d,a,x[i+8],20,1163531501);
+      a=md5gg(a,b,c,d,x[i+13],5,-1444681467);d=md5gg(d,a,b,c,x[i+2],9,-51403784);c=md5gg(c,d,a,b,x[i+7],14,1735328473);b=md5gg(b,c,d,a,x[i+12],20,-1926607734);
+      a=md5hh(a,b,c,d,x[i+5],4,-378558);d=md5hh(d,a,b,c,x[i+8],11,-2022574463);c=md5hh(c,d,a,b,x[i+11],16,1839030562);b=md5hh(b,c,d,a,x[i+14],23,-35309556);
+      a=md5hh(a,b,c,d,x[i+1],4,-1530992060);d=md5hh(d,a,b,c,x[i+4],11,1272893353);c=md5hh(c,d,a,b,x[i+7],16,-155497632);b=md5hh(b,c,d,a,x[i+10],23,-1094730640);
+      a=md5hh(a,b,c,d,x[i+13],4,681279174);d=md5hh(d,a,b,c,x[i],11,-358537222);c=md5hh(c,d,a,b,x[i+3],16,-722521979);b=md5hh(b,c,d,a,x[i+6],23,76029189);
+      a=md5hh(a,b,c,d,x[i+9],4,-640364487);d=md5hh(d,a,b,c,x[i+12],11,-421815835);c=md5hh(c,d,a,b,x[i+15],16,530742520);b=md5hh(b,c,d,a,x[i+2],23,-995338651);
+      a=md5ii(a,b,c,d,x[i],6,-198630844);d=md5ii(d,a,b,c,x[i+7],10,1126891415);c=md5ii(c,d,a,b,x[i+14],15,-1416354905);b=md5ii(b,c,d,a,x[i+5],21,-57434055);
+      a=md5ii(a,b,c,d,x[i+12],6,1700485571);d=md5ii(d,a,b,c,x[i+3],10,-1894986606);c=md5ii(c,d,a,b,x[i+10],15,-1051523);b=md5ii(b,c,d,a,x[i+1],21,-2054922799);
+      a=md5ii(a,b,c,d,x[i+8],6,1873313359);d=md5ii(d,a,b,c,x[i+15],10,-30611744);c=md5ii(c,d,a,b,x[i+6],15,-1560198380);b=md5ii(b,c,d,a,x[i+13],21,1309151649);
+      a=md5ii(a,b,c,d,x[i+4],6,-145523070);d=md5ii(d,a,b,c,x[i+11],10,-1120210379);c=md5ii(c,d,a,b,x[i+2],15,718787259);b=md5ii(b,c,d,a,x[i+9],21,-343485551);
+      a=safeAdd(a,oa);b=safeAdd(b,ob);c=safeAdd(c,oc);d=safeAdd(d,od);
+    }
+    return rhex(a)+rhex(b)+rhex(c)+rhex(d);
+  }
+  engine.registerFilter('md5', v => md5(String(v || '')));
+
+  // ── URL filters ──────────────────────────────────────────────────────────
+  engine.registerFilter('relative_url', v => {
+    if (!v) return '';
+    const s = String(v);
+    if (/^(https?:)?\/\//i.test(s)) return s;
+    return baseurl + (s.startsWith('/') ? s : '/' + s);
+  });
+  engine.registerFilter('absolute_url', v => {
+    if (!v) return '';
+    const s = String(v);
+    if (/^(https?:)?\/\//i.test(s)) return s;
+    return siteUrl + (s.startsWith('/') ? s : '/' + s);
+  });
+
+  // ── Encoding filters ─────────────────────────────────────────────────────
+  // uri_escape note: Jekyll's CGI.escape applies to the whole string, but
+  // in practice Chirpy templates call it on accumulated query strings like
+  //   qs | append: "&caption=" | append: value | uri_escape
+  // which would encode the existing key=value pairs if we used encodeURIComponent
+  // naively. We detect this case and encode only the final value segment.
+  engine.registerFilter('uri_escape', v => {
+    const s = String(v || '');
+    const lastEq  = s.lastIndexOf('=');
+    const lastAmp = s.lastIndexOf('&');
+    if (lastEq > 0 && lastEq > lastAmp) {
+      // Looks like an accumulated query string — encode only the value after the last =
+      return s.slice(0, lastEq + 1) + encodeURIComponent(s.slice(lastEq + 1));
+    }
+    return encodeURIComponent(s);
+  });
+  engine.registerFilter('url_decode', v => {
+    try { return decodeURIComponent(String(v || '').replace(/\+/g, ' ')); }
+    catch { return String(v || ''); }
+  });
+  engine.registerFilter('xml_escape', v =>
+    String(v || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'));
+
+  // ── Date filters ─────────────────────────────────────────────────────────
+  engine.registerFilter('date_to_string', v => {
+    if (!v) return '';
+    try { return new Date(v).toLocaleDateString('en-US', {year:'numeric',month:'short',day:'numeric'}); }
+    catch { return String(v); }
+  });
+  engine.registerFilter('date_to_xmlschema', v => {
+    if (!v) return '';
+    try { return new Date(v).toISOString(); } catch { return String(v); }
+  });
+
+  // ── String filters ───────────────────────────────────────────────────────
+  engine.registerFilter('slugify',     v => String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''));
+  engine.registerFilter('markdownify', v => md.render(String(v||'')));
+  engine.registerFilter('strip_html',  v => String(v||'').replace(/<[^>]+>/g,''));
+  engine.registerFilter('truncatewords', (v, n=15) => {
+    const words = String(v||'').split(/\s+/);
+    return words.length <= n ? v : words.slice(0, n).join(' ') + '…';
+  });
+  engine.registerFilter('number_of_words', v => String(v||'').split(/\s+/).filter(Boolean).length);
+  engine.registerFilter('downcase',   v => String(v||'').toLowerCase());
+  engine.registerFilter('upcase',     v => String(v||'').toUpperCase());
+  engine.registerFilter('capitalize', v => { const s=String(v||''); return s.charAt(0).toUpperCase()+s.slice(1); });
+  engine.registerFilter('strip',      v => String(v||'').trim());
+  engine.registerFilter('replace',      (v,a,b) => String(v||'').split(a).join(b));
+  engine.registerFilter('replace_first',(v,a,b) => String(v||'').replace(a,b));
+  engine.registerFilter('prepend',    (v,s) => String(s||'') + String(v||''));
+  engine.registerFilter('append',     (v,s) => String(v||'') + String(s||''));
+  engine.registerFilter('inspect',    v => JSON.stringify(v));
+
+  // ── Array filters ────────────────────────────────────────────────────────
+  engine.registerFilter('split',   (v,s) => String(v||'').split(s));
+  engine.registerFilter('first',   v => Array.isArray(v) ? v[0] : v);
+  engine.registerFilter('last',    v => Array.isArray(v) ? v[v.length-1] : v);
+  engine.registerFilter('size',    v => v ? (Array.isArray(v) ? v.length : String(v).length) : 0);
+  engine.registerFilter('join',    (arr,sep=', ') => Array.isArray(arr) ? arr.join(sep) : String(arr||''));
+  engine.registerFilter('concat',  (a,b) => [...(a||[]),...(b||[])]);
+  engine.registerFilter('uniq',    arr => Array.isArray(arr) ? [...new Set(arr)] : arr);
+  engine.registerFilter('map',     (arr,key) => Array.isArray(arr) ? arr.map(i => i&&i[key]) : []);
+  engine.registerFilter('where',   (arr,key,val) => Array.isArray(arr) ? arr.filter(i => i&&i[key]==val) : []);
+  engine.registerFilter('sort',    (arr,key) => {
+    if (!Array.isArray(arr)) return arr;
+    if (!key) return [...arr].sort();
+    return [...arr].sort((a,b) => a[key]>b[key] ? 1 : a[key]<b[key] ? -1 : 0);
+  });
+  engine.registerFilter('default', (v,d) => (v==null||v===''||v===false) ? d : v);
+  engine.registerFilter('array_to_sentence_string', arr => {
+    if (!Array.isArray(arr)) return String(arr||'');
+    if (arr.length === 0) return '';
+    if (arr.length === 1) return arr[0];
+    return arr.slice(0,-1).join(', ') + ', and ' + arr[arr.length-1];
+  });
+
+  // ── {% include %} tag ────────────────────────────────────────────────────
+  // Custom implementation that:
+  //   · fetches include files from the repo (or Chirpy CDN as fallback)
+  //   · handles key="value with spaces" parameter syntax correctly
+  //   · evaluates parameter values that are Liquid variable refs (include.src etc.)
+  //   · collapses multi-line HTML tags in output (prevents markdown-it mangling)
+  //   · renders .md include files through markdown-it
+
+  /**
+   * Parse Jekyll include arguments string into {name, params}.
+   * Handles all parameter forms:
+   *   key="value with spaces"  key='value'  key=bareword  key=variable.ref
+   * The filename is the first non-key=value token.
+   */
+  function parseIncludeArgs(argsStr) {
+    const s = (argsStr || '').trim();
+    if (!s) return { name: null, params: {} };
+    const tokens = [];
+    // Regex matches key=value pairs (with quoted or bare values) and bare tokens
+    const re = /([\w./:-]+)=(?:"([^"]*)"|'([^']*)'|([^\s]*))|"([^"]*)"|'([^']*)'|([^\s=]+)/g;
+    let m;
+    while ((m = re.exec(s)) !== null) {
+      if (m[1] !== undefined) {
+        tokens.push({ type: 'kv', key: m[1], val: m[2] ?? m[3] ?? m[4] ?? '' });
+      } else {
+        tokens.push({ type: 'bare', val: m[5] ?? m[6] ?? m[7] ?? '' });
+      }
+    }
+    if (!tokens.length) return { name: null, params: {} };
+    const nameToken = tokens.find(t => t.type === 'bare');
+    const params = {};
+    for (const t of tokens) { if (t.type === 'kv') params[t.key] = t.val; }
+    return { name: nameToken?.val ?? null, params };
+  }
+
+  /**
+   * Evaluate a parameter value that might be a Liquid variable reference.
+   *
+   * Three categories of values:
+   *   · Dotted refs (include.src, page.title) — always evaluate via Liquid
+   *   · Plain words (image, true, right) — try Liquid, fall back to literal
+   *     if the variable doesn't exist in context
+   *   · Literals (wc:filename.jpg, /path, 1200) — return as-is, no evaluation
+   *     (these contain characters that would make invalid Liquid expressions)
+   */
+  async function evalLiquidValue(expr, ctx) {
+    if (!expr) return expr;
+    const isDotted    = /^[a-zA-Z_][\w.\[\]]*\.[\w.\[\]]+$/.test(expr);
+    const isPlainWord = /^[a-zA-Z_][\w-]*$/.test(expr);
+    if (!isDotted && !isPlainWord) return expr; // literal — return unchanged
+    try {
+      const r = await engine.parseAndRender(`{{ ${expr} }}`, ctx);
+      const t = (r || '').trim();
+      if (isDotted)    return t;              // dotted: empty means unset
+      return t !== '' ? t : expr;             // plain word: empty → use as literal
+    } catch { return isPlainWord ? expr : ''; }
+  }
+
+  const includeCache = new Map();
+  async function fetchInclude(name) {
+    if (includeCache.has(name)) return includeCache.get(name);
+    try {
+      const txt = await fetchFile(o, r, ref, `_includes/${name}`);
+      includeCache.set(name, txt);
+      return txt;
+    } catch { return null; }
+  }
+
+  // Shared include rendering logic used by both {% include %} and {% include_cached %}
+  async function renderInclude(name, argsStr, ctx) {
+    const { name: fileName, params } = parseIncludeArgs(argsStr);
+    const includeName = name || fileName;
+    if (!includeName) return '<div class="include-placeholder">{% include (missing name) %}</div>';
+
+    const src = await fetchInclude(includeName);
+    if (!src) return `<div class="include-placeholder">{% include ${includeName} %} — not found</div>`;
+
+    const includeObj = {};
+    for (const [k, v] of Object.entries(params)) {
+      includeObj[k] = await evalLiquidValue(v, ctx);
+    }
+    ctx.push({ include: includeObj });
+    let rendered;
+    try {
+      rendered = await engine.parseAndRender(src, ctx);
+      // Collapse multi-line HTML tags so markdown-it doesn't wrap stray
+      // attribute lines in <p> tags (e.g. youtube.html's conditional style= attr)
+      rendered = collapseMultilineTags(rendered);
+    } catch (e) {
+      rendered = `<div class="include-placeholder">{% include ${includeName} %} — render error: ${e.message}</div>`;
+    } finally {
+      ctx.pop();
+    }
+    if (/\.(md|markdown)$/i.test(includeName)) rendered = md.render(rendered);
+    return rendered;
+  }
+
+  engine.registerTag('include', {
+    parse(token) { this.argsStr = token.args; },
+    async render(ctx) { return renderInclude(null, this.argsStr, ctx); }
+  });
+
+  // include_cached is from the jekyll-include-cache plugin — behaves identically
+  // to include for preview purposes (we don't implement caching across renders)
+  engine.registerTag('include_cached', {
+    parse(token) { this.argsStr = token.args; },
+    async render(ctx) { return renderInclude(null, this.argsStr, ctx); }
+  });
+
+  // ── Server-side-only tag stubs ───────────────────────────────────────────
+  // These tags require the Jekyll build environment and cannot be replicated
+  // client-side. They render as visible placeholders so the developer knows
+  // something is missing, rather than silently producing broken output.
+  //
+  // TO ADD MORE STUBS: add the tag name to the array below.
+  for (const tag of ['seo','feed_meta','include_relative','paginate','post_url','highlight','endhighlight']) {
+    try {
+      engine.registerTag(tag, {
+        parse(token) { this.raw = token.getText ? token.getText() : tag; },
+        render() { return `<div class="include-placeholder">{% ${this.raw||tag} %} (server-side only)</div>`; }
+      });
+    } catch { /* tag already registered */ }
+  }
+
+  return engine;
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  MULTI-LINE HTML TAG COLLAPSING
+//  markdown-it treats inline HTML tags that span multiple lines as markdown,
+//  wrapping the subsequent attribute lines in <p> tags and breaking the tag.
+//  Example: youtube.html emits <iframe\n  style="..."\n  src="..."> which
+//  becomes <iframe <p>src="..."> after markdown-it processes it.
+//  Fix: collapse all multi-line tags to single lines before rendering.
+// ════════════════════════════════════════════════════════════════════════════
+
+function collapseMultilineTags(src) {
+  return src.replace(/<([a-zA-Z][a-zA-Z0-9-]*)(\s[^>]*?)>/gs, (match, tag, attrs) => {
+    if (!attrs.includes('\n')) return match;
+    const collapsed = attrs.replace(/\s*\n\s*/g, ' ').replace(/ {2,}/g, ' ').trim();
+    return `<${tag} ${collapsed}>`;
+  });
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  KRAMDOWN ATTRIBUTE BLOCKS  {: .class #id key="val"}
+//  Kramdown IAL (Inline Attribute List) syntax is Ruby-specific and not
+//  supported by markdown-it. We handle it in two passes:
+//
+//  Pass 1 — Inline IALs: [text](url){: attrs} and ![alt](src){: attrs}
+//    These appear immediately after a markdown element on the same line.
+//    We convert them to raw HTML before passing to markdown-it.
+//
+//  Pass 2 — Block IALs: {: attrs} on its own line
+//    These apply to the preceding block element.
+//    We replace them with HTML comment sentinels before rendering, then
+//    inject the attributes into the last preceding tag after rendering.
+//
+//  Supported attribute syntax:
+//    .classname         → adds to class attribute
+//    #id                → sets id attribute
+//    key="value"        → sets arbitrary attribute (width, height, loading, etc.)
+//    key='value'
+//    key=value
+// ════════════════════════════════════════════════════════════════════════════
+
+/** Parse a raw IAL string into {classes, id, extraAttrs}. */
+function parseIAL(raw) {
+  const classes = [], extraAttrs = {};
+  let id = null;
+  const tokens = raw.match(/\.([\w-]+)|#([\w-]+)|([\w-]+)=(?:"([^"]*)"|'([^']*)'|([\S]*))/g) || [];
+  for (const tok of tokens) {
+    const cm = tok.match(/^\.([\w-]+)$/);
+    const im = tok.match(/^#([\w-]+)$/);
+    const am = tok.match(/^([\w-]+)=(?:"([^"]*)"|'([^']*)'|([\S]*))$/);
+    if (cm) classes.push(cm[1]);
+    else if (im) id = im[1];
+    else if (am) extraAttrs[am[1]] = am[2] ?? am[3] ?? am[4] ?? '';
+  }
+  return { classes, id, extraAttrs };
+}
+
+/** Merge parsed IAL attributes into an existing HTML open tag string. */
+function injectAttrsIntoTag(tagStr, close, { classes, id, extraAttrs }) {
+  if (classes.length) {
+    const ex = tagStr.match(/\bclass="([^"]*)"/);
+    if (ex) tagStr = tagStr.replace(/\bclass="[^"]*"/, `class="${ex[1]} ${classes.join(' ')}"`);
+    else    tagStr += ` class="${classes.join(' ')}"`;
+  }
+  if (id) {
+    if (/\bid=/.test(tagStr)) tagStr = tagStr.replace(/\bid="[^"]*"/, `id="${id}"`);
+    else                      tagStr += ` id="${id}"`;
+  }
+  for (const [k, v] of Object.entries(extraAttrs)) {
+    const re = new RegExp(`\\b${k}="[^"]*"`);
+    if (re.test(tagStr)) tagStr = tagStr.replace(re, `${k}="${v}"`);
+    else                 tagStr += ` ${k}="${v}"`;
+  }
+  return tagStr + close;
+}
+
+/**
+ * Apply kramdown IAL attribute blocks to markdown source, then render.
+ * @param {string}   markdownSrc — raw markdown with {: ...} blocks
+ * @param {function} renderFn    — function(src) → html (wraps md.render)
+ */
+function applyKramdownAttributes(markdownSrc, renderFn) {
+  let src = markdownSrc;
+
+  // Pass 1: Inline IALs — convert to raw HTML before markdown-it sees them
+  // ![alt](src){: attrs}
+  src = src.replace(/!\[([^\]]*)\]\(([^)]+)\)\{:\s*([^}]+)\}/g, (_, alt, imgSrc, raw) => {
+    const { classes, id, extraAttrs } = parseIAL(raw.trim());
+    let tag = `<img src="${imgSrc}" alt="${alt}"`;
+    if (classes.length) tag += ` class="${classes.join(' ')}"`;
+    if (id)             tag += ` id="${id}"`;
+    for (const [k, v] of Object.entries(extraAttrs)) tag += ` ${k}="${v}"`;
+    return tag + '>';
+  });
+  // [text](url){: attrs}  — negative lookbehind excludes images (already handled above)
+  src = src.replace(/(?<!!)\[([^\]]+)\]\(([^)]+)\)\{:\s*([^}]+)\}/g, (_, text, href, raw) => {
+    const { classes, id, extraAttrs } = parseIAL(raw.trim());
+    let tag = `<a href="${href}"`;
+    if (classes.length) tag += ` class="${classes.join(' ')}"`;
+    if (id)             tag += ` id="${id}"`;
+    for (const [k, v] of Object.entries(extraAttrs)) tag += ` ${k}="${v}"`;
+    return tag + `>${text}</a>`;
+  });
+
+  // Pass 2: Block IALs — sentinel strategy
+  const lines = src.split('\n');
+  const attrMap = [];
+  const blockIalRe = /^\{:\s*([^}]+)\}\s*$/;
+  let sentinelIdx = 0;
+
+  const processedLines = lines.map(line => {
+    const m = line.match(blockIalRe);
+    if (!m) return line;
+    const sentinel = `KRAMDOWN_IAL_${sentinelIdx++}`;
+    attrMap.push({ sentinel, raw: m[1].trim() });
+    return `<!-- ${sentinel} -->`;
+  });
+
+  let html = renderFn(processedLines.join('\n'));
+
+  for (const { sentinel, raw } of attrMap) {
+    const comment = `<!-- ${sentinel} -->`;
+    const ci = html.indexOf(comment);
+    if (ci === -1) continue;
+    const before   = html.slice(0, ci);
+    const tagMatch = before.match(/(<[a-zA-Z][^>]*?)(\/?>)\s*$/s);
+    if (!tagMatch) { html = html.replace(comment, ''); continue; }
+    const replaced = injectAttrsIntoTag(tagMatch[1], tagMatch[2], parseIAL(raw));
+    const tagStart = ci - tagMatch[0].length;
+    html = html.slice(0, tagStart) + replaced + html.slice(ci + comment.length);
+  }
+
+  return html;
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  URL REWRITING
+//  After Liquid+Markdown rendering, the HTML contains root-relative paths
+//  like /chirpy-juncture-starter/assets/css/main.css. These need to be
+//  rewritten to absolute URLs so they load correctly inside the srcdoc iframe,
+//  which has no base URL.
+//
+//  Two resolution targets:
+//    forAsset=true  → deployed GitHub Pages site (CSS, JS, images, fonts)
+//    forAsset=false → raw.githubusercontent.com (linked markdown content)
+//
+//  Special cases handled:
+//    · media_subpath: Chirpy front matter key that prefixes relative image URLs
+//    · Query strings: preserved unchanged to avoid double-encoding
+//    · Baseurl double-prepend: paths already containing the baseurl are detected
+//    · Script content: import statements and fetch() calls inside <script> blocks
+// ════════════════════════════════════════════════════════════════════════════
+
+function rewriteRelativeUrlsInString(html, rawBase, fileDir, deployedOrigin, baseurl, mediaSubpath) {
+  const deployedBase = ((deployedOrigin || '') + (baseurl || '')).replace(/\/$/, '');
+
+  /**
+   * Resolve a single URL to an absolute form.
+   * @param {string}  url       — the URL to resolve
+   * @param {boolean} forAsset  — true: resolve against deployed site; false: against rawBase
+   * @param {boolean} isImage   — true: apply media_subpath prefix to relative paths
+   */
+  function resolve(url, forAsset, isImage = false) {
+    if (!url) return url;
+    let u = url.trim();
+    if (/^(https?:|data:|mailto:|tel:|#|\/\/)/i.test(u)) return u; // already absolute
+
+    // Preserve query string — resolve path only, reattach qs unchanged
+    const qIdx = u.indexOf('?');
+    const qs   = qIdx !== -1 ? u.slice(qIdx) : '';
+    if (qIdx !== -1) u = u.slice(0, qIdx);
+
+    // Apply media_subpath to relative image URLs (Chirpy front matter feature)
+    if (isImage && mediaSubpath && !u.startsWith('/')) {
+      u = mediaSubpath.replace(/\/$/, '') + '/' + u;
+    }
+
+    let resolved;
+    if (u.startsWith('/')) {
+      if (forAsset) {
+        // Avoid double-prepending baseurl: if path already starts with baseurl,
+        // prepend only the origin (e.g. /chirpy-starter/assets/... → https://site.io/chirpy-starter/assets/...)
+        const baseurlPrefix = (baseurl || '').replace(/\/$/, '');
+        if (baseurlPrefix && u.startsWith(baseurlPrefix + '/')) {
+          resolved = (deployedOrigin || '').replace(/\/$/, '') + u;
+        } else {
+          resolved = deployedBase + u;
+        }
+      } else {
+        resolved = rawBase + u.replace(/^\//, '');
+      }
+    } else {
+      resolved = rawBase + fileDir + u; // relative path — resolve against file location
+    }
+    return resolved + qs;
+  }
+
+  // src= on media/embed elements — apply media_subpath for img and source
+  html = html.replace(/<(img|script|source|video|audio|iframe)(\s[^>]*?)\bsrc=("[^"]*"|'[^']*')/gi,
+    (match, tag, before, val) => {
+      const q = val[0], url = val.slice(1, -1);
+      const isImage = /^(img|source)$/i.test(tag);
+      return `<${tag}${before}src=${q}${resolve(url, true, isImage)}${q}`;
+    });
+
+  // href= on <link> elements (stylesheets, fonts, icons)
+  html = html.replace(/<link(\s[^>]*?)\bhref=("[^"]*"|'[^']*')/gi,
+    (match, before, val) => {
+      const q = val[0], url = val.slice(1, -1);
+      return `<link${before}href=${q}${resolve(url, true)}${q}`;
+    });
+
+  // href= on <a> elements — only rewrite relative links (not # or external)
+  html = html.replace(/<a(\s[^>]*?)\bhref=("[^"]*"|'[^']*')/gi,
+    (match, before, val) => {
+      const q = val[0], url = val.slice(1, -1);
+      if (/^(https?:|mailto:|tel:|#)/i.test(url.trim())) return match;
+      return `<a${before}href=${q}${resolve(url, false)}${q}`;
+    });
+
+  // url(...) in <style> blocks and inline style attributes
+  html = html.replace(/url\((['"]?)([^)'"]+)\1\)/g,
+    (match, q, url) => {
+      if (/^(https?:|data:|\/\/)/i.test(url.trim())) return match;
+      return `url(${q}${resolve(url, true)}${q})`;
+    });
+
+  // Root-relative quoted strings inside inline <script> blocks
+  // Handles: import ... from "/path", fetch("/path"), etc.
+  // Skips external scripts (those with src= attribute).
+  html = html.replace(/(<script\b[^>]*>)([\s\S]*?)(<\/script>)/gi,
+    (match, open, scriptContent, close) => {
+      if (/\bsrc=/i.test(open)) return match; // external script — nothing to rewrite
+      const rewritten = scriptContent.replace(
+        /(["'`])(\/(?!\/)[^"'`\s]+)\1/g,
+        (m, q, path) => {
+          if (/^(https?:|data:|\/\/)/i.test(path)) return m;
+          return q + resolve(path, true) + q;
+        }
+      );
+      return open + rewritten + close;
+    });
+
+  return html;
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  MAIN RENDER
+//  Orchestrates the full pipeline from hash payload to iframe srcdoc.
+// ════════════════════════════════════════════════════════════════════════════
+
+async function render() {
+  const payload = parsePayload();
+  if (!payload?.o || !payload?.r || !payload?.ref || !payload?.p) {
+    setStatus('No payload — use the bookmarklet from a GitHub file page.', 'warn');
+    document.getElementById('__preview-frame').srcdoc =
+      '<html><body style="padding:2rem;font-family:system-ui"><h2>No preview loaded</h2>' +
+      '<p>Use the bookmarklet from a GitHub file page to open a preview.</p></body></html>';
+    return;
+  }
+
+  const { o, r, ref, p } = payload;
+  pbFile.textContent = `${o}/${r}@${ref} — ${p}`;
+  setStatus('Fetching file…');
+
+  // ── 1. Fetch the post source ─────────────────────────────────────────────
+  let postText;
+  try {
+    postText = await fetchRepoFile(o, r, ref, p);
+  } catch (e) {
+    setStatus(`Failed to fetch ${p}: ${e.message}`, 'err');
+    return;
+  }
+  const { data: pageFM, body: pageBody } = parseFrontMatter(postText);
+
+  // ── 2. Load site config ──────────────────────────────────────────────────
+  setStatus('Loading _config.yml…');
+  const siteConfig     = await loadSiteConfig(o, r, ref);
+  const deployedOrigin = siteConfig.url || location.origin;
+  const baseurl        = siteConfig.baseurl || '';
+
+  // ── 3. Load _data (i18n strings, CDN origins) ───────────────────────────
+  setStatus('Loading _data…');
+  const siteData = await loadDataDir(o, r, ref, siteConfig.lang);
+
+  // ── 4. Build Liquid context ──────────────────────────────────────────────
+  // Mirrors the context Jekyll provides at build time.
+  // Note: site.posts/pages/tags/categories are empty — we only build one page.
+  const now = new Date();
+  const siteCtx = {
+    ...siteConfig,
+    url: deployedOrigin,
+    baseurl,
+    time: now.toISOString(),
+    posts: [], pages: [], tags: [], categories: [],
+    data: siteData,
+  };
+  const pageCtx = {
+    ...pageFM,
+    path: p,
+    url: baseurl + '/' + p.replace(/^_posts\//, '').replace(/\.md$/, '/'),
+    date: pageFM.date ? new Date(pageFM.date).toISOString() : now.toISOString(),
+    content: '',  // populated before each layout layer is applied
+    excerpt: '',
+  };
+  const context = { site: siteCtx, page: pageCtx };
+  const engine  = buildLiquidEngine(o, r, ref, context);
+
+  // ── 5. Render post body: Liquid → Markdown ───────────────────────────────
+  // 1. Expand Liquid tags ({% include %}, {{ page.title }}, etc.)
+  // 2. Collapse multi-line HTML tags that would confuse markdown-it
+  // 3. Apply kramdown IAL attribute blocks ({: .class})
+  // 4. Render Markdown to HTML
+  setStatus('Rendering post content…');
+  let renderedContent;
+  try {
+    const liquidExpanded = await engine.parseAndRender(pageBody, context);
+    renderedContent = applyKramdownAttributes(liquidExpanded, src => md.render(collapseMultilineTags(src)));
+  } catch (e) {
+    // Liquid error — fall back to rendering raw markdown without Liquid expansion
+    renderedContent = applyKramdownAttributes(pageBody, src => md.render(collapseMultilineTags(src)));
+    setStatus(`Liquid error in post body (rendered raw): ${e.message}`, 'warn');
+  }
+
+  // ── 6. Resolve layout chain ──────────────────────────────────────────────
+  // Determine the layout from front matter, or fall back to _config.yml defaults.
+  const layoutName = pageFM.layout ||
+    siteConfig.defaults?.find(d => d.scope?.type === 'posts')?.values?.layout ||
+    'post';
+
+  setStatus(`Resolving layout chain: ${layoutName}…`);
+  const layoutChain = await resolveLayoutChain(o, r, ref, layoutName);
+
+  // No layouts found — render content-only fallback
+  if (layoutChain.length === 0) {
+    setStatus('No layouts found — showing raw content.', 'warn');
+    const rawBase  = `https://raw.githubusercontent.com/${o}/${r}/${ref}/`;
+    const fileDir  = (p.split('/').slice(0, -1).join('/') + '/').replace(/^\/+/, '');
+    const rawHtml  = rewriteRelativeUrlsInString(
+      `<html><body style="padding:1rem;font-family:system-ui;max-width:780px;margin:0 auto">${renderedContent}</body></html>`,
+      rawBase, fileDir, deployedOrigin, baseurl
+    );
+    document.getElementById('__preview-frame').srcdoc = rawHtml;
+    return;
+  }
+
+  // ── 7. Apply layout chain (innermost → outermost) ────────────────────────
+  // Each layout receives the previous layer's output as {{ content }}.
+  // Jekyll also exposes {{ page.content }} for compatibility, so we set both.
+  setStatus(`Applying ${layoutChain.length} layout(s)…`);
+  let html = renderedContent;
+
+  for (const layer of layoutChain) {
+    // Skip the compress layout — it's whitespace-minification-only and uses
+    // Jekyll-specific Liquid constructs that produce empty output in LiquidJS.
+    // There is no visual difference in skipping it.
+    if (layer.name === 'compress') continue;
+
+    context.page.content = html;
+    const layerCtx = { ...context, content: html, layout: layer.fm };
+    const prevHtml = html;
+
+    try {
+      const result = await engine.parseAndRender(layer.src, layerCtx);
+      if (result && result.trim().length > 50) {
+        html = result;
+      } else {
+        // Suspiciously empty output — keep the previous layer and warn
+        setStatus(`Layout '${layer.name}' produced no output (skipped) — preview may be incomplete.`, 'warn');
+        html = prevHtml;
+      }
+    } catch (e) {
+      setStatus(`Layout '${layer.name}' render error (skipped): ${e.message}`, 'warn');
+      html = prevHtml;
+    }
+  }
+
+  // ── 8. Rewrite relative URLs ─────────────────────────────────────────────
+  // Convert all root-relative paths to absolute URLs so assets load correctly
+  // inside the srcdoc iframe (which has no base URL context).
+  const rawBase      = `https://raw.githubusercontent.com/${o}/${r}/${ref}/`;
+  const fileDir      = (p.split('/').slice(0, -1).join('/') + '/').replace(/^\/+/, '');
+  const mediaSubpath = (pageFM.media_subpath || '').replace(/\/$/, '');
+  html = rewriteRelativeUrlsInString(html, rawBase, fileDir, deployedOrigin, baseurl, mediaSubpath);
+
+  // ── 9. Inject supplementary CSS ─────────────────────────────────────────
+  // These styles are needed because Chirpy's _includes/head.html (which normally
+  // links Font Awesome and provides other CSS) is a gem-only file and stubbed out.
+
+  // Footnote styles for markdown-it-footnote output
+  const footnoteCss = `<style>
+    .footnotes { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color, rgba(128,128,128,.3)); font-size: 0.875rem; opacity: 0.85; }
+    .footnotes ol { padding-left: 1.5rem; }
+    .footnotes li { margin-bottom: 0.4rem; line-height: 1.6; }
+    .footnote-ref { font-size: 0.75em; vertical-align: super; line-height: 0; margin-left: 1px; }
+    .footnote-ref a, .footnote-backref { color: var(--link-color, #4a9eff); text-decoration: none; }
+    .footnote-ref a:hover, .footnote-backref:hover { text-decoration: underline; }
+    .footnotes-sep { display: none; }
+  </style>`;
+  html = html.replace(/<\/head>/i, footnoteCss + '\n</head>');
+
+  // Font Awesome — inject only if not already present in the rendered output
+  // (some repos may include it via their own head.html override)
+  if (!/<link[^>]*font.?awesome/i.test(html) &&
+      !/<script[^>]*font.?awesome/i.test(html) &&
+      !/<script[^>]*kit\.fontawesome/i.test(html)) {
+    const faLink = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">';
+    html = html.replace(/<\/head>/i, faLink + '\n</head>');
+  }
+
+  // ── 10. Inject in-iframe preview banner ──────────────────────────────────
+  // A minimal banner inside the iframe showing the layout chain and timestamp.
+  // (Separate from the outer preview bar — this one travels with the content.)
+  const inlinebannerCss = `<style>
+    #__preview-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
+      display: flex; align-items: center; gap: 10px; padding: 4px 12px;
+      background: rgba(15,15,20,0.85); backdrop-filter: blur(6px);
+      font-family: ui-monospace, monospace; font-size: 11px; color: #8b949e;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      pointer-events: none;
+    }
+    #__preview-banner .pb-badge {
+      background: #238636; color: #fff; border-radius: 3px;
+      padding: 1px 5px; font-weight: 700; font-size: 10px; pointer-events: none;
+    }
+  </style>`;
+  html = html.replace(/<\/head>/i, inlinebannerCss + '\n</head>');
+
+  const inlineBannerHtml = `<div id="__preview-banner">` +
+    `<span class="pb-badge">PREVIEW</span>` +
+    `<span>${layoutChain.map(l => l.name).join(' → ')} · ${new Date().toLocaleTimeString()}</span>` +
+    `</div>`;
+  // Add 'preview' class to <body> so authors can write custom CSS using
+  // .preview { ... } to adjust presentation specifically in preview context
+  html = html.replace(/<body(\s[^>]*)?>/i, (match, attrs) => {
+    const a = attrs || '';
+    if (/\bclass=/i.test(a)) return match.replace(/\bclass="([^"]*)"/i, 'class="$1 preview"');
+    return `<body${a} class="preview">`;
+  });
+  html = html.replace(/(<body[^>]*>)/i, '$1' + inlineBannerHtml);
+
+  // ── 11. Write to iframe ──────────────────────────────────────────────────
+  document.getElementById('__preview-frame').srcdoc = html;
+  setStatus(`Done · ${layoutChain.map(l => l.name).join(' → ')} · ${new Date().toLocaleTimeString()}`);
+}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+//  CONTROLS
+// ════════════════════════════════════════════════════════════════════════════
+
+document.getElementById('pb-reload').addEventListener('click', () => {
+  fetchCache.clear();
+  render();
+});
+
+document.getElementById('pb-config').addEventListener('click', () => {
+  const action = prompt(
+    'Config options:\n' +
+    '  1 = Set / update GitHub PAT\n' +
+    '      (raises rate limit from 60 → 5000 req/hr; required for private repos)\n' +
+    '  2 = Clear GitHub PAT\n' +
+    '  3 = Set preview app base URL\n\n' +
+    'Enter 1, 2, or 3:'
+  );
+  if (!action) return;
+
+  if (action.trim() === '1') {
+    const pat = prompt(
+      'GitHub Personal Access Token\n' +
+      'No scopes needed for public repos.\n' +
+      'Needs repo:read scope for private repos.',
+      getToken()
+    );
+    if (pat == null) return;
+    if (pat.trim()) {
+      localStorage.setItem('jekyllPreviewPAT', pat.trim());
+      setStatus('PAT saved — reloading…');
+      setTimeout(() => { fetchCache.clear(); repoMissCache.clear(); render(); }, 300);
+    }
+  } else if (action.trim() === '2') {
+    localStorage.removeItem('jekyllPreviewPAT');
+    setStatus('PAT cleared.');
+  } else if (action.trim() === '3') {
+    const next = prompt('Preview app base URL:', localStorage.getItem('jekyllPreviewBase') || '');
+    if (next == null) return;
+    localStorage.setItem('jekyllPreviewBase', next.trim().replace(/\/?$/, '/'));
+    setStatus('Preview base URL saved.');
+  }
+});
+
+// ── Initial render on page load ──────────────────────────────────────────────
+render();
+
+</script>
+</body>
+</html>

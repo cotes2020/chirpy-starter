@@ -3,6 +3,7 @@ title: "Juncture: Overview"
 description: An introduction to Juncture — a Markdown-first framework for adding interactive viewers and text-driven media interactions to a Jekyll + Chirpy site. This overview explains Juncture’s origins, how it fits into the existing architecture, and how it is enabled and configured for individual posts.
 permalink: /admin/juncture-overview
 date: 2026-02-15
+toc: true
 order: 10
 juncture:
     mode: flat

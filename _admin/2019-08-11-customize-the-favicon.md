@@ -3,6 +3,7 @@ title: "Chirpy: Customize the Favicon"
 author: cotes
 date: 2019-08-11 00:34:00 +0800
 permalink: /admin/customize-the-favicon
+toc: true
 order: 4
 ---
 

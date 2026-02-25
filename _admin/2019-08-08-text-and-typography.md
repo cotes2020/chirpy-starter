@@ -7,6 +7,7 @@ math: true
 mermaid: true
 media_subpath: /assets/img
 permalink: /admin/text-and-typography
+toc: true
 order: 2
 ---
 

@@ -2,6 +2,7 @@
 layout: admin
 title: Admin
 permalink: /admin/
+toc: true
 order: 0
 ---
 
@@ -13,6 +14,8 @@ This area brings together two things:
 * Additional guides explaining how to use the Juncture extensions built on top of Chirpy
 
 If you are creating or editing content for this site, this is where you should start.
+
+If you're a content author and want to just dive in, refer to the **[Authors Guide](juncture-authors-guide)**
 
 ## What This Covers
 
