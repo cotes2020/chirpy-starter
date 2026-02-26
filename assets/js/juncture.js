@@ -105,7 +105,6 @@ function computeDialogWidth({ aspect }) {
 }
 
 function showDialog({ aspect, src } = {}) {
-    console.log('showDialog', { aspect, src });
     if (activeDialog) return;
     const srcUrl = safeURL(src);
     if (!srcUrl) {
@@ -240,7 +239,6 @@ function addMessageHandler() {
             if (typeof h !== "number" || h <= 0) return;
             const sendingIframe = findIframeBySourceWindow(event.source);
             if (sendingIframe) {
-                console.log(`Setting height of iframe ${sendingIframe.id || sendingIframe.getAttribute('data-id') || ''} to ${h}px based on message from ${event.origin}`);
                 sendingIframe.style.height = h + "px";
             }
             return;
@@ -273,7 +271,6 @@ function wrapAdjacentEmbedsAsTabs({
         return `Item ${idx + 1}`;
     }
 } = {}) {
-    console.log('wrapAdjacentEmbedsAsTabs');
     const isIgnorableText = (n) => (n.nodeType === Node.COMMENT_NODE) || (n.nodeType === Node.TEXT_NODE && n.nodeValue.trim() === "");
 
     const isEmbedItem = (n) =>
@@ -369,7 +366,6 @@ function wrapAdjacentEmbedsAsTabs({
  * ------------------------------------------- */
 
 function autoFloat({ root = document.body } = {}) {
-    console.log('autoFloat');
     const embeds = Array.from(root.querySelectorAll('iframe, sl-tab-group, figure.iframe-wrapper, p:has(>img), p:has(>a>img)')).reverse();
 
     embeds.forEach((embed) => {
@@ -438,7 +434,6 @@ function parseActionLink(a) {
 }
 
 function addActionLinks({ root = document.body } = {}) {
-    // console.log('addActionLinks');
     const iframes = Array.from(root.querySelectorAll("iframe")).filter((i) => i.id);
 
     if (!iframes.length) return;
@@ -700,7 +695,6 @@ async function getEntityData(qids, language = "en") {
  * add them back explicitly in the card footer.
  */
 async function makeEntityPopups({ root = document.body, language = "en" } = {}) {
-    // console.log('makeEntityPopups')
     const anchors = Array.from(root.querySelectorAll("a"));
     const qids = new Set();
 
@@ -931,7 +925,6 @@ function requestPositionUpdate() {
 
 function handleStepEnter(response) {
     const stepEl = response?.element;
-    // console.log('handleStepEnter', stepEl)
     if (!stepEl) return;
 
     setActive(stepEl);
@@ -942,7 +935,6 @@ function handleStepEnter(response) {
 }
 
 function init2col() {
-    console.log('init2col')
     els.article = qs(SELECTORS.article);
     els.header = qs(SELECTORS.header);
     els.viewer = qs(SELECTORS.viewer);

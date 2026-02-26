@@ -276,7 +276,6 @@ script_includes:
     import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks } from "{{ '/assets/js/juncture.js' | relative_url }}";
 
     let isJuncture = '{{ page.juncture }}';
-    console.log(isJuncture);
 
     if (isJuncture) {
       let mode = '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat';
