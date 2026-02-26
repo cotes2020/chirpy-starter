@@ -24,6 +24,14 @@
   {%- if jekyll.environment == "development" -%}
     {%- assign is_dev = true -%}
   {%- endif -%}
+
+  {%- assign image_extensions = "jpg,jpeg,png,gif,webp,svg,tif,tiff,avif" | split: "," -%}
+  {%- assign ext = url | split: "." | last | downcase -%}
+  {%- assign is_image = false -%}
+
+  {%- if image_extensions contains ext -%}
+    {%- assign is_image = true -%}
+  {%- endif -%}
     
   {%- assign is_cloudinary_cdn = false -%}
     {%- if site.cdn contains 'res.cloudinary.com' -%}
@@ -84,7 +92,7 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/{{ _md5 | slice: 0, 1 }}/{{
     
     {% endunless %}
 
-    {% if is_dev == false and is_cloudinary_cdn == true %}
+    {% if is_dev == false and is_cloudinary_cdn == true and is_image == true %}
       {%- assign url = site.cdn | append: '/' | append: url -%}
     {% endif %}
   
