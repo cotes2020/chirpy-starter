@@ -1007,6 +1007,7 @@
       const imageSize = image.getContentSize();
       const imageAspectRatio = imageSize.x / imageSize.y;
       setContainerHeight(imageAspectRatio);
+      setTimeout(() => viewer.viewport.goHome(true), 100);
     }).observe(window.frameElement);
 
     window.addEventListener('message', (event) => {
