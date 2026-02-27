@@ -729,7 +729,7 @@ iframe.full {
     aspect-ratio: unset;
 }
 
-iframe[src^="https://cdn.knightlab.com/"].full {
+iframe[src^="https://cdn.knightlab.com/"] {
     height: 650px;
 }
 
