@@ -53,5 +53,6 @@
 {%- assign qs = qs | replace: '+', '%2B' %}
 
 <iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" title="Juncture image viewer" allow="clipboard-write"
-  src="{{ '/assets/components/image.html' | relative_url }}?{{ qs }}" allowfullscreen>
+  src="{{ '/assets/components/image.html' | relative_url }}?{{ qs }}" allowfullscreen
+  {% if include.aspect %} style="aspect-ratio: {{ include.aspect }};" {% endif %}>
 </iframe>

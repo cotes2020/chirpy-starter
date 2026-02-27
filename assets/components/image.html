@@ -28,7 +28,7 @@
 
     /* Figure wrapper (viewer + caption) */
     #wrap {
-      height: 98%;
+      height: 100%;
       display: grid;
       grid-template-rows: 1fr auto;
       position: relative;
@@ -42,6 +42,7 @@
       /* shown only if caption exists */
       position: relative;
       margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
       padding: 0 36px;
       /* reserve space so the right icon doesn't overlap text */
       font-size: 1em;
@@ -730,7 +731,9 @@
     }
 
     function updateIframeAspectTip() {
+      console.log(els.wrap);
       const r = els.wrap.getBoundingClientRect();
+      console.log(r);
       const w = Math.max(1, Math.round(r.width));
       const h = Math.max(1, Math.round(r.height));
       els.arTip.textContent = iframeAspectText(w, h);
