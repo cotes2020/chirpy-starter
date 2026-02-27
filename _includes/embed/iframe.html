@@ -8,13 +8,13 @@
 {%- assign qs = qs | append: "&caption=" | append: include.caption | uri_escape -%}
 {%- endif -%}
 
-{%- assign class = "embed-iframe iframe-wrapper" -%}
+{%- assign class = "iframe-wrapper" -%}
 {%- if include.class -%}
 {%- assign class = class | append: " " | append: include.class -%}
 {%- endif -%}
 
 <figure class="{{ class }}">
-  <iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" allow="clipboard-write"
+  <iframe id="{{ include.id }}" class="embed-iframe" loading="lazy" allow="clipboard-write"
     src="{{ src_final }}" 
     {% if include.width %} width="{{ include.width }}" {% endif %}
     {% if include.height %} height="{{ include.height }}" {% endif %}

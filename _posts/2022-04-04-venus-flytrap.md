@@ -180,7 +180,7 @@ Erasmus Darwin’s conviction that such mechanisms—"curious contrivance[s]" to
 
 Charles Darwin began pondering the lethal activities of carnivorous plants in 1860, and over the course of the decade sporadically worked with the [Droseraceae.](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77126644-1) Among those who facilitated his study of these plants were the American naturalist [Mary Treat](Q6780853) (1830—1923) and Joseph Dalton Hooker (1817—1911). Hooker, Darwin’s close friend and then director of [Royal Botanic Gardens, Kew](Q188617) supplied him with ample living specimens. Armed with this network of correspondents and the global resources of Kew, Darwin was able to carry out detailed investigations of plant carnivory from his backyard greenhouse at [Down House](Q3038318). Indeed, an important aspect of Darwin’s enduring impact on biology was his work that examined evolutionary adaptation through various botanical lenses, with the Venus flytrap and other carnivorous plants serving as prime examples. Francis Darwin sought to further develop the book’s findings by conducting his own [experiments](https://www.darwinproject.ac.uk/commentary/life-sciences/dipsacus-and-drosera-frank-s-favourite-carnivores) on plant carnivory and publishing a revised second edition in 1888.
 
-{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Hmhbx0rEUdgxkbwUs5TMjhjopCpeUOR_oUe0rEvapcc&" height="650px" class="full" %}
+{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Hmhbx0rEUdgxkbwUs5TMjhjopCpeUOR_oUe0rEvapcc&" class="full" %}
 
 # "Vegetable Wickedness" on Display
 

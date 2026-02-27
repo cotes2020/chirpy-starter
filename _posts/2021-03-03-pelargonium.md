@@ -66,7 +66,7 @@ In the wake of that initial nomenclature confusion, seventeenth-century botanist
 
 <!-- TimelineJS spreadsheet data not found -->
 
-{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=11nYkAFDtVbdE5tjZDSfYpv_8BXnmmjHc6uQRkwDHA3U&&font=Default&lang=en&timenav_position=bottom&hash_bookmark=false&initial_zoom=1" height="650px" class="full" %}
+{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=11nYkAFDtVbdE5tjZDSfYpv_8BXnmmjHc6uQRkwDHA3U&&font=Default&lang=en&timenav_position=bottom&hash_bookmark=false&initial_zoom=1" class="full" %}
 
 # Technology, Breeding, and the Modern Pelargonium
 

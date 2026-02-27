@@ -41,7 +41,7 @@ Since [classical antiquity](Q486761), the black-eyed pea has been a cultural mar
 
 Authors of the ancient world have described black-eyed peas in accounts of plants and nature. The Roman chronicler [Pliny the Elder](Q82778) (23/24–79 CE) wrote that priests should avoid eating the food for fear its rough nature would upset their delicate constitutions. He also notes that [Pythagoras](Q10261) (c.570–c.495 BCE) and his followers did not eat black-eyed peas because they "believed the souls of the dead to be contained within" the dried beans.[^ref4] This belief may have been informed by some cultural groups in Africa that understood the black eye of the pea as the watchful presence of a supreme deity.[^ref5] Such accounts, together with later botanical texts expressing ever-changing ideas of the bean’s origins and classification, demonstrate a long confusion regarding the plant’s common and Latin names in Europe.[^ref6] They also provide a wealth of information about the cultural and social role played by the bean in the European context.
 
-{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1-bgb9ieXKIJb0mj1LuB2lfcJXRcH4IJdq6l6NrFpUWw&timenav-position=bottom&hash-bookmark=false&initial-zoom=1" height="650px" class="full" %}
+{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1-bgb9ieXKIJb0mj1LuB2lfcJXRcH4IJdq6l6NrFpUWw&timenav-position=bottom&hash-bookmark=false&initial-zoom=1" class="full" %}
 
 Records of black-eyed pea consumption and use within Europe during the [Middle Ages](Q12554) are relatively scarce. Understood as a food for peasants and livestock, black-eyed peas would have been considered subject matter too lowly for inclusion in the annals of history. Throughout the [early modern period](Q5308718), the dried bean continued to be associated with persons of low social standing. But by the late sixteenth century, the bean seemed at least worthy of representation. In the Italian artist [Annibale Carracci’s](Q7824) (1560–1609) painting _The Bean Eater_, from circa 1590, the artist’s brush strokes depict a man and his bowl of black-eyed peas, visually articulating their mutual low standing. Even though the beans had been a vital part of the Mediterranean diet and culture for centuries, they are here presented as both marginal and familiar.
 
@@ -49,7 +49,7 @@ Records of black-eyed pea consumption and use within Europe during the [Middle A
 
 In contrast, many more artists took inspiration from the [green pea](Q25237)—be it the leaves, delicate blossoms, or sinuous tendril-filled vines—which became an emblem for love, fertility, and even lust. Verdant green peas were considered domestic to Europe, and served the elite not only for food, but for decorating their homes and gardens.
 
-{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1goBeScMb3Depvqjmo89tMojcRHDbVY4YOktgo-P7oV4&timenav-position=bottom&hash-bookmark=false&initial-zoom=1" height="650px" class="full" %}
+{% include embed/iframe.html src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1goBeScMb3Depvqjmo89tMojcRHDbVY4YOktgo-P7oV4&timenav-position=bottom&hash-bookmark=false&initial-zoom=1" class="full" %}
 
 # Peas and Beans in Early Modern Texts and Images
 
