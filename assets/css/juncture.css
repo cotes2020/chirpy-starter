@@ -648,6 +648,7 @@ figure.iframe-wrapper figcaption {
 }
 
 .footnotes {
+    clear: both;
     overflow-wrap: break-word;
     word-wrap: break-word;
     -ms-word-break: break-all;
