@@ -731,9 +731,7 @@
     }
 
     function updateIframeAspectTip() {
-      console.log(els.wrap);
       const r = els.wrap.getBoundingClientRect();
-      console.log(r);
       const w = Math.max(1, Math.round(r.width));
       const h = Math.max(1, Math.round(r.height));
       els.arTip.textContent = iframeAspectText(w, h);

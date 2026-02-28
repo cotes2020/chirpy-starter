@@ -6,20 +6,104 @@ media_subpath: /assets/posts/contributors
 ---
 
 <style>
-    h1, h2, h3, h4, h5 { clear: both; }
-    p:has(img) {
-        float: right;
-        width: 40%;
-        margin-left: 1em;
-    }
-    p a,
-    p a img {
-        width: 100%;
-    }
 
-    p a img {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
+#panel-wrapper {
+    display: none;
+    width: 0;
+}
+
+#main-wrapper .container main {
+    width: 100%;
+}
+
+/* ---- layout: responsive card grid ---- */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* ---- card ---- */
+.contrib-card {
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card-bg, #fff);
+  box-shadow: rgba(0,0,0,.08) 0 2px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* title */
+.contrib-card h2 {
+  margin: 0;
+  padding: .75rem 1rem .25rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* image: flush, square crop */
+.contrib-card p:has(> img),
+.contrib-card p:has(> a > img) {
+  margin: 0;
+  order: -1; /* move photo above the heading */
+}
+
+.contrib-card img {
+  width: 100%;
+  height: 220px;          /* pick your preferred height */
+  object-fit: cover;      /* crops instead of stretching */
+  object-position: center top;
+  display: block;
+  border-radius: 12px;
+}
+
+/* bio collapsed/expanded */
+.contrib-bio {
+  overflow: hidden;
+  padding: .25rem 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* collapsed: clamp via max-height */
+.contrib-card[data-collapsed="true"] .contrib-bio {
+  max-height: 7.5em;
+  position: relative;
+}
+
+/* fade uses card bg variable so it works in both light and dark mode */
+.contrib-card[data-collapsed="true"] .contrib-bio::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2.5em;
+  pointer-events: none;
+  background: linear-gradient(transparent, var(--card-bg, #fff));
+}
+
+/* toggle button */
+.contrib-toggle {
+  margin-top: .4rem;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  color: #777;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.contrib-card:hover .contrib-toggle {
+  opacity: 1;
+}
+
+.contrib-toggle:hover {
+  text-decoration: underline;
+}
 
 </style>
 
@@ -278,3 +362,85 @@ Matthew Turetsky is a Ph.D. student in History at Carnegie Mellon University stu
 ![May Wang](Wang.jpg)
 
 May Wang graduated from Harvard College in 2020 with a degree in comparative literature and a secondary in astrophysics. Her undergraduate work often focused on the intersection of cultural and scientific history, especially in nineteenth-century novels. Wang has interned at the Harvard Art Museums, Dumbarton Oaks, and the Smithsonian Astrophysical Observatory. Wang is currently a Postgraduate Writing and Reporting Fellow at Dumabrton Oaks.
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('.page-content') || document.querySelector('article') || document.body;
+
+  const grid = document.createElement('div');
+  grid.className = 'contrib-grid';
+  root.appendChild(grid);
+
+  const h2s = Array.from(root.querySelectorAll('h2'));
+  if (!h2s.length) return;
+
+  // For each H2, wrap it + following siblings up to next H2 into a card
+  h2s.forEach((h2) => {
+    // Skip if already wrapped
+    if (h2.closest('.contrib-card')) return;
+
+    const card = document.createElement('section');
+    card.className = 'contrib-card';
+    card.dataset.collapsed = 'true';
+
+    // Insert card before the heading, then move nodes into it
+    grid.appendChild(card);
+    
+    let node = h2;
+    while (node) {
+      const next = node.nextSibling;
+      card.appendChild(node);
+
+      // Stop when the next element sibling is an H2 (next contributor)
+      const nextEl = next && next.nodeType === 1 ? next : null;
+      if (nextEl && nextEl.tagName === 'H2') break;
+
+      node = next;
+    }
+
+    // Identify bio content: everything after the image paragraph (or after h2 if no image)
+    const imageP = card.querySelector('p:has(> img)') || card.querySelector('p img')?.closest('p');
+    const bioWrap = document.createElement('div');
+    bioWrap.className = 'contrib-bio';
+
+    // Move bio nodes into bioWrap
+    let start = imageP ? imageP.nextSibling : card.querySelector('h2')?.nextSibling;
+    while (start) {
+      const next = start.nextSibling;
+      // Don’t move the toggle if rerun
+      if (!(start.nodeType === 1 && start.classList.contains('contrib-toggle'))) {
+        bioWrap.appendChild(start);
+      }
+      start = next;
+    }
+    card.appendChild(bioWrap);
+
+    // Add toggle button
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'contrib-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'More';
+    card.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+      const collapsed = card.dataset.collapsed === 'true';
+      card.dataset.collapsed = collapsed ? 'false' : 'true';
+      btn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
+      btn.textContent = collapsed ? 'Less' : 'More';
+    });
+  });
+
+  // Hide toggle button for bios that aren't actually truncated
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.contrib-card').forEach(card => {
+      const bio = card.querySelector('.contrib-bio');
+      const btn = card.querySelector('.contrib-toggle');
+      if (bio && btn && bio.scrollHeight <= bio.clientHeight + 2) {
+        btn.style.display = 'none';
+        card.dataset.collapsed = 'false';
+      }
+    });
+  });
+});
+</script>

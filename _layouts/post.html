@@ -9,6 +9,63 @@ script_includes:
   - comment
 ---
 
+<style>
+  #topbar {
+    background-color: #eee;
+    border-radius: 3px;
+  }
+  #main-wrapper .container #toolbar {
+    display: none;
+  }
+  /* When toolbar is relocated into the topbar */
+  #topbar #toolbar.topbar-toolbar {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  #topbar #toolbar.topbar-toolbar .toolbar-inner {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 3px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    margin-top: 0;
+    margin-right: 4px;
+  }
+
+  /* Optional: keep toolbar items from expanding vertically */
+  #topbar #toolbar.topbar-toolbar .toolbar-item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #toolbar .toolbar-inner a, #toolbar .toolbar-inner button {
+    border: 1px solid rgba(0, 0, 0, .12);
+    background: rgba(255, 255, 255, .9);
+    color: inherit;
+    font: inherit;
+    font-size: .9rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  #toolbar .toolbar-inner a, #toolbar .toolbar-inner button, #toolbar .toolbar-inner sl-button::part(base) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    height: 2.2rem;
+    padding: 0 .65rem;
+    border-radius: .6rem;
+    text-decoration: none;
+  }
+
+</style>
+
 {% include lang.html %}
 
 {% include toc-status.html %}
@@ -275,6 +332,33 @@ script_includes:
 
     import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks } from "{{ '/assets/js/juncture.js' | relative_url }}";
 
+    function moveToolbarIntoTopbar() {
+      const toolbar = document.getElementById("toolbar");
+      const topbar = document.getElementById("topbar");
+      if (!toolbar || !topbar) return;
+
+      // Avoid duplicating if something reruns (PJAX, etc.)
+      if (toolbar.dataset.moved === "true") return;
+
+      // Where to insert: before search trigger if it exists,
+      // otherwise before the <search> element, otherwise append.
+      const searchTrigger = document.getElementById("search-trigger");
+      const searchEl = document.getElementById("search");
+
+      toolbar.classList.add("topbar-toolbar"); // for styling tweaks
+      toolbar.dataset.moved = "true";
+
+      if (searchTrigger && searchTrigger.parentElement === topbar) {
+        topbar.insertBefore(toolbar, searchTrigger);
+      } else if (searchEl && searchEl.parentElement === topbar) {
+        topbar.insertBefore(toolbar, searchEl);
+      } else {
+        topbar.appendChild(toolbar);
+      }
+      toolbar.style.display = 'inline-block';
+      toolbar.style.marginLeft = 'auto';
+    }
+      
     let isJuncture = '{{ page.juncture }}';
 
     if (isJuncture) {
@@ -290,6 +374,13 @@ script_includes:
       if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
       addActionLinks();
       if (doAutoFloat && !isMobile) autoFloat();
+
+      // Initial load
+      document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);
+
+      // If Chirpy navigation swaps pages without full reload (depends on your setup),
+      // this makes it resilient.
+      window.addEventListener("pageshow", moveToolbarIntoTopbar);
     }
 
   </script>
