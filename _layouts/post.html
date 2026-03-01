@@ -337,15 +337,12 @@ script_includes:
       const topbar = document.getElementById("topbar");
       if (!toolbar || !topbar) return;
 
-      // Avoid duplicating if something reruns (PJAX, etc.)
       if (toolbar.dataset.moved === "true") return;
 
-      // Where to insert: before search trigger if it exists,
-      // otherwise before the <search> element, otherwise append.
       const searchTrigger = document.getElementById("search-trigger");
       const searchEl = document.getElementById("search");
 
-      toolbar.classList.add("topbar-toolbar"); // for styling tweaks
+      toolbar.classList.add("topbar-toolbar");
       toolbar.dataset.moved = "true";
 
       if (searchTrigger && searchTrigger.parentElement === topbar) {
@@ -375,11 +372,7 @@ script_includes:
       addActionLinks();
       if (doAutoFloat && !isMobile) autoFloat();
 
-      // Initial load
       document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);
-
-      // If Chirpy navigation swaps pages without full reload (depends on your setup),
-      // this makes it resilient.
       window.addEventListener("pageshow", moveToolbarIntoTopbar);
     }
 

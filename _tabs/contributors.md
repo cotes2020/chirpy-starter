@@ -374,16 +374,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const h2s = Array.from(root.querySelectorAll('h2'));
   if (!h2s.length) return;
 
-  // For each H2, wrap it + following siblings up to next H2 into a card
   h2s.forEach((h2) => {
-    // Skip if already wrapped
     if (h2.closest('.contrib-card')) return;
 
     const card = document.createElement('section');
     card.className = 'contrib-card';
     card.dataset.collapsed = 'true';
 
-    // Insert card before the heading, then move nodes into it
     grid.appendChild(card);
     
     let node = h2;
@@ -391,23 +388,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const next = node.nextSibling;
       card.appendChild(node);
 
-      // Stop when the next element sibling is an H2 (next contributor)
       const nextEl = next && next.nodeType === 1 ? next : null;
       if (nextEl && nextEl.tagName === 'H2') break;
 
       node = next;
     }
 
-    // Identify bio content: everything after the image paragraph (or after h2 if no image)
     const imageP = card.querySelector('p:has(> img)') || card.querySelector('p img')?.closest('p');
     const bioWrap = document.createElement('div');
     bioWrap.className = 'contrib-bio';
 
-    // Move bio nodes into bioWrap
     let start = imageP ? imageP.nextSibling : card.querySelector('h2')?.nextSibling;
     while (start) {
       const next = start.nextSibling;
-      // Don’t move the toggle if rerun
       if (!(start.nodeType === 1 && start.classList.contains('contrib-toggle'))) {
         bioWrap.appendChild(start);
       }
@@ -415,7 +408,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     card.appendChild(bioWrap);
 
-    // Add toggle button
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'contrib-toggle';
@@ -431,7 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hide toggle button for bios that aren't actually truncated
   requestAnimationFrame(() => {
     grid.querySelectorAll('.contrib-card').forEach(card => {
       const bio = card.querySelector('.contrib-bio');
