@@ -138,6 +138,42 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;          /* hidden on screen */
+    }
+
+    /* Print: use poster, suppress player/overlays */
+    @media print {
+      .poster {
+        display: block !important;
+      }
+
+      .video-wrapper iframe,
+      .click-overlay {
+        display: none !important;
+      }
+    }
+    .print-url {
+        display: none;        /* hidden on screen */
+    }
+
+    /* Only show in print */
+    @media print {
+      figcaption {
+          display: block !important;
+      }
+      .print-url {
+          display: block !important;   /* forces new line */
+          margin-top: 4px;
+          font-size: 0.9em;
+          word-break: break-all;
+      }
+    }
   </style>
 </head>
 
@@ -147,11 +183,13 @@
     <figure>
       <div class="video-wrapper">
         <div id="youtubePlayer"></div>
+        <img id="poster" class="poster" alt="">
         <!-- In non-max mode, JS appends a .click-overlay div here -->
         <!-- In max mode, the YT.Player API targets the div above -->
       </div>
       <figcaption>
         <span class="caption-label" id="videoTitle"></span>
+        <a id="caption-print-url" class="print-url" target="_blank" rel="noopener"></a>
       </figcaption>
     </figure>
   </main>
@@ -210,6 +248,28 @@
       caption: params.get('caption') || null,          // override caption; falls back to YouTube title
       start: toSeconds(params.get('start')),         // playback start time in seconds (null = 0)
       end: toSeconds(params.get('end')),           // playback end time in seconds (null = play to end)
+    }
+
+    const poster = document.getElementById('poster');
+
+    if (poster && props.vid) {
+      const maxres = `https://img.youtube.com/vi/${props.vid}/maxresdefault.jpg`;
+      const hq = `https://img.youtube.com/vi/${props.vid}/hqdefault.jpg`;
+
+      poster.src = maxres;
+      poster.alt = 'Video poster image';
+
+      // Fallback if maxres isn't available for the video
+      poster.addEventListener('error', () => {
+        if (poster.src !== hq) poster.src = hq;
+      }, { once: true });
+    }
+
+    const captionUrl = document.getElementById('caption-print-url');
+    if (captionUrl && props.vid) {
+        const url = `https://www.youtube.com/watch?v=${props.vid}`;
+        captionUrl.href = url;
+        captionUrl.textContent = url;
     }
 
     // ── Element references ──────────────────────────────────────────────────────

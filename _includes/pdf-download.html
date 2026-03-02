@@ -19,8 +19,8 @@
 
 <!-- Configuration anchor (optional overrides via page front-matter) -->
 <div data-pdf-root data-service="{{ include.service | default: 'https://pdf-converter-drnxe7pzjq-uc.a.run.app/pdf' }}"
-    data-viewport-width="{{ include.viewportWidth | default: 1020 }}"
-    data-keep-together="{{ include.keepTogether | default: '.float-pair' }}"
+    data-viewport-width="{{ include.viewportWidth | default: 1100 }}"
+    data-keep-together="{{ include.keepTogether | default: 'section,.float-pair' }}"
     data-hide-tags="{{ include.hideTags | default: '' }}"
     data-hide-ids="{{ include.hideIds | default: 'topbar,toolbar,tail-wrapper' }}"
     data-hide-classes="{{ include.hideClasses | default: 'readtime,post-tail-wrapper' }}"
@@ -71,7 +71,7 @@
 
         function buildPdfUrl(pageUrl) {
             const service = location.hostname === 'localhost' ? 'http://localhost:8888/pdf' : root?.dataset.service?.trim();
-            const viewportWidth = root?.dataset.viewportWidth?.trim() || '1020';
+            const viewportWidth = root?.dataset.viewportWidth?.trim() || '1100';
             const keepTogether = root?.dataset.keepTogether?.trim() || '';
             const hideTags = root?.dataset.hideTags?.trim() || '';
             const hideIds = root?.dataset.hideIds?.trim() || '';

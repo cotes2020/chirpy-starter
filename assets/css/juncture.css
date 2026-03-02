@@ -217,6 +217,10 @@ figure.iframe-wrapper figcaption {
     width: 100%;
 }
 
+.col1 .viewer {
+    display: none;;
+}
+
 .preview .container,
 #main-wrapper.col2>.container {
     max-width: 1200px !important;
@@ -554,43 +558,6 @@ figure.iframe-wrapper figcaption {
     word-break: break-word;
 }
 
-@media print {
-    .keep-together-pair {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-        /* Make it a real box */
-        display: block !important;
-    }
-
-    /* Floats are the enemy of reliable keep-together */
-    .keep-together-pair .right {
-        float: none !important;
-        clear: none !important;
-        margin: 0 0 .6rem 0 !important;
-    }
-
-    /* If you want a “col2-ish” feel in print: use grid instead of float */
-    .keep-together-pair {
-        display: grid !important;
-        grid-template-columns: 1fr auto;
-        column-gap: 1rem;
-        align-items: start;
-    }
-
-    /* Put text first, media second */
-    .keep-together-pair>p {
-        grid-column: 1;
-    }
-
-    .keep-together-pair>iframe,
-    .keep-together-pair>sl-tab-group,
-    .keep-together-pair>figure,
-    .keep-together-pair>p:has(>img),
-    .keep-together-pair>p:has(>a>img) {
-        grid-column: 2;
-    }
-}
-
 /* Base wrapper for index card images */
 .post-index-item .post-index-media {
     width: 100%;
@@ -639,4 +606,105 @@ iframe[src^="https://cdn.knightlab.com/"] {
     font-size: 1.2rem;
     color: inherit;
     padding-left: .5rem;
+}
+
+@media print {
+    .keep-together-pair {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        /* Make it a real box */
+        display: block !important;
+    }
+
+    /* Floats are the enemy of reliable keep-together */
+    .keep-together-pair .right {
+        float: none !important;
+        clear: none !important;
+        margin: 0 0 .6rem 0 !important;
+    }
+
+    /* If you want a “col2-ish” feel in print: use grid instead of float */
+    .keep-together-pair {
+        display: grid !important;
+        grid-template-columns: 1fr auto;
+        column-gap: 1rem;
+        align-items: start;
+    }
+
+    /* Put text first, media second */
+    .keep-together-pair>p {
+        grid-column: 1;
+    }
+
+    .keep-together-pair>iframe,
+    .keep-together-pair>sl-tab-group,
+    .keep-together-pair>figure,
+    .keep-together-pair>p:has(>img),
+    .keep-together-pair>p:has(>a>img) {
+        grid-column: 2;
+    }
+
+    .trigger, .entity-popup span {
+        text-decoration: none !important;
+        border-bottom: 0 !important;
+    }
+
+    #topbar-wrapper {
+        display: none;
+    }
+
+    #main-wrapper main {
+        padding: 0 !important;
+    }
+
+    article {
+        /* border: 1px solid red; */
+    }
+    article header h1 {
+        margin-top: -0;
+    }
+    div.content {
+        width: 1066px !important;
+    }
+
+    iframe.right {
+        width: 50% !important;
+        page-break-inside: avoid !important;
+    }
+}
+
+/* Default: posters hidden on screen */
+    .yt-print-poster {
+        display: none;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    /* Print: hide the iframe and show the poster */
+    @media print {
+    iframe[src*="youtube.com/embed/"],
+    iframe[src*="youtube-nocookie.com/embed/"] {
+        display: none !important;
+    }
+
+    .yt-print-poster {
+        display: block !important;
+    }
+
+    /* If your component adds overlays/logos/buttons, nuke them in print */
+    .embed-youtube .play-button,
+    .embed-youtube .yt-logo,
+    .embed-youtube .overlay,
+    .embed-youtube .youtube-overlay {
+        display: none !important;
+    }
+}
+
+.float-pair {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
