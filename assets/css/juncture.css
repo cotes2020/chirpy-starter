@@ -276,7 +276,7 @@ figure.iframe-wrapper figcaption {
     position: sticky;
     width: 100%;
     top: 0;
-    background-color: #fff;
+    background: var(--main-bg);
     z-index: 200;
 }
 
@@ -445,6 +445,7 @@ figure.iframe-wrapper figcaption {
 
     .post-index.view-list .post-index-body {
         width: 58.3333%;
+        color: var(--text-color);
         /* ~ col-md-7 */
     }
 }
@@ -452,6 +453,7 @@ figure.iframe-wrapper figcaption {
 /* ===== title sizes (optional but helps match your original) ===== */
 .post-index.view-list .post-index-title {
     font-size: 1.2rem;
+    color: var(--heading-color);
 }
 
 /* like h1-ish */
@@ -482,6 +484,7 @@ figure.iframe-wrapper figcaption {
 /* nicer placement */
 .post-excerpt-wrap {
     position: relative;
+    color: var(--text-color);
 }
 
 .post-index.view-grid .post-excerpt-wrap::after {
@@ -523,6 +526,8 @@ figure.iframe-wrapper figcaption {
 
 .post-index.view-list .post-index-item.card {
     height: var(--bs-card-height);
+    background: var(--main-bg);
+    border: 1px solid var(--bs-border-color);
 }
 
 .post-index.view-list .post-excerpt {
@@ -670,6 +675,12 @@ iframe[src^="https://cdn.knightlab.com/"] {
     iframe.right {
         width: 50% !important;
         page-break-inside: avoid !important;
+    }
+    .right {
+        float: right !important;
+    }
+    h1 {
+        page-break-after: avoid;
     }
 }
 

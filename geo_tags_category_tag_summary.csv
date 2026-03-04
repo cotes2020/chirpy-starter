@@ -1,0 +1,60 @@
+category_tag,category,tag,count,essay_ids
+origin:East Asia,origin,East Asia,11,carolina-rice; cryptomeria; eggplant; indigo; jasmine; katsura; mint; mulberry; peony; soybean; tamarack
+origin:North America,origin,North America,11,agave; arbor-vitae; dioscoreavillosa; how-to-read-an-herbarium-specimen; mulberry; passionflower; pecan; sunflower; tamarack; venus-flytrap; wild-rice
+origin:South America,origin,South America,11,agave; ayahuasca; cacao; cassava; heliconia; maize; mimosa-pudica; passionflower; peanut; potato; quinoa
+origin:Mesoamerica,origin,Mesoamerica,9,agave; cacao; cassava; contrayerva; dioscoreavillosa; how-to-read-an-herbarium-specimen; indigo; maize; passionflower
+origin:Amazon Basin,origin,Amazon Basin,8,ayahuasca; cacao; cassava; how-to-read-an-herbarium-specimen; maize; mimosa-pudica; passionflower; peanut
+origin:South Asia,origin,South Asia,8,cinnamon; eggplant; indigo; jasmine; mint; okra; tamarind; turmeric
+origin:Southeast Asia,origin,Southeast Asia,8,banana; breadfruit; cinnamon; corpse-flower; eggplant; okra; paperbark; turmeric
+origin:Tropical Africa,origin,Tropical Africa,7,black-eyed-pea; carolina-rice; coffee; indigo; okra; tamarind; watermelon
+origin:Andean Highlands,origin,Andean Highlands,6,ayahuasca; cassava; contrayerva; peanut; potato; quinoa
+origin:Mediterranean Basin,origin,Mediterranean Basin,5,boxwood; dittany; dragon-tree; mint; poppy
+origin:Oceania,origin,Oceania,4,banana; breadfruit; heliconia; paperbark
+origin:Central Asia,origin,Central Asia,3,jasmine; soybean; tamarack
+origin:Middle East,origin,Middle East,3,boxwood; mulberry; poppy
+origin:North Africa,origin,North Africa,3,boxwood; dragon-tree; watermelon
+origin:Sub-Saharan Africa,origin,Sub-Saharan Africa,3,black-eyed-pea; gulmohar; pelargonium
+origin:Eastern Europe,origin,Eastern Europe,2,guelder-rose; tamarack
+origin:Horn of Africa,origin,Horn of Africa,2,coffee; okra
+origin:Western Europe,origin,Western Europe,2,boxwood; guelder-rose
+origin:Himalayan Region,origin,Himalayan Region,1,mulberry
+origin:Indian Ocean World,origin,Indian Ocean World,1,gulmohar
+circulation:Western Europe,circulation,Western Europe,37,agave; arbor-vitae; ayahuasca; boxwood; breadfruit; cacao; carolina-rice; cinnamon; contrayerva; corpse-flower; dioscoreavillosa; dittany; dragon-tree; eggplant; guelder-rose; gulmohar; heliconia; how-to-read-an-herbarium-specimen; indigo; jasmine; katsura; mimosa-pudica; mint; mulberry; passionflower; pecan; pelargonium; peony; potato; quinoa; soybean; sunflower; tamarack; turmeric; venus-flytrap; watermelon; wild-rice
+circulation:North America,circulation,North America,27,agave; arbor-vitae; ayahuasca; boxwood; carolina-rice; corpse-flower; cryptomeria; dioscoreavillosa; dittany; how-to-read-an-herbarium-specimen; indigo; katsura; maize; mimosa-pudica; mint; mulberry; paperbark; passionflower; pecan; potato; quinoa; soybean; sunflower; tamarack; venus-flytrap; watermelon; wild-rice
+circulation:Mediterranean Basin,circulation,Mediterranean Basin,23,agave; arbor-vitae; black-eyed-pea; boxwood; cinnamon; contrayerva; dittany; dragon-tree; eggplant; guelder-rose; indigo; jasmine; mint; mulberry; okra; passionflower; pelargonium; peony; poppy; sunflower; tamarind; turmeric; watermelon
+circulation:East Asia,circulation,East Asia,15,black-eyed-pea; cinnamon; cryptomeria; eggplant; heliconia; jasmine; katsura; mulberry; paperbark; peanut; peony; poppy; soybean; tamarack; watermelon
+circulation:South America,circulation,South America,14,ayahuasca; cacao; cassava; coffee; contrayerva; how-to-read-an-herbarium-specimen; maize; mimosa-pudica; passionflower; peanut; potato; quinoa; soybean; tamarind
+circulation:South Asia,circulation,South Asia,14,banana; black-eyed-pea; breadfruit; carolina-rice; eggplant; gulmohar; heliconia; indigo; jasmine; mulberry; poppy; tamarind; turmeric; watermelon
+circulation:Caribbean,circulation,Caribbean,10,banana; breadfruit; cassava; coffee; dioscoreavillosa; gulmohar; indigo; mimosa-pudica; okra; peanut
+circulation:Southeast Asia,circulation,Southeast Asia,7,banana; cassava; coffee; corpse-flower; eggplant; gulmohar; turmeric
+circulation:Atlantic World,circulation,Atlantic World,6,black-eyed-pea; cacao; cassava; dragon-tree; okra; potato
+circulation:Mesoamerica,circulation,Mesoamerica,6,agave; cacao; dioscoreavillosa; maize; passionflower; peanut
+circulation:Oceania,circulation,Oceania,5,banana; breadfruit; heliconia; paperbark; turmeric
+circulation:Middle East,circulation,Middle East,4,coffee; jasmine; poppy; tamarind
+circulation:Sub-Saharan Africa,circulation,Sub-Saharan Africa,4,banana; black-eyed-pea; carolina-rice; cassava
+circulation:Amazon Basin,circulation,Amazon Basin,3,ayahuasca; how-to-read-an-herbarium-specimen; maize
+circulation:Andean Highlands,circulation,Andean Highlands,3,ayahuasca; maize; quinoa
+circulation:Indian Ocean World,circulation,Indian Ocean World,3,cinnamon; coffee; gulmohar
+circulation:North Africa,circulation,North Africa,2,okra; pelargonium
+circulation:Central Asia,circulation,Central Asia,1,tamarack
+circulation:Eastern Europe,circulation,Eastern Europe,1,guelder-rose
+circulation:Horn of Africa,circulation,Horn of Africa,1,okra
+circulation:Silk Road Region,circulation,Silk Road Region,1,poppy
+circulation:Tropical Africa,circulation,Tropical Africa,1,tamarind
+cultural:Western Europe,cultural,Western Europe,35,agave; arbor-vitae; ayahuasca; black-eyed-pea; boxwood; breadfruit; cacao; carolina-rice; cinnamon; coffee; contrayerva; corpse-flower; dioscoreavillosa; dittany; dragon-tree; guelder-rose; heliconia; how-to-read-an-herbarium-specimen; indigo; jasmine; katsura; mimosa-pudica; mint; mulberry; passionflower; pelargonium; peony; poppy; potato; quinoa; soybean; sunflower; turmeric; venus-flytrap; watermelon
+cultural:North America,cultural,North America,29,agave; arbor-vitae; ayahuasca; black-eyed-pea; boxwood; carolina-rice; corpse-flower; dioscoreavillosa; dittany; eggplant; how-to-read-an-herbarium-specimen; indigo; katsura; maize; mimosa-pudica; mint; mulberry; okra; paperbark; passionflower; pecan; potato; quinoa; soybean; sunflower; tamarack; venus-flytrap; watermelon; wild-rice
+cultural:Mediterranean Basin,cultural,Mediterranean Basin,15,black-eyed-pea; boxwood; cinnamon; coffee; dittany; dragon-tree; eggplant; jasmine; mint; mulberry; okra; passionflower; peony; poppy; watermelon
+cultural:East Asia,cultural,East Asia,13,cryptomeria; eggplant; guelder-rose; jasmine; katsura; mulberry; paperbark; peanut; peony; poppy; soybean; tamarack; watermelon
+cultural:Caribbean,cultural,Caribbean,12,banana; black-eyed-pea; breadfruit; cassava; coffee; dioscoreavillosa; heliconia; indigo; mimosa-pudica; okra; peanut; tamarind
+cultural:South America,cultural,South America,11,ayahuasca; cacao; cassava; coffee; heliconia; maize; mimosa-pudica; okra; passionflower; quinoa; soybean
+cultural:South Asia,cultural,South Asia,11,banana; carolina-rice; cinnamon; eggplant; gulmohar; indigo; jasmine; mulberry; poppy; tamarind; turmeric
+cultural:Mesoamerica,cultural,Mesoamerica,8,agave; cacao; contrayerva; dioscoreavillosa; indigo; maize; passionflower; peanut
+cultural:Andean Highlands,cultural,Andean Highlands,6,ayahuasca; cassava; contrayerva; peanut; potato; quinoa
+cultural:Middle East,cultural,Middle East,4,coffee; jasmine; poppy; tamarind
+cultural:Southeast Asia,cultural,Southeast Asia,4,banana; corpse-flower; paperbark; turmeric
+cultural:Sub-Saharan Africa,cultural,Sub-Saharan Africa,4,banana; black-eyed-pea; carolina-rice; cassava
+cultural:Amazon Basin,cultural,Amazon Basin,3,ayahuasca; cassava; how-to-read-an-herbarium-specimen
+cultural:Oceania,cultural,Oceania,3,banana; breadfruit; paperbark
+cultural:North Africa,cultural,North Africa,2,dragon-tree; pelargonium
+cultural:Tropical Africa,cultural,Tropical Africa,2,tamarind; watermelon
+cultural:Eastern Europe,cultural,Eastern Europe,1,guelder-rose

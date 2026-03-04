@@ -12,7 +12,6 @@ script_includes:
 <style>
 
   #topbar {
-    background-color: #F7F8FA;
     border-radius: 3px;
   }
   #main-wrapper .container #toolbar {
@@ -366,7 +365,7 @@ script_includes:
       let mode = mode_toggle
         ? localStorage.getItem('postViewMode') || '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat'
         : '{{ page.juncture.mode }}' || '{{ site.juncture.mode }}' || 'flat';
-      mode = mode === 'col1' ? 'flat' : 'col2';
+      mode = mode === 'col1' || mode === 'flat' ? 'flat' : 'col2';
       let doAutoFloat = ('{{ page.juncture.auto_float }}' || '{{ site.juncture.auto_float }}' || 'true').toLowerCase() === 'true';
       let groupEmbeds = ('{{ page.juncture.group_embeds }}' || '{{ site.juncture.group_embeds }}' || 'true').toLowerCase() === 'true';
       let wikidataInfoPopups = ('{{ page.juncture.wikidata_info_popups }}' || '{{ site.juncture.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
@@ -378,6 +377,7 @@ script_includes:
         if (newContentEl) contentEl.replaceWith(newContentEl);
       }
 
+      mainWrapper.classList.add(mode === 'col2' ? 'col2' : 'col1');
       new MutationObserver(() => {
         mode = mainWrapper.classList.contains('col2') ? 'col2' : 'flat';
         console.log(`mode=${mode}`);

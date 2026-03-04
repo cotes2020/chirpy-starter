@@ -47,7 +47,7 @@
       /* reserve space so the right icon doesn't overlap text */
       font-size: 1em;
       line-height: 1.4;
-      color: #6d6c6c;
+      color: inherit;
       background: transparent;
       min-height: 24px;
     }
@@ -62,6 +62,7 @@
       text-overflow: ellipsis;
       */
       line-height: 1.2;
+      color: inherit;
     }
 
     /* Right-side expand button */
@@ -94,8 +95,12 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      #caption {
+      figure {
+        background-color: rgba(27,27,30,.9);
         color: rgba(255, 255, 255, 0.55);
+      }
+      a {
+        color: #58a6ff;
       }
     }
 
@@ -1005,9 +1010,9 @@
     new ResizeObserver(entries => {
       const image = viewer?.world.getItemAt(0);
       if (!image) return;
-      const imageSize = image.getContentSize();
-      const imageAspectRatio = imageSize.x / imageSize.y;
-      setContainerHeight(imageAspectRatio);
+      //const imageSize = image.getContentSize();
+      //const imageAspectRatio = imageSize.x / imageSize.y;
+      //setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
     }).observe(window.frameElement);
