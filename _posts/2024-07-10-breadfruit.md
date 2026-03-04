@@ -1,9 +1,9 @@
 ---
 title: 'The Breadfruit''s Reinvention: Pacific to Caribbean'
-description: Breadfruit, a towering tree with nourishing fruit, has long been a staple
-  across the Pacific, spread by human migration and cultivation. This story explores
-  how its movement reveals patterns of settlement, and how selective breeding over
-  millennia transformed the plant into the seedless, resilient form we know today.
+description: Breadfruit, a Pacific staple transported by human migration, became central
+  to British colonial strategy in the Caribbean through Captain Bligh's 1793 expedition.
+  Genetic analysis reveals two Caribbean cultivars directly descended from Tahitian
+  ancestors after over two centuries of separation.
 author: Elaine Savory
 date: 2024-07-10
 permalink: /breadfruit

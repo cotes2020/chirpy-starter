@@ -1,9 +1,10 @@
 ---
 title: 'Carolina Rice: An Agricultural Legacy of Enslaved Peoples'
-description: Carolina rice, once lost after the Reconstruction era, is being revived
-  as a heritage grain with deep historical roots. Its story uncovers a legacy of slavery,
-  settler colonialism, and exploitation that shaped both the British Empire and early
-  America.
+description: Carolina rice shaped colonial and imperial economies through the agricultural
+  knowledge enslaved West Africans brought to America and beyond. Eighteenth-century
+  naturalists erased this crucial expertise by using passive voice in cultivation
+  descriptions, obscuring that hoe-farming and mortar-pestle processing were West
+  African technologies.
 author: Julia Fine
 date: 2021-03-03
 permalink: /carolina-rice
@@ -14,7 +15,6 @@ image:
   path: G92F023_016F.jpg
 juncture: true
 ---
-
 
 # The Comeback Kid
 

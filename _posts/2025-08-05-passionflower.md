@@ -1,12 +1,9 @@
 ---
 title: 'Passionflower: Christian Curiosity, Exotic Vine, Tropical Fruit'
-description: The passionflower (Passiflora), native to the Neotropics, has carried
-  shifting meanings across cultures. Indigenous peoples used it for food and medicine,
-  while Europeans saw symbols of Christ’s Passion in its flowers. By the Victorian
-  era, it was reinterpreted as a sign of exotic beauty and sensuality, spreading into
-  gardens, decorative arts, and poetry. Today, with over 500 species and 400 hybrids,
-  passionflowers are cultivated worldwide for their striking flowers and edible fruits,
-  now celebrated globally as passionfruit.
+description: Passionflower carried Christian symbolism in Europe before Victorian
+  culture reinterpreted it as a symbol of sensuality and exotic beauty. Jesuits saw
+  Christ's Passion in the flower's morphology, later using it to justify colonial
+  conquest across the Americas.
 author: Theo Detweiler, Willa Frank, Rose Kent
 date: 2025-08-05
 permalink: /passionflower
@@ -18,7 +15,6 @@ image:
   path: wc:Passiflora_passion_flower.jpg
 juncture: true
 ---
-
 
 # Introduction
 

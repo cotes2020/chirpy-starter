@@ -1,10 +1,9 @@
 ---
 title: The Corpse Flower - Amorphophallus titanium
-description: The corpse flower, known for its massive size and foul odor, draws huge
-  crowds when it blooms—an event that happens only once every 5 to 10 years. This
-  story explores the plant’s rare and spectacular flowering, its unique pollination
-  strategy, and its rising popularity as a star attraction at botanic gardens across
-  the U.S.
+description: Amorphophallus titanum attracts crowds through its massive size and putrid
+  odor during rare blooms occurring every five to ten years. Horticulturists have
+  enabled three times more flowering in six years than occurred over the previous
+  120 years by sharing cultivation techniques between botanic gardens.
 author: Ashley Buchanan
 date: 2021-11-28
 permalink: /corpse-flower
@@ -15,7 +14,6 @@ image:
   path: wc:Corpse_flower_(71304)f.jpg
 juncture: true
 ---
-
 
 # Pretty Stinky
 

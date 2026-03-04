@@ -1,9 +1,9 @@
 ---
 title: 'Black-Eyed Pea: Crop, Culture, Class'
-description: The black-eyed pea has a rich global history, shifting from a sacred
-  African symbol to a humble food for laborers and enslaved peoples. Today, it’s celebrated
-  worldwide as both a cultural touchstone and a versatile ingredient that bridges
-  old and new traditions.
+description: Black-eyed peas shifted from sacred African symbol to marker of low status
+  in Europe, then became central to enslaved African American foodways and culture.
+  Pliny the Elder warned priests against eating them, believing their rough nature
+  would upset delicate constitutions.
 author: Sarah Mallory, Emily Kamm, Haley Price, and Christina Hourigan
 date: 2022-06-14
 permalink: /black-eyed-pea
@@ -14,7 +14,6 @@ image:
   path: banner.jpg
 juncture: true
 ---
-
 
 # A Food Source and So Much More
 

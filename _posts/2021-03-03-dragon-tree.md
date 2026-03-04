@@ -1,9 +1,8 @@
 ---
 title: 'Dracaena draco: The Mystery of Dragon’s Blood'
-description: Despite its mythical name, “dragon’s blood” is a vivid red resin harvested
-  from certain trees, most notably Dracaena draco and D. cinnabari. This story unpacks
-  the centuries-old mystery of its origins and how human demand has threatened these
-  iconic trees in the modern era.
+description: Dracaena draco produces dragon's blood, a red resin central to Guanche
+  medicine, colonial trade, and European science. Humboldt's childhood encounter with
+  a colossal specimen in Berlin sparked his lifelong passion for tropical exploration.
 author: Thomas C. Anderson, Cati Kalinoski, and Lucas Mertehikian
 date: 2021-03-03
 permalink: /dragon-tree
@@ -14,7 +13,6 @@ image:
   path: wc:Parque_del_Drago_-_Drago_de_Icod_de_los_Vinos_02.jpg
 juncture: true
 ---
-
 
 # A Desensitizing Sensory Experience
 

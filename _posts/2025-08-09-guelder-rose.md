@@ -1,9 +1,10 @@
 ---
 title: 'Guelder Rose: The Powerful Symbolism of a Plant in Ukraine and Russia'
-description: The guelder rose has evolved from a prehistoric European food and fuel
-  plant into a powerful Ukrainian emblem of homeland, resistance, and identity. Its
-  striking morphology underpins centuries of symbolism in songs, art, and literature
-  across Ukraine and Russia, now crystallized in contemporary patriotic culture.
+description: The guelder rose evolved from a prehistoric food plant into Ukraine's
+  emblem of homeland and resistance, symbolized in the Independence Monument and patriotic
+  song "Chervona Kalyna." Grant Allen's 1881 text first used the term "evolutionary
+  biology" to describe the plant's deceptive sterile outer flowers that attract pollinators
+  to fertile inner blooms.
 author: Anna Hogarth, Nidhish Birhade, and Matthew Turetsky
 date: 2025-08-09
 tags: flower fruit medicinal ornamental shrub temperate
@@ -14,7 +15,6 @@ image:
   path: wc:Viburnum_opulus_%28Guelder_Rose%29_-_Flickr_-_S._Rae.jpg
 juncture: true
 ---
-
 
 # An Old Symbol Still Stands
 

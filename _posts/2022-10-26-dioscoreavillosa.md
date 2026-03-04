@@ -1,10 +1,9 @@
 ---
 title: 'Wild Yam: The Rhizome of the Pill'
-description: Wild yam (Dioscorea villosa), once key to the development of the birth
-  control pill, has a complex history shaped by Indigenous knowledge and commercial
-  science. This story revisits how the plant was studied and represented, challenging
-  traditional botanical illustrations to reflect its deeper cultural and medicinal
-  significance.
+description: Wild yam's rhizomes enabled birth control pill synthesis after chemist
+  Russell Marker extracted diosgenin from the plant in 1940. Marker committed biopiracy
+  by smuggling a Mexican yam tuber across the U.S. border, launching a pharmaceutical
+  industry that harvested 75,000 tons annually.
 author: Kira Bre Clingen
 date: 2022-10-26
 permalink: /dioscoreavillosa

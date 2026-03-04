@@ -1,10 +1,9 @@
 ---
 title: 'Venus Flytrap: Queen of the Carnivorous Plants'
-description: The Venus flytrap (Dionaea muscipula), once dubbed a “miracle of nature”
-  by Linnaeus, has fascinated botanists and poets alike for centuries with its carnivorous
-  adaptations. This story traces its discovery, scientific acclaim, and the cultural
-  intrigue it inspired, revealing how this small plant captured the imagination of
-  naturalists across continents and eras.
+description: The Venus flytrap fascinated eighteenth-century naturalists through transatlantic
+  specimen exchange networks, earning Linnaeus's declaration of "miracle of nature."
+  Early naturalists misinterpreted the plant's trap mechanism as a catch-and-release
+  device rather than a predatory killing system.
 author: John R. Schaefer
 date: 2022-04-04
 permalink: /venus-flytrap
@@ -15,7 +14,6 @@ image:
   path: banner.jpg
 juncture: true
 ---
-
 
 # A Household Name
 

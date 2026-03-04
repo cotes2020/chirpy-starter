@@ -1,9 +1,9 @@
 ---
 title: 'Ayahuasca: Amazonian Plant Lessons'
-description: Ayahuasca, a traditional Amazonian psychoactive brew, has spread globally
-  since the late 1990s, especially through New Age practices and ecotourism. Its deep
-  Indigenous roots and evolving meanings highlight the complex human-plant relationships
-  that have been reshaped in the global marketplace.
+description: Ayahuasca, an Amazonian psychoactive brew, served Indigenous communities
+  for millennia in healing, spiritual initiation, and divination rituals. Loren Miller's
+  1986 patent on a cultivar was overturned not by recognizing Indigenous rights, but
+  by a pressed plant specimen from a Chicago museum.
 author: Ashley Thuthao Keng Dam, Diana Heredia-López, Rachael Nelson, and Erin Wrightson
 date: 2022-07-12
 permalink: /ayahuasca

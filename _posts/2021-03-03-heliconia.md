@@ -1,9 +1,10 @@
 ---
 title: 'Heliconia: Evolution at Work'
-description: Heliconias, known for their striking tropical beauty, have long been
-  popular in gardens but understudied by scientists due to collection challenges.
-  This story highlights recent discoveries that reveal their complex relationships
-  with animals and their remarkable role in shaping ecosystems.
+description: Heliconias, tropical plants with sculptural bracts and vivid colors,
+  were long overlooked by scientists due to collection challenges but now reveal sophisticated
+  plant-animal interactions. Caribbean heliconia species and their single hummingbird
+  pollinator have coevolved so precisely that male and female hummingbirds visit different
+  flower species based on bill size.
 author: W. John Kress and Yota Batsaki
 date: 2021-03-03
 permalink: /heliconia
@@ -14,7 +15,6 @@ image:
   path: monographTrochi2Goul_0286.jpg
 juncture: true
 ---
-
 
 # From Mount Helicon to the Amazon
 

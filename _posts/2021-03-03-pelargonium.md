@@ -1,9 +1,9 @@
 ---
 title: 'Pelargonium: By Any Other Name Would Smell as Sweet?'
-description: Charles Dickens adored the scarlet “geranium,” but the plant he loved
-  was actually a pelargonium—long mistaken for its namesake. This story untangles
-  their identities and reveals the pelargonium’s distinct history and influence across
-  science, industry, and culture.
+description: Pelargonium, long misidentified as geranium, shaped Victorian gardens,
+  perfume industries, and colonial agriculture across Europe and Africa. Charles Dickens
+  famously adorned his buttonhole with the scarlet flower, unaware he was wearing
+  a pelargonium rather than true geranium.
 author: Daisy Reid, Verónica Matallana Chaves, and Yao Jiang
 date: 2021-03-03
 permalink: /pelargonium
@@ -14,7 +14,6 @@ image:
   path: pelargonium_harvard.jpg
 juncture: true
 ---
-
 
 # What’s in a Name?
 

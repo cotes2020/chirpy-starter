@@ -1,10 +1,9 @@
 ---
 title: Contrayerva
-description: Francis Drake’s 16th-century voyage around the globe helped spark a wave
-  of European interest in exotic plants, feeding the rise of botanical science. This
-  story follows how naturalists like Charles Clusius used explorers’ accounts to build
-  networks, botanical gardens, and a new culture of plant collecting in early modern
-  Europe.
+description: Contrayerva, a Nahua therapeutic called coanenepilli, became valued in
+  European medicine through sixteenth-century accounts by explorers and naturalists
+  like Clusius. The plant's indigenous name meant "serpent's tongue," yet European
+  botanists linked it to multiple physically different plants all called coanenepilli.
 author: Ashley Buchanan
 date: 2021-05-28
 permalink: /contrayerva
@@ -15,7 +14,6 @@ image:
   path: Contrayerva_Header.jpg
 juncture: true
 ---
-
 
 # Drake’s Root
 

@@ -1,9 +1,9 @@
 ---
 title: 'Watermelon: Stereotypes of Race and Class'
-description: Though now beloved for its sweet red flesh, watermelon was historically
-  a pale, sometimes bitter fruit valued for its rind, medicinal uses, and hydration.
-  This story explores how Citrullus lanatus evolved over time and became entangled
-  with cultural stereotypes, revealing its complex global and social history.
+description: Watermelon evolved from a pale, medicinal fruit to a sweet dessert staple
+  while accumulating complex cultural meanings across Africa, Asia, Europe, and America.
+  Nineteenth-century racist stereotypes falsely linked watermelons to Black criminality
+  and disease, transforming a symbol of freedom into a tool of racial oppression.
 author: Anna Lawrence, Camilo Uribe Botta, and May Wang
 date: 2021-03-03
 permalink: /watermelon
@@ -14,7 +14,6 @@ image:
   path: wc:Albert_Eckhout_1610-1666_Brazilian_fruits.jpg
 juncture: true
 ---
-
 
 # Watermelon: The Food of Angels
 

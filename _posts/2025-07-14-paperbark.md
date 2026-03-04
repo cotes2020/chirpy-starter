@@ -1,10 +1,9 @@
 ---
 title: 'The Broad-Leaf Paperbark: Friend or Foe?'
-description: The paperbark tree (Melaleuca quinquenervia) was introduced by colonial
-  powers to reshape landscapes—from Hong Kong’s rocky hillsides to Florida’s swamplands—under
-  the guise of progress and productivity. This story reveals how a once-valued symbol
-  of development became a cautionary tale of ecological disruption and unintended
-  consequences.
+description: Melaleuca quinquenervia served colonial powers as a landscape tool, later
+  becoming Florida's most destructive wetland invader. Ironically, the same traits
+  that made it valued for draining swamps—rapid growth and prolific seeding—enabled
+  its transformation from champion tree to ecological enemy within a century.
 author: Bethany Kidd and Sierra Roark
 date: 2025-07-14
 permalink: /paperbark
@@ -15,7 +14,6 @@ image:
   path: wc:170411_559_Encinitas_-_San_Diego_Botanic_Gdn%2C_entrance_gdn%2C_Melaleuca_viridiflora_var_rubriflora_Paperbark_Tree_%2834456955761%29.jpg
 juncture: true
 ---
-
 
 **Cultural warning for Aboriginal and Torres Strait Islander people:** This webpage contains images, voices, and names of deceased persons in photographs, film, and printed material.
 {: style="border:1px solid black; background-color:#ffffe0; padding:1em; border-radius:0.5em; margin-bottom:3em;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"}

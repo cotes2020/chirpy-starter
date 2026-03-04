@@ -1,11 +1,9 @@
 ---
 title: How to Read an Herbarium Specimen
-description: This richly illustrated article by Maura Flannery explores how herbarium
-  specimens—pressed, preserved plants—serve as vital scientific and historical documents.
-  It traces their evolution from 16th-century collections to modern tools for tracking
-  biodiversity and climate change. Through case studies like Darlingtonia californica
-  and the Lewis and Clark expedition, the piece reveals how specimens preserve botanical
-  knowledge, collector histories, and even indigenous expertise.
+description: Herbarium specimens are pressed plants preserved since the 16th century
+  that document biodiversity, species ranges, and climate change. A 1558 tomato specimen's
+  DNA revealed it was a domesticated variety, proving early colonial-era cultivation
+  of New World crops in Europe.
 author: Maura Flannery
 date: 2024-01-03
 tags: education

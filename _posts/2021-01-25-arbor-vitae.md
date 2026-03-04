@@ -1,9 +1,9 @@
 ---
 title: 'Arbor Vitae: In Search of the Tree of Life'
-description: The “tree of life,” or arbor vitaæ, has long been surrounded by mystery
-  and debate over its true identity. This story traces how the St. Lawrence Iroquois
-  used the tree’s medicinal properties to aid French explorers and explores the evidence
-  behind its botanical identification.
+description: White cedar (_Thuja occidentalis_) cured scurvy in Jacques Cartier's
+  crew during 1535 after St. Lawrence Iroquois taught them to brew vitamin-C-rich
+  tea from its needles. European herbalists rapidly propagated the tree across the
+  continent while losing all knowledge of its medicinal origin and Indigenous source.
 author: Ashley Buchanan
 date: 2021-01-25
 permalink: /arbor-vitae
@@ -14,7 +14,6 @@ image:
   path: wc:Neuchâtel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg
 juncture: true
 ---
-
 
 # The Mysterious Tree of Life
 

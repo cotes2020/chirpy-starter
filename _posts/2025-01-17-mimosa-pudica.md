@@ -1,10 +1,9 @@
 ---
 title: 'The Sensitive Plant: Meaning and Movement'
-description: Mimosa pudica, known for its touch-sensitive leaves, has captivated observers
-  for centuries, sparking fascination with plant intelligence. This story traces how
-  the plant’s responsiveness inspired both scientific curiosity and colonial exploitation,
-  while highlighting the resilience of diverse cultural knowledge systems surrounding
-  it.
+description: Mimosa pudica's leaf movements challenged European botanical understanding
+  of plant life, inspiring centuries of scientific experimentation and cultural symbolism.
+  Eighteenth-century botanist Desfontaines discovered the plant habituates to repeated
+  stimuli by placing it in a moving carriage through Paris.
 author: Elaina Foley, Sabrina Freidus, and Jordan Norviel
 date: 2025-01-17
 permalink: /mimosa-pudica
@@ -15,7 +14,6 @@ image:
   path: wc:Mimosa_pudica_kian-siau-chhau.jpg
 juncture: true
 ---
-
 
 # (Re)discovering the Sensitive Plant
 

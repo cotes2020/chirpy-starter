@@ -1,9 +1,9 @@
 ---
 title: 'Cryptomeria japonica: Climate Change, Cultivation, and Culture'
-description: Cryptomeria japonica, or sugi, is Japan’s national tree and has long
-  held cultural and symbolic importance in the country’s landscape. This story traces
-  how sugi’s role is evolving today as Japan grapples with the environmental and social
-  impacts of aging monoculture forests.
+description: Sugi, Japan's national tree, shaped postwar landscape through massive
+  afforestation but created monoculture forests now causing public health crises.
+  One-quarter of Japan's population suffers allergies from the tree's prolific spring
+  pollen.
 author: Kira Bre Clingen and Edyth Jostol
 date: 2022-10-26
 permalink: /cryptomeria
