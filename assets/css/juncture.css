@@ -215,11 +215,11 @@ figure.iframe-wrapper figcaption {
 
 .col2 .viewer figure {
     width: 100%;
+    background: var(--main-bg);
 }
 
 .col1 .viewer {
     display: none;
-    ;
 }
 
 .preview .container,
@@ -307,6 +307,7 @@ figure.iframe-wrapper figcaption {
     height: 50dvh;
     /* padding-top: 1em; */
     align-items: start;
+    background: var(--main-bg);
 }
 
 .col2 .active {
@@ -315,6 +316,12 @@ figure.iframe-wrapper figcaption {
     border-color: #9e9e9e;
     margin: 0 -0.5em 1em -0.5em;
     padding: 0 0.5em;
+}
+
+[data-mode="dark"] .col2 .active {
+    background: var(--main-bg);
+    border: 1px solid #777;
+    border-radius: 6px;
 }
 
 .trigger {
@@ -355,6 +362,10 @@ figure.iframe-wrapper figcaption {
     padding: 0 0.5em;
 }
 
+[data-mode="dark"] .col2 .post-content {
+    background: var(--main-bg);
+}
+
 .col2 .right {
     margin: 0;
 }
@@ -362,6 +373,7 @@ figure.iframe-wrapper figcaption {
 .viewer>iframe,
 .viewer>sl-tab-group {
     width: 100%;
+    background: var(--main-bg);
 }
 
 .post-index {
