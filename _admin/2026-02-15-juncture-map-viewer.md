@@ -38,7 +38,9 @@ juncture:
         white-space: pre-wrap;
         word-break: break-word;
     }
-    .attribute {
+    .attribute > h2,
+    .attribute > h3,
+    .attribute > h4 {
         color: red;
         font-weight: bold;
     }
