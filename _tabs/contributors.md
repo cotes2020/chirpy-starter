@@ -51,7 +51,8 @@ media_subpath: /assets/posts/contributors
 
 .contrib-card img {
   width: 100%;
-  height: 220px;          /* pick your preferred height */
+  /* height: 220px; */
+  aspect-ratio: 1;
   object-fit: cover;      /* crops instead of stretching */
   display: block;
   border-radius: 12px;
