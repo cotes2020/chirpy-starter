@@ -14,6 +14,7 @@ media_subpath: /assets/posts/heliconia
 image:
   path: monographTrochi2Goul_0286.jpg
 juncture: true
+categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 
 # From Mount Helicon to the Amazon

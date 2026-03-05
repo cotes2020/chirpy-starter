@@ -13,6 +13,7 @@ media_subpath: /assets/posts/mimosa-pudica
 image:
   path: wc:Mimosa_pudica_kian-siau-chhau.jpg
 juncture: true
+categories: ["Healing & Knowledge", "Scientific Curiosity"]
 ---
 
 # (Re)discovering the Sensitive Plant

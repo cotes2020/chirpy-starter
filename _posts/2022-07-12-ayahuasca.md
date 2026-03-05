@@ -13,6 +13,7 @@ media_subpath: /assets/posts/ayahuasca
 image:
   path: https://live.staticflickr.com/8507/27951788334_154753d604_4k.jpg
 juncture: true
+categories: ["Healing & Knowledge", "Psychoactive & Ritual"]
 ---
 
 Since the late 1990s, the Amazonian psychoactive beverage [ayahuasca](Q380436) has grown increasingly common throughout the world. Those living in Europe or the United States may be most familiar with the brew through [New Age](Q183308) spiritual practices, exoticizing travel writing, and the growing ecotourism industry. However, these associations can obscure the long traditions of ayahuasca’s use by a variety of Indigenous groups in what is now South America. Even within [Amazonia](Q244451), ayahuasca’s ingredients and components, ritual usage, and spiritual and medicinal effects remain highly dynamic and contested. With its evolving story, ayahuasca can serve as an eloquent "plant teacher," as it is known in the Peruvian Amazon, highlighting both the relationality between humans and plants and the ways those relations were appropriated and transformed for a global market. 

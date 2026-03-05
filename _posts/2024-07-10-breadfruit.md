@@ -13,6 +13,7 @@ media_subpath: /assets/posts/breadfruit
 image:
   path: wc:Breadfruit_1.jpg
 juncture: true
+categories: ["Trade & Empire", "Colonial Commodity"]
 ---
 
 The breadfruit tree is magnificent when mature, tall and broad branched, with large glossy leaves.  It provides shade and through its impressive spherical fruit, nutritious food.[^1]

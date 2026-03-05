@@ -13,6 +13,7 @@ media_subpath: /assets/posts/pelargonium
 image:
   path: pelargonium_harvard.jpg
 juncture: true
+categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 
 # What’s in a Name?

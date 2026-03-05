@@ -14,6 +14,7 @@ media_subpath: /assets/posts/carolina-rice
 image:
   path: G92F023_016F.jpg
 juncture: true
+categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 ---
 
 # The Comeback Kid

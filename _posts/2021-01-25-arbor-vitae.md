@@ -13,6 +13,7 @@ media_subpath: /assets/posts/arbor-vitae
 image:
   path: wc:Neuchâtel_Herbarium_-_Thuja_occidentalis_-_NEU000099701.jpg
 juncture: true
+categories: ["Healing & Knowledge", "Traditional Medicine"]
 ---
 
 # The Mysterious Tree of Life

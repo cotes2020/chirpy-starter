@@ -13,6 +13,7 @@ media_subpath: /assets/posts/venus-flytrap
 image:
   path: banner.jpg
 juncture: true
+categories: ["Healing & Knowledge", "Scientific Curiosity"]
 ---
 
 # A Household Name

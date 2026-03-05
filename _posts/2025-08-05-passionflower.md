@@ -14,6 +14,7 @@ media_subpath: /assets/posts/passionflower
 image:
   path: wc:Passiflora_passion_flower.jpg
 juncture: true
+categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 
 # Introduction

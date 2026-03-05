@@ -13,6 +13,7 @@ media_subpath: /assets/posts/cryptomeria
 image:
   path: wc:Cryptomeria_japonica_%27Cristata%27_Szydlica_japo%C5%84ska_2019-06-09_04.jpg
 juncture: true
+categories: ["Gardens & Aesthetics", "National & Cultural Icons"]
 ---
 
 Japanese cedar (_Cryptomeria japonica_), *sugi* in Japanese, is Japan's national tree and the most widely planted tree species in the country.[^1] It was the backbone of a massive and successful [afforestation](Q2384419) project following World War II (1941-1945) and the Korean War (1950-1953).[^2] Today, 70 percent of Japan is forested, and over 24 percent of this forest is made of cultivated plantations. However, the popularity of the tree that led to the widespread planting of the species has been negatively affected by the massive amounts of [pollen](Q79932) that the male cones produce each spring[^3], resulting in a drastic public health hazard. In fact, one–quarter of the country's population is afflicted with Japanese cedar pollinosis, an allergic reaction.

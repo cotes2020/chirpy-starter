@@ -13,6 +13,7 @@ media_subpath: /assets/posts/contrayerva
 image:
   path: Contrayerva_Header.jpg
 juncture: true
+categories: ["Healing & Knowledge", "Women's Botanical Knowledge"]
 ---
 
 # Drake’s Root

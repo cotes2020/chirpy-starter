@@ -13,6 +13,7 @@ media_subpath: /assets/posts/black-eyed-pea
 image:
   path: banner.jpg
 juncture: true
+categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 ---
 
 # A Food Source and So Much More
