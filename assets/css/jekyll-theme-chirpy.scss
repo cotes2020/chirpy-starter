@@ -8,23 +8,6 @@
 {%- endif -%}
 ';
 
-/* append your custom style below */
-
-/* Glassmorphism tokens */
-:root {
-  --glass-bg: rgba(255, 255, 255, 0.10);
-  --glass-border: rgba(255, 255, 255, 0.22);
-  --glass-shadow: rgba(0, 0, 0, 0.12);
-  --glass-blur: 18px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --glass-bg:     rgba(15, 15, 25, 0.45);  /* match [data-mode="dark"] */
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-shadow: rgba(0, 0, 0, 0.50);
-  }
-}
 
 @mixin glass {
   background: var(--glass-bg);
@@ -127,5 +110,95 @@
 /* Scrollbar styling for dark mode */
 [data-mode="dark"] {
   scrollbar-color: rgba(126, 179, 255, 0.3) transparent;
+  scrollbar-width: thin;
+}
+
+
+/* ── Light Mode Enhancements ── */
+
+:root,
+[data-mode="light"] {
+  /* Glass tokens for light */
+  --glass-bg:     rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-shadow: rgba(100, 116, 139, 0.12);
+
+  /* Chirpy core color overrides */
+  --main-bg:          #f4f6fb;      /* soft blue-grey instead of pure white */
+  --sidebar-bg:       transparent;  /* let glass show through               */
+  --topbar-bg:        transparent;
+  --text-color:       #1e293b;      /* deep slate, easier than pure black   */
+  --heading-color:    #0f172a;
+  --link-color:       #2563eb;      /* vivid blue links                     */
+  --link-hover-color: #1d4ed8;
+  --tag-bg:           rgba(37, 99, 235, 0.08);
+  --border-color:     rgba(148, 163, 184, 0.25);
+
+  /* Code blocks */
+  --code-bg:          #f1f5f9;
+  --code-header-bg:   #e2e8f0;
+
+  /* Soft full-page gradient */
+  background: linear-gradient(
+    135deg,
+    #f0f4ff 0%,
+    #faf5ff 50%,
+    #f0f9ff 100%
+  );
+}
+
+/* Sidebar subtle left accent border */
+[data-mode="light"] #sidebar,
+:root #sidebar {
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Active nav item highlight */
+[data-mode="light"] #sidebar li.active > a,
+:root #sidebar li.active > a {
+  background: rgba(37, 99, 235, 0.10);
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Post preview hover in light mode */
+[data-mode="light"] .post-preview:hover,
+:root .post-preview:hover {
+  box-shadow:
+    0 12px 36px rgba(100, 116, 139, 0.18),
+    0 0 0 1px rgba(37, 99, 235, 0.12);
+}
+
+/* Post tags pill style */
+[data-mode="light"] .post-tag,
+:root .post-tag {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 999px;
+  color: #2563eb;
+  padding: 2px 10px;
+  font-size: 0.78rem;
+}
+
+/* Code block enhancements */
+[data-mode="light"] div.highlight,
+:root div.highlight {
+  background: var(--code-bg);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 8px;
+}
+
+/* Soften heading underlines */
+[data-mode="light"] h1, [data-mode="light"] h2,
+:root h1, :root h2 {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  padding-bottom: 0.3rem;
+}
+
+/* Scrollbar styling */
+[data-mode="light"],
+:root {
+  scrollbar-color: rgba(37, 99, 235, 0.25) transparent;
   scrollbar-width: thin;
 }
