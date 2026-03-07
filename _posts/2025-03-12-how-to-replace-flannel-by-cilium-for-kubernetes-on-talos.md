@@ -1,5 +1,5 @@
 ---
-title: Setting Up Cilium on a Kubernetes Cluster with Talos in Proxmox
+title: Setting Up Cilium on Talos in Proxmox
 date: 2025-03-12 21:00:00 +0100
 categories: [DevOps, Kubernetes]
 tags: [kubernetes, talos, cilium, homelab] # TAG names should always be lowercase
