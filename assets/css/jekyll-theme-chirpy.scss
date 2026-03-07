@@ -1,0 +1,61 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Glassmorphism tokens */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-shadow: rgba(0, 0, 0, 0.12);
+  --glass-blur: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.28);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-shadow: rgba(0, 0, 0, 0.35);
+    --glass-blur: 18px;
+  }
+}
+
+@mixin glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-radius: 16px;
+}
+
+/* Try to target Chirpy surfaces without breaking layout */
+#sidebar,
+#topbar,
+.card,
+.post-preview,
+#main-wrapper .post,
+#main-wrapper .archive,
+#main-wrapper .tag,
+#main-wrapper .categories {
+  @include glass;
+}
+
+/* Subtle lift on hover */
+.card:hover,
+.post-preview:hover {
+  transform: translateY(-2px);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Mobile: reduce blur for performance */
+@media (max-width: 1024px) {
+  :root { --glass-blur: 10px; }
+}
