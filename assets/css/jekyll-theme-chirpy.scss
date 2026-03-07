@@ -182,6 +182,101 @@
   --enter-ease: cubic-bezier(0.2, 0.9, 0.2, 1);
   --gradient-duration: 22s;
 
+  --subtitle-max: 95ch;
+  --subtitle-steps: 95;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); filter: drop-shadow(0 0 0 rgba(126,179,255,0)); }
+  50%      { transform: translate3d(0, 0, 0) scale(1.02); filter: drop-shadow(0 10px 18px rgba(126,179,255,0.22)); }
+}
+
+@keyframes caretBlink {
+  0%, 49% { border-right-color: transparent; }
+  50%, 100% { border-right-color: currentColor; }
+}
+
+@keyframes typeSubtitle {
+  from { max-width: 0; }
+  to   { max-width: var(--subtitle-max); }
+}
+
+/* Fade/slide-in */
+#sidebar { animation: fadeUp var(--enter-duration) var(--enter-ease) both; animation-delay: 40ms; }
+#topbar  { animation: fadeUp var(--enter-duration) var(--enter-ease) both; animation-delay: 90ms; }
+#main-wrapper { animation: fadeUp var(--enter-duration) var(--enter-ease) both; animation-delay: 140ms; }
+
+.post-preview, .card { animation: fadeUp 560ms var(--enter-ease) both; animation-delay: 180ms; }
+.post-preview:nth-child(2) { animation-delay: 240ms; }
+.post-preview:nth-child(3) { animation-delay: 300ms; }
+.post-preview:nth-child(4) { animation-delay: 360ms; }
+.post-preview:nth-child(5) { animation-delay: 420ms; }
+.post-preview:nth-child(6) { animation-delay: 480ms; }
+
+/* Avatar pulse (dark) + hover glow */
+html[data-mode="dark"] #sidebar #avatar { animation: pulseGlow 4.8s ease-in-out infinite; }
+
+#sidebar #avatar {
+  display: inline-block;
+  transition: transform 180ms ease, filter 180ms ease;
+  will-change: transform, filter;
+}
+
+#sidebar #avatar:hover {
+  transform: translate3d(0, -1px, 0) scale(1.04);
+  filter: drop-shadow(0 14px 28px rgba(126, 179, 255, 0.28));
+}
+
+/* Typewriter ONLY on home (modern browsers) */
+@supports selector(html:has(#post-list)) {
+  html:has(#post-list) #sidebar .site-subtitle {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+
+    max-width: 0;
+    border-right: 2px solid currentColor;
+
+    animation:
+      typeSubtitle 2.6s steps(var(--subtitle-steps), end) 650ms forwards,
+      caretBlink 720ms step-end infinite;
+  }
+}
+
+/* Mobile: disable typewriter to avoid wrapping weirdness */
+@media (max-width: 1024px) {
+  @supports selector(html:has(#post-list)) {
+    html:has(#post-list) #sidebar .site-subtitle {
+      white-space: normal;
+      max-width: none;
+      border-right: none;
+      animation: none;
+    }
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+
+:root {
+  --enter-duration: 520ms;
+  --enter-ease: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --gradient-duration: 22s;
+
   /* adjust if you change your tagline length */
   --subtitle-max: 95ch;
   --subtitle-steps: 95;
