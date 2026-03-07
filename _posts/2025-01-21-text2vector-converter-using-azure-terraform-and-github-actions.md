@@ -1,5 +1,5 @@
 ---
-title: Deploying a Text-to-Vector Embedding Converter to Azure with Terraform and GitHub Actions
+title: Deploying Text-to-Vector on Azure with Terraform and GitHub Actions
 date: 2025-01-21 08:00:00 +0100
 categories: [DevOps, Terraform]
 tags: [terraform, github-actions, azure] # TAG names should always be lowercase

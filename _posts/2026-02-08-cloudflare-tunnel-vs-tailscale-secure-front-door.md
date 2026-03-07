@@ -1,9 +1,9 @@
 ---
-title: "Cloudflare Tunnel vs Tailscale: Which one for Secure Homelab Remote Access ?"
+title: Cloudflare Tunnel vs Tailscale for Homelab Remote Access
 date: 2026-02-08 18:00:00 +0100
 categories: [Homelab, Security]
 tags: [cloudflare-tunnel, tailscale, zero-trust, self-hosting, homelab]
-description: Stop being afraid of exposing your services (as always if you do it right)
+description: Which one for Secure Homelab Remote Access ?
 author: sofianlak
 image:
   path: /assets/img/headers/cloudflare-vs-tailscale.png

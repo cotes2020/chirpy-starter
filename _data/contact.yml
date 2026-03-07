@@ -11,6 +11,10 @@
   icon: "fab fa-youtube"
   url: "https://www.youtube.com/@sofianlak"
 
+- type: status
+  icon: "fas fa-heartbeat"
+  url: "https://status.sofianlak.fr"
+
 #- type: twitter
 #  icon: "fa-brands fa-x-twitter"
 
