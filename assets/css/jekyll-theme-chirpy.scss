@@ -20,10 +20,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --glass-bg: rgba(0, 0, 0, 0.28);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-shadow: rgba(0, 0, 0, 0.35);
-    --glass-blur: 18px;
+    --glass-bg:     rgba(15, 15, 25, 0.45);  /* match [data-mode="dark"] */
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: rgba(0, 0, 0, 0.50);
   }
 }
 
@@ -58,4 +57,75 @@
 /* Mobile: reduce blur for performance */
 @media (max-width: 1024px) {
   :root { --glass-blur: 10px; }
+}
+
+/* ── Dark Mode Enhancements ── */
+
+/* Override Chirpy's dark palette */
+[data-mode="dark"] {
+  /* Glass tokens for dark */
+  --glass-bg:     rgba(15, 15, 25, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: rgba(0, 0, 0, 0.50);
+
+  /* Chirpy core color overrides */
+  --main-bg:         #0d0d14;       /* deep navy-black page background */
+  --sidebar-bg:      transparent;   /* let glass mixin show through     */
+  --topbar-bg:       transparent;
+  --text-color:      #e2e8f0;       /* soft white, easier on eyes       */
+  --heading-color:   #f0f4ff;
+  --link-color:      #7eb3ff;       /* cool blue links                  */
+  --link-hover-color:#a8cfff;
+  --tag-bg:          rgba(126, 179, 255, 0.12);
+  --border-color:    rgba(255, 255, 255, 0.08);
+
+  /* Code blocks */
+  --code-bg:         #1a1a2e;
+  --code-header-bg:  #12122a;
+
+  /* Subtle full-page gradient */
+  background: linear-gradient(
+    135deg,
+    #0d0d14 0%,
+    #0f1a2e 50%,
+    #0d0d14 100%
+  );
+}
+
+/* Glow accent on sidebar avatar in dark mode */
+[data-mode="dark"] #sidebar .site-title a,
+[data-mode="dark"] #sidebar .site-subtitle {
+  text-shadow: 0 0 20px rgba(126, 179, 255, 0.4);
+}
+
+/* Highlighted/active nav items */
+[data-mode="dark"] #sidebar li.active > a {
+  background: rgba(126, 179, 255, 0.15);
+  border-radius: 8px;
+}
+
+/* Post preview hover glow in dark mode */
+[data-mode="dark"] .post-preview:hover {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(126, 179, 255, 0.2);
+}
+
+/* Soften images slightly in dark mode */
+[data-mode="dark"] img:not(.no-dark) {
+  filter: brightness(0.88) saturate(0.9);
+}
+
+/* Code block enhancements */
+[data-mode="dark"] div.highlight,
+[data-mode="dark"] code {
+  background: var(--code-bg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+/* Scrollbar styling for dark mode */
+[data-mode="dark"] {
+  scrollbar-color: rgba(126, 179, 255, 0.3) transparent;
+  scrollbar-width: thin;
 }
