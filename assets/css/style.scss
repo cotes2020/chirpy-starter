@@ -1,0 +1,109 @@
+---
+---
+
+@import "jekyll-theme-chirpy";
+
+/* ==========================================================================
+   Custom Typography - Space Mono
+   ========================================================================== */
+
+/* Import Space Mono from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Apply Space Mono to code elements */
+code,
+pre,
+.highlight,
+.highlighter-rouge {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Apply Space Mono to the site title for a distinctive look */
+#sidebar .site-title {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Apply Space Mono to headings for a tech aesthetic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Style inline code with Space Mono */
+p code,
+li code {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Post title styling */
+.post-preview h1 a,
+.post-title {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Tab titles in sidebar */
+#sidebar .nav-link span,
+#sidebar .nav-item a {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Post metadata (date, read time, etc.) */
+.post-meta,
+.post-meta time,
+.post-meta span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* Pagination text */
+.pagination .page-number,
+.pagination .extend {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Footer text */
+#footer p,
+#footer a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* Table of Contents */
+#toc-wrapper .panel-heading,
+#toc li a {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Archive page headings */
+#archives .year-label,
+#archives .month-label {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Tag and Category page headings */
+#tags h1,
+#categories h1 {
+  font-family: 'Space Mono', monospace;
+}
+
+/* About page specific styling */
+#about h1,
+#about h2 {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Blockquote styling with mono font */
+blockquote {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+}
+
+/* Button and badge text */
+.btn,
+.badge {
+  font-family: 'Space Mono', monospace;
+}
