@@ -14,21 +14,27 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 50%, #3d2817 100%);
+            /* Dark, grimy, layered background */
+            background:
+                radial-gradient(circle at top left, rgba(40, 24, 14, 0.4) 0%, transparent 55%),
+                radial-gradient(circle at bottom right, rgba(10, 6, 4, 0.9) 0%, transparent 60%),
+                linear-gradient(135deg, #050307 0%, #050304 35%, #0b0504 70%, #15100e 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Cinzel', serif;
             overflow: hidden;
             position: relative;
+            color: #d6c7a0;
         }
 
-        /* Animated gears background */
+        /* Animated gears background – darker, more like silhouettes */
         .gear {
             position: absolute;
-            border: 3px solid #8b6914;
+            border: 2px solid #3b2a17;
             border-radius: 50%;
-            opacity: 0.15;
+            opacity: 0.08;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
         }
 
         .gear::before {
@@ -37,35 +43,35 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 30%;
-            height: 30%;
+            width: 26%;
+            height: 26%;
             background: transparent;
             border-radius: 50%;
-            border: 2px solid #8b6914;
+            border: 2px solid #2a1b10;
         }
 
         .gear-1 {
-            width: 200px;
-            height: 200px;
-            top: 10%;
-            left: 10%;
-            animation: rotate 20s linear infinite;
+            width: 220px;
+            height: 220px;
+            top: 8%;
+            left: 8%;
+            animation: rotate 26s linear infinite;
         }
 
         .gear-2 {
-            width: 150px;
-            height: 150px;
-            top: 60%;
-            right: 10%;
-            animation: rotateReverse 15s linear infinite;
+            width: 170px;
+            height: 170px;
+            top: 62%;
+            right: 8%;
+            animation: rotateReverse 20s linear infinite;
         }
 
         .gear-3 {
-            width: 100px;
-            height: 100px;
-            bottom: 20%;
-            left: 20%;
-            animation: rotate 10s linear infinite;
+            width: 120px;
+            height: 120px;
+            bottom: 18%;
+            left: 22%;
+            animation: rotate 14s linear infinite;
         }
 
         @keyframes rotate {
@@ -78,14 +84,15 @@
             to { transform: rotate(0deg); }
         }
 
-        /* Steam particles */
+        /* Steam particles – dimmer, smokier */
         .steam {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            width: 110px;
+            height: 110px;
+            background: radial-gradient(circle, rgba(180, 180, 180, 0.07) 0%, transparent 70%);
             border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
+            animation: float 9s ease-in-out infinite;
+            filter: blur(1px);
         }
 
         .steam-1 { top: 80%; left: 15%; animation-delay: 0s; }
@@ -93,46 +100,52 @@
         .steam-3 { top: 85%; left: 60%; animation-delay: 4s; }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
-            50% { transform: translateY(-50px) scale(1.2); opacity: 0.1; }
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.25; }
+            50% { transform: translateY(-60px) scale(1.3); opacity: 0.08; }
         }
 
         .container {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(145deg, rgba(60, 40, 20, 0.9), rgba(40, 25, 15, 0.95));
-            border: 4px solid #8b6914;
-            border-radius: 10px;
-            box-shadow: 
-                0 0 20px rgba(139, 105, 20, 0.5),
-                inset 0 0 50px rgba(0, 0, 0, 0.5),
-                0 10px 30px rgba(0, 0, 0, 0.5);
+            background:
+                radial-gradient(circle at top center, rgba(60, 40, 25, 0.22) 0%, transparent 60%),
+                radial-gradient(circle at bottom center, rgba(10, 6, 4, 0.85) 0%, transparent 65%),
+                linear-gradient(145deg, rgba(12, 8, 6, 0.98), rgba(4, 2, 2, 0.99));
+            border: 3px solid #3e2b16;
+            border-radius: 12px;
+            box-shadow:
+                0 0 40px rgba(0, 0, 0, 0.9),
+                0 14px 40px rgba(0, 0, 0, 0.9),
+                inset 0 0 60px rgba(0, 0, 0, 0.9);
             position: relative;
             z-index: 10;
-            max-width: 600px;
+            max-width: 620px;
         }
 
         .container::before {
             content: '';
             position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
-            background: linear-gradient(45deg, #8b6914, #d4af37, #8b6914);
-            border-radius: 12px;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #4b381f, #8b6b32, #3b2917);
+            border-radius: 14px;
             z-index: -1;
-            opacity: 0.3;
+            opacity: 0.2;
+            mix-blend-mode: screen;
         }
 
-        /* Rivets decoration */
+        /* Rivets decoration – tarnished brass */
         .rivet {
             position: absolute;
             width: 12px;
             height: 12px;
-            background: radial-gradient(circle, #d4af37 0%, #8b6914 100%);
+            background: radial-gradient(circle, #c29a54 0%, #5b421f 100%);
             border-radius: 50%;
-            box-shadow: inset 0 -2px 3px rgba(0,0,0,0.5);
+            box-shadow:
+                inset 0 -2px 3px rgba(0, 0, 0, 0.7),
+                0 0 4px rgba(0, 0, 0, 0.9);
         }
 
         .rivet-tl { top: 10px; left: 10px; }
@@ -143,11 +156,11 @@
         .error-code {
             font-family: 'Rye', serif;
             font-size: 120px;
-            color: #d4af37;
-            text-shadow: 
-                3px 3px 0 #3d2817,
-                -1px -1px 0 #8b6914,
-                0 0 20px rgba(212, 175, 55, 0.5);
+            color: #b38b5d;
+            text-shadow:
+                0 0 15px rgba(0, 0, 0, 0.9),
+                0 0 35px rgba(0, 0, 0, 0.9),
+                3px 3px 0 #1a100a;
             margin-bottom: 10px;
             letter-spacing: 10px;
         }
@@ -158,66 +171,71 @@
         }
 
         @keyframes steamPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.9)); }
+            50% { transform: scale(1.06); filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9)); }
         }
 
         h1 {
             font-family: 'Rye', serif;
-            font-size: 28px;
-            color: #c9b037;
+            font-size: 26px;
+            color: #d6c7a0;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow:
+                0 0 6px rgba(0, 0, 0, 0.9),
+                0 0 18px rgba(0, 0, 0, 0.9);
         }
 
         p {
-            color: #b8a080;
+            color: #a49478;
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 25px;
         }
 
         .countdown-container {
-            background: linear-gradient(145deg, #2a1f15, #1a120c);
-            border: 2px solid #6b5014;
+            background: radial-gradient(circle at top, rgba(80, 52, 26, 0.55) 0%, rgba(10, 5, 3, 0.95) 60%);
+            border: 2px solid #5e4320;
             border-radius: 8px;
             padding: 15px 30px;
             display: inline-block;
             margin: 20px 0;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            box-shadow:
+                inset 0 0 24px rgba(0, 0, 0, 0.95),
+                0 0 18px rgba(0, 0, 0, 0.9);
         }
 
         .countdown-label {
-            color: #8b6914;
-            font-size: 12px;
+            color: #7f6340;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         #countdown {
             font-family: 'Rye', serif;
-            font-size: 36px;
-            color: #d4af37;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            font-size: 34px;
+            color: #e0cf9b;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
         }
 
         .progress-bar {
             width: 100%;
             height: 6px;
-            background: #1a120c;
+            background: #090605;
             border-radius: 3px;
             margin-top: 15px;
             overflow: hidden;
-            border: 1px solid #4a3515;
+            border: 1px solid #3d2b17;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.9);
         }
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #8b6914, #d4af37);
+            background: linear-gradient(90deg, #614320, #b38b5d);
             width: 100%;
             transition: width 1s linear;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
         }
 
         .btn-container {
@@ -227,20 +245,20 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background: linear-gradient(145deg, #6b5014, #8b6914);
-            color: #f0e0c0;
+            background: linear-gradient(145deg, #3f2b17, #5b3d1e);
+            color: #e3d3aa;
             text-decoration: none;
             font-family: 'Cinzel', serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            border: 2px solid #d4af37;
+            border: 2px solid #8b6b32;
             border-radius: 5px;
-            box-shadow: 
-                0 5px 15px rgba(0,0,0,0.3),
-                inset 0 1px 0 rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.9),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            transition: all 0.25s ease;
             position: relative;
             overflow: hidden;
         }
@@ -249,61 +267,65 @@
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
+            left: -120%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
             transition: left 0.5s ease;
         }
 
         .btn:hover {
-            background: linear-gradient(145deg, #8b6914, #a67c00);
-            transform: translateY(-2px);
-            box-shadow: 
-                0 8px 25px rgba(139, 105, 20, 0.4),
-                inset 0 1px 0 rgba(255,255,255,0.2);
+            background: linear-gradient(145deg, #5b3d1e, #7a5428);
+            transform: translateY(-1px);
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.95),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .btn:hover::before {
-            left: 100%;
+            left: 130%;
         }
 
         .divider {
             width: 80%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #8b6914, transparent);
+            background: linear-gradient(90deg, transparent, #5b4323, transparent);
             margin: 20px auto;
+            opacity: 0.7;
         }
 
         .quote {
             font-style: italic;
-            color: #8b7355;
+            color: #8a7a61;
             font-size: 14px;
-            margin-top: 15px;
-            border-left: 3px solid #8b6914;
+            margin-top: 18px;
+            border-left: 3px solid #5b4323;
             padding-left: 15px;
             text-align: left;
         }
 
-        /* Pipe decorations */
+        /* Pipe decorations – darker, oily metal */
         .pipe {
             position: absolute;
-            background: linear-gradient(90deg, #4a3515, #6b5014, #4a3515);
-            border: 1px solid #2a1f15;
+            background: linear-gradient(90deg, #241810, #47311c, #241810);
+            border: 1px solid #120b07;
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.9),
+                inset 0 0 6px rgba(0, 0, 0, 0.8);
         }
 
         .pipe-left {
             width: 4px;
-            height: 100px;
-            left: -20px;
+            height: 110px;
+            left: -22px;
             top: 50%;
             transform: translateY(-50%);
         }
 
         .pipe-right {
             width: 4px;
-            height: 100px;
-            right: -20px;
+            height: 110px;
+            right: -22px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -312,17 +334,18 @@
             .error-code {
                 font-size: 80px;
             }
-            
+
             h1 {
                 font-size: 20px;
             }
-            
+
             .container {
                 margin: 20px;
                 padding: 30px 20px;
             }
         }
     </style>
+
 </head>
 <body>
     <!-- Background gears -->
