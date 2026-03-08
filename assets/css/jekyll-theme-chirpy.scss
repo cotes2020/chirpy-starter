@@ -340,3 +340,104 @@ html[data-mode="dark"] #sidebar #avatar {
 [data-mode="dark"] {
   @include dark-mode;
 }
+
+/* ==========================================================================
+   Custom Typography - Space Mono
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Apply Space Mono to headings for a tech aesthetic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Site title and subtitle in sidebar */
+#sidebar .site-title,
+#sidebar .site-title a,
+#sidebar .site-subtitle {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Post titles and previews */
+.post-title,
+.post-preview h1 a,
+.post-preview .post-title {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Code elements */
+code,
+pre,
+.highlight,
+.highlighter-rouge,
+pre code {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Inline code sizing */
+p code,
+li code,
+td code {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Post metadata */
+.post-meta,
+.post-meta time,
+.post-meta span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* Pagination */
+.pagination .page-number,
+.pagination .extend {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Footer */
+#footer p,
+#footer a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* TOC */
+#toc-wrapper .panel-heading,
+#toc li a {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Archive headings */
+#archives .year-label,
+#archives .month-label {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Tag and Category headings */
+#tags h1,
+#categories h1 {
+  font-family: 'Space Mono', monospace;
+}
+
+/* About page */
+#about h1,
+#about h2 {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Blockquotes */
+blockquote {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+}
+
+/* Buttons and badges */
+.btn,
+.badge {
+  font-family: 'Space Mono', monospace;
+}
