@@ -183,7 +183,6 @@
    1) Animated gradients (via mixins above)
    2) Fade/slide-in on load
    3) Avatar pulse + hover glow
-   4) Typewriter tagline (home-only via :has)
    ───────────────────────────────────────────── */
 
 :root {
@@ -309,34 +308,6 @@ html[data-mode="dark"] #sidebar #avatar {
   filter: drop-shadow(0 14px 28px rgba(126, 179, 255, 0.28));
 }
 
-/* 4) Typewriter ONLY on home page (modern browsers)
-   Uses :has(#post-list) since home includes #post-list in main content. */
-@supports selector(html:has(#post-list)) {
-  html:has(#post-list) #sidebar .site-subtitle {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-
-    max-width: 0;
-    border-right: 2px solid currentColor;
-
-    animation:
-      typeSubtitle 2.6s steps(var(--subtitle-steps), end) 650ms forwards,
-      caretBlink 720ms step-end infinite;
-  }
-}
-
-/* Mobile: disable typewriter to avoid wrapping weirdness */
-@media (max-width: 1024px) {
-  @supports selector(html:has(#post-list)) {
-    html:has(#post-list) #sidebar .site-subtitle {
-      white-space: normal;
-      max-width: none;
-      border-right: none;
-      animation: none;
-    }
-  }
-}
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
