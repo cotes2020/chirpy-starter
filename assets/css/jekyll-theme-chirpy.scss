@@ -318,7 +318,7 @@ html[data-mode="dark"] #sidebar #avatar {
   }
 }
 
-/* ── Apply Themes ── */
+/* ── Apply Themes ─ */
 
 /* 1. Default to Light Mode globally */
 :root {
@@ -442,20 +442,24 @@ blockquote {
   font-family: 'Space Mono', monospace;
 }
 
-/* ==========================================================================
-   Sidebar avatar: slightly rounded square
-   ========================================================================== */
+/* ========================================================================== */
+/* Sidebar avatar: slightly rounded square with strong override */
+/* ========================================================================== */
+
+#sidebar #avatar,
+#sidebar #avatar > a,
+#sidebar #avatar img {
+  border-radius: 18px !important;
+}
 
 #sidebar #avatar {
   width: 7rem;
   height: 7rem;
-  border-radius: 18px; /* slightly rounded square */
-  overflow: hidden;    /* crop image cleanly inside the frame */
+  overflow: hidden;
 }
 
 #sidebar #avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: inherit;
 }
