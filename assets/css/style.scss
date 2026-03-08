@@ -1,8 +1,6 @@
 ---
 ---
 
-@import "jekyll-theme-chirpy";
-
 /* ==========================================================================
    Custom Typography - Space Mono
    ========================================================================== */
@@ -14,7 +12,26 @@
 code,
 pre,
 .highlight,
-.highlighter-rouge {
+.highlighter-rouge,
+.highlight .na,  /* Name.Attribute */
+.highlight .nt,  /* Name.Tag */
+.highlight .nv,  /* Name.Variable */
+.highlight .nf,  /* Name.Function */
+.highlight .nb,  /* Name.Builtin */
+.highlight .nc,  /* Name.Class */
+.highlight .no,  /* Name.Constant */
+.highlight .nn,  /* Name.Namespace */
+.highlight .vc,  /* Name.Variable.Class */
+.highlight .vg,  /* Name.Variable.Global */
+.highlight .vi,  /* Name.Variable.Instance */
+.highlight .o,   /* Operator */
+.highlight .k,   /* Keyword */
+.highlight .kc,  /* Keyword.Constant */
+.highlight .kd,  /* Keyword.Declaration */
+.highlight .kn,  /* Keyword.Namespace */
+.highlight .kp,  /* Keyword.Pseudo */
+.highlight .kr,  /* Keyword.Reserved */
+.highlight .kt   /* Keyword.Type */ {
   font-family: 'Space Mono', monospace;
 }
 
@@ -33,66 +50,80 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style inline code with Space Mono */
 p code,
-li code {
+li code,
+td code {
   font-family: 'Space Mono', monospace;
   font-size: 0.9em;
 }
 
 /* Post title styling */
 .post-preview h1 a,
-.post-title {
+.post-title,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
   font-family: 'Space Mono', monospace;
 }
 
 /* Tab titles in sidebar */
 #sidebar .nav-link span,
-#sidebar .nav-item a {
+#sidebar .nav-item a,
+#sidebar .site-subtitle {
   font-family: 'Space Mono', monospace;
 }
 
 /* Post metadata (date, read time, etc.) */
 .post-meta,
 .post-meta time,
-.post-meta span {
+.post-meta span,
+.post-meta em,
+.post-meta i {
   font-family: 'Space Mono', monospace;
   font-size: 0.85em;
 }
 
 /* Pagination text */
 .pagination .page-number,
-.pagination .extend {
+.pagination .extend,
+.pagination a {
   font-family: 'Space Mono', monospace;
 }
 
 /* Footer text */
 #footer p,
-#footer a {
+#footer a,
+#footer span {
   font-family: 'Space Mono', monospace;
   font-size: 0.85em;
 }
 
 /* Table of Contents */
 #toc-wrapper .panel-heading,
-#toc li a {
+#toc li a,
+#toc .toc-entry {
   font-family: 'Space Mono', monospace;
 }
 
 /* Archive page headings */
 #archives .year-label,
-#archives .month-label {
+#archives .month-label,
+#archives h1 {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
 }
 
 /* Tag and Category page headings */
 #tags h1,
-#categories h1 {
+#categories h1,
+.tag-label,
+.category-label {
   font-family: 'Space Mono', monospace;
 }
 
 /* About page specific styling */
 #about h1,
-#about h2 {
+#about h2,
+#about h3 {
   font-family: 'Space Mono', monospace;
 }
 
@@ -104,6 +135,86 @@ blockquote {
 
 /* Button and badge text */
 .btn,
-.badge {
+.badge,
+.tag,
+.post-tag {
   font-family: 'Space Mono', monospace;
+}
+
+/* Code block filenames and headers */
+.code-header,
+.file-path,
+.lang-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* Copy button */
+.copy-btn,
+.copy-code-button {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8em;
+}
+
+/* Search results */
+.search-results h2,
+.search-results .post-title {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Breadcrumbs */
+.breadcrumb,
+.breadcrumb-item,
+.breadcrumb-item a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85em;
+}
+
+/* Page title in main content */
+#page-category h1,
+#page-tag h1,
+#page-archive h1 {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Ensure code blocks have proper sizing */
+pre code {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* Table styling */
+table th,
+table td code {
+  font-family: 'Space Mono', monospace;
+}
+
+/* List styling */
+ul li::marker,
+ol li::marker {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Link styling - keep default but ensure consistency */
+a,
+a:link,
+a:visited {
+  /* Allow browser default, but ensure no monospace interference */
+}
+
+/* Special emphasis on important inline code */
+strong code,
+code strong {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* Italic code */
+em code,
+code em,
+i code,
+code i {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
 }
