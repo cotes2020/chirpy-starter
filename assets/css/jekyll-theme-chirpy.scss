@@ -441,3 +441,21 @@ blockquote {
 .badge {
   font-family: 'Space Mono', monospace;
 }
+
+/* ==========================================================================
+   Sidebar avatar: slightly rounded square
+   ========================================================================== */
+
+#sidebar #avatar {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 18px; /* slightly rounded square */
+  overflow: hidden;    /* crop image cleanly inside the frame */
+}
+
+#sidebar #avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
