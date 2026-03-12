@@ -1,15 +1,11 @@
 # The Site Configuration
 
-# Import the theme
-theme: jekyll-theme-chirpy
+# Fill in the protocol & hostname for your site.
+# E.g. 'https://username.github.io', note that it does not end with a '/'.
+url: https://plant-humanities.github.io
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
-lang: en
-
-# Change to your timezone › https://zones.arilyn.cc
-timezone:
+# The base URL of your site
+baseurl: /chirpy
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -21,12 +17,23 @@ tagline: Explore the cultural histories of plants and their influence on human s
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: https://plant-humanities.github.io
+# the avatar on sidebar, support local or CORS resources
+avatar: /assets/img/logo.png
 
 github:
-  username: # change to your GitHub username
+  username: plant-humanities # change to your GitHub username
+  repository: chirpy # change to your GitHub repository name, e.g. 'my-blog'
+
+# Change to your timezone › https://zones.arilyn.cc
+timezone:
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
+lang: en
 
 twitter:
   username: # change to your Twitter username
@@ -149,9 +156,6 @@ pwa:
 
 paginate: 12
 
-# The base URL of your site
-baseurl: "/chirpy"
-
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
@@ -233,8 +237,8 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-# The options for the Juncture layout, which provides enhanced features for content presentation and interaction.
-juncture:
+# The options for the StoryKit layout, which provides enhanced features for content presentation and interaction.
+storykit:
   mode: flat                  # default layout style: flat or 2col
   mode_toggle: true           # Enable the toggle button to switch between 2col and flat styles
   auto_float: true            # auto float embeds

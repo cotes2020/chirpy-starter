@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/carolina-rice
 image:
   path: G92F023_016F.jpg
-juncture: true
+storykit: true
 categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 ---
 

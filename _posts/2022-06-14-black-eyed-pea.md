@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/black-eyed-pea
 image:
   path: banner.jpg
-juncture: true
+storykit: true
 categories: ["Trade & Empire", "Enslaved Labor & Diaspora"]
 ---
 

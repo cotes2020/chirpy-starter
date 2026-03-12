@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/how-to-read-an-herbarium-specimen
 image:
   path: Rauwolf.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "Botanical Science"]
 ---
 

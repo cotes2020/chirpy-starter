@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/mimosa-pudica
 image:
   path: wc:Mimosa_pudica_kian-siau-chhau.jpg
-juncture: true
+storykit: true
 categories: ["Healing & Knowledge", "Scientific Curiosity"]
 ---
 

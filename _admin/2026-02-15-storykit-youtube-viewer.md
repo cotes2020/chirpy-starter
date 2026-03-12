@@ -1,12 +1,12 @@
 ---
-title: "Juncture: YouTube Viewer"
-description: How to use the Juncture YouTube viewer in your Markdown posts.
-permalink: /admin/juncture-youtube-viewer
+title: "StoryKit: YouTube Viewer"
+description: How to use the StoryKit YouTube viewer in your Markdown posts.
+permalink: /admin/storykit-youtube-viewer
 date: 2026-02-22
-media_subpath: /assets/posts/juncture
+media_subpath: /assets/posts/storykit
 toc: true
 order: 25
-juncture:
+storykit:
     mode: flat
     toolbar: false
 ---
@@ -45,9 +45,9 @@ juncture:
 
 ## Overview
 
-The Juncture YouTube Viewer embeds a YouTube video in your page as a clean, responsive preview. It looks similar to a standard embedded video, but behaves differently when clicked.
+The StoryKit YouTube Viewer embeds a YouTube video in your page as a clean, responsive preview. It looks similar to a standard embedded video, but behaves differently when clicked.
 
-When a reader clicks the preview, Juncture opens a **larger, expanded viewer** using the full available screen width. This gives the reader a much better viewing experience without forcing a large player on the page itself.
+When a reader clicks the preview, StoryKit opens a **larger, expanded viewer** using the full available screen width. This gives the reader a much better viewing experience without forcing a large player on the page itself.
 
 This two-mode design keeps your article layout clean and readable while still making video a first-class part of the content.
 
@@ -74,7 +74,7 @@ This allows your writing to direct the reader to the right moment in a video. In
 In short:
 
 - Use a standard YouTube embed when you simply need a video in the page.
-- Use the Juncture YouTube Viewer when timing, interactivity, or a clean layout matters.
+- Use the StoryKit YouTube Viewer when timing, interactivity, or a clean layout matters.
 
 ## Attributes
 
@@ -121,7 +121,7 @@ When present, the video begins playing automatically when the expanded viewer op
 
 Autoplay only applies in expanded mode. The preview in the page is always inactive regardless of this setting.
 
-> **Note:** Autoplay with sound requires the viewer to be served from a page that passes `allow="autoplay"` on its iframe. This is handled automatically by Juncture.
+> **Note:** Autoplay with sound requires the viewer to be served from a page that passes `allow="autoplay"` on its iframe. This is handled automatically by StoryKit.
 
 ---
 

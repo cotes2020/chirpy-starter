@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/cryptomeria
 image:
   path: wc:Cryptomeria_japonica_%27Cristata%27_Szydlica_japo%C5%84ska_2019-06-09_04.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "National & Cultural Icons"]
 ---
 

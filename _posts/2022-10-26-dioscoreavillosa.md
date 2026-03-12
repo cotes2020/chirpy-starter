@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/dioscoreavillosa
 image:
   path: dioscorea-voronoi1.jpg
-juncture: true
+storykit: true
 categories: ["Trade & Empire", "Biopiracy & Intellectual Property"]
 ---
 

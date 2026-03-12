@@ -11,7 +11,7 @@ published: true
 media_subpath: /assets/posts/dragon-tree
 image:
   path: wc:Parque_del_Drago_-_Drago_de_Icod_de_los_Vinos_02.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "Art & Imagination"]
 ---
 

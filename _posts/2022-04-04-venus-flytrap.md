@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/venus-flytrap
 image:
   path: banner.jpg
-juncture: true
+storykit: true
 categories: ["Healing & Knowledge", "Scientific Curiosity"]
 ---
 

@@ -13,7 +13,7 @@ featured: true
 media_subpath: /assets/posts/guelder-rose
 image:
   path: wc:Viburnum_opulus_%28Guelder_Rose%29_-_Flickr_-_S._Rae.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 

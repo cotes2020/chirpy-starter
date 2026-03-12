@@ -13,7 +13,7 @@ published: true
 media_subpath: /assets/posts/heliconia
 image:
   path: monographTrochi2Goul_0286.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 

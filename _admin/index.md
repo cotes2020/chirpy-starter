@@ -11,11 +11,11 @@ order: 0
 This area brings together two things:
 
 * The official documentation for the Chirpy theme
-* Additional guides explaining how to use the Juncture extensions built on top of Chirpy
+* Additional guides explaining how to use the StoryKit extensions built on top of Chirpy
 
 If you are creating or editing content for this site, this is where you should start.
 
-If you're a content author and want to just dive in, refer to the **[Authors Guide](juncture-authors-guide)**
+If you're a content author and want to just dive in, refer to the **[Authors Guide](storykit-authors-guide)**
 
 ## What This Covers
 
@@ -28,13 +28,14 @@ Chirpy provides the foundation: how to create posts, manage front matter, insert
 
 These documents explain the core conventions that everything else builds on.
 
-The Juncture documentation then shows you how to go beyond standard posts — adding interactive image viewers, maps, comparisons, and other embedded components using simple Markdown and Liquid include tags.
+The StoryKit documentation then shows you how to go beyond standard posts — adding interactive image viewers, maps, comparisons, and other embedded components using simple Markdown and Liquid include tags.
 
-* **[Juncture Overview](juncture-overview)** 
-* **[Image Viewer](juncture-image-viewer)** 
-* **[Map Viewer](juncture-map-viewer)** 
-* **[Image Compare Viewer](juncture-image-compare-viewer)** 
-* **[YouTube Viewer](juncture-youtube-viewer)** 
+* **[StoryKit Overview](storykit-overview)** 
+* **[Image Viewer](storykit-image-viewer)** 
+* **[Map Viewer](storykit-map-viewer)** 
+* **[Image Compare Viewer](storykit-image-compare-viewer)**
+* **[YouTube Viewer](storykit-youtube-viewer)**
+* **[Network Viewer](storykit-vis-network-viewer)**
 
 A complete list of documents is found in the **[Guides](#guides)** section below.
 
@@ -49,7 +50,7 @@ The goal of these extensions is to let you create rich, visual essays without ne
 ## How to Use This Documentation
 
 1. Start with the Chirpy basics if you haven’t already.
-2. Browse the Juncture component guides.
+2. Browse the StoryKit component guides.
 3. Copy the provided examples into your own post.
 4. Modify the parameters (image paths, captions, IDs, etc.) to fit your content.
 
@@ -64,7 +65,7 @@ The examples in these docs are meant to be directly reusable.
 ## A Practical Approach
 
 Think of Chirpy as the publishing engine.
-Think of Juncture as a set of specialized tools you can plug into that engine.
+Think of StoryKit as a set of specialized tools you can plug into that engine.
 
 You don’t need to understand how those tools are built — only how to use them correctly.
 

@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/ayahuasca
 image:
   path: https://live.staticflickr.com/8507/27951788334_154753d604_4k.jpg
-juncture: true
+storykit: true
 categories: ["Healing & Knowledge", "Psychoactive & Ritual"]
 ---
 

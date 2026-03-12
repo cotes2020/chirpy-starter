@@ -1,9 +1,10 @@
 ---
-title: "Juncture: Preview Bookmarklet Setup"
-description: A one-page guide for installing the preview bookmarklet and GitHub token, enabling one-click live preview of any post directly from GitHub's file browser.
-permalink: /admin/preview-bookmarklet
+title: "StoryKit: One-Time Setup for Authors"
+description: A guide for configuring the StoryKit Preview Tool.  The tool uses a bookmarklet and GitHub token, enabling one-click live preview of any post directly from GitHub's file browser.
+permalink: /admin/storykit-preview-setup
 date: 2026-02-15
-order: 21
+toc: true
+order: 11
 ---
 
 <style>
@@ -98,6 +99,8 @@ order: 21
   }
 </style>
 
+## Step 1 — Add Bookmarklet to Browser
+
 <div class="bookmarklet-wrap">
 
   <div class="bookmarklet-intro">
@@ -128,6 +131,34 @@ order: 21
   </div>
 
 </div>
+
+## Step 2 — Add a GitHub Token (PAT)
+
+Without a token, GitHub limits you to a handful of preview loads per hour. Adding a token raises this to 5,000 — effectively unlimited for normal use.
+
+**Create the token:**
+
+1. Go to [github.com/settings/tokens/new](https://github.com/settings/tokens/new) *(sign in if prompted)*
+2. In the **Note** field type: `Jekyll Preview`
+3. Under **Expiration** choose `No expiration`
+4. Scroll down — **do not check any boxes**
+5. Click **Generate token**
+6. **Copy the token** that appears — it starts with `ghp_`
+
+> ⚠️ You won't be able to see this token again after you leave the page. Copy it now.
+
+**Save the token in the preview tool:**
+
+1. Open your preview page at [{{ site.url }}{{ site.baseurl }}/preview]({{ site.url }}{{ site.baseurl }}/preview)
+2. Click the **⚙ Config** button in the top bar
+3. Enter `1` and press OK
+4. Paste your token and press OK
+
+> ✅ The token is saved in your browser. You won't need to enter it again unless you clear your browser data or switch to a different browser.
+
+---
+---
+
 
 <script>
 (function() {

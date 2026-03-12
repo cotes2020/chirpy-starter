@@ -77,7 +77,7 @@
 {%- assign class = class | append: " " | append: include.class -%}
 {%- endif -%}
 
-<iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" title="Juncture map viewer" allow="clipboard-write"
+<iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" title="StoryKit map viewer" allow="clipboard-write"
   style="aspect-ratio: {{ include.aspect | default: '1.0' }};"
   src="{{ '/assets/components/map.html' | relative_url }}?{{ qs }}" allowfullscreen>
 </iframe>

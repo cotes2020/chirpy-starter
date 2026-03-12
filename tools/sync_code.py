@@ -15,7 +15,7 @@ from typing import List, Optional
 # Config: source repo + branch
 # ----------------------------
 SRC_USER = "rsnyder"
-SRC_REPO = "chirpy-juncture-starter"
+SRC_REPO = "storykit-starter"
 SRC_BRANCH = "main"
 
 # Optional: GitHub token (env var) to avoid rate limits / access private repos
@@ -30,14 +30,14 @@ FILES_TO_SYNC = [
     "_admin/2019-08-08-write-a-new-post.md",
     "_admin/2019-08-09-getting-started.md",
     "_admin/2019-08-11-customize-the-favicon.md",
-    "_admin/2026-02-15-juncture-overview.md",
-    "_admin/2026-02-15-juncture-image-viewer.md",
-    "_admin/2026-02-15-juncture-image-compare-viewer.md",
-    "_admin/2026-02-15-juncture-map-viewer.md",
-    "_admin/2026-02-15-juncture-youtube-viewer.md",
-    "_admin/2026-02-15-juncture-authors-guide.md",
-    "_admin/2026-02-15-juncture-preview-setup.md",
-    "_admin/2026-02-15-juncture-entity-info-popups.md",
+    "_admin/2026-02-15-storykit-overview.md",
+    "_admin/2026-02-15-storykit-image-viewer.md",
+    "_admin/2026-02-15-storykit-image-compare-viewer.md",
+    "_admin/2026-02-15-storykit-map-viewer.md",
+    "_admin/2026-02-15-storykit-youtube-viewer.md",
+    "_admin/2026-02-15-storykit-authors-guide.md",
+    "_admin/2026-02-15-storykit-preview-setup.md",
+    "_admin/2026-02-15-storykit-entity-info-popups.md",
     "_includes/embed/iframe.html",
     "_includes/embed/image-compare.html",
     "_includes/embed/image.html",
@@ -53,7 +53,7 @@ FILES_TO_SYNC = [
     "_includes/media-url.html",
     "_includes/sidebar.html",
     "_layouts/admin.html",
-    "_layouts/juncture-home.html",
+    "_layouts/storykit-home.html",
     "_layouts/post.html",
     "_plugins/md5_filter.rb",
     "_posts/.template.md",
@@ -62,20 +62,22 @@ FILES_TO_SYNC = [
     "assets/components/map.html",
     "assets/components/vis-network.html",
     "assets/components/youtube.html",
-    "assets/css/juncture.css",
-    "assets/js/juncture.js",
+    "assets/css/storykit.css",
+    "assets/js/storykit.js",
     "assets/img/devices-mockup.png",
     "assets/img/devtools-dark.png",
     "assets/img/devtools-light.png",
     "assets/img/mockup.png",
     "assets/img/pages-source-dark.png",
     "assets/img/pages-source-light.png",
-    "assets/posts/juncture/image.png",
-    "assets/posts/juncture/map.png",
+    "assets/posts/storykit/image.png",
+    "assets/posts/storykit/map.png",
     "assets/posts/image-compare/Westgate_Towers_c1905.jpg",
     "assets/posts/image-compare/Westgate_Towers_2021.jpg",
     "preview/index.html",
     "tools/sync_code.py",
+    "Gemfile",
+    ".github/workflows/pages-deploy.yml"
 ]
 
 

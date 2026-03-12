@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/pelargonium
 image:
   path: pelargonium_harvard.jpg
-juncture: true
+storykit: true
 categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 ---
 

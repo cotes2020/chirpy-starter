@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/corpse-flower
 image:
   path: wc:Corpse_flower_(71304)f.jpg
-juncture: true
+storykit: true
 categories: ["Healing & Knowledge", "Scientific Curiosity"]
 ---
 

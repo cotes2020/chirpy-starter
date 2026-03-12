@@ -1,11 +1,11 @@
 ---
-title: "Juncture: Entity Info Popups"
-description: How to create rich information popups using Wikidata entities in Juncture.
+title: "StoryKit: Entity Info Popups"
+description: How to create rich information popups using Wikidata entities in StoryKit.
 date: 2026-02-15
 toc: true
-permalink: /admin/juncture-entity-info-popups
+permalink: /admin/storykit-entity-info-popups
 order: 21
-juncture:
+storykit:
     mode: flat
     toolbar: false
 ---
@@ -42,7 +42,7 @@ juncture:
     }
 </style>
 
-Juncture adds support for **Entity Info Popups** — lightweight, contextual information panels that appear when a reader clicks a linked term in your text.
+StoryKit adds support for **Entity Info Popups** — lightweight, contextual information panels that appear when a reader clicks a linked term in your text.
 
 They allow you to reference people, places, organizations, works, and concepts without interrupting the flow of your writing. Instead of sending readers off-site, the relevant details appear instantly in a clean, structured popup.
 
@@ -52,7 +52,7 @@ They allow you to reference people, places, organizations, works, and concepts w
 
 An Entity Info Popup is a small, on-demand information panel generated from a **Wikidata entity**.
 
-For example, instead of linking directly to Wikipedia, you can reference a person or place using its Wikidata identifier (a `Q` number). Juncture then:
+For example, instead of linking directly to Wikipedia, you can reference a person or place using its Wikidata identifier (a `Q` number). StoryKit then:
 
 * Retrieves structured data from Wikidata
 * Displays a concise summary
@@ -83,7 +83,7 @@ Each entity in Wikidata has:
 * Links to Wikipedia and other knowledge sources
 * Often an associated image from Wikimedia Commons
 
-Unlike Wikipedia (which is primarily narrative text), Wikidata is structured and machine-readable. That makes it ideal for dynamic components like Juncture’s popups.
+Unlike Wikipedia (which is primarily narrative text), Wikidata is structured and machine-readable. That makes it ideal for dynamic components like StoryKit popups.
 
 ---
 
@@ -92,7 +92,7 @@ Unlike Wikipedia (which is primarily narrative text), Wikidata is structured and
 Creating an entity popup is simple:
 
 1. Identify the Wikidata ID (`Q` number) for the entity.
-2. Link text in your Markdown to that ID using Juncture’s entity syntax.
+2. Link text in your Markdown to that ID using StoryKit entity syntax.
 
 ### Step 1: Find the Wikidata ID
 
@@ -102,7 +102,7 @@ Creating an entity popup is simple:
 
 ### Step 2: Link the Text
 
-Use the Juncture entity reference format in your Markdown:
+Use the StoryKit entity reference format in your Markdown:
 
 ```markdown
 [Charles Darwin](Q1035)
@@ -143,7 +143,7 @@ Depending on what Wikidata contains, the popup may include:
 * Key properties (dates, roles, affiliations, location, etc.)
 * Link to Wikipedia
 
-Because the data is structured, Juncture can present it consistently across different types of entities.
+Because the data is structured, StoryKit can present it consistently across different types of entities.
 
 > The quality of the popup depends on the completeness of the Wikidata entry. Well-documented subjects produce better popups.
 > {: .prompt-tip }
@@ -179,13 +179,13 @@ They are particularly effective in:
 
 Chirpy already supports rich formatting, attribute blocks, and structured content (see the core writing guide  and formatting examples ).
 
-Juncture builds on that foundation by introducing semantic linking through Wikidata entities. Instead of simply formatting text, you are adding structured meaning.
+StoryKit builds on that foundation by introducing semantic linking through Wikidata entities. Instead of simply formatting text, you are adding structured meaning.
 
 From an author’s perspective:
 
 * You continue writing standard Markdown.
 * You add entity links where helpful.
-* Juncture handles the data retrieval and display.
+* StoryKit handles the data retrieval and display.
 
 No JavaScript knowledge or API work is required.
 
@@ -209,7 +209,7 @@ Some names are ambiguous. Make sure the ID matches the intended subject.
 
 ## Summary
 
-Juncture Entity Info Popups:
+StoryKit Entity Info Popups:
 
 * Turn plain text references into structured, interactive knowledge
 * Pull live data from Wikidata

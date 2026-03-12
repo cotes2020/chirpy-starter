@@ -1,21 +1,21 @@
-{%- if page.juncture.mode_toggle == nil -%}
-    {%- if site.juncture.mode_toggle == nil -%}
+{%- if page.storykit.mode_toggle == nil -%}
+    {%- if site.storykit.mode_toggle == nil -%}
         {%- assign toggle_enabled = true -%}
     {% else %}
-        {%- assign toggle_enabled = site.juncture.mode_toggle -%}
+        {%- assign toggle_enabled = site.storykit.mode_toggle -%}
     {%- endif -%}
 {%- else -%}
-    {%- assign toggle_enabled = page.juncture.mode_toggle -%}
+    {%- assign toggle_enabled = page.storykit.mode_toggle -%}
 {%- endif -%}
 
-{%- if page.juncture.mode == nil -%}    
-    {%- if site.juncture.mode == nil -%}
+{%- if page.storykit.mode == nil -%}    
+    {%- if site.storykit.mode == nil -%}
         {%- assign default_mode = 'flat' -%}
     {% else %}
-        {%- assign default_mode = site.juncture.mode -%}
+        {%- assign default_mode = site.storykit.mode -%}
     {%- endif -%}
 {%- else -%}
-    {%- assign default_mode = page.juncture.mode -%}
+    {%- assign default_mode = page.storykit.mode -%}
 {%- endif -%}
 
 {%- if default_mode == 'flat' -%}
@@ -42,7 +42,7 @@
     const STORAGE_KEY = 'postViewMode';
 
     async function loadMain() {
-        const mod = await import('{{ "/assets/js/juncture.js" | relative_url }}');
+        const mod = await import('{{ "/assets/js/storykit.js" | relative_url }}');
         return { isMobile: !!mod.isMobile, init2col: mod.init2col };
     }
 

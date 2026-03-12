@@ -1,12 +1,12 @@
 ---
-title: "Juncture: Image Compare Viewer"
-description: How to use the Juncture Image Compare viewer in your Markdown posts.
-permalink: /admin/juncture-image-compare-viewer
+title: "StoryKit: Image Compare Viewer"
+description: How to use the StoryKit Image Compare viewer in your Markdown posts.
+permalink: /admin/storykit-image-compare-viewer
 date: 2026-02-22
 media_subpath: /assets/posts/image-compare
 toc: true
 order: 23
-juncture:
+storykit:
     mode: flat
     toolbar: false
 ---
@@ -45,9 +45,9 @@ juncture:
 
 ## Overview
 
-The Juncture Image Compare Viewer places two images side by side in an interactive slider that lets readers reveal one image beneath the other by dragging a divider. It is designed for comparing before/after photographs, historical images against modern views, or any pair of images that share the same subject.
+The StoryKit Image Compare Viewer places two images side by side in an interactive slider that lets readers reveal one image beneath the other by dragging a divider. It is designed for comparing before/after photographs, historical images against modern views, or any pair of images that share the same subject.
 
-When a reader clicks the viewer, Juncture opens a **larger, expanded viewer** using the full available screen width. This gives a much better experience for detailed comparison without forcing a large element into the article layout itself.
+When a reader clicks the viewer, StoryKit opens a **larger, expanded viewer** using the full available screen width. This gives a much better experience for detailed comparison without forcing a large element into the article layout itself.
 
 ### Preview Mode and Expanded Mode
 
@@ -68,7 +68,7 @@ Real-world before/after photographs are rarely taken from exactly the same posit
 In short:
 
 - Use a standard `<img>` pair when you simply need two images displayed together.
-- Use the Juncture Image Compare viewer when you want an interactive slider, a clean layout, or precise alignment between the two images.
+- Use the StoryKit Image Compare viewer when you want an interactive slider, a clean layout, or precise alignment between the two images.
 
 ---
 

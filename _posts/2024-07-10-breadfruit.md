@@ -12,7 +12,7 @@ published: true
 media_subpath: /assets/posts/breadfruit
 image:
   path: wc:Breadfruit_1.jpg
-juncture: true
+storykit: true
 categories: ["Trade & Empire", "Colonial Commodity"]
 ---
 

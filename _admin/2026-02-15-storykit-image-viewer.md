@@ -1,14 +1,14 @@
 ---
-title: "Juncture: Image Viewer"
-description: How to use the Juncture image viewer in your Markdown posts.
-permalink: /admin/juncture-image-viewer
+title: "StoryKit: Image Viewer"
+description: How to use the StoryKit image viewer in your Markdown posts.
+permalink: /admin/storykit-image-viewer
 date: 2026-02-15
-media_subpath: /assets/posts/juncture
+media_subpath: /assets/posts/storykit
 # image: image.png
 # show_header_image: false
 toc: true
 order: 22
-juncture:
+storykit:
     mode: flat
     toolbar: false
 ---
@@ -48,13 +48,13 @@ juncture:
 
 ## Overview
 
-At first glance, the Juncture Image Viewer looks similar to the standard image support built into Jekyll and the Chirpy theme. It displays a clean, responsive image in the page, just like a normal Markdown image.
+At first glance, the StoryKit Image Viewer looks similar to the standard image support built into Jekyll and the Chirpy theme. It displays a clean, responsive image in the page, just like a normal Markdown image.
 
 The difference becomes clear when the image is clicked.
 
-When a reader clicks the page image, Juncture opens a larger viewer using the **highest-resolution version available**. This version supports smooth zooming and panning, allowing readers to explore fine detail. The image shown in the page itself is optimized for normal web viewing, so your page loads quickly and looks clean. The high-resolution version is only loaded when needed.
+When a reader clicks the page image, StoryKit opens a larger viewer using the **highest-resolution version available**. This version supports smooth zooming and panning, allowing readers to explore fine detail. The image shown in the page itself is optimized for normal web viewing, so your page loads quickly and looks clean. The high-resolution version is only loaded when needed.
 
-This makes the Juncture viewer ideal for:
+This makes the StoryKit viewer ideal for:
 
 - Maps  
 - Archival photographs  
@@ -64,14 +64,14 @@ This makes the Juncture viewer ideal for:
 
 ### First-Class Support for Wikimedia Commons
 
-The Juncture viewer makes using Wikimedia Commons especially convenient.
+The StoryKit viewer makes using Wikimedia Commons especially convenient.
 
 You can reference a Commons image either by:
 
 - Full Commons URL  
 - The shorthand format: `wc:File_Name.jpg`
 
-Juncture automatically:
+StoryKit automatically:
 
 - Retrieves the optimal image size for the page  
 - Loads the highest-resolution version for exploration  
@@ -82,7 +82,7 @@ This removes much of the friction normally involved in correctly using Commons i
 
 ### Interactive Storytelling
 
-Where Juncture goes beyond a traditional image viewer is in **interactivity**.
+Where StoryKit goes beyond a traditional image viewer is in **interactivity**.
 
 You can link text to viewer actions such as:
 
@@ -98,7 +98,7 @@ The result is a more immersive reading experience — one where the image become
 In short:
 
 - Use the standard Chirpy image when you simply need to display a picture.
-- Use the Juncture Image Viewer when the image is something readers should explore.
+- Use the StoryKit Image Viewer when the image is something readers should explore.
 
 ## Attributes
 
