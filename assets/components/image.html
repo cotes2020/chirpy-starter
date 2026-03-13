@@ -268,6 +268,7 @@
 
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js';
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 
     // =========================================================================
@@ -283,6 +284,13 @@
       captionExpand: document.getElementById("caption-expand"),
       arTip: document.getElementById("ar-tip"),
     };
+
+    function mdToHtml(md) {
+      if (md == null) return "";
+      const html = marked.parse(String(md)).trim();
+      const m = html.match(/^<p>([\s\S]*)<\/p>$/i);
+      return m ? m[1] : html;
+    }
 
     function showMsg(html) {
       els.msg.innerHTML = html;
@@ -754,7 +762,7 @@
 
     // Caption init
     if (cfg.caption) {
-      els.captionText.innerHTML = decodeHtml(cfg.caption);
+      els.captionText.innerHTML = decodeHtml(mdToHtml(cfg.caption));
       if (cfg.attribution) els.captionText.innerHTML += `<br><small>${cfg.attribution}</small>`
       els.caption.style.display = "block";
       updateIframeAspectTip(); // caption affects wrap height

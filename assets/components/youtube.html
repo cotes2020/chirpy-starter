@@ -212,6 +212,8 @@
 
   <script type="module">
 
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
     // ── Utilities ───────────────────────────────────────────────────────────────
 
     /**
@@ -222,6 +224,13 @@
       if (!params.has(key)) return def
       const v = params.get(key)
       return v === '' || v === 'true' || v === '1'
+    }
+
+    function mdToHtml(md) {
+      if (md == null) return "";
+      const html = marked.parse(String(md)).trim();
+      const m = html.match(/^<p>([\s\S]*)<\/p>$/i);
+      return m ? m[1] : html;
     }
 
     /**
@@ -377,7 +386,7 @@
 
     if (props.caption) {
       // Use the explicitly provided caption without any network request
-      videoTitle.textContent = props.caption
+      videoTitle.innerHTML = mdToHtml(props.caption)
     } else {
       // Fall back to the video title from YouTube's oembed API
       const oembedUrl =
