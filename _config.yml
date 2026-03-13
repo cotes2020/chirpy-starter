@@ -138,6 +138,12 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:

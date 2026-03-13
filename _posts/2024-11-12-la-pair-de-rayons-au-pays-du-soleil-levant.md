@@ -4,6 +4,7 @@ date: 2024-11-12 00:00:00 +0100
 categories: [Life, Travel]
 tags: [bikepacking] # TAG names should always be lowercase
 description: Rétrospective de mon voyage à vélo de Séoul à Tokyo
+lang: fr-FR
 author: sofianlak
 image:
   path: /assets/img/headers/s2t-header.jpg

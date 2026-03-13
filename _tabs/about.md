@@ -9,7 +9,14 @@ description: >-
 
 ## **Who am I?**
 
-![Sofian Lakhdar - DevOps](/assets/img/sofianlak.png){: width="180" height="200" .w-40 .left}
+<style>
+.content a.popup.w-no-popup {
+  pointer-events: none;
+  cursor: default;
+}
+</style>
+
+![Sofian Lakhdar - DevOps](/assets/img/sofianlak.png){: width="180" height="200" .w-40 .left .w-no-popup}
 **Sofian Lakhdar** has built his career around **`DevOps`** practices and **`Platform Engineering`**. He is guided by values inspired from sports: self-improvement, continuous learning, team spirit, and solidarity. These principles permeate his professional and personal life, enabling him to approach every challenge with commitment.
 
 ## **Why this blog?**

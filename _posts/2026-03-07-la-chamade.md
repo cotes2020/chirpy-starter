@@ -4,6 +4,7 @@ date: 2026-03-07 18:00:00 +0100
 categories: [Life, Travel]
 tags: [bikepacking, voyage, poetry] # TAG names should always be lowercase
 description: Une montée de 25 km à Shikoku, un carrefour des émotions
+lang: fr-FR
 author: sofianlak
 image:
   path: /assets/img/headers/shikoku.png
