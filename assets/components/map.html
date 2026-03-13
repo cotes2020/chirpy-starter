@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Map Component</title>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
   <!-- Shoelace theme (optional) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css" />
 
@@ -65,16 +67,15 @@
 
     /* Caption */
     figcaption {
-      font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 28px;
-      padding: 8px 0;
-      display: flex;
-      align-items: center;
-      background: #fff;
-      color: rgb(52, 52, 60);
-      font-style: italic;
+      display: block;
+      text-align: center;
+      font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
+      font-size: 18px;
       font-weight: 400;
+      color: #6d6c6c;
+      line-height: 1.4;
+      color-scheme: light;
+      font-style: normal;
       -webkit-font-smoothing: antialiased;
 
       /* layout */
@@ -83,24 +84,12 @@
       padding-right: 0;
     }
 
-    .caption-left {
-      flex: 1 1 auto;
-      min-width: 0;
-      padding-left: 0;
-    }
-
-    .caption-right {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      /* padding-right: 10px; */
-    }
 
     .caption-title {
-      padding-left: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      display: inline-block;
+      padding: 0 0.5rem;
+      text-align: center;
+      /* white-space: nowrap; */
     }
 
     .expand-btn {
@@ -221,14 +210,7 @@
       </div>
 
       <figcaption>
-        <div class="caption-left">
-          <div class="title caption-title"></div>
-        </div>
-        <div class="caption-right">
-          <button id="expandBtn" class="expand-btn" type="button" aria-label="Expand map" title="Expand">
-            <i class="fa-solid fa-expand" aria-hidden="true"></i>
-          </button>
-        </div>
+        <span class="title caption-title"></span>
       </figcaption>
     </figure>
   </main>
@@ -283,7 +265,7 @@
     const captionTitleEl = document.querySelector("figcaption .title");
     const coordsEl = document.querySelector("#coords");
     const mapEl = document.querySelector("#map");
-    const expandBtn = document.querySelector("#expandBtn");
+    // const expandBtn = document.querySelector("#expandBtn");
 
     // ------------------------------ expand button ---------------------------
     function postShowDialog() {
@@ -294,11 +276,13 @@
         "*"
       );
     }
+    /*
     expandBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       postShowDialog();
     });
+    */
 
     // ------------------------------ utilities ------------------------------
     const isQid = (s) => typeof s === "string" && /^Q\d+$/.test(s.trim());
@@ -965,6 +949,8 @@
       };
 
       if (props.caption) setCaption(props.caption);
+
+      console.log(props);
 
       const qids = collectQIDsFromProps(props);
       const entities = qids.size ? await getEntityData(Array.from(qids), props.language) : {};

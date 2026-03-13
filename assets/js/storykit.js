@@ -944,14 +944,19 @@ function positionViewer() {
 
     const articleRect = els.article.getBoundingClientRect();
     const headerRect = els.header.getBoundingClientRect();
+    const viewerRect = els.viewer.getBoundingClientRect();
 
     // Height available below header (clamp to >= 0)
-    const availableH = Math.max(0, window.innerHeight - headerRect.bottom - 2);
+    const availableH = Math.max(0, window.innerHeight - viewerRect.top - 10);
+
+    els.viewer.querySelectorAll("iframe").forEach((iframe) => {
+        iframe.style.maxHeight = `${availableH - (iframe.parentElement.tagName === 'SL-TAB-PANEL' ? 50 : 0)}px`;
+    });
 
     const viewerW = articleRect.width / 2;
     const rightOffset = Math.max(0, window.innerWidth - articleRect.right);
 
-    // els.viewer.style.height = `${availableH}px`;
+    els.viewer.style.height = `${availableH}px`;
     els.viewer.style.width = `${viewerW}px`;
     els.viewer.style.right = `${rightOffset}px`;
 }

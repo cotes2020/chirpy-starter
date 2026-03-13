@@ -64,10 +64,6 @@ script_includes:
     text-decoration: none;
   }
 
-  .post-navigation {
-    display: none !important;
-  }
-
   [id^="fn"] {
     scroll-margin-top: 80px;
   }
@@ -78,6 +74,14 @@ script_includes:
   [data-mode="dark"] #topbar-wrapper {
       background: var(--main-bg) !important;
   }
+
+  {% if page.storykit.post_navigation == false %}
+    .post-navigation { display: none !important; }
+  {% else %}
+    {% if site.storykit.post_navigation == false %}
+      .post-navigation { display: none !important; }
+    {% endif %}
+  {% endif %}
 
 </style>
 

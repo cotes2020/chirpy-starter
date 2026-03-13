@@ -187,8 +187,7 @@ attribution {
 
 /* ****** End Entity Popup ****** */
 
-iframe,
-figure {
+.shadow {
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
@@ -206,11 +205,40 @@ figure.iframe-wrapper iframe {
     aspect-ratio: 0.59
 }
 
-figure.iframe-wrapper figcaption {
-    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-    text-align: center;
+figure.iframe-wrapper figcaption,
+div figcaption {
+      display: block;
+      text-align: center;
+      font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #6d6c6c;
+      line-height: 1.4;
+      color-scheme: light;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+}
+div figcaption {
     font-size: 16px;
-    line-height: 28px;
+}
+
+.col2 .viewer {
+    /* border: 1px solid red; */
+}
+
+.col2 .viewer sl-tab-panel {
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    background: var(--main-bg);
+}
+
+.col2 .viewer iframe,
+.col2 .viewer sl-tab-group {
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    background: var(--main-bg);
 }
 
 .col2 .viewer figure {

@@ -247,3 +247,4 @@ storykit:
   toolbar: true               # show the post toolbar
   cite: true                  # show the cite button in the toolbar
   pdf: true                   # show the pdf download button in the toolbar
+  post_navigation: false      # show the post navigation links at the end of posts

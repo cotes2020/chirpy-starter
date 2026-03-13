@@ -39,7 +39,7 @@
       {%- assign layer = parts[1] | strip -%}
     {%- endif -%}
 
-    {%- capture full_url -%}{%- include media-url.html src=frag subpath=post.media_subpath -%}{%- endcapture -%}
+    {%- capture full_url -%}{%- include media-url.html src=frag subpath=page.media_subpath -%}{%- endcapture -%}
     {%- assign full_url = full_url | strip -%}
 
     {%- if full_url != "" -%}

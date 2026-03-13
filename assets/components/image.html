@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Image Viewer</title>
 
@@ -38,31 +39,34 @@
 
     /* Caption bar */
     #caption {
-      display: none;
-      /* shown only if caption exists */
+      display: none; /* shown only if caption exists */
       position: relative;
       margin-top: 0.25rem;
       margin-bottom: 0.25rem;
-      padding: 0 36px;
-      /* reserve space so the right icon doesn't overlap text */
-      font-size: 1em;
-      line-height: 1.4;
-      color: inherit;
       background: transparent;
       min-height: 24px;
     }
+    #caption a {
+      color: inherit;
+    }
 
-    /* Caption text: single line, ellipsis, centered */
+    /* Caption text */
     #caption-text {
       display: block;
       text-align: center;
+      font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #6d6c6c;
+      line-height: 1.4;
+      color-scheme: light;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
       /*
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       */
-      line-height: 1.2;
-      color: inherit;
     }
 
     /* Right-side expand button */
@@ -770,6 +774,8 @@
       showRotationControl: cfg.max,
       showNavigator: false,
       keyboard: cfg.max,
+      minZoomImageRatio: 1,
+      maxZoomLevel: 50,
 
       mouseNavEnabled: cfg.max,
 
@@ -1012,7 +1018,7 @@
       if (!image) return;
       const imageSize = image.getContentSize();
       const imageAspectRatio = imageSize.x / imageSize.y;
-      setContainerHeight(imageAspectRatio);
+      if (!cfg.max) setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
     }).observe(window.frameElement);
@@ -1313,7 +1319,7 @@
         imageAspectRatio = clip.width / clip.height;
       }
 
-      setContainerHeight(imageAspectRatio);
+      if (!cfg.max) setContainerHeight(imageAspectRatio);
 
       // Apply rotate + optional flip
       const rot = parseRotate(cfg.rotate);
