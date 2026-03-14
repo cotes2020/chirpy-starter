@@ -72,6 +72,10 @@
 {% assign qs = qs | append: "&allmaps=" | append: allmaps_clean | uri_escape %}
 {% endif %}
 
+{% if include.basemap %}
+{% assign qs = qs | append: "&basemap=" | append: include.basemap | uri_escape %}
+{% endif %}
+
 {%- assign class = "embed-map" -%}
 {%- if include.class -%}
 {%- assign class = class | append: " " | append: include.class -%}

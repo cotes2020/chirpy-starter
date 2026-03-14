@@ -2,8 +2,7 @@
   {%- capture src_final -%}
     {%- include media-url.html src=include.src width=include.width subpath=page.media_subpath -%}
   {%- endcapture -%}
-  {%- assign src_final = src_final | strip -%}
-  <!-- src_final: {{ src_final }} -->
+  {%- assign src_final = src_final | strip | uri_escape -%}
 
   {%- assign first_char = src_final | slice: 0, 1 -%}
   {%- if first_char == '/' -%}

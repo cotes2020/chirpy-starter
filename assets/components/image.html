@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Image Viewer</title>
 
@@ -39,13 +40,15 @@
 
     /* Caption bar */
     #caption {
-      display: none; /* shown only if caption exists */
+      display: none;
+      /* shown only if caption exists */
       position: relative;
       margin-top: 0.25rem;
       margin-bottom: 0.25rem;
       background: transparent;
       min-height: 24px;
     }
+
     #caption a {
       color: inherit;
     }
@@ -99,10 +102,14 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      body, figure, #osd {
-        background-color: rgba(27,27,30,.9);
+
+      body,
+      figure,
+      #osd {
+        background-color: rgba(27, 27, 30, .9);
         color: rgba(255, 255, 255, 0.55);
       }
+
       a {
         color: #58a6ff;
       }
@@ -510,6 +517,7 @@
 
       const supplementHtml = `<small>${supplementParts.join(" • ")}</small>`;
 
+      // const captionHtml = `${escHtml(description)}<br>${supplementHtml}`;
       const captionHtml = `${escHtml(description)}<br>${supplementHtml}`;
 
       return { captionHtml, attributionRequired };
