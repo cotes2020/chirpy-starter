@@ -4,6 +4,12 @@ layout: default
 
 <link rel="stylesheet" href="{{ '/assets/css/storykit.css' | relative_url }}">
 
+<style>
+    .sidebar-bottom > [href^="https://github.com"] {
+    display: none !important;
+  }
+</style>
+
 <script>
   let modeToggle = document.getElementById('view-toggle');
   console.log(modeToggle.style.display);

@@ -230,7 +230,11 @@ function addMessageHandler() {
         if (msg.type === 'getElementById') {
             // if (event.origin !== location.origin) return;
             let el = document.getElementById(event.data.id)
-            event.source.postMessage(JSON.stringify({ event: 'element', id: event.data.id, html: el?.outerHTML }), '*')
+            event.source.postMessage(JSON.stringify({
+                event: 'element',
+                html: el ? el.outerHTML : null,
+                text: el ? el.textContent : null 
+            }), '*')
             return;
         }
 

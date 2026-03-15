@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StoryKit Component Template</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/themes/light.css" />
   <style>
     *,
     *::before,
@@ -35,8 +34,6 @@
 
     figcaption {
       padding: 8px 0;
-      display: flex;
-      background: #fff;
 
       text-align: center;
       font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
@@ -49,52 +46,24 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    figcaption svg {
-      width: 1em;
-      height: 1em;
-      margin-inline: .3em;
-      flex: none;
-      fill: currentColor;
-      cursor: pointer;
-    }
-
-    sl-drawer::part(base) {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
-
-    sl-drawer::part(body) {
-      padding: 0;
-      margin: 3px;
-    }
-
-    sl-drawer::part(footer) {
-      padding: 0.5em;
-      border-top: 1px solid #ccc;
-    }
-
-    sl-tab::part(base) {
-      padding: 0.5em 1em;
-    }
-
-    sl-tab-panel::part(base) {
-      padding: 0.5em;
-    }
-
-    sl-tab-panel[aria-hidden=true] {
-      display: none !important;
-    }
-
-    .expandToggle {
-      margin-left: auto;
-      flex-shrink: 0;
-    }
-
     .clamp {
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
+    /* Transparent div injected over the iframe in non-max mode.
+       Captures clicks so the viewer is never interactive
+       in preview mode — clicks instead trigger the expanded dialog. */
+    .click-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      cursor: pointer;
+      background: transparent;
+    }
+
   </style>
 </head>
 
@@ -103,27 +72,9 @@
   <figure>
     <div class="content"></div>
     <figcaption>
-      <svg class="drawerToggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
-        <path
-          d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z" />
-      </svg>
-      <div class="label clamp"></div>
-      <svg class="expandToggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path
-          d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z" />
-      </svg>
+      <div class="label"></div>
     </figcaption>
   </figure>
-
-  <sl-drawer contained class="drawer" no-header style="--size: calc(100% - 30px);">
-    <sl-tab-group>
-      <sl-tab slot="nav" active panel="info">Content info</sl-tab>
-      <sl-tab-panel active name="info">
-        Content Info
-      </sl-tab-panel>
-    </sl-tab-group>
-    <sl-button slot="footer" variant="primary" size="small" class="close">Close</sl-button>
-  </sl-drawer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.js"
     integrity="sha512-GE9mKnPrTn2DY5AZuIC9yE6K4FF8T+9lsO7jwHn+RW9rEjnHzF/in0oGwlPzRwjhQ+oJiawmtfvleX+l6h5/cA=="
@@ -158,36 +109,23 @@
     const content = figure.firstElementChild
     const figcaption = figure.querySelector('figcaption')
     const captionText = figcaption.querySelector('.label')
-    const drawer = document.querySelector('.drawer')
     let id
+
+    if (!props.max) {
+      const overlay = document.createElement('div')
+      overlay.className = 'click-overlay'
+      figure.appendChild(overlay)
+      overlay.addEventListener('click', () => window.parent.postMessage({ type: "showDialog", aspect: 1.0, src: `${location.href}&dataid=${props.dataid}&max` }, "*" ));
+    }
 
     if (props.nocaption === true) figcaption.style.display = 'none'
     else if (props.caption) captionText.innerHTML = md2Html(props.caption)
 
-    const drawerToggle = figcaption.querySelector('.drawerToggle')
-    drawerToggle?.addEventListener('click', e => drawer.open = !drawer.open)
-
-    function postShowDialog() {
-      window.parent.postMessage(
-        { type: "showDialog", props: { aspect: 1.0, src: `${location.href}&dataid=${props.dataid}&max` } },
-        "*"
-      );
-    }
-
-    const expandToggle = figcaption.querySelector('.expandToggle')
-    if (props.max) expandToggle.style.display = 'none'
-    else {
-      expandToggle?.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        postShowDialog();
-      })
-    }
-
     const buildGraph = (csv) => {
+      const normalized = csv.replace(/\s+node,/g, '\nnode,').replace(/\s+edge,/g, '\nedge,') // normalize line breaks
       let nodes = []
       let edges = []
-      const { data, errors } = Papa.parse(csv, {
+      const { data, errors } = Papa.parse(normalized, {
         header: false,        // treat first row as keys
         dynamicTyping: true,  // convert "123" → 123
         skipEmptyLines: true,
