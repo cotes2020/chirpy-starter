@@ -53,7 +53,7 @@
         sl-image-comparer {
             width: 100%;
             max-width: 100%;
-            display: block;
+            display: none;
         }
 
         /* Wrapper gives the overlay a light-DOM positioning root */
@@ -321,7 +321,7 @@
 <body>
     <figure id="figure" hidden>
         <div class="comparer-wrap">
-            <sl-image-comparer id="comparer" style="width:100%;">
+            <sl-image-comparer id="comparer">
                 <img id="imgBefore" slot="before" alt="Before image" />
                 <img id="imgAfter"  slot="after"  alt="After image"  />
             </sl-image-comparer>
@@ -439,10 +439,23 @@
         //   exactly once, after the slowest/most important dimension is done.
 
         function notifyHeight() {
+            comparer.style.display = 'block'; 
+            if (isMax) {
+                const panelIsOpen = $panel.classList.contains("open");
+                let containerHeight = window.frameElement.clientHeight;
+                let containerWidth = window.frameElement.clientWidth;
+                let comparerWidth = comparer.clientWidth;
+
+                let comparerHeight = containerHeight - (panelIsOpen ? 254 : 44); // Account for panel height when open, plus some padding
+                let comparerAspect = comparer.clientWidth / comparer.clientHeight;
+                comparer.style.height = `${comparerHeight}px`;
+                comparer.style.width = `${comparerHeight * comparerAspect}px`;
+                comparer.style.margin = 'auto';
+            }
             requestAnimationFrame(() => {
                 // body.offsetHeight sees the clipped panel box, not its scrollable content
                 const h = document.body.offsetHeight;
-                window.parent.postMessage({ type: "image-compare:height", height: h }, "*");
+                if (!isMax) window.parent.postMessage({ type: "image-compare:height", height: h }, "*");
             });
         }
 
@@ -485,7 +498,12 @@
         // Notify height once images settle
         let loadCount = 0;
         [$imgBefore, $imgAfter].forEach(img => {
-            const done = () => { if (++loadCount === 2) notifyHeight(); };
+            console.log(img);
+            const done = () => { 
+                if (++loadCount === 2) {
+                    // notifyHeight(); 
+                };
+            }
             img.addEventListener("load", done);
             img.addEventListener("error", done);
         });
@@ -519,7 +537,7 @@
                 const maxParams = new URLSearchParams(location.search);
                 maxParams.set("max", "true");
                 const maxSrc = `${location.pathname}?${maxParams.toString()}`;
-                const dialogAspect = aspect ? parseFloat(aspect) : null;
+                const dialogAspect = aspect ? parseFloat(aspect) : 1.0;
                 window.parent.postMessage({
                     type:   "showDialog",
                     src:    maxSrc,

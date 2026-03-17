@@ -870,7 +870,6 @@ function setActive(el) {
  * - Use an element with class "right"
  */
 function findViewerSource(stepEl) {
-    console.log("Finding viewer source for step:", stepEl);
     let toMatch = ['IFRAME', 'SL-TAB-GROUP', 'FIGURE'];
 
     let node = stepEl?.previousElementSibling;
@@ -878,7 +877,6 @@ function findViewerSource(stepEl) {
 
     node = stepEl?.nextElementSibling;
     while (node?.nodeName === 'HR') node = node.nextElementSibling;
-    console.log(node);
     if (node?.nodeType === Node.ELEMENT_NODE && (
         toMatch.includes(node?.nodeName) ||
         (node?.nodeName === 'P' && node.firstChild?.nodeName === 'IMG') ||

@@ -68,7 +68,11 @@ A pen-and-ink drawing by the Smithsonian’s scientific illustrator [Alice Tange
 
 Mee’s gift of observation, honed through the painstaking sketching of plants and conversations with expert botanists, led her to notice the plant. Her painting, though with a primarily aesthetic purpose, was detailed and accurate enough to convince Kress, an expert on the genus, that this discovery was of a new variety. His scientific publication then called for the skill of a [botanical illustrator](Q3148760), shifting the emphasis from color and composition to the accurate description of the plant’s parts, yet with a graceful economy of means that produces its own version of aesthetic pleasure.
 
-{% include embed/image-compare.html before="Tangerini_Heliconia_chartacea_var._meeana_detail_frame_gray.jpg" after="mee_heliconia_uaupensis_RoyalBotanicGardenKew.jpg" class="right" %}
+{% include embed/image-compare.html
+    before="Tangerini_Heliconia_chartacea_var._meeana_detail_frame_gray.jpg?bx=0.5&bx=1&bs=1.94"
+    after="mee_heliconia_uaupensis_RoyalBotanicGardenKew.jpg?ax=4.5&ay=9.5&as=1.24"
+    position="50"
+%}
 
 # The Natural History of Heliconias – Experts in Interactions 
 
