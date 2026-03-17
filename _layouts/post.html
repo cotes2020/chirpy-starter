@@ -75,6 +75,10 @@ script_includes:
       background: var(--main-bg) !important;
   }
 
+  .sidebar-bottom > [href^="https://github.com"] {
+    display: none !important;
+  }
+
   {% if page.storykit.post_navigation == false %}
     .post-navigation { display: none !important; }
   {% else %}

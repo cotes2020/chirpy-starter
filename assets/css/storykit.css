@@ -207,17 +207,18 @@ figure.iframe-wrapper iframe {
 
 figure.iframe-wrapper figcaption,
 div figcaption {
-      display: block;
-      text-align: center;
-      font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: #6d6c6c;
-      line-height: 1.4;
-      color-scheme: light;
-      font-style: normal;
-      -webkit-font-smoothing: antialiased;
+    display: block;
+    text-align: center;
+    font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6d6c6c;
+    line-height: 1.4;
+    color-scheme: light;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
 }
+
 div figcaption {
     font-size: 16px;
 }
@@ -244,6 +245,10 @@ div figcaption {
 .col2 .viewer figure {
     width: 100%;
     background: var(--main-bg);
+}
+
+.col2 .viewer iframe.embed-iframe[src^="https://cdn.knightlab.com"] {
+    height: 1000px;
 }
 
 .col1 .viewer {
