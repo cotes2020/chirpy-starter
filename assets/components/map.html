@@ -389,7 +389,7 @@
 
       if (url.startsWith("wc:") ||
         ((url.includes("wikimedia.org") || url.includes("wikipedia.org")) && url.includes("/media/File:"))) {
-        return mwImage(url.replace(/^wc:/, ""), 300);
+        return mwImage(url.replace(/^wc:/, ""), 330);
       }
       if (url.startsWith("http://") || url.startsWith("https://")) return url;
       if (url.startsWith("gh:")) return `https://raw.githubusercontent.com/${url.slice(3)}/main`;
@@ -666,8 +666,8 @@
 
         if (rec.description) e.description = safeDecodeURIComponent(rec.description.value).replace(/_/g, " ");
         if (rec.coords) e.coords = rec.coords.value.slice(6, -1).split(" ").reverse().join(",");
-        if (rec.image) { e.image = rec.image.value; e.thumbnail = mwImage(rec.image.value, 300); }
-        if (rec.logoImage && !e.thumbnail) e.thumbnail = mwImage(rec.logoImage.value, 300);
+        if (rec.image) { e.image = rec.image.value; e.thumbnail = mwImage(rec.image.value, 330); }
+        if (rec.logoImage && !e.thumbnail) e.thumbnail = mwImage(rec.logoImage.value, 330);
         if (rec.whosOnFirst) e.geojson = whosOnFirstUrl(rec.whosOnFirst.value);
         if (rec.wikipedia) e.wikipedia = rec.wikipedia.value;
 
@@ -790,7 +790,7 @@
             let style = `width:${Number.isFinite(w) ? w : 100}px;height:${Number.isFinite(h) ? h : 100}px;`;
             if (p.circle) style += `border-radius:50%;border:4px solid ${p.color || "#555555"};`;
 
-            const imgUrl = String(p.url).startsWith("wc:") ? mwImage(String(p.url).slice(3), 108) : p.url;
+            const imgUrl = String(p.url).startsWith("wc:") ? mwImage(String(p.url).slice(3), 330) : p.url;
             const html = `<img src="${imgUrl}" style="${style}"/>`;
 
             return new L.Marker(latlng, {
