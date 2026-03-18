@@ -449,6 +449,7 @@
 
       const attributionRequired = asBool(meta?.AttributionRequired);
 
+      // Escape plain text for safe insertion into HTML.
       const escHtml = (s) =>
         String(s)
           .replace(/&/g, "&amp;")
@@ -459,41 +460,111 @@
 
       const isNonEmpty = (s) => typeof s === "string" && s.trim().length > 0;
 
-      // Description: user caption wins; else fall back to Commons metadata.
-      const description =
-        (isNonEmpty(userCaption) && userCaption.trim()) ||
-        (isNonEmpty(meta?.ImageDescription) && String(meta.ImageDescription).trim()) ||
-        (isNonEmpty(meta?.ObjectName) && String(meta.ObjectName).trim()) ||
-        "Image";
+      /**
+       * Strip HTML tags and decode common entities from a string that may
+       * contain arbitrary Commons HTML (e.g. <span lang="en">…</span>,
+       * <a href="…">…</a>, &amp;, &nbsp;, numeric refs, etc.).
+       * Returns clean plain text, or null if the input is empty/nullish.
+       */
+      const stripHtml = (html) => {
+        if (!html) return null;
+        let s = String(html);
 
-      // Commons file page URL (always included in supplement)
+        // 1. Collapse runs of whitespace inside tags to avoid "word word" → "wordword"
+        //    when two adjacent tags are removed.
+        s = s.replace(/<\/?\w[^>]*>/g, " ");
+
+        // 2. Decode the handful of entities Commons commonly emits.
+        s = s
+          .replace(/&nbsp;/gi, " ")
+          .replace(/&amp;/gi, "&")
+          .replace(/&lt;/gi, "<")
+          .replace(/&gt;/gi, ">")
+          .replace(/&quot;/gi, '"')
+          .replace(/&#39;/gi, "'")
+          .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+          .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
+
+        // 3. Collapse whitespace and trim.
+        s = s.replace(/\s+/g, " ").trim();
+
+        return s.length > 0 ? s : null;
+      };
+
+      /**
+       * Extract the most useful plain-text language variant from a Commons
+       * ImageDescription (which may be a bare string, or HTML like:
+       *   <div lang="en" …>English text</div><div lang="de" …>Deutsch</div>
+       * Strategy: prefer the "en" div if present, else take the first div,
+       * else strip the whole string.
+       */
+      const extractDescription = (raw) => {
+        if (!raw) return null;
+        const s = String(raw);
+
+        // Try to pull the English-language div first.
+        const enMatch = s.match(/<div[^>]+lang=["']?en["']?[^>]*>([\s\S]*?)<\/div>/i);
+        if (enMatch) return stripHtml(enMatch[1]);
+
+        // Fall back to the first div of any language.
+        const firstDiv = s.match(/<div[^>]*>([\s\S]*?)<\/div>/i);
+        if (firstDiv) return stripHtml(firstDiv[1]);
+
+        // No div structure — strip whatever is there.
+        return stripHtml(s);
+      };
+
+      /**
+       * Extract the best plain-text author name from the Artist field,
+       * which Commons often returns as an HTML snippet like
+       *   <a href="/wiki/User:Foo">Foo Bar</a>
+       * or just a plain string.
+       */
+      const extractArtist = (html) => {
+        if (!html) return null;
+        const s = String(html);
+
+        // Prefer the inner text of the first <a> (the display name).
+        const aMatch = s.match(/<a\b[^>]*>([\s\S]*?)<\/a>/i);
+        if (aMatch) return stripHtml(aMatch[1]);
+
+        // No link — strip tags from whatever is there.
+        return stripHtml(s);
+      };
+
+      // Description: user caption wins; else fall back to Commons metadata.
+      // User captions are treated as Markdown; Commons metadata is plain text.
+      let descriptionHtml;
+      if (isNonEmpty(userCaption)) {
+        // Render user-supplied Markdown → HTML (marked is already imported).
+        const rendered = marked.parse(userCaption.trim());
+        // Unwrap a single <p>…</p> so it flows inline in the caption.
+        const unwrapped = rendered.trim().replace(/^<p>([\s\S]*?)<\/p>$/i, "$1");
+        descriptionHtml = unwrapped;
+      } else {
+        const plain =
+          extractDescription(meta?.ImageDescription) ||
+          stripHtml(meta?.ObjectName) ||
+          null;
+        descriptionHtml = plain ? escHtml(plain) : null;
+      }
+
+      // Commons file page URL (always included in supplement).
       const commonsUrl = commonsFileTitle
         ? `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(commonsFileTitle).replace(/%3A/g, ":")}`
         : null;
 
-      // Extract plain author name from Artist (often HTML <a>..</a>)
-      const extractInnerText = (html) => {
-        if (!html) return null;
-        const s = String(html);
-        const m = s.match(/<a\b[^>]*>(.*?)<\/a>/i);
-        const raw = m ? m[1] : s;
-        return raw
-          .replace(/&nbsp;/g, " ")
-          .replace(/&amp;/g, "&")
-          .replace(/&quot;/g, '"')
-          .replace(/&#39;/g, "'")
-          .replace(/<[^>]*>/g, "")
-          .trim() || null;
-      };
-
-      const artistName = extractInnerText(meta?.Artist) || "Unknown author";
+      const artistName = extractArtist(meta?.Artist) || "Unknown author";
       const licenseName =
-        meta?.LicenseShortName || meta?.UsageTerms || meta?.License || "License";
+        stripHtml(meta?.LicenseShortName) ||
+        stripHtml(meta?.UsageTerms) ||
+        stripHtml(meta?.License) ||
+        "License";
       const licenseUrl = meta?.LicenseUrl || null;
 
       const linkAttrs = `target="_blank" rel="noopener noreferrer"`;
 
-      // Supplemental line: always includes Commons source link; adds attribution if required.
+      // Supplemental line: Commons source link + optional attribution.
       const supplementParts = [];
 
       if (commonsUrl) {
@@ -501,23 +572,22 @@
           `Source: <a href="${escHtml(commonsUrl)}" ${linkAttrs}>Wikimedia Commons</a>`
         );
       } else {
-        // If title wasn't provided, still meet the "always provide supplement" intent,
-        // but without a usable link.
         supplementParts.push(`Source: Wikimedia Commons`);
       }
 
       if (attributionRequired) {
-        // Keep it concise: author + license (linked if possible)
         const licenseHtml = licenseUrl
           ? `<a href="${escHtml(licenseUrl)}" target="_blank" rel="license noopener noreferrer">${escHtml(licenseName)}</a>`
           : escHtml(licenseName);
-
         supplementParts.push(`© ${escHtml(artistName)} — ${licenseHtml}`);
       }
 
       const supplementHtml = `<small>${supplementParts.join(" • ")}</small>`;
 
-      const captionHtml = `${escHtml(description)}<br>${supplementHtml}`;
+      // If there's no usable description, show only the supplement line.
+      const captionHtml = descriptionHtml
+        ? `${descriptionHtml}<br>${supplementHtml}`
+        : supplementHtml;
 
       return { captionHtml, attributionRequired };
     }
