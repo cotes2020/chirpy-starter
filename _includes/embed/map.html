@@ -20,7 +20,7 @@
 {% assign markers_clean = include.markers
 | strip_newlines
 | strip
-| replace: " ", "" %}
+| replace: " ", "%20" %}
 {% assign qs = qs | append: "&markers=" | append: markers_clean | uri_escape %}
 {% endif %}
 
