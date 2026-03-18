@@ -41,7 +41,11 @@
   {%- if is_wc -%}
     {%- assign mw_width = include.width | default: 1200 -%}
 
-    {%- assign mw_title = url
+    {% assign parts = url | split: "?" %}
+    {% assign base_url = parts[0] %}
+    {% assign query_string = parts[1] %}
+
+    {%- assign mw_title = base_url
       | replace: 'wc:', ''
       | replace: 'Special:FilePath/', 'File:'
       | split: 'File:'
@@ -63,7 +67,9 @@
     {%- capture mw_url -%}
 https://upload.wikimedia.org/wikipedia/commons/thumb/{{ _md5 | slice: 0, 1 }}/{{ _md5 | slice: 0, 2 }}/{{ mw_path }}/{{ mw_width }}px-{{ mw_path }}{%- if extension == 'svg' -%}.png{%- elsif extension == 'tif' or extension == 'tiff' -%}.jpg{%- endif -%}
     {%- endcapture -%}
-
+    {% if query_string %}
+      {%- assign mw_url = mw_url | append: '?' | append: query_string -%}
+    {% endif %}
     {%- assign url = mw_url | strip -%}
   {% else %}
     
