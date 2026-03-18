@@ -702,7 +702,9 @@
         const { captionHtml } = buildCommonsCaption(wcMeta, wcTitle, cfg.caption);
         cfg.caption = captionHtml;
       } else if (fallbackImageUrl.indexOf('localhost') < 0 && fallbackImageUrl.indexOf('127.0.0.1') < 0) {
-        fallbackImageUrl = `https://res.cloudinary.com/dmceci9t1/image/fetch/${cfg.max ? '' : 'w_431,'}q_auto,f_auto/${fallbackImageUrl}`;
+        if (!cfg.region) {
+          fallbackImageUrl = `https://res.cloudinary.com/dmceci9t1/image/fetch/${cfg.max ? '' : 'w_431,'}q_auto,f_auto/${fallbackImageUrl}`;
+        }
       }
     }
 
@@ -1102,7 +1104,11 @@
       const image = viewer?.world.getItemAt(0);
       if (!image) return;
       const imageSize = image.getContentSize();
-      const imageAspectRatio = imageSize.x / imageSize.y;
+      let imageAspectRatio = imageSize.x / imageSize.y;
+      if (cfg.region) {
+        const region = parseRegionString(cfg.region, false);
+        imageAspectRatio = region.w / region.h;
+      }
       if (!cfg.max) setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
@@ -1399,7 +1405,7 @@
 
       // Apply clip (IIIF-like)
       const clip = parseRegion(cfg.region, imageSize.x, imageSize.y);
-      if (clip) {
+      if (clip && !cfg.max) {
         item.setClip(clip);
         imageAspectRatio = clip.width / clip.height;
       }
