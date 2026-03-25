@@ -118,13 +118,17 @@ node,Q65968,House of Habsburg
 edge,Q65968,Q150862,member of
 {: #Helianthus-annuus-network-csv}
 
-{% include embed/vis-network.html id="Helianthus-annuus-network" caption="Network of botanists who authored or translated herbals in which the cultivated sunflower was described and, in some cases, represented visually." aspect="1.2" %}
+{% include embed/vis-network.html id="Helianthus-annuus-network" caption="Network of botanists who authored or translated herbals in which the cultivated sunflower was described and, in some cases, represented visually." %}
 
 # Sunflower Aesthetics in Full Bloom
 
 The advent of the florilegium in the 1610s was integral to the blossoming of sunflower aesthetics, as is evidenced in the sumptuous prints contained in [_Hortus Eystettensis_.](https://bibdigital.rjb.csic.es/idurl/1/10908)[^ref9] The 1613 book was commissioned from apothecary and botanist [Basilius Besler](Q65027) by the [Prince Bishop of Eichstätt](Q110347), who wished to document rare and foreign flora then growing in his garden in Bavaria. As part of the project, Besler oversaw the production of this hand-colored [engraving](https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/essays-interviews-resources/glossary) of a domesticated sunflower shown life-sized. The image’s impact derives not only from its impressive dimensions but also from its bold cruciform [composition](Q462437), both of which imbue the full flower head and stem with a sense of power and religious reverence for nature. A symmetrical design makes the flower’s disk spiral a focal point around which irregular ray florets lend rhythm and heart-shaped leaves a decorative flourish. These formal strategies were innovative for the time because they celebrated the sunflower’s beauty above its use value, unlike most economical illustrations then found in herbals. Consequently, Besler’s _Flos Solis maior_ (large flower of the sun) became an influential model for visualizing _Helianthus annuus_ that anticipated modern visual stereotypes for the plant, perhaps best epitomized by [this tiny sunflower emoji.](https://openmoji.org/library/#search=sunflower&emoji=1F33B)
 
-{% include embed/image-compare.html before="1F33B_sunflower_OpenMojis_rectangle_3.png" after="http://beeld.teylersmuseum.nl/Digital_Library/Emags/149b_439-2/pubData/source/images/zoompages/zoompage86.jpg" %}
+{% include embed/image-compare.html
+    before="1F33B_sunflower_OpenMojis_rectangle_3.png?bx=-6&bs=0.72"
+    after="http://beeld.teylersmuseum.nl/Digital_Library/Emags/149b_439-2/pubData/source/images/zoompages/zoompage86.jpg?ax=36.5&ax=33&ay=48&as=1.46"
+    position="50"
+%}
 
 # Mythic Encounters and Scientific Debates
 
@@ -137,11 +141,11 @@ The migration of sunflower iconography from one source to another is evidenced i
 
 Although European herbals such as Hernández’s perpetuated cultural myths that the domesticated sunflower was present in Mexico prior to colonization or originated in Peru, botanists have since debunked these ideas by using distribution maps and [fossilized remains](Q40614) to study the plant’s origin and range.[^ref14] The earliest known cultivated sunflower remains—charred seeds—tell us that humans used _Helianthus annuus_ at Hayes shelter in [central Tennessee](Q495448) by 5000 BP ([Before Present](https://www.archaeological.org/programs/educators/introduction-to-archaeology/glossary/#b)) and parts of eastern North America by 3000 BP.[^ref15] It is likely that, in the pre-5000 BP context, Indigenous peoples transported wild sunflowers to their campsites, where the plants became stabilized and later cultivated to possess desirable traits, namely large flower heads with more seeds.[^ref16]
 
-{% include embed/map.html center="Q495448" zoom="4.5" caption="Hayes Shelter prehistoric site, Marshall County, central Tennessee" %}
+{% include embed/map.html center="Q495448" zoom="4.5" caption="Hayes Shelter prehistoric site, Marshall County, central Tennessee" markers="Q495448" %}
 
 Yet scientists still disagree about when humans first used domesticated sunflowers in parts of the southwestern United States and Mexico, and whether such plants were cultivated independently there.[^ref17] An ongoing source of debate is the origin of a charred seed that was recovered at San Andrés archaeological site in [Tabasco](Q80914), Mexico. Although some scientists identified the seed as coming from cultivated _Helianthus annuus_, others argued that it most likely came from a bottle gourd.[^ref18] Expanding on this archeological research, [genomic](Q222046) studies of modern domesticated and wild sunflowers have linked the plants to a single common ancestor, which was cultivated at an independent domestication center, along with pepo squash, marsh elder, and chenopod, in [central Tennessee](map1/flyto/37.347878,-89.590292) and other parts of eastern North America.[^ref19] Citing that evidence, botanists have argued that domesticated _Helianthus annuus_ was brought to Mexico via North American trade routes, possibly by Spanish colonizers.[^ref20]
 
-{% include embed/map.html id="map1" center="Q80914" zoom="6.5" caption="San Antonio cave, Tobasco, Mexico" %}
+{% include embed/map.html id="map1" center="Q80914" zoom="6.5" caption="San Antonio cave, Tobasco, Mexico" markers="Q80914" %}
 
 # "I’ll Follow the Sun": Heliotropism as Metaphor and Myth
 

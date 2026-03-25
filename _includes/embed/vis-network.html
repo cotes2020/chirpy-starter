@@ -8,6 +8,11 @@
 {%- assign qs = qs | append: "&caption=" | append: include.caption | uri_escape -%}
 {%- endif -%}
 
+{%- assign class = "embed-vis-network" -%}
+{%- if include.class -%}
+{%- assign class = class | append: " " | append: include.class -%}
+{%- endif -%}
+
 <iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" title="StoryKit network viewer" allow="clipboard-write"
   style="aspect-ratio: {{ include.aspect | default: 1.0 }};"
   src="{{ '/assets/components/vis-network.html' | relative_url }}?{{ qs }}" allowfullscreen>

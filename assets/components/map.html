@@ -324,6 +324,42 @@
       captionTitleEl.innerHTML = mdToHtml(caption);
     }
 
+    function parseAspectRatio(value) {
+      if (!value) return null;
+
+      const v = value.trim();
+
+      // form: "w / h" or "w/h"
+      const slash = v.split("/");
+      if (slash.length === 2) {
+        const w = parseFloat(slash[0]);
+        const h = parseFloat(slash[1]);
+        if (Number.isFinite(w) && Number.isFinite(h) && h !== 0) {
+          return w / h;
+        }
+        return null;
+      }
+
+      // form: "1.7778"
+      const n = parseFloat(v);
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function setContainerHeight(aspectRatio) {
+      const iframe = window.frameElement;
+      if (!aspectRatio) {
+        const raw = iframe?.style.getPropertyValue('aspect-ratio');
+        aspectRatio = parseAspectRatio(raw);
+      }
+      let width = mapEl.clientWidth;
+      if (iframe && width) {
+        let captionHeight = captionTitleEl.clientHeight || parseInt(captionTitleEl?.style.height?.slice(0, -2)) || 0;
+        let containerHeight = width / aspectRatio + captionHeight + 20;
+        // console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
+        iframe.style.height = `${containerHeight}px`;
+      }
+    }
+
     function clampNumber(n, min, max) {
       const x = Number(n);
       if (!Number.isFinite(x)) return min;
@@ -956,6 +992,9 @@
       if (props.caption) setCaption(props.caption);
 
       console.log(props);
+
+      setContainerHeight();
+
 
       const qids = collectQIDsFromProps(props);
       const entities = qids.size ? await getEntityData(Array.from(qids), props.language) : {};
