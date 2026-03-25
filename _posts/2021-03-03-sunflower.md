@@ -10,7 +10,7 @@ date: 2021-03-03
 permalink: /sunflower
 tags: flower oilseed ornamental temperate
 published: true
-media_subpath: /assets/posts/sunflower
+media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/sunflower
 image:
   path: BES_Hort_2_000140.jpg
 storykit: true

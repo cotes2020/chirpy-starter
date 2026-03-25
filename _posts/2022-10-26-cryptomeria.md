@@ -9,7 +9,7 @@ date: 2022-10-26
 permalink: /cryptomeria
 tags: tree conifer ornamental temperate
 published: true
-media_subpath: /assets/posts/cryptomeria
+media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/cryptomeria
 image:
   path: wc:Cryptomeria_japonica_%27Cristata%27_Szydlica_japo%C5%84ska_2019-06-09_04.jpg
 storykit: true
@@ -87,7 +87,7 @@ Following the World War II period, the Japanese government instigated a series o
 
 In 1964, the [Forestry Basic Act](https://www.cas.go.jp/jp/seisaku/hourei/data/ffba.pdf) was passed, which effectively established a national forest industry in Japan, including plans to build thousands of miles of roads across the nation to allow timber to be easily harvested from hilly, densely forested regions and shipped out to ports along the coast.[^22] The Act aimed to build closer ties between urban and rural areas, linking previously separated parts of Japan through educational forestry programs and vocational training. The road network allowed for more than the transport of timber: it enabled the flow of knowledge and forestry practices from the urban centers to the once-isolated rural villages. The legislation also included guarantees from the Japanese government that forestry workers would receive subsidies in the event of a natural disaster or diminishing international markets.[^23] The subsidies, which still exist today, included offsetting the harvest and transportation costs, allowing foresters to take advantage of ports and other international distribution points to sell their timber.[^24] 
 
-{% include embed/image.html src="crypto-size.png" region="2,2,1181,950" aspect="0.77" %}
+{% include embed/image.html src="crypto-size.png" %}
 {% include embed/image.html src="DSC_0018.jpg" caption="Japanese cedar cut into standard timber sizes to be exported. Image by author, 2019." aspect="1.51" %}
 
 The reforestation campaign focused on conifer plantings, with subsidies and compulsion, so following the success of these agrarian and forestry reforms, 4 billion cedar trees were planted across Japan between 1950 and 1970.[^25] Since the 1970s, 16 million new cedar trees have been planted annually.[^26][^27]  

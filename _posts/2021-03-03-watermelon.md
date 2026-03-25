@@ -9,7 +9,7 @@ date: 2021-03-03
 permalink: /watermelon
 tags: fruit tropical temperate
 published: true
-media_subpath: /assets/posts/watermelon
+media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/watermelon
 image:
   path: wc:Albert_Eckhout_1610-1666_Brazilian_fruits.jpg
 storykit: true

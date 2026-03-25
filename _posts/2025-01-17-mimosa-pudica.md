@@ -9,7 +9,7 @@ date: 2025-01-17
 permalink: /mimosa-pudica
 tags: shrub ornamental nitrogen-fixer tropical
 published: true
-media_subpath: /assets/posts/mimosa-pudica
+media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/mimosa-pudica
 image:
   path: wc:Mimosa_pudica_kian-siau-chhau.jpg
 storykit: true

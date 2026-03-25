@@ -1100,7 +1100,7 @@
       }, 60);
     }
 
-    new ResizeObserver(entries => {
+    if (window.frameElement) new ResizeObserver(entries => {
       const image = viewer?.world.getItemAt(0);
       if (!image) return;
       const imageSize = image.getContentSize();

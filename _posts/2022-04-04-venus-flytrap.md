@@ -9,7 +9,7 @@ date: 2022-04-04
 permalink: /venus-flytrap
 tags: carnivorous ornamental wetland temperate
 published: true
-media_subpath: /assets/posts/venus-flytrap
+media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/venus-flytrap
 image:
   path: banner.jpg
 storykit: true
