@@ -22,6 +22,7 @@ sl-tab-panel .left {
 
 hr {
     clear: both;
+    border: 0;
 }
 
 .media-pair {
@@ -651,8 +652,54 @@ iframe {
     transition: height 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+iframe,
 iframe.full {
     width: 100%;
+}
+
+
+iframe.small  {
+    width: 33% !important;
+}
+
+iframe.medium  {
+    width: 50%;
+}
+
+iframe.large  {
+    width: 75%;
+}
+
+iframe.center {
+    margin: auto;
+}
+
+iframe.right {
+    float: unset;
+    display: block;
+    margin-left: auto;
+}
+
+iframe.left {
+    margin-right: auto;
+}
+
+iframe.right.float {
+    float: right;
+    width: 50%;
+    margin: 0 0 0.5rem 1rem;
+}
+
+iframe[class*="embed"].float {
+    width: 50% !important;
+    float: right;
+    margin: 0 0 0.5rem 1rem;
+}
+
+iframe[class*="embed"].float.left {
+    width: 50% !important;
+    float: left;
+    margin: 0 1rem 0.5rem 0;
 }
 
 iframe[src^="https://cdn.knightlab.com/"] {
@@ -777,7 +824,7 @@ iframe[src^="https://cdn.knightlab.com/"] {
 }
 
 .float-pair {
-    display: block;
+    display: flow-root;
     margin: 0;
     padding: 0;
     border: 0;

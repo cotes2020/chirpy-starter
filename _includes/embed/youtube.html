@@ -23,6 +23,6 @@
 {%- endif -%}
 
 <iframe id="{{ include.id }}" class="{{ class }}" loading="lazy" title="YouTube viewer" allow="clipboard-write" allowfullscreen
-  {% if include.aspect %} style="aspect-ratio: {{ include.aspect }};" {% endif %}
+  style="aspect-ratio: {{ include.aspect | default: 1.55 }}; width: 100%;"
   src="{{ '/assets/components/youtube.html' | relative_url }}?{{ qs }}" >
 </iframe>

@@ -356,6 +356,7 @@
         let captionHeight = captionTitleEl.clientHeight || parseInt(captionTitleEl?.style.height?.slice(0, -2)) || 0;
         let containerHeight = width / aspectRatio + captionHeight + 20;
         // console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
+        if (!iframe.style.width) iframe.style.width = '100%';
         iframe.style.height = `${containerHeight}px`;
       }
     }
@@ -733,12 +734,12 @@
     // ----------------------------- layer parsing ----------------------------
     function collectQIDsFromProps(props) {
       const qids = new Set();
-      if (isQid(props.center)) qids.add(props.center);
+      if (isQid(props.center)) qids.add(props.center.trim());
 
       if (typeof props.markers === "string") {
         props.markers.split("|").forEach(marker => {
           const [first] = marker.split("~");
-          if (isQid(first)) qids.add(first);
+          if (isQid(first)) qids.add(first.trim());
         });
       }
       return qids;

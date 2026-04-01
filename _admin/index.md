@@ -31,6 +31,7 @@ These documents explain the core conventions that everything else builds on.
 The StoryKit documentation then shows you how to go beyond standard posts — adding interactive image viewers, maps, comparisons, and other embedded components using simple Markdown and Liquid include tags.
 
 * **[StoryKit Overview](storykit-overview)** 
+* **[StoryKit Formatting Tips](storykit-formatting-tips)** 
 * **[Image Viewer](storykit-image-viewer)** 
 * **[Map Viewer](storykit-map-viewer)** 
 * **[Image Compare Viewer](storykit-image-compare-viewer)**

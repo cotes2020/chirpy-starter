@@ -410,6 +410,7 @@ function autoFloat({ root = document.body } = {}) {
         if (!parent) return;
 
         embed.classList.add('right');
+        embed.classList.add('float');
 
         // Existing behavior: swap order (embed before paragraph) and insert hr above embed
         parent.insertBefore(embed, previousSib);

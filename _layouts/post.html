@@ -93,7 +93,7 @@ script_includes:
 
 {% include toc-status.html %}
 
-{% if page.storykit %}
+{% if page.storykit != false %}
   <link rel="stylesheet" href="{{ '/assets/css/storykit.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/themes/light.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace/cdn/shoelace.js"></script>
@@ -101,7 +101,7 @@ script_includes:
 
 <article class="px-1" data-toc="{{ enable_toc }}">
   
-  {% if page.storykit %}
+  {% if page.storykit != false %}
 
     {%- if page.storykit.toolbar == nil -%}
       {%- if site.storykit.toolbar == nil -%}{%- assign toolbar_enabled = true -%}
@@ -358,7 +358,7 @@ script_includes:
   <!-- div.post-tail-wrapper -->
 </article>
 
-{% if page.storykit %}
+{% if page.storykit != false %}
   <script type="module">
 
     import { isMobile, autoFloat, makeEntityPopups, wrapAdjacentEmbedsAsTabs, addActionLinks, restructureMarkdownToSections } from "{{ '/assets/js/storykit.js' | relative_url }}";
@@ -386,43 +386,37 @@ script_includes:
       toolbar.style.display = 'inline-block';
       toolbar.style.marginLeft = 'auto';
     }
-      
-    let isStorykit = '{{ page.storykit }}';
 
-    if (isStorykit) {
+    const mainWrapper = document.getElementById('main-wrapper');
+    let mode_toggle = ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true';
+    let mode = mode_toggle
+      ? localStorage.getItem('postViewMode') || '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat'
+      : '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat';
+    mode = mode === 'col1' || mode === 'flat' ? 'flat' : 'col2';
+    let doAutoFloat = ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true';
+    let groupEmbeds = ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true';
+    let wikidataInfoPopups = ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
+    console.log(`StoryKit: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
 
-      const mainWrapper = document.getElementById('main-wrapper');
-      let mode_toggle = ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true';
-      let mode = mode_toggle
-        ? localStorage.getItem('postViewMode') || '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat'
-        : '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat';
-      mode = mode === 'col1' || mode === 'flat' ? 'flat' : 'col2';
-      let doAutoFloat = ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true';
-      let groupEmbeds = ('{{ page.storykit.group_embeds }}' || '{{ site.storykit.group_embeds }}' || 'true').toLowerCase() === 'true';
-      let wikidataInfoPopups = ('{{ page.storykit.wikidata_info_popups }}' || '{{ site.storykit.wikidata_info_popups }}' || 'true').toLowerCase() === 'true';
-      console.log(`StoryKit: isMobile:${isMobile} mode:${mode} modeToggle:${mode_toggle} autoFloat:${doAutoFloat} groupEmbeds:${groupEmbeds} wikidataInfoPopups:${wikidataInfoPopups}`);
-
-      if (mode === 'flat' || mode === 'col1') {
-        let contentEl = document.querySelector('.post-content');
-        const newContentEl = restructureMarkdownToSections(contentEl);
-        if (newContentEl) contentEl.replaceWith(newContentEl);
-      }
-
-      mainWrapper.classList.add(mode === 'col2' ? 'col2' : 'col1');
-      new MutationObserver(() => {
-        mode = mainWrapper.classList.contains('col2') ? 'col2' : 'flat';
-        console.log(`mode=${mode}`);
-      }).observe(mainWrapper, {attributes: true, attributeFilter: ['class']});
-
-      if (wikidataInfoPopups) makeEntityPopups();
-      if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
-      addActionLinks();
-      if (doAutoFloat && !isMobile) autoFloat();
-
-      document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);
-      window.addEventListener("pageshow", moveToolbarIntoTopbar);
-
+    if (mode === 'flat' || mode === 'col1') {
+      let contentEl = document.querySelector('.post-content');
+      const newContentEl = restructureMarkdownToSections(contentEl);
+      if (newContentEl) contentEl.replaceWith(newContentEl);
     }
+
+    mainWrapper.classList.add(mode === 'col2' ? 'col2' : 'col1');
+    new MutationObserver(() => {
+      mode = mainWrapper.classList.contains('col2') ? 'col2' : 'flat';
+      console.log(`mode=${mode}`);
+    }).observe(mainWrapper, {attributes: true, attributeFilter: ['class']});
+
+    if (wikidataInfoPopups) makeEntityPopups();
+    if (groupEmbeds) wrapAdjacentEmbedsAsTabs();
+    addActionLinks();
+    if (doAutoFloat && !isMobile) autoFloat();
+
+    document.addEventListener("DOMContentLoaded", moveToolbarIntoTopbar);
+    window.addEventListener("pageshow", moveToolbarIntoTopbar);
 
   </script>
 {% endif %}

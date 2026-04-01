@@ -803,7 +803,11 @@
         if (imageAspectRatio) {
           let captionHeight = caption.clientHeight || parseInt(caption?.style.height?.slice(0, -2)) || 24
           let containerHeight = width / imageAspectRatio + captionHeight + 20;
-          if (iframe) iframe.style.height = `${containerHeight}px`;
+          // console.log(`setContainerHeight: width=${width}, aspect=${imageAspectRatio.toFixed(3)}, captionHeight=${captionHeight}, total=${containerHeight}`);
+          if (iframe) {
+            if (!iframe.style.width) iframe.style.width = '100%';
+            iframe.style.height = `${containerHeight}px`;
+          }
         }
       }
     }
@@ -1109,7 +1113,7 @@
         const region = parseRegionString(cfg.region, false);
         imageAspectRatio = region.w / region.h;
       }
-      if (!cfg.max) setContainerHeight(imageAspectRatio);
+      //if (!cfg.max) setContainerHeight(imageAspectRatio);
       viewer.viewport.goHome(false);
       setTimeout(() => viewer.viewport.goHome(false), 50);
     }).observe(window.frameElement);

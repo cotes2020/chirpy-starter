@@ -38,6 +38,7 @@ FILES_TO_SYNC = [
     "_admin/2026-02-15-storykit-authors-guide.md",
     "_admin/2026-02-15-storykit-preview-setup.md",
     "_admin/2026-02-15-storykit-entity-info-popups.md",
+    "_admin/2026-02-15-storykit-formatting-tips.md",
     "_includes/embed/iframe.html",
     "_includes/embed/image-compare.html",
     "_includes/embed/image.html",
