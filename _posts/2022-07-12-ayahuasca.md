@@ -11,7 +11,7 @@ tags: vine psychoactive medicinal tropical
 published: true
 media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/ayahuasca
 image:
-  path: https://live.staticflickr.com/8507/27951788334_154753d604_4k.jpg
+  path: 27951788334_154753d604_4k.jpg
 storykit: true
 categories: ["Healing & Knowledge", "Psychoactive & Ritual"]
 ---
