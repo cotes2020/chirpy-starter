@@ -33,16 +33,19 @@ Enclosing container class controls layout:
         {%- assign is_cloudinary_cdn = true -%}
     {%- endif -%}
 
+    <!-- src: {{ src }} -->
     {% if post.media_subpath and is_abs == false and is_wc == false %}
         {% assign src = post.media_subpath | append: '/' | append: src %}
         {% if is_dev == false and is_cloudinary_cdn == true %}
             {% assign src = site.url | append: site.baseurl | append: src %}
         {% endif %}
     {% endif %}
+    <!-- src: {{ src }} -->
 
     {% if is_dev == false and is_cloudinary_cdn == true and is_wc == false %}
       {%- assign src = site.cdn | append: '/' | append: src -%}
     {% endif %}
+    <!-- src: {{ src }} -->
 
     {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
     {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
