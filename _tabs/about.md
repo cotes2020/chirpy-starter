@@ -33,7 +33,7 @@ Plants and People courses.
 ## So Many Stories to Tell
 
 As a visitor of the Lab, you will discover fascinating stories of plants from around the world.
-Consider [cassava](/cassava): poisonous when eaten raw, it was rendered harmless by Indigenous methods
+Consider [cassava]({{ site.baseurl }}/cassava): poisonous when eaten raw, it was rendered harmless by Indigenous methods
 of processing this plant into food, so that today it is a diet staple of more than 600 million people.
 You can use an interactive map to follow cassava’s travels from the Americas, where it was
 already cultivated in 8000 BCE, to its global distribution today. Beautiful images—from a
