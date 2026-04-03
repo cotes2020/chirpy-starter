@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Skills">
+  <h1>Skills</h1>
+
+  <section>
+    <h2>Technical Skills &amp; Experience</h2>
+    <hr />
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h3>Data Science &amp; Machine Learning</h3>
+        <ul>
+          <li>Pandas</li>
+          <li>Polars</li>
+          <li>PyTorch</li>
+          <li>TensorFlow</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Cloud Computing Platforms</h3>
+        <ul>
+          <li>AWS</li>
+          <li>Azure</li>
+          <li>Google Cloud (G Cloud)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Data Analytics &amp; Visualization</h3>
+        <ul>
+          <li>Data Studio</li>
+          <li>Looker</li>
+          <li>Power BI</li>
+          <li>Tableau</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>T-SQL</li>
+          <li>Visual Basic</li>
+          <li>Redshift SQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Project Management &amp; Operations</h2>
+    <hr />
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h3>Methodologies</h3>
+        <ul>
+          <li>Scrum</li>
+          <li>Six Sigma</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <ul>
+          <li>Asana</li>
+          <li>Jira</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Management Skills</h3>
+        <ul>
+          <li>Team and Schedule Management</li>
+          <li>Risk Management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  h2 { margin-top: 2rem; }
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .skill-group {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .skill-group h3 { font-size: 0.95rem; margin: 0 0 0.75rem; color: var(--accent); }
+  ul { padding-left: 1.25rem; margin: 0; color: var(--text-muted); }
+  li { margin-bottom: 0.3rem; font-size: 0.9rem; }
+</style>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Education & Certificates">
+  <h1>Education &amp; Certificates</h1>
+
+  <section>
+    <h2>Education</h2>
+    <hr />
+    <h3>University of Toronto</h3>
+    <ul>
+      <li><a href="https://www.artsci.utoronto.ca/" target="_blank" rel="noopener">Honours Bachelor of Arts</a>
+        <ul>
+          <li>Geographic Information Systems</li>
+          <li>Environment and Geography</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certification Highlights</h2>
+    <hr />
+    <div class="cert-list">
+      <div class="cert">
+        <span class="cert-date">Jun 2024</span>
+        <div>
+          <strong>AWS Certified Cloud Practitioner</strong><br />
+          <a href="https://www.credly.com/badges/cd3dd32d-6f51-4495-96b6-a7414adb323a?source=linked_in_profile" target="_blank" rel="noopener">Amazon &rarr;</a>
+        </div>
+      </div>
+      <div class="cert">
+        <span class="cert-date">Dec 2021</span>
+        <div>
+          <strong>AWS Partner: Accreditation (Business)</strong><br />
+          <a href="https://www.credly.com/badges/11f91ece-ac74-4519-a5b5-c97e4dec3b35?source=linked_in_profile" target="_blank" rel="noopener">Amazon &rarr;</a>
+        </div>
+      </div>
+      <div class="cert">
+        <span class="cert-date">Aug 2021</span>
+        <div>
+          <strong>AWS Certified Database &ndash; Specialty</strong><br />
+          <a href="https://www.linkedin.com/in/phillip-b-39b3884a/details/certifications/" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+        </div>
+      </div>
+      <div class="cert">
+        <span class="cert-date">Sep 2019</span>
+        <div>
+          <strong>Microsoft: Querying with Transact-SQL</strong><br />
+          <a href="https://courses.edx.org/certificates/84baf226f34e44129ad7ba971dc7eba1" target="_blank" rel="noopener">edX &rarr;</a>
+        </div>
+      </div>
+      <div class="cert">
+        <span class="cert-date">Mar 2019</span>
+        <div>
+          <strong>Project Management Fundamentals</strong><br />
+          <a href="https://pd.uwaterloo.ca/OnlineCourse.aspx?courseCatalogID=dee366d9-1605-42b0-bee8-3a9cf6c826aa" target="_blank" rel="noopener">University of Waterloo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  h2 { margin-top: 2rem; }
+  .cert-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+  .cert {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .cert-date { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; padding-top: 2px; min-width: 60px; }
+</style>

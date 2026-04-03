@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Awards">
+  <h1>Awards</h1>
+
+  <section>
+    <h2>Omnicom Media Group, Toronto, ON</h2>
+    <hr />
+    <div class="award-list">
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Omnicom Media Group</span><span class="date">Dec 2020</span></div>
+        <h3>Spot Award</h3>
+        <p>Recognized for delivering performance that surpassed expectations.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Omnicom Media Group</span><span class="date">Jul 2018</span></div>
+        <h3>R.E.A.P. Award</h3>
+        <p>Commended for innovatively automating a process previously considered manual only, resulting in significant cost savings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rogers Sports and Media, Toronto, ON</h2>
+    <hr />
+    <div class="award-list">
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Sports and Media</span><span class="date">Feb 2017</span></div>
+        <h3>MBU Sales Recognition Awards &mdash; Platinum Club Winner</h3>
+        <p>Acknowledged for streamlining departmental processes and implementing cost-saving measures.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Sports and Media</span><span class="date">Jan 2017</span></div>
+        <h3>MBU Sales Recognition Awards &mdash; Sales Ops WOW</h3>
+        <p>Awarded for exceptional performance and dedication in the sales operation department.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Sports and Media</span><span class="date">Jan 2016</span></div>
+        <h3>Employee of the Year Award</h3>
+        <p>Honored as Employee of the Year for demonstrating exceptional performance and commitment to corporate principles and values.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Communications</span><span class="date">Jul 2015</span></div>
+        <h3>Business Impact Award</h3>
+        <p>Recognized for commitment to innovation and creating new benchmarks for success, driving growth and executing against strategic plans.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Sports and Media</span><span class="date">Jan 2014</span></div>
+        <h3>Team of the Year Award &mdash; Rogers Media</h3>
+        <p>Celebrated for commitment to innovation, creating new benchmarks for success, and driving growth in alignment with Rogers' Five-Year Plan.</p>
+      </div>
+      <div class="award">
+        <div class="award-meta"><span class="awarder">Rogers Sports and Media</span><span class="date">Jun 2013</span></div>
+        <h3>Business Impact Award</h3>
+        <p>Acknowledged for commitment to innovation, setting new benchmarks for success, and driving growth.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  h2 { margin-top: 2rem; color: var(--accent); }
+  .award-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+  .award {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .award-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+  .award h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+  .award p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+</style>

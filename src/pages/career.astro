@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Career Experience">
+  <h1>Career Experience</h1>
+
+  <section class="job">
+    <div class="job-header">
+      <h2>Exostatic Inc., Toronto, ON</h2>
+      <span class="period">2021 &ndash; Present</span>
+    </div>
+    <h3><a href="https://www.exostatic.com/" target="_blank" rel="noopener">Lead Data Engineer</a></h3>
+    <p>I work closely with clients to help identify and scope out new project opportunities, then guide them through the initial stages of development. Within my team, I'm responsible for delegating tasks to keep our workflow running smoothly and ensuring everyone has the support they need to succeed. As a developer, I contribute to the coding process and also offer guidance and mentorship to my colleagues, helping us build high-quality solutions together.</p>
+    <ul>
+      <li>Led data engineering team in creating scalable data systems, enhancing operational efficiency, reducing tech debt and decision-making.</li>
+      <li>Utilized machine learning techniques to pioneer advanced data practices, improving the quality of data-driven insights.</li>
+      <li>Worked with clients to product manage the sales pipeline, while launching multi-million dollar games.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="job">
+    <div class="job-header">
+      <h2>Omnicom Media Group, Toronto, ON</h2>
+    </div>
+
+    <h3><a href="https://omnicommediagroup.com/" target="_blank" rel="noopener">Senior Manager of Business Intelligence</a> <span class="period">2019 &ndash; 2021</span></h3>
+    <p>I streamlined business operations by automating ETL processes, boosting efficiency and accuracy. My work generated valuable industry insights for senior leadership, directly informing strategic decision-making. I was also deeply involved in meticulous requirements gathering and documentation, ensuring project clarity and success.</p>
+    <ul>
+      <li>Earned a SPOT award for outstanding performance.</li>
+      <li>Developed automated quality assurance tools for high-value clients, saving hundreds of hours and preventing errors in advance.</li>
+    </ul>
+
+    <h3><a href="https://omnicommediagroup.com/" target="_blank" rel="noopener">Intermediate Reporting Analyst</a> <span class="period">2017 &ndash; 2019</span></h3>
+    <p>I undertook a comprehensive review of internal reporting processes, identifying areas for improvement and implementing solutions to enhance their efficiency and streamline workflows for optimal performance. I developed a suite of customized reporting tools that accelerated report generation and significantly reduced manual labour hours annually.</p>
+    <ul>
+      <li>Enhanced efficiency by automating reporting processes, saving close to 1,500 labour hours annually.</li>
+      <li>Earned a bronze REAP award for assisting a client with an urgent deadline through automation.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section class="job">
+    <div class="job-header">
+      <h2>Rogers Sports and Media, Toronto, ON</h2>
+      <span class="period">2012 &ndash; 2017</span>
+    </div>
+    <h3><a href="https://www.rogerssportsandmedia.com/" target="_blank" rel="noopener">Senior Business Systems Analyst</a></h3>
+    <p>Committed to maintaining the highest levels of data integrity, I developed innovative reporting and quality assurance tools. These tools were instrumental in minimizing errors, protecting financial resources, and ensuring the accuracy of crucial business data. I authored specialized applications and queries to automate quality assurance testing, streamlining the testing process and significantly reducing manual effort.</p>
+    <ul>
+      <li>Awarded 2015 Employee of the Year at Rogers Sports and Media.</li>
+      <li>Developed an engine for validating NHL advertisements for Rogers' advertising clients.</li>
+      <li>Authored applications and queries to automate quality assurance testing, catching hundreds of thousands of dollars in advertising errors.</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .job { margin-bottom: 2rem; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; }
+  .job h2 { margin-bottom: 0.25rem; font-size: 1.3rem; color: var(--accent); }
+  .job h3 { margin: 1rem 0 0.4rem; font-size: 1.05rem; }
+  .period { font-size: 0.875rem; color: var(--text-muted); white-space: nowrap; }
+  ul { color: var(--text-muted); padding-left: 1.5rem; }
+  li { margin-bottom: 0.4rem; }
+</style>
