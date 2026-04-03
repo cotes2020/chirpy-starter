@@ -102,7 +102,7 @@ layout: default
     setView(isCurrentlyGrid ? "list" : "grid");
   });
 
-  setView(localStorage.getItem("postIndexView") === "grid" ? "grid" : "list");
+  setView(localStorage.getItem("postIndexView") === "list" ? "list" : "grid");
 
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".post-excerpt-toggle");
