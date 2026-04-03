@@ -1,0 +1,15 @@
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: Regionalized Consumerism and Coding
+date: 2026-02-05 23:58:00 +0900
+categories: [costs, ai]
+tags: [travelling, regionalization, price-gouging, ai]
+---
+
+Traveling is a wonderful way to broaden one's perspectives and give us opportunities to learn something new. We can learn important things like appreciating new cultures, art or media. Common things like etiquette while on a lift, common ways of how locals interact with each other in public or how to properly eat at a restaurant. We can learn frustrating facts as well regretfully, such as how certain things can be less expensive, more abundant or priced exclusively for certain markets. Quite often there are practical reasons such as shipping cost, storage logistics, supply availability to name just a few. However sometimes there aren't.
+
+What really, I find both paradoxical and frustrating though is when a certain product is which is produced locally is more expensive for the people in its place then it is for people a good distance away. Luxury goods like coffee, cacao and lobster are quite common examples of this syndrome. Furniture I think can also be a good example, since quite often the factories and workshops that build the furniture are quite a long distance away from the raw materials from which they are gathered. Digital goods however buck the trend, since in theory should roughly cost the same to deliver to any customer on the internet, no matter where they are located.
+
+We can see though, online companies will price their products to match how much they believe the local country or region can bear to pay for it. This however by nature is inequal and creates a system that promotes gray-area markets. For example, online games have multiple third-party websites that resell user accounts, which can be quite lucrative in markets where labour costs are very low, at the cost of other users' enjoyment and the fairness of the game. The same analogy can be said about job outsourcing and relying on external labour pools to supplement your local market.
+
+Traditionally, since the internet era, software engineering and computer programming notoriously have been one of the most avant-garde industries to adopt the practice of using foreign labour to lower costs. AI though is poised to disrupt this trend, and where the dice will land in the coming years is hard to see. I think it is clear at this point that the tech companies clearly have much to financially gain, since they can take advantage of using a smaller labour pool with AI to get more done. What remains to be seen though is if they will keep their more expensive local labour or just axe their local staff altogether and take the most capitalist approach to applying AI to their labour force.
