@@ -1,0 +1,53 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const { title, date, tags = [], categories = [] } = frontmatter;
+const formattedDate = new Date(date).toLocaleDateString('en-CA', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
+---
+<BaseLayout title={title}>
+  <article>
+    <header class="post-header">
+      <div class="post-meta">
+        <time>{formattedDate}</time>
+        {categories.length > 0 && (
+          <span class="categories">{categories.join(' / ')}</span>
+        )}
+      </div>
+      <h1>{title}</h1>
+      <div class="tags">
+        {tags.map((tag: string) => (
+          <span class="tag">#{tag}</span>
+        ))}
+      </div>
+    </header>
+    <div class="post-body">
+      <slot />
+    </div>
+    <a href="/blog" class="back-link">&larr; Back to Blog</a>
+  </article>
+</BaseLayout>
+
+<style>
+  article { max-width: 720px; margin: 0 auto; }
+  .post-header { margin-bottom: 2rem; }
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+  h1 { font-size: 2rem; margin: 0 0 1rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .post-body { line-height: 1.8; }
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  .back-link:hover { color: var(--accent); }
+</style>
