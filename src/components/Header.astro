@@ -1,0 +1,68 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/career', label: 'Career' },
+  { href: '/education', label: 'Education' },
+  { href: '/skills', label: 'Skills' },
+  { href: '/awards', label: 'Awards' },
+];
+const pathname = Astro.url.pathname;
+---
+<header>
+  <nav>
+    <a href="/" class="site-title">Phillip Bruno</a>
+    <ul>
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class={pathname === link.href ? 'active' : ''}>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 60px;
+  }
+  .site-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  a:hover, a.active {
+    color: var(--accent);
+  }
+</style>
