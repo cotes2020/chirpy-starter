@@ -1,13 +1,13 @@
 :root {
-  --bg: #1a1b1e;
-  --bg-secondary: #141517;
-  --text: #cdd6f4;
-  --text-muted: #a6adc8;
-  --accent: #89b4fa;
-  --accent-hover: #b4d0fb;
-  --border: #313244;
-  --tag-bg: #1e2030;
-  --card-bg: #1e1e2e;
+  --bg: #0d0d1a;
+  --bg-secondary: #090912;
+  --text: #f8f8f2;
+  --text-muted: #a0a0c0;
+  --accent: #ff2d78;
+  --accent-hover: #bf5af2;
+  --border: #2a1a4a;
+  --tag-bg: #1a0a2e;
+  --card-bg: #150d2a;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
