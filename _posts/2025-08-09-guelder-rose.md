@@ -10,7 +10,7 @@ date: 2025-08-09
 tags: flower fruit medicinal ornamental shrub temperate
 published: true
 featured: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/guelder-rose
+media_subpath: /assets/posts/guelder-rose
 image:
   path: wc:Viburnum_opulus_%28Guelder_Rose%29_-_Flickr_-_S._Rae.jpg
 storykit: true

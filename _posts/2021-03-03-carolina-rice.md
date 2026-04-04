@@ -10,7 +10,7 @@ date: 2021-03-03
 permalink: /carolina-rice
 tags: grain wetland staple
 published: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/carolina-rice
+media_subpath: /assets/posts/carolina-rice
 image:
   path: G92F023_016F.jpg
 storykit: true

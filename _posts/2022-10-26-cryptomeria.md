@@ -9,7 +9,7 @@ date: 2022-10-26
 permalink: /cryptomeria
 tags: tree conifer ornamental temperate
 published: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/cryptomeria
+media_subpath: /assets/posts/cryptomeria
 image:
   path: wc:Cryptomeria_japonica_%27Cristata%27_Szydlica_japo%C5%84ska_2019-06-09_04.jpg
 storykit: true

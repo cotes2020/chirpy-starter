@@ -10,7 +10,7 @@ permalink: /passionflower
 tags: flower fruit medicinal ornamental tropical vine
 published: true
 featured: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/passionflower
+media_subpath: /assets/posts/passionflower
 image:
   path: wc:Passiflora_passion_flower.jpg
 storykit: true

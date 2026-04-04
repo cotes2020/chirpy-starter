@@ -9,7 +9,7 @@ date: 2024-01-03
 tags: education
 permalink: /how-to-read-an-herbarium-specimen
 published: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/how-to-read-an-herbarium-specimen
+media_subpath: /assets/posts/how-to-read-an-herbarium-specimen
 image:
   path: Rauwolf.jpg
 storykit: true

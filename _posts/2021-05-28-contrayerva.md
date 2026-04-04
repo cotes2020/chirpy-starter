@@ -9,7 +9,7 @@ date: 2021-05-28
 permalink: /contrayerva
 tags: herb medicinal root tropical
 published: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/contrayerva
+media_subpath: /assets/posts/contrayerva
 image:
   path: Contrayerva_Header.jpg
 storykit: true

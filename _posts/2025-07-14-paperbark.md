@@ -9,7 +9,7 @@ date: 2025-07-14
 permalink: /paperbark
 tags: tree medicinal tropical
 published: true
-media_subpath: https://plant-humanities.github.io/chirpy/assets/posts/paperbark
+media_subpath: /assets/posts/paperbark
 image:
   path: wc:170411_559_Encinitas_-_San_Diego_Botanic_Gdn%2C_entrance_gdn%2C_Melaleuca_viridiflora_var_rubriflora_Paperbark_Tree_%2834456955761%29.jpg
 storykit: true
