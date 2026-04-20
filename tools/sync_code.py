@@ -54,7 +54,7 @@ FILES_TO_SYNC = [
     "_includes/media-url.html",
     "_includes/sidebar.html",
     "_layouts/admin.html",
-    "_layouts/storykit-home.html",
+    "_layouts/home.html",
     "_layouts/post.html",
     "_plugins/md5_filter.rb",
     "_posts/.template.md",

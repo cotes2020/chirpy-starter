@@ -39,7 +39,7 @@
   {%- endif -%}
 
   {%- if is_wc -%}
-    {%- assign mw_width = include.width | default: 1200 -%}
+    {%- assign mw_width = include.width | default: 1280 -%}
 
     {% assign parts = url | split: "?" %}
     {% assign base_url = parts[0] %}

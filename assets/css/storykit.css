@@ -1,13 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/light.css");
 
-@media (min-width: 1650px) {
-    #main-wrapper>.container {
-        max-width: 1600px;
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
-    }
-}
-
 @media (min-width: 1200px) {
     .content {
         font-size: 1.2em;
@@ -239,7 +231,7 @@ div figcaption {
 .col2 .viewer sl-tab-panel {
     max-height: 100%;
     height: auto;
-    width: 100% !important;
+    width: 100%;
     background: var(--main-bg);
 }
 
@@ -296,7 +288,7 @@ div figcaption {
 
 #main-wrapper.col1>.container {
     width: 100% !important;
-    /* max-width: unset; */
+    max-width: unset;
 }
 
 .col1>.container main {
@@ -666,15 +658,15 @@ iframe.full {
 }
 
 
-iframe.small {
+iframe.small  {
     width: 33% !important;
 }
 
-iframe.medium {
+iframe.medium  {
     width: 50%;
 }
 
-iframe.large {
+iframe.large  {
     width: 75%;
 }
 
@@ -692,25 +684,25 @@ iframe.left {
     margin-right: auto;
 }
 
-.col1 iframe.right.float {
+iframe.right.float {
     float: right;
     width: 50%;
     margin: 0 0 0.5rem 1rem;
 }
 
-.col1 iframe[class*="embed"].float {
+iframe[class*="embed"].float {
     width: 50% !important;
     float: right;
     margin: 0 0 0.5rem 1rem;
 }
 
-.col1 iframe[class*="embed"].float.left {
+iframe[class*="embed"].float.left {
     width: 50% !important;
     float: left;
     margin: 0 1rem 0.5rem 0;
 }
 
-.col1 iframe[src^="https://cdn.knightlab.com/"] {
+iframe[src^="https://cdn.knightlab.com/"] {
     height: 650px;
     aspect-ratio: unset !important;
 }
@@ -836,4 +828,8 @@ iframe.left {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+.preview-img img {
+    width: 100%;
 }

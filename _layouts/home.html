@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/storykit.css' | relative_url }}">
+
+<style>
+    .sidebar-bottom > [href^="https://github.com"] {
+    display: none !important;
+  }
+</style>
+
+<script>
+  let modeToggle = document.getElementById('view-toggle');
+  modeToggle.style.display = 'unset';
+  modeToggle.firstChild.className = 'fa-solid fa-grip';
+</script>
+
+{{ content }}
+
+{% include lang.html %}
+
+{% assign all_pinned = site.posts | where: 'pin', 'true' %}
+{% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+
+{% assign posts = '' | split: '' %}
+
+<!-- Get pinned posts on current page -->
+
+{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
+{% assign visible_end = visible_start | plus: paginator.per_page %}
+
+{% if all_pinned.size > visible_start %}
+{% if all_pinned.size > visible_end %}
+{% assign pinned_size = paginator.per_page %}
+{% else %}
+{% assign pinned_size = all_pinned.size | minus: visible_start %}
+{% endif %}
+
+{% for i in (visible_start..all_pinned.size) limit: pinned_size %}
+{% assign posts = posts | push: all_pinned[i] %}
+{% endfor %}
+{% else %}
+{% assign pinned_size = 0 %}
+{% endif %}
+
+<!-- Get normal posts on current page -->
+
+{% assign normal_size = paginator.posts | size | minus: pinned_size %}
+
+{% if normal_size > 0 %}
+{% if pinned_size > 0 %}
+{% assign normal_start = 0 %}
+{% else %}
+{% assign normal_start = visible_start | minus: all_pinned.size %}
+{% endif %}
+
+{% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
+
+{% for i in (normal_start..normal_end) %}
+{% assign posts = posts | push: all_normal[i] %}
+{% endfor %}
+{% endif %}
+
+<div id="post-index" class="post-index view-list flex-grow-1 px-xl-1">
+  {% for post in posts %}
+  {% include post_index_item.html post=post %}
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+{% include post-paginator.html %}
+{% endif %}
+
+
+<script>
+  const containers = ["#post-index", "#featured-essays"]
+    .map(sel => document.querySelector(sel))
+    .filter(Boolean);
+
+  const toggleBtn = document.querySelector("#view-toggle");
+  const toggleIcon = toggleBtn?.querySelector("i");
+
+  function setView(view) {
+    const isGrid = view === "grid";
+
+    containers.forEach(container => {
+      container.classList.toggle("view-grid", isGrid);
+      container.classList.toggle("view-list", !isGrid);
+    });
+
+    if (toggleIcon) {
+      toggleIcon.className = isGrid ? "fa-solid fa-bars" : "fa-solid fa-grip";
+    }
+
+    localStorage.setItem("postIndexView", view);
+  }
+
+  toggleBtn?.addEventListener("click", () => {
+    const isCurrentlyGrid = containers[0]?.classList.contains("view-grid");
+    setView(isCurrentlyGrid ? "list" : "grid");
+  });
+
+  setView(localStorage.getItem("postIndexView") || "{{ page.format | default: 'list' }}");
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".post-excerpt-toggle");
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const card = btn.closest(".post-index-item");
+    if (!card) return;
+
+    const expanded = card.classList.toggle("is-expanded");
+    btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    btn.textContent = expanded ? "Less" : "More";
+  });
+</script>

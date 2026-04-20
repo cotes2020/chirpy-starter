@@ -11,6 +11,12 @@ Enclosing container class controls layout:
 
     {% assign src = post.image.path | default: post.image %}
 
+    {%- assign p4 = src | slice: 0, 4 -%}
+    {%- assign is_abs = false -%}
+    {%- if p4 == "http" -%}
+        {%- assign is_abs = true -%}
+    {%- endif -%}
+
     {%- assign p3 = src | slice: 0, 3 -%}
     {%- assign is_wc = false -%}
     {%- if p3 == "wc:" or src contains "commons.wikimedia.org" -%}
@@ -27,25 +33,16 @@ Enclosing container class controls layout:
         {%- assign is_cloudinary_cdn = true -%}
     {%- endif -%}
 
-    <!-- src:{{ src }} media_subpath:{{ post.media_subpath }} -->
-    {% if post.media_subpath and is_wc == false %}
+    {% if post.media_subpath and is_abs == false and is_wc == false %}
         {% assign src = post.media_subpath | append: '/' | append: src %}
-        {%- assign p4 = src | slice: 0, 4 -%}
-        {%- assign is_abs = false -%}
-        {%- if p4 == "http" -%}
-            {%- assign is_abs = true -%}
-        {%- endif -%}
-        <!-- src:{{ src }} media_subpath:{{ post.media_subpath }} is_abs:{{ is_abs }} -->
-        {% if is_dev == false and is_cloudinary_cdn == true and is_abs == false %}
+        {% if is_dev == false and is_cloudinary_cdn == true %}
             {% assign src = site.url | append: site.baseurl | append: src %}
         {% endif %}
     {% endif %}
-    <!-- src: {{ src }} -->
 
     {% if is_dev == false and is_cloudinary_cdn == true and is_wc == false %}
       {%- assign src = site.cdn | append: '/' | append: src -%}
     {% endif %}
-    <!-- src: {{ src }} -->
 
     {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
     {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
