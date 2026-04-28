@@ -45,23 +45,24 @@ How did these two types of rice make it across the oceans to Carolina? During th
 
 But it was not enough merely to bring the seed to Carolina. Rather, tidal-basin cultivation, as Catesby documents occurring in Carolina, was a specialized form of cultivation unknown at the time in England. This fact is highlighted in natural histories of the period. Consider [Catesby’s discussion of the wetland cultivation of rice](https://www.biodiversitylibrary.org/item/120381#page/41/mode/1up) in colonial America: "In March and April it is sown in shallow trenches made by the Hough, and good Crops have been made without any further Culture than dropping the seeds on the bare ground and covering it with the Earth, or in little Holes made to receive it without any further management." Catesby uses the passive voice, which is not uncommon in his agricultural descriptions. And yet, this seemingly innocuous construction in fact erases the essential contributions and knowledge of enslaved people, without which Carolina rice would not have come to America and the crop in general could not have been cultivated in the wetlands.
 
-{% include embed/image.html src="1235183.jpg" aspect="1.40" %}
+{% include embed/image.html src="1235183.jpg" caption="Late 19th-Century Drawing of the Rice Planting Process on a Carolina Plantation" attribution="Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library" aspect="0.873" %}
 
 Catesby makes the role of enslaved people in rice cultivation implicitly known [through his reference to the "Hough,"](https://www.biodiversitylibrary.org/item/120381#page/41/mode/1up) which makes "shallow trenches" in the land. The hoe was not a prominent tool in European agriculture at the time, "which relied principally on draft animal traction"; such metal tools were not used by the local Native American population either. In colonial-era West Africa, however, the hoe was the primary tool used for field preparation.[^ref4] Catesby’s reference to the "Hough" thus belies a long history of West African knowledge being used in the Carolinas.
 
-{% include embed/image.html src="1149814.jpg" aspect="0.85" %}
+{% include embed/image.html src="1149814.jpg" caption="1913 Drawing by Rice Planter Elizabeth Pringle" attribution="Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library" aspect="0.622" %}
 
 In the penultimate sentence of his description of rice, Catesby finally acknowledges the role of enslaved peoples in the crop’s production, [writing,](https://www.biodiversitylibrary.org/item/120381#page/41/mode/1up) "they use a Hand-Mill, yet there remains an inner Film which clouds the Brightness of the grain, to get off which it is beat in large wooden Mortars, and Pestles of the same, by Negro Slaves, which is very laborious and tedious." This mortar and pestle tool, another technology used in West Africa, was employed almost exclusively by women, demonstrating the gendered aspect of rice cultivation.
 
-{% include embed/image.html src="1212087.jpg" aspect="0.93" %}
+{% include embed/image.html src="1212087.jpg" caption="1913 Drawing by Rice Planter Elizabeth Pringle" attribution="Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library
+author: Alice Ravenel Huger Smith (1876–1958)" aspect="0.632" %}
 
 Any doubt that enslaved people brought wetland rice cultivation to Carolina has been put to rest by geographer Judith Carney. In her path-breaking work _[Black Rice](Q3434002)_, Carney details how the "preparation of tidal floodplains for rice cultivation followed principles remarkably similar to those of the mangrove rice system [in West Africa]."[^ref5] This was an incredibly intricate system, which required embankments, ditches, drainage valves, and more. As Carney explains, it was only with the knowledge of mangroves in West Africa that such systems could have been built in Carolina.
 
-{% include embed/image.html src="G92F023_003F.jpg" aspect="1.91" %}
+{% include embed/image.html src="G92F023_003F.jpg" caption="Photograph of a Wetland-Cultivated Carolina Rice Field" attribution="The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection,The New York Public Library" aspect="1.043" %}
 
 As a result of the cultivation knowledge of enslaved people, particularly women, rice quickly became a popular [cash crop](Q932139) grown in the American colonies. According to [an 1892 work on the history of rice by "Dan Talmage’s Sons,"](https://www.biodiversitylibrary.org/item/82844#page/18/mode/1up) annual rice production in the 1720s averaged about 10 million pounds; in just two decades, that number more than doubled to over 25 million pounds per year. Indeed, Carolina rice was the "region’s dominant export," and a major player in the Western European market for rice.[^ref6]
 
-{% include embed/image.html src="25670373.jpg" aspect="0.72" %}
+{% include embed/image.html src="25670373.jpg" caption="Production of Rice in America from 1720-1889" attribution="Library of Congress via BHL" aspect="0.598" %}
 
 # Carolina Rice Beyond Carolina
 
