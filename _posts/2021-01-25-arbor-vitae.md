@@ -20,7 +20,7 @@ categories: ["Healing & Knowledge", "Traditional Medicine"]
 
 In his 1640 herbal _Theatrum Botanicum_, [John Parkinson](Q256288) described the "tree of life," or "arbor vitæ," as ["a tall tree being similar to a cypress and covered by a dark reddish bark on the trunk and an even redder bark on the branches."](https://www.biodiversitylibrary.org/page/56601375#page/1502/mode/1up) Parkinson went on to explain that the tree, unknown to the ancients, originated in the New World and was introduced to Europe by the French. He explained that while it was presented to the [French King](Q70972), [Francis I](Q129857), as the tree of life he had no idea why. Clearly, Parkinson was unaware of the miraculous stories associated with arbor vitæ.
 
-{% include embed/image.html src="56601375.jpg" aspect="0.73" %}
+{% include embed/image.html src="56601375.jpg" aspect="0.73" caption="Theatrum botanicum, 1640 p. 1478" attribution="_Theatrum Botanicum_: The Theater of Plants" %}
 
 A century earlier, French explorer [Jacques Cartier](Q7321) and his crew learned of the tree and its astonishing medicinal effects from the St. Lawrence Iroquois Indians of Eastern Canada while exploring the Gulf of St. Lawrence and the [St. Lawrence River](Q3339246). The Indigenous people of this region used numerous local plants to treat disease and survive the region’s harsh winters.[^ref1] The French explorers, however, were far less equipped to survive the unforgiving environment they found themselves stranded in during the winter of 1535–36. Suffering from a mysterious disease that threatened to kill more than half of his crew, Captain Cartier turned to the [St. Lawrence Iroquois](Q129060) for help.
 
@@ -42,11 +42,11 @@ According to Ramusio’s narrative, the tree used to cure the French explorers w
 
 Through linguistic, botanical, and historical analysis numerous trees have been put forward as the miraculous tree that saved Cartier and his men–the [balsam fir](Q428023) (_Abies balsamea_), [white spruce](Q128116) (_Picea glauca_), [red spruce](Q469151) (_Picea rubens_), [black spruce](Q218425) (_Picea mariana_), [eastern white pine](Q157230) (_Pinus strobus_), [red pine](Q2045958) (_Pinus resinosa_), [white cedar](Q147468) (_Thuja occidentalis_), and [eastern hemlock](Q1137143) (_Tsuga canadensis_). Even [sassafras](Q584469) (_Sassafras albidum_) has been considered, although it is generally agreed that based on sixteenth-century descriptions and its natural distribution, sassafras could not be a candidate.
 
-{% include embed/image.html src="nebc00056528.jpg" aspect="0.69" %}
-{% include embed/image.html src="a00022322.jpg" aspect="0.69" %}
-{% include embed/image.html src="a00022346.jpg" aspect="0.70" %}
-{% include embed/image.html src="l0820001.jpg" aspect="0.58" %}
-{% include embed/image.html src="linn-hl1136-1.jpg" aspect="0.81" %}
+{% include embed/image.html src="nebc00056528.jpg" aspect="0.69" caption="Isosyntype of Abies balsamea" %}
+{% include embed/image.html src="a00022322.jpg" aspect="0.69" caption="Holotype of Picea glauca" %}
+{% include embed/image.html src="a00022346.jpg" aspect="0.70" caption="Holotype of Picea mariana" %}
+{% include embed/image.html src="l0820001.jpg" aspect="0.58" caption="Type of Pinus strobus" %}
+{% include embed/image.html src="linn-hl1136-1.jpg" aspect="0.81" caption="Lectotype of Thuja occidentalis" %}
 
 Sixteenth- and seventeenth-century European herbals consistently describe the tree of life as a _Thuja_ (a genus of coniferous trees) or similar to a cypress, without fruit (although the cone is now considered a fruit), and very aromatic. From this we can conclude that the tree of life was indeed an evergreen coniferous tree native to the area around present-day [Quebec](Q2145) and [Montreal](Q340).
 
@@ -70,7 +70,7 @@ Scurvy is an acute chronic illness caused by a dietary deficiency of ascorbic ac
 
 Today, adult scurvy is treated with 300–1,000 mg of ascorbic acid per day. Although lemons and oranges are traditionally associated with high levels of vitamin C (50 mg/100 g) the reduced ascorbic acid in 100 grams of fresh needles and shoots from many conifers exceeds or matches the vitamin C in citrus. For example, balsam fir has 270 mg, red spruce 169 mg, and white cedar 45 mg.[^ref8] Furthermore, as Don J. Durzan has highlighted in his scientific analysis of coniferous biofactors, in the winter when food was scarce and the temperature plummeted, the coniferous trees of life provided vital vitamins, arginine, proline, other conditionally and essential amino acids, and antioxidants, all of which aided in the recovery from scurvy.
 
-{% include embed/image.html src="Vitamin_C_in_conifers.jpg" aspect="1.01" %}
+{% include embed/image.html src="Vitamin_C_in_conifers.jpg" aspect="1.01" caption="The vitamin C in lemon and oranges compared to the needles and bark of several conifers" %}
 
 # Identifying the Tree of Life
 
@@ -89,10 +89,10 @@ It is clear that by the mid-seventeenth century much of the medicinal knowledge 
 
 In 1753, botanist [Carl Linnaeus’s](Q1043) pioneering work, _Systema Naturae_, which cemented a system of binomial classification for plants, identified the arbor vitæ, the _Thuja Theophrasis_, and the _Thuja strobilis lævibus_ as the same plant, which he reclassified as [_Thuja occidentalis_.](https://www.biodiversitylibrary.org/page/359023#page/444/mode/1up) Since then, _Thuja occidentalis_ has generally been accepted as the Ameda tree that saved Cartier and his men.
 
-{% include embed/image.html src="56601375.jpg" aspect="0.73" %}
-{% include embed/image.html src="529649.jpg" aspect="0.61" %}
-{% include embed/image.html src="49828508.jpg" aspect="0.68" %}
-{% include embed/image.html src="359023.jpg" aspect="0.60" %}
+{% include embed/image.html src="56601375.jpg" aspect="0.73" caption="Theatrum botanicum, 1640 p. 1478" attribution="*Theatrum Botanicum*: The Theater of Plants" %}
+{% include embed/image.html src="529649.jpg" aspect="0.61" caption="Caroli Clusi Atrebatis, 1601, p. 36" attribution="*Caroli Clusi Atrebatis*" %}
+{% include embed/image.html src="49828508.jpg" aspect="0.68" caption="Herbario nuovo, 1585, p. 40" attribution="*Herbaria nuovo*" %}
+{% include embed/image.html src="359023.jpg" aspect="0.60" caption="Systema Naturae p. 1002" attribution="_Species Plantarum_" %}
 
 Although tales of Cartier’s explorations were not initially widely published, interest in them, as well as identifying the tree that miraculously cured scurvy, increased in the eighteenth and early nineteenth centuries as the European colonial enterprise expanded. Numerous naturalists, botanists, and historians have attempted to confirm the identity of Ameda as _Thuja occidentalis_ or prove it wrong. While _Thuja occidentalis_ remains the consensus, other strong contenders are the white spruce and the eastern white pine, since both have names in the Mohawk language, "onnita" and "ohnehta" respectively, that sound similar to later European spelling varieties of Ameda (Anneda, Annedda, and Hanneda). Finally, many argue that it was the balsam fir, as it has the highest levels of vitamin C (270 mg) of any North American conifer.
 

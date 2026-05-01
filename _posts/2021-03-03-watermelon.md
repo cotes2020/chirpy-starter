@@ -52,7 +52,7 @@ In fact, centuries later, in 1888, watermelons were still being promoted as a fa
 
 By the ninth and twelfth centuries, watermelons had spread, respectively, to India and China, travelling regional trade routes.[^ref11] Distinguished by its sinewy vines, the fruit was associated with vitality and playfulness and soon became the object of artistic attention. Fourteenth-century Japanese representations of [arhats](Q225932)—those who reached nirvana in the Buddhist tradition—for instance, show watermelons as a religious offering. Korean paintings from the [Joseon Dynasty](Q28179) by the female artist [Shin Saimdang](Q464485) (1504–1551) [depict watermelons](https://www.museum.go.kr/site/eng/relic/represent/view?relicId=2061) alongside flowers, butterflies, and mice, with their arching vines and exposed seeds symbolizing a wish for healthy and abundant children.[^ref12] One of Shin’s depictions of watermelons appears on the 5,000 won banknote today.[^ref13]
 
-{% include embed/image.html src="DP-12232-006.jpg" aspect="0.75" %}
+{% include embed/image.html src="DP-12232-006.jpg" aspect="0.75" caption="‘Satsubari, the Second of the Sixteen Arhats.’ Japan, early fourteenth century." %}
 {% include embed/image.html src="18731783.jpg" caption="Plants and insects by Shin Saimdang." attribution="Harvard Art Museums" aspect="0.76" %}
 {% include embed/image.html src="wc:5000_won_serieV_reverse.jpeg" aspect="2.09" %}
 

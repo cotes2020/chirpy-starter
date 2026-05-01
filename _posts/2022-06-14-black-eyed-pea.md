@@ -45,7 +45,7 @@ Authors of the ancient world have described black-eyed peas in accounts of plant
 
 Records of black-eyed pea consumption and use within Europe during the [Middle Ages](Q12554) are relatively scarce. Understood as a food for peasants and livestock, black-eyed peas would have been considered subject matter too lowly for inclusion in the annals of history. Throughout the [early modern period](Q5308718), the dried bean continued to be associated with persons of low social standing. But by the late sixteenth century, the bean seemed at least worthy of representation. In the Italian artist [Annibale Carracci’s](Q7824) (1560–1609) painting _The Bean Eater_, from circa 1590, the artist’s brush strokes depict a man and his bowl of black-eyed peas, visually articulating their mutual low standing. Even though the beans had been a vital part of the Mediterranean diet and culture for centuries, they are here presented as both marginal and familiar.
 
-{% include embed/image.html src="Annibale_Carracci_Bean_Eater_dvdbramhall_Flickr_CC_BY_NC_ND_2.0.jpg" aspect="1.2" %}
+{% include embed/image.html src="Annibale_Carracci_Bean_Eater_dvdbramhall_Flickr_CC_BY_NC_ND_2.0.jpg" aspect="1.2" caption="Annibale Carracci, The Bean Eater, 1580–90, oil on canvas, 57 x 68 cm, Rome, Palazzo Colonna." %}
 
 In contrast, many more artists took inspiration from the [green pea](Q25237)—be it the leaves, delicate blossoms, or sinuous tendril-filled vines—which became an emblem for love, fertility, and even lust. Verdant green peas were considered domestic to Europe, and served the elite not only for food, but for decorating their homes and gardens.
 
@@ -55,7 +55,7 @@ In contrast, many more artists took inspiration from the [green pea](Q25237)—b
 
 Visual representations of black-eyed peas and other varieties of beans and peas shaped European understanding of the plant. Beginning in the sixteenth century, the dramatic rise in the production and circulation of printed texts with images, such as [herbals](Q6165948) and natural histories, reinforced the codification of plants based on their geographic origins. Unprecedented global travel also formed European ideas about the ways in which close observation of the natural world could reveal the domestic or foreign origins of a person, plant, or animal. One result of this was a shift in European attitudes toward the black-eyed pea.
 
-{% include embed/image.html src="Clusius_Rariorum_Plantarum_Historia_Biblioteca_del_Real_Jardín_Botánico_CC_BY_NC_SA.jpg" region="pct:18.92,8.26,76.44,39.57" aspect="0.61" %}
+{% include embed/image.html src="Clusius_Rariorum_Plantarum_Historia_Biblioteca_del_Real_Jardín_Botánico_CC_BY_NC_SA.jpg" region="pct:18.92,8.26,76.44,39.57" aspect="0.61" caption="Phaseolus peregrinus IIII, Carolus Clusius, Rariorum Plantarum Historia, Antwerp, Officina Plantiniana apud Ioannem Moretum, 1601." attribution="Rariorum Plantarum Historia" %}
 
 Despite the millennia-old European presence of the black-eyed pea, it was now understood in Europe as an itinerant body within a Eurocentric [taxonomy](Q8269924) of plants. European explorers visiting Africa, Asia, and the Americas reinforced this idea. Their observations, often reported in books, were soon taken throughout Europe as factual. For example, Dutch trader and explorer [Pieter de Marees’](Q3117063) 1602 book about West Africa includes an illustration of the [black-eyed pea](img1/zoomto/418,756,583,437) in an idealized landscape alongside people and other plants.[^ref7]
 

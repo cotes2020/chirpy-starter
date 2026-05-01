@@ -1,0 +1,3135 @@
+[
+  {
+    "label": "Due libri dell'historia de i semplici, aromati, et altre cose: che vengono portate dall'Indie Orientali pertinente alla medicina, 1576",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/6781301#page/20/mode/1up"
+    },
+    "source": "_Due libri dell'historia de i semplici, aromati, et altre cose: che vengono portate dall'Indie Orientali pertinente alla medicina_",
+    "author": "Garcia de Orta, Annibale Briganti, Carolus Clusius, Nicolás Monardes",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Due libri dell'historia de i semplici, aromati, et altre cose: che vengono portate dall'Indie Orientali pertinente alla medicina</em>, 1576",
+    "hash": "09f42f02",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/6781301",
+    "file_name": "b547fe8a7a6bb1f87616002d30755679a4151941faf3fed2ae5afd5608a7b8fa",
+    "parent_directory": "agave"
+  },
+  {
+    "label": "Diego Rivera, Tlachiqueros",
+    "requiredStatement": {
+      "attribution": "Tumblr"
+    },
+    "author": "Diego Rivera (1886–1957)",
+    "label_formatted": "Diego Rivera, <em>Tlachiqueros</em>",
+    "hash": "11437fce",
+    "image_url": "https://66.media.tumblr.com/3334775915bd1eab9a7aa7e787708091/tumblr_nzbju0LvFn1ssxmhoo1_1280.jpg",
+    "file_name": "f8434dc6ec5081004e8dd3d9e646c4c004bc4f7eb954dc611632c547a83df1c5",
+    "parent_directory": "agave"
+  },
+  {
+    "label": "Isosyntype of Abies balsamea",
+    "label_formatted": "Isosyntype of <em>Abies balsamea</em>",
+    "hash": "7abe9268",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/00/gpi-nebc-typspe-01-19/nebc0008/nebc00056528.jp2",
+    "file_name": "06899bdb35b51e3aa242683600d76bdda3e75cf77b6be6d641c4d02f42f9a6c2",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Holotype of Picea glauca",
+    "label_formatted": "Holotype of <em>Picea glauca</em>",
+    "hash": "f93acafc",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/00/gpi-a-typspe-01-57/a0002/a00022322.jp2",
+    "file_name": "2590dcc37f428c625d7501b5c5c15d0cb82d841f5932674dc88b61bf8b338be3",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Systema Naturae p. 1002",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library",
+      "url": "https://www.biodiversitylibrary.org/page/359023#page/444/mode/1up"
+    },
+    "source": "_Species Plantarum_",
+    "author": "Carl Linnaeus (1707–1778)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Systema Naturae</em> p. 1002",
+    "hash": "7b1b63d9",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/359023",
+    "file_name": "4c243d16800bb00d3fe8396c3c685d214d67327657ce8eddfa4be582866b1e64",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Type of Pinus strobus",
+    "requiredStatement": {
+      "attribution": ""
+    },
+    "label_formatted": "Type of <em>Pinus strobus</em>",
+    "hash": "34d415c1",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/alukaplant/l/phase_01/l0001/l0820001.jp2",
+    "file_name": "57153230461530f57f2f89fbfbc592524bb7bddb7e8cfcbc16e01028ff8d8404",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Herbario nuovo, 1585, p. 40",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/198003#page/68/mode/1up"
+    },
+    "source": "*Herbaria nuovo*",
+    "author": "Castore Durante (1529–1590)",
+    "sourceLicense": "No usage notes",
+    "label_formatted": "<em>Herbario nuovo</em>, 1585, p. 40",
+    "hash": "22c3a8c2",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/49828508",
+    "file_name": "8e20ed504a26ed8c6e857ba507a5d0d445c17cb5e226a7ddd34be988bf46d8de",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Lectotype of Thuja occidentalis",
+    "requiredStatement": {
+      "attribution": ""
+    },
+    "label_formatted": "Lectotype of <em>Thuja occidentalis</em>",
+    "hash": "bbf1d2e9",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/05/gpi-linn-typspe-01-04/linn0001/linn-hl1136-1.jp2",
+    "file_name": "b921b36b61895a1fc848fc4c37180b9b3b70085a48062e47d7db42231e488e8d",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Theatrum botanicum, 1640 p. 1478",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/256142#page/1502/mode/1up"
+    },
+    "source": "*Theatrum Botanicum*: The Theater of Plants",
+    "author": "John Parkinson",
+    "sourceLicense": "Not in copyright; no usage notes",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Theatrum botanicum</em>, 1640 p. 1478",
+    "hash": "0908d28f",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/56601375",
+    "file_name": "bf599541d0c3a7754d7acc34ccf5c3a345987cd6adc991442aa8be5ffba2e428",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Caroli Clusi Atrebatis, 1601, p. 36",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/529647#page/48/mode/1up"
+    },
+    "source": "*Caroli Clusi Atrebatis*",
+    "author": "Carolus Clusius (1526–1609)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Caroli Clusi Atrebatis</em>, 1601, p. 36",
+    "hash": "5ddf7fb3",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/529649",
+    "file_name": "c0e159b31943ffdd1e9ca4ee375cab4fb943eee135123a8e6fbe61895f2abce5",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Holotype of Picea mariana",
+    "requiredStatement": {
+      "attribution": ""
+    },
+    "label_formatted": "Holotype of <em>Picea mariana</em>",
+    "hash": "87622b87",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/00/gpi-a-typspe-01-57/a0006/a00022346.jp2",
+    "file_name": "c4cb01176ad0111c3176708c6d95ee14be07bbf2c38baf593136b44f6510df3d",
+    "parent_directory": "arbor-vitae"
+  },
+  {
+    "label": "Latin descriptions of several psychotria species, which were classified according to Linnaean principles. Description of Pscyhotria viridis in Hipolito Ruíz and José Pavón, Flora Peruviana et Chilensis, vol. 1, 1798–1802. Biblioteca de la Universidad Complutense de Madrid, CC BY-NC-SA 4.0.",
+    "hash": "c52ad66b",
+    "image_url": "http://dioscorides.ucm.es/proyecto_digitalizacion/imagenes/2010/5315939240/5315939240_0155.jpg",
+    "file_name": "0b4d2805ee6de36911fb255f51988b716418e4edf59c055d56569a7847571b7f",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Cover page Richard Spruce, Notes of a Botanist on the Amazon and Andes, edited by Alfred Russel Wallace, London, Macmillan and co., limited, 1908. Smithsonian Libraries via BHL, not in copyright.",
+    "hash": "1c8c85d4",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/47391507",
+    "file_name": "19eeeb889275551cb5645839dc768afeface20411a297d3888caad27fb3d5eaf",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Excerpt of Richard Spruce’s translation and summary of Villavicencio’s description of ayahuasca consumption and rituals (ca. 1854). Richard Spruce, Notes of a Botanist on the Amazon and Andes, edited by Alfred Russel Wallace, London, Macmillan and co., limited, 1908. Smithsonian Libraries via BHL, not in copyright.",
+    "hash": "dac7951a",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/47391371",
+    "file_name": "3f6e740e96cec7af429ee1f9b6cc71c24020c2938e3860c9a0ed1c8c28d70199",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Cross in Matutu Daime Church, 2006. Lou Gold, Flickr, CC BY-NC 2.0.",
+    "hash": "a2a64683",
+    "image_url": "https://live.staticflickr.com/200/470377554_585483993d_k.jpg",
+    "file_name": "68cc5c6c5740c697c776ebd4709ff4d289a0300af6929da3ed019f3ac1e26d60",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "“Eco Aldeia Serra Sagrada,” an ayahuasca retreat in Minas Gerais, Brazil. upsilon, Flickr, CC BY 2.0.",
+    "hash": "cd0c7e7a",
+    "image_url": "https://live.staticflickr.com/7801/46289544604_b947b3f048_3k.jpg",
+    "file_name": "7e650de3335d18a004a3727d878b77567af9118268f6311f397560bd13ddcfc5",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Peruvian shahman and artist Pabo Amaringo reflects on the experience of consuming ayahuasca, public domain.",
+    "hash": "d8e6bf53",
+    "image_url": "https://github.com/Athaodam/Adventures-with-Ayahuasca/blob/main/Ayahuasca%20Trip%20-%20Pablo%20Amaringo.png?raw=true",
+    "file_name": "84764056003dead1fdcedbfc61a9d797d8dce32cae3404f93e61bf09eb81271a",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Pablo Amaringo, Espíritus de los Renacos (Spirits of the Renacos), 1996, gouache on paper, 18 x 24 in., St. Lawrence University Art Gallery. St. Lawrence University Art Gallery via Flickr, CC BY-NC-ND 2.0.",
+    "hash": "c2b008f5",
+    "image_url": "https://live.staticflickr.com/8507/27951788334_154753d604_4k.jpg",
+    "file_name": "9b8fb30fff7ef998f488aaf6b87ec4e1af52e1575eb5ea917cdf36758e3750d7",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Map of various Amazonian groups reported to use ayahuasca plants. Composed and drawn by botanist Richard Evans Shultes, 1957. Missouri Botanical Garden, Peter H. Raven Library via BHL, public domain.",
+    "hash": "bf0f6c33",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/7810703",
+    "file_name": "9c3570ccc6e1b6f90ccae6341bc8ca72c31747517c0a72ef74ac6bb2307f57a7",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "The specimen not only includes a dried plant with its flowers but also a photograph that shows the flowers’ coloration. Specimen of cultivated Banisteriopsis caapi at the Kampong, Florida, 1974. Collected by Timothy Plowman. Field Museum of Natural History, CC BY-NC 4.0.",
+    "hash": "1f85d801",
+    "image_url": "https://fm-digital-assets.fieldmuseum.org/725/857/V0219206F.jpg",
+    "file_name": "9f80d22bc92cf0bd6d4c649d0df2eb3c2d35480fb416e5df5cdf685d68ea3b90",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Bundles of ayahuasca, Kofan, Rio San Miguel, Columbia, bundle of sticks, wrapped with a vine and tied with twisted fiber, 46.3 x 19.7 x 12.1 cm (overall), Museum Purchase, 1948.",
+    "requiredStatement": {
+      "attribution": "Peabody Museum of Archaeology and Ethnology (Harvard University)",
+      "url": "https://collections.peabody.harvard.edu/objects/details/111973?ctx=c39d04cd790324c789f6d88cb13d126d39e882d6&idx=0"
+    },
+    "sourceLicense": "Museum Purchase,1948. Image © President and Fellows of Harvard College, Peabody Museum of Archaeology and Ethnology, 48-17-30/7158",
+    "hash": "3daaf9ee",
+    "file_name": "Bundles_of_ayahuasca_48-17-30:7158_Peabody_Museum_Copyright_2021_The_President_and_Fellows_of_Harvard_College",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Decorated ritual ceramic vase for the hallucinogen yagé (ayahuasca), before 1953, Mirití-Paraná River, Columbia, ceramic, fiber, 30.5 x 27.8 x 24.4 cm (overall), loan from Richard Schultes, 1954.",
+    "requiredStatement": {
+      "attribution": "Peabody Museum of Archaeology and Ethnology (Harvard University)",
+      "url": "https://collections.peabody.harvard.edu/objects/details/173922?ctx=c92428595e916c536437fe52c5db87df7d51d486&idx=0"
+    },
+    "sourceLicense": "Loan from Richard Schultes, 1954. Image © President and Fellows of Harvard College, Peabody Museum of Archaeology and Ethnology, 54-21-30/7536",
+    "hash": "6a34d5aa",
+    "file_name": "Decorated_ritual_ceramic_vase_54-21-30:7536_Peabody_Museum_Copyright_2021_The_President_and_Fellows_of_Harvard_College",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Patent granted to Loren Miller in 1986.",
+    "requiredStatement": {
+      "attribution": "United States Patent and Trademark Office",
+      "url": "https://pdfpiw.uspto.gov/.piw?Docid=PP005751&homeurl=http%3A%2F%2Fpatft.uspto.gov%2Fnetacgi%2Fnph-Parser%3FSect1%3DPTO2%2526Sect2%3DHITOFF%2526p%3D1%2526u%3D%25252Fnetahtml%25252FPTO%25252Fsearch-adv.htm%2526r%3D28%2526f%3DG%2526l%3D50%2526d%3DPTXT%2526S1%3D%252522banisteriopsis%252522%2526OS%3D%252522banisteriopsis%252522%2526RS%3D%252522banisteriopsis%252522&PageNum=&Rtype=&SectionNum=&idkey=NONE&Input=View+first+page"
+    },
+    "sourceLicense": "Public domain. Source: United States Patent and Trademark Office, www.uspto.gov",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "e41762d5",
+    "file_name": "Patent_granted_to_Loren_Miller_in_1986_Source_United_States_Patent_and_Trademark_Office_www.uspto.gov",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Pottery cup with raised base, for drinking ayahuasca, Aguarico, Rio Napo, Ecuador, ceramic, 10 x 19 cm (overall), Peabody Museum and Division of Anthropology Expedition, John Gillin, Director, 1935.",
+    "requiredStatement": {
+      "attribution": "Peabody Museum of Archaeology and Ethnology (Harvard University)",
+      "url": "https://collections.peabody.harvard.edu/objects/details/110840?ctx=39d0bb380b2914a76b25405975ccb13a86a826fe&idx=0"
+    },
+    "sourceLicense": "Peabody Museum and Division of Anthropology Expedition, John Gillin, Director, 1935. Image © President and Fellows of Harvard College, Peabody Museum of Archaeology and Ethnology, 35-25-30/1108",
+    "hash": "7ee6060f",
+    "file_name": "Pottery_cup_with_raised_base_35-25-30:1108_Peabody_Museum_Copyright_2021_The_President_and_Fellows_of_Harvard_College_1",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Linda Tuhiwai Smith, Decolonizing Methodologies: Research and Indigenous Peoples (London and New York: Zed Books; Dunedin, New Zealand: University of Otago Press; distributed in the USA exclusively by Palgrave, St. Martin’s Press: 1999).",
+    "requiredStatement": {
+      "attribution": "Kristan M. Hanson",
+      "url": "https://nycstandswithstandingrock.files.wordpress.com/2016/10/linda-tuhiwai-smith-decolonizing-methodologies-research-and-indigenous-peoples.pdf"
+    },
+    "source": "Decolonizing Methodologies: Research and Indigenous Peoples",
+    "author": "Linda Tuhiwai Smith (b. 1950)",
+    "sourceLicense": "CC BY-NC 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "3fbe3fec",
+    "file_name": "Smith_Decolonizing_Methodologies_no_known_copyright_restrictions_2",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Screenshot from Yagé Is Our Life. Yagé Is Our Life, YouTube, no known copyright restrictions.",
+    "requiredStatement": {
+      "attribution": "Kristan M. Hanson",
+      "url": "https://www.youtube.com/watch?v=MXpvWYCDpFc"
+    },
+    "source": "Yagé Is Our Life ",
+    "author": "Yagé Is Our Life ",
+    "sourceLicense": "CC BY-NC 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "30a9a2ec",
+    "file_name": "Yage_Is_Our_Life_YouTube_posted_by_Yage_Is_Our_Life_no_known_restrictions_1",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Screenshot from Yagé Is Our Life. Yagé Is Our Life, YouTube, no known copyright restrictions.",
+    "requiredStatement": {
+      "attribution": "Kristan M. Hanson",
+      "url": "https://www.youtube.com/watch?v=MXpvWYCDpFc"
+    },
+    "source": "Yagé Is Our Life ",
+    "author": "Yagé Is Our Life ",
+    "sourceLicense": "CC BY-NC 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "b5f94115",
+    "file_name": "Yage_Is_Our_Life_YouTube_posted_by_Yage_Is_Our_Life_no_known_restrictions_2",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Richard Schultes, A young Kamentsá boy holds the flower of a narcotic plant similar to a moonflower in the Valley of Sibundoy Valley, circa 1953. The name metz-kwai stands for “intoxicant of the jaguar.” Botanical Museum leaflets, Harvard University 17, no. 1 (1955). Missouri Botanical Garden, Peter H. Raven Library via BHL, public domain.",
+    "hash": "3349a74a",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/7463889",
+    "file_name": "a2d432a6c76821fbcdbeee2f7f48cec69cdf8accf1602f20f230fd9a736cbc8c",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Pablo Maroni’s discussion of different Amazonian groups’ rituals and their alleged association with the devil. Pablo Maroni, Noticias auténticas del famoso río Marañón y misión apostólica de la Compañía de Jesús de la provincia de Quito, 1738 [first published 1889]. Biblioteca Digital AECID (Madrid), CC BY-NC-SA 4.0.",
+    "requiredStatement": {
+      "attribution": "Courtesy of the Biblioteca Digital AECID (Madrid) - Signatura: 3GR-7315"
+    },
+    "summary": "Pablo Maroni's discussion of different Amazonian groups' rituals and their alleged association with the devil. Maroni mentions the use of a white datura and a vine called ayahuasca to 'deprive of the senses'",
+    "sourceLicense": "Creative Commons - Attribution, Non-Commercial, ShareAlike",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "hash": "2b463c8d",
+    "image_url": "https://bibliotecadigital.aecid.es/bibliodig/i18n/catalogo_imagenes/imagen_id.do?idImagen=12001473&formato=jpg",
+    "file_name": "a650b776d02fa7d84d8919559691a08f696622c1eeb5ee72bb95fa1065499930",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Richard Evans Schultes (center) with Salvador Chindoy (left), a renowned Kamëntsá healer from Colombia’s Sibundoy Valley, probably 1940s. The identity of the individual on the right is not recorded. Archives of the Economic Botany Library of Oakes Ames, Harvard University with permission of the Schultes family. Disclaimer: the Schultes family authorizes the use of this material for scholarly purposes, the photographer has not been identified.",
+    "hash": "abca8abe",
+    "image_url": "https://blog.biodiversitylibrary.org/wp-content/uploads/sites/4/2020/08/Schultes_amazon_1940s-1186x1536.jpg",
+    "file_name": "abf5e388c47643cc136897026ca9312f69f4e13f9f7aa542563fe583c17295fa",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Preparing Ayahuasca with Chacruna (P. viridis), Jairo Galvis Henao via Flickr, CC BY-NC-ND 2.0.",
+    "hash": "11910786",
+    "image_url": "https://live.staticflickr.com/7384/11949826476_3110402a35_k.jpg",
+    "file_name": "b6f8b31ca67b6c70699200e2ead9f2d83e2a476c758367eb8b948eba37bd2d26",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Traditional Shipibo Embroidery, photo by Juan Carlos Huayllapuma/CIFOR. Indigenous community Callería (CIFOR) via Flickr, CC BY-NC-ND 2.0.",
+    "hash": "274fbf9f",
+    "image_url": "https://live.staticflickr.com/4386/36706638286_f4bfd80169_3k.jpg",
+    "file_name": "bf0befc9ec8b6f56172d10dcb60b1171203cb2df842128242a24c8969ffeecfd",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Isidro Gálvez and José Brunete, draughtsmen, Illustrations of (a) Pyschotria subtomentosa and (b) Psychotria viridis in Hipólito Ruiz and José Pavón, Flora Peruviana et Chilensis, vol. 2, 1798–1802. Biblioteca de la Universidad Complutense de Madrid, CC BY-NC-SA 4.0.",
+    "hash": "0477f3a3",
+    "image_url": "http://dioscorides.ucm.es/proyecto_digitalizacion/imagenes/2010/5315939269/5315939269_0430.jpg",
+    "file_name": "bf59b0f6caeb2fb92bfba25e4b08012203ad6a4f7b1d971aa9c4d8feb7b71d1a",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Richard Spruce’s drawings of the Tariana people in the Uapés River where he documented the use of caapi. Richard Spruce, Notes of a Botanist on the Amazon and Andes, edited by Alfred Russel Wallace, London, Macmillan and co., limited, 1908. Smithsonian Libraries via BHL, not in copyright.",
+    "hash": "2a6e2370",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/47391881",
+    "file_name": "d687aa6236cc80b12db8bb39b47acd9f912f7f67b07dbbabfc7cda627fa22761",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Vegetalista Don Emilio reflects on the experience of consuming ayahuasca, public domain.",
+    "hash": "63902a11",
+    "image_url": "https://github.com/Athaodam/Adventures-with-Ayahuasca/blob/main/Ayahuasca%20Trip%20-%20Don%20Emilio.png?raw=true",
+    "file_name": "e39e1070b08203e150535ba694174e1727abc872fd05a2ca95a19057c9414536",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Botanical description and scientific name of the ayahuasca vine. Richard Spruce, Notes of a Botanist on the Amazon and Andes, edited by Alfred Russel Wallace, London, Macmillan and co., limited, 1908. Smithsonian Libraries via BHL, not in copyright.",
+    "hash": "192faa6e",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/47391360",
+    "file_name": "f12efc7a6a60c4c2e7f2576b541cd667a931d53e0ca78deb9ccf86a6834bd012",
+    "parent_directory": "ayahuasca"
+  },
+  {
+    "label": "Whole Genome Sequence of a Wild Banana Relative",
+    "source": "Wu, W., Yang, YL., He, WM. et al. _Whole genome sequencing of a banana wild relative Musa itinerans provides insights into lineage-specific diversification of the Musa genus._ Sci Rep 6, 31586 (2016). https://doi.org/10.1038/srep31586",
+    "author": "Wu, W., Yang, YL., He, WM. et al",
+    "requiredStatement": {
+      "url": "https://www.nature.com/articles/srep31586#Fig1"
+    },
+    "hash": "1ba7d6c7",
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsrep31586/MediaObjects/41598_2016_Article_BFsrep31586_Fig1_HTML.jpg?as=webp",
+    "file_name": "266b46d3eb804d5f87a773872414152f6a302a0285e7dfa4aed33ad0d51e8d75",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "Dodoens, Crŭÿde boeck, 1563, p. 616",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/30640#page/658/mode/1up"
+    },
+    "source": "*Crŭÿde boeck*",
+    "author": "Rembert Dodoens (1517–1585) ",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Dodoens, <em>Crŭÿde boeck</em>, 1563, p. 616",
+    "hash": "02986df0",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/6726349",
+    "file_name": "2f2a61166b6f85de058cba19afe6a1b646838393b04edf8b42a93323d85fae63",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "Cosmographie de Levant",
+    "requiredStatement": {
+      "attribution": "Google Books",
+      "url": "https://books.google.com/books?id=U91y-xxk0OYC&dq=cosmographie%20de%20levant&hl=it&pg=PA213#v=onepage&q=mose&f=false"
+    },
+    "hash": "154d657c",
+    "image_url": "https://books.google.com/books/content?id=U91y-xxk0OYC&hl=it&pg=PA185&img=1&zoom=3&sig=ACfU3U19cLgXquFUoGHxxNVvFcJjABaeTA&w=1025",
+    "file_name": "343668326727ccf92f92516866ba7a178985cbdc28c06aa080ba06fb37be6ef8",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "Ehret, Banana plant, 1742",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection"
+    },
+    "author": "Georg Dionysius Ehret (1708–1770)",
+    "summary": "Banana plant (Musa species): flowering and fruiting plant with stolons and separate floral segments and sectioned fruit, also a description of the plant's growth, anatomical labels and a scale bar. Etching by G. D. Ehret, c. 1742, after himself. Credit: Wellcome Collection. Attribution 4.0 International (CC BY 4.0)",
+    "sourceLicense": "(CC BY 4.0)",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "ede1155b",
+    "image_url": "https://iiif.wellcomecollection.org/image/V0043033.jpg/full/2048%2C/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "Methodus Plantarum Sexualis, Ehret",
+    "requiredStatement": {
+      "attribution": "Wikimedia Commons",
+      "url": "https://www.flickr.com/photos/62496016@N02/48043970821"
+    },
+    "source": "*Methodus Plantarum Sexualis in sistemate naturae descripta*",
+    "author": "Georg Dionysius Ehret (1708–1770)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Methodus Plantarum Sexualis</em>, Ehret",
+    "hash": "ee0b50c0",
+    "image_url": "https://live.staticflickr.com/65535/48043970821_9a2b6500ea_6k.jpg",
+    "file_name": "c25fa141a470ac070cc8bc6243c447f91f12c2711a843ac3d571c0159ef513c9",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "Cavendish Cultivars",
+    "author": "Promusa.org adopted from Hippolyte et al. 2012",
+    "requiredStatement": {
+      "url": "https://www.promusa.org/blogpost614-Modernizing-Simmonds-and-Shepherd-s-legacy"
+    },
+    "hash": "ce494b0b",
+    "image_url": "http://www.promusa.org/preview3344",
+    "file_name": "f3470082f04ed996a163ba4c60f1f67d87ca3145f154ea9dc0cbfa7a17006db4",
+    "parent_directory": "banana"
+  },
+  {
+    "label": "The black-eyed pea is labeled as letter ‘e’. Indiae Orientalis pars VI. Veram et historicam descriptionem auriferi regni Guineae, ad Africam pertinentis, quod alias littus de Mina vocant, 1604, John Carter Brown Library. Internet Archive, public domain.",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via Internet Archive"
+    },
+    "hash": "3748765c",
+    "image_url": "https://ia904500.us.archive.org/BookReader/BookReaderImages.php?zip=/34/items/indiaeorientalis00mare_1/indiaeorientalis00mare_1_jp2.zip&file=indiaeorientalis00mare_1_jp2/indiaeorientalis00mare_1_0171.jp2&id=indiaeorientalis00mare_1&scale=2&rotate=0",
+    "file_name": "7f7147f04ccec0de2a7a4cdd0a6e189a51d4e712c33ed9eec1953e3864e1da0d",
+    "parent_directory": "black-eyed-peas"
+  },
+  {
+    "label": "Letter from George Washington to Charles Carter, 1787, Manuscript Division, U.S. Library of Congress.",
+    "requiredStatement": {
+      "attribution": "Manuscript Division, U.S. Library of Congress",
+      "url": "https://founders.archives.gov/documents/Washington/04-05-02-0442"
+    },
+    "source": "George Washington Papers, Series 2, Letterbooks 1754 to 1799: Letterbook 14,- Feb. 22, 1788",
+    "author": "George Washington (1732–1799)",
+    "sourceLicense": "The Library of Congress provides access to manuscripts at the Library of Congress for educational and research purposes and makes no warranty with regard to their use for other purposes.",
+    "hash": "ab9ecd15",
+    "image_url": "https://tile.loc.gov/storage-services/master/mss/mgw/mgw2/014/2340228.jpg",
+    "file_name": "94b1923c0bd805e7a7ba5ad9fe38c78ec66bea2a95c96444e8ab21abeb1dde51",
+    "parent_directory": "black-eyed-peas"
+  },
+  {
+    "label": "Annibale Carracci, The Bean Eater, 1580–90, oil on canvas, 57 x 68 cm, Rome, Palazzo Colonna.",
+    "requiredStatement": {
+      "attribution": "dvdbramhall, Flickr",
+      "url": "https://www.flickr.com/photos/35271748@N00/11949623645"
+    },
+    "author": "Annibale Carracci (1560–1609); dvdbramhall",
+    "sourceLicense": "CC BY-NC-ND 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "hash": "c218e15f",
+    "file_name": "Annibale_Carracci_Bean_Eater_dvdbramhall_Flickr_CC_BY_NC_ND_2.0",
+    "parent_directory": "black-eyed-peas"
+  },
+  {
+    "label": "Phaseolus peregrinus IIII, Carolus Clusius, Rariorum Plantarum Historia, Antwerp, Officina Plantiniana apud Ioannem Moretum, 1601.",
+    "requiredStatement": {
+      "attribution": "Biblioteca del Real Jardín Botánico",
+      "url": "https://bibdigital.rjb.csic.es/idurl/1/13800"
+    },
+    "source": "Rariorum Plantarum Historia",
+    "author": "Carolus Clusius (1526–1609)",
+    "sourceLicense": "CC BY-NC-SA",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "attribution_formatted": "Biblioteca del Real Jardín Botánico",
+    "hash": "bd03e8c9",
+    "file_name": "Clusius_Rariorum_Plantarum_Historia_Biblioteca_del_Real_Jardín_Botánico_CC_BY_NC_SA",
+    "parent_directory": "black-eyed-peas"
+  },
+  {
+    "label": "There are thousands of varieties of black-eyed peas. Jeffrey Ehlers, UC Riverside, via AAAS and EurekAlert!, no usage restrictions.",
+    "requiredStatement": {
+      "attribution": "Jeffrey Ehlers, UC Riverside via AAAS and EurekAlert!"
+    },
+    "hash": "98bf6ade",
+    "image_url": "https://newsroom.ucr.edu/images/releases/1708_0hi.jpg",
+    "file_name": "c444bc99e57e63b56a871d63bdc64134900c6905b516b652568cc75c356d730a",
+    "parent_directory": "black-eyed-peas"
+  },
+  {
+    "label": "Boxwood blight at the Dumbarton Oaks garden.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "hash": "1a99f118",
+    "image_url": "https://raw.githubusercontent.com/WouterKlein/boxwoodtest/master/images/Boxwood-blight-in-Dumbarton-Oaks-garden_pre-removal2.jpg",
+    "file_name": "4044fb7cac396304085f6be9299b99b3fb645fd184df34c743df34156afa35d9",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Boxwood image in Parkinson’s Paradisi in sole paradisus terrestris,1629.",
+    "requiredStatement": {
+      "attribution": "Getty Research Institute via archive.org",
+      "url": "https://archive.org/details/gri_33125012606931/page/n620/mode/1up"
+    },
+    "author": "John Parkinson",
+    "sourceLicense": "Not in copyright",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Boxwood image in Parkinson’s <em>Paradisi in sole paradisus terrestris</em>,1629.",
+    "hash": "995bf168",
+    "image_url": "https://ia801309.us.archive.org/BookReader/BookReaderImages.php?id=gri_33125012606931&itemPath=%2F6%2Fitems%2Fgri_33125012606931&server=ia801309.us.archive.org&page=n620_w1136",
+    "file_name": "5a106cc2e71bd82927521c13ec5e252eb63ed6b7ac5b2aea06fc0eb31927b176",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Box Walk at Dumbarton Oaks.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks",
+      "url": "https://www.doaks.org/visit/garden/explore/box-walk/"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "hash": "02768200",
+    "image_url": "https://www.doaks.org/visit/garden/explore/box-walk/@@images/image",
+    "file_name": "6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Sixteenth-century Netherlandish rosary bead (interior).",
+    "requiredStatement": {
+      "attribution": "Metropolitan Museum of Art via Wikimedia Commons",
+      "url": "https://www.metmuseum.org/art/collection/search/464449"
+    },
+    "author": "Unknown",
+    "sourceLicense": "CC0 1.0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "hash": "32f8b253",
+    "image_url": "https://images.metmuseum.org/CRDImages/md/original/DP371962.jpg",
+    "file_name": "992f20a62764c5437c3aa6ec3bb7a871711f5066a928fe3499a9ccd8c8d4d423",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Imperial garden of the Old Summer Palace in Beijing. Unknown artist, after Yilantai, c. 1783-1786.",
+    "requiredStatement": {
+      "attribution": "The British Museum",
+      "url": "https://www.britishmuseum.org/collection/object/A_1916-0214-0-1"
+    },
+    "source": "*Twenty views of the European Palaces of the Yuanming yuan*",
+    "author": "Yilantai (1749–1786)",
+    "sourceLicense": "CC BY-NC-SA 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "hash": "4836a663",
+    "image_url": "https://raw.githubusercontent.com/WouterKlein/boxwoodtest/master/images/Old-Summer-Palace_Beijing_British-Museum.jpg",
+    "file_name": "9a88a39cc18938dc0f88459f92f26e3dcaddb17790bbf200474080b4e1105f4a",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Boxwood in the Dumbarton Oaks garden, before removal.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "hash": "4237c4df",
+    "image_url": "https://raw.githubusercontent.com/WouterKlein/boxwoodtest/master/images/Boxwood-blight-in-Dumbarton-Oaks-garden_pre-removal1.jpg",
+    "file_name": "a2ee4ea3121a86a07070561d61cb70a9eeacd940e965428f9617dbb6e9a6014a",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Boxwood in the Dumbarton Oaks garden, after removal.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "hash": "437fe478",
+    "image_url": "https://raw.githubusercontent.com/WouterKlein/boxwoodtest/master/images/Boxwood-blight-in-Dumbarton-Oaks-garden_post-removal.jpg",
+    "file_name": "c248d7ade5a3440a8f5307a8cc155774a84e651b3dd92a0a9a32611547cceed5",
+    "parent_directory": "boxwood"
+  },
+  {
+    "label": "Botanical illustration of Theobroma cacao by Everard Kickius (likely 1700-1701) of specimen from  Sir Hans Sloane's collection.",
+    "requiredStatement": {
+      "attribution": "Natural History Museum of London via JSTOR Global Plants"
+    },
+    "title_formatted": "Botanical illustration of <em>Theobroma cacao</em> by Everard Kickius (likely 1700-1701) of specimen from  Sir Hans Sloane's collection.",
+    "hash": "913d0f08",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/16/gpi-bm-typspe-01-78/bm0007/bm000589107.jp2",
+    "file_name": "278d729dd7e858800c1925780d994167de5274fb69c3a2ceed52a0db071aa8e7",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Carolus Clusius' mentions of Beretinus fructus and Cacao fructus_",
+    "requiredStatement": {
+      "attribution": "Peter H. Raven Library, Missouri Botanical Garden via BHL"
+    },
+    "title_formatted": "Carolus Clusius' mentions of <em>Beretinus</em> <em>fructus</em> and <em>Cacao</em> <em>fructus</em>",
+    "hash": "ac8570f6",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/8066123",
+    "file_name": "2bc33044c9eca65866f0047883c8fd0ecb3b8dea53bca271cc097dd4066988fa",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Herbarium specimen of Theobroma cacao collected by F. Miranda in Chiapas, Mexico (1962).",
+    "title_formatted": "Herbarium specimen of <em>Theobroma cacao</em> collected by F. Miranda in Chiapas, Mexico (1962).",
+    "hash": "d959914b",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/15/ap_01_us0005/us00102185.jp2",
+    "file_name": "39c4a8175729a3856e498df7b3fa9180d5bc369e7e3587b83458a7d516c88c3c",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Maya God L seated in merchant regalia; God K to the right next to a cacao tree.",
+    "hash": "fe7e2fbd",
+    "image_url": "http://research.mayavase.com/uploads/mayavase/hires/0631.jpg",
+    "file_name": "5760f930210f3c29331b43c2a06b4908fefc5e4174c48dbabae9b43e34713eca",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Maya God L seated in merchant regalia with cacao symbolism on left; God K on the right.",
+    "hash": "c8ecf394",
+    "image_url": "http://research.mayavase.com/uploads/mayavase/hires/9089.jpg",
+    "file_name": "a4348ab4a7bf5cd968455d87e389a6f92feb7de087a9a48eeeb5368352b0933e",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Theatrum Botanicum p. 1642",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute via archive.org and BHL"
+    },
+    "hash": "2c72dd0d",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/56601539",
+    "file_name": "dbf4c0aa4635e396edcf9fa824e6031571bf542a4e74d5834dab75e64fe9fe65",
+    "parent_directory": "cacao"
+  },
+  {
+    "label": "Photograph of a Wetland-Cultivated Carolina Rice Field",
+    "requiredStatement": {
+      "attribution": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection,The New York Public Library",
+      "url": "https://digitalcollections.nypl.org/items/510d47e1-af08-a3d9-e040-e00a18064a99"
+    },
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "bb2ec0c7",
+    "image_url": "https://images.nypl.org/index.php?id=G92F023_003F&t=w",
+    "file_name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "Late 19th-Century Drawing of the Rice Planting Process on a Carolina Plantation",
+    "requiredStatement": {
+      "attribution": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library"
+    },
+    "source": "_Dixie; or, Southern Scenes and Sketches_",
+    "author": "Julian Ralph (1853–1903)",
+    "sourceLicense": "Public domain",
+    "image_url": "https://images.nypl.org/index.php?id=1235183&t=w",
+    "file_name": "317f31115cfb15b90f56e35c3c6d4f4e09385e69a1225d4a4284ac44ad65c8e5",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "1913 Drawing by Rice Planter Elizabeth Pringle",
+    "requiredStatement": {
+      "attribution": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library"
+    },
+    "author": "Alice Ravenel Huger Smith (1876–1958)",
+    "sourceLicense": "Public domain",
+    "image_url": "https://images.nypl.org/index.php?id=1149814&t=w",
+    "file_name": "62c8abfcc2b157fc1c297146feb05280cea597ddf689dd0cd17b0cbab6d25de8",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "1913 Drawing by Rice Planter Elizabeth Pringle",
+    "requiredStatement": {
+      "attribution": "Schomburg Center for Research in Black Culture, Jean Blackwell Hutson Research and Reference Division, The New York Public Library"
+    },
+    "author": "Alice Ravenel Huger Smith (1876–1958)",
+    "sourceLicense": "Public domain",
+    "image_url": "https://images.nypl.org/index.php?id=1212087&t=w",
+    "file_name": "6ae993c498079fe77da34db9f1c1364745f6d4cb5549a7d1dbfcf9819e9ad976",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "Production of Rice in America from 1720-1889",
+    "requiredStatement": {
+      "attribution": "Library of Congress via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/25670373#page/19/mode/1up"
+    },
+    "source": "_The Greatest of Grains; Rice_",
+    "author": "Dan Talmage's Sons Company",
+    "sourceLicense": "No usage notes",
+    "hash": "953d8333",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/25670373",
+    "file_name": "7b03afb2ec96015888526a38794657aa7d82fe9a97f53fe93e6899204d1070c9",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "Production of Rice in America from 1720-1889",
+    "requiredStatement": {
+      "attribution": "Library of Congress via BHL"
+    },
+    "author": "Dan Talmage's Sons Company",
+    "sourceLicense": "No usage notes",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/25670373",
+    "file_name": "953d8333deacabb3b5d83bb57c62acaf298889fe77fd959c577cb7025b1cd9b1",
+    "parent_directory": "carolina-rice"
+  },
+  {
+    "label": "Njideka Akunyili Crosby, Cassava Garden, 2015, Acrylic, transfers, colored pencil, charcoal and commemorative fabric on paper, 72 x 60 in, 182.88 x 152.40 cm",
+    "requiredStatement": {
+      "attribution": "Njideka Akunyili Crosby",
+      "url": "http://www.njidekaakunyilicrosby.com/work/cassava-garden#details"
+    },
+    "summary": "Photography: Robert Glowacki, Courtesy of the Artist, Victoria Miro, London, and David Zwirner, New York, © 2015 Njideka Akunyili. All rights reserved.",
+    "author": "Njideka Akunyili Crosby",
+    "sourceLicense": "Courtesy of the artist",
+    "file_name": "15.09.047_NA12_Cassava Garden_2015",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "“Inquiries and Directions for the Antilles, or Caribbee Islands,” No. 33, 634, 228 Philosophical Transactions of Royal Society of London_, 1668.",
+    "requiredStatement": {
+      "attribution": "University of California Libraries via archive.org"
+    },
+    "attribute": "University of California Libraries, Archive.org",
+    "title_formatted": "“Inquiries and Directions for the Antilles, or Caribbee Islands,” No. 33, 634, 228 <em>Philosophical Transactions of Royal Society of London</em>, 1668.",
+    "hash": "429c2cb1",
+    "image_url": "https://ia600302.us.archive.org/BookReader/BookReaderImages.php?id=philosophicaltra01royarich&itemPath=%2F9%2Fitems%2Fphilosophicaltra01royarich&server=ia600302.us.archive.org&page=n261_w386",
+    "file_name": "18a074e182f0ec83439eda0ae9738382d7f567d4f90be48fb2d9570cac59e671",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "_Tipiti, Manioc Squeezer_, Tukuna, Ticuna, Maguta, Guyana, cutting, weaving, 122.3 cm. (length)",
+    "requiredStatement": {
+      "attribution": "Courtesy of The Spurlock Museum, University of Illinois at Urbana-Champaign"
+    },
+    "title_formatted": "<em>Tipiti, Manioc Squeezer</em>, Tukuna, Ticuna, Maguta, Guyana, cutting, weaving, 122.3 cm. (length)",
+    "summary": "Object no. 1998.19.0620",
+    "hash": "3aaebc98",
+    "image_url": "https://www.spurlock.illinois.edu/img/blog/2018/294-food-and-drink/cassava-4.jpg",
+    "file_name": "18d40555bb4220c36b8e5fe0e1b7e691d934767a794bb59047725b5a4bd3f9f7",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "_Economie rustique, Indigoterie et manioc (_Rural Economy, Indigo Plantation and Manioc_), Denis Diderot, Encyclopédie_, vol. 1762, Paris.",
+    "requiredStatement": {
+      "attribution": "Smithsonian Libraries, Biodiversity Heritage Library"
+    },
+    "primary": "true",
+    "title_formatted": "<em>Economie rustique, Indigoterie et manioc</em> (<em>Rural Economy, Indigo Plantation and Manioc</em>), Denis Diderot, <em>Encyclopédie</em>, vol. 1762, Paris.",
+    "hash": "ed091dab",
+    "image_url": "https://ia800301.us.archive.org/BookReader/BookReaderImages.php?id=Recueildeplancht1Dide&itemPath=%2F2%2Fitems%2FRecueildeplancht1Dide&server=ia800301.us.archive.org&page=n124_w333",
+    "file_name": "25a52b7766a307043af42346c53bb75722f0788f7254abda137ae5abbfdf0ca5",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Louise von Panhuys, Leaves of the Bitter Manioc, Cassava (Blätter der bitteren Maniok, Cassava), n.d., watercolor, color pencil, 39.8 x 52.3 cm",
+    "requiredStatement": {
+      "attribution": "Universitätsbibliothek, Frankfurt am Main",
+      "url": "http://nbn-resolving.de/urn:nbn:de:hebis:30:2-46673"
+    },
+    "author": "Louise von Panhuys (1763–1844)",
+    "sourceLicense": "CC BY-NC-SA 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "label_formatted": "Louise von Panhuys, <em>Leaves of the Bitter Manioc, Cassava</em> (<em>Blätter der bitteren Maniok, Cassava</em>), n.d., watercolor, color pencil, 39.8 x 52.3 cm",
+    "hash": "6029a21c",
+    "image_url": "http://sammlungen.ub.uni-frankfurt.de/panhuys/image/view/4989769?w=1000",
+    "file_name": "25b71d314c539bf910224b4f131fcf97a37e0a50bc180d26ba66be53922979cb",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Title page, Antonio de León Pinelo, Cuestión moral: Si el chocolate quebranta el ayuno eclesiástico_, Madrid: Iuan Gonçalez., 1636.",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via archive.org"
+    },
+    "reuseRights": "http://rightsstatements.org/vocab/NKC/1.0/",
+    "sourceLicense": "No notice of copyright",
+    "labelFormatted": "Title page, Antonio de León Pinelo, <em>Cuestión moral: Si el chocolate quebranta el ayuno eclesiástico</em>, Madrid: Iuan Gonçalez., 1636.",
+    "image_url": "https://ia903105.us.archive.org/BookReader/BookReaderImages.php?id=questionmoralsie00lenp&itemPath=%2F19%2Fitems%2Fquestionmoralsie00lenp&server=ia903105.us.archive.org&page=n6_w420",
+    "file_name": "327e4b720969d1faf2d5a18c33887fbb9c04931fe0033b76828568643b89b53e",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Charles Theodore Middleton, Workers preparing cakes from manioc root in the tropics, with decorative border, ca. 1777, engraving, 28.7 x 17 cm (platemark)",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/aqzdvhau"
+    },
+    "author": "Charles Theodore Middleton",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "label_formatted": "Charles Theodore Middleton, <em>Workers preparing cakes from manioc root in the tropics, with decorative border</em>, ca. 1777, engraving, 28.7 x 17 cm (platemark)",
+    "hash": "1cd79c22",
+    "image_url": "https://iiif.wellcomecollection.org/image/V0044465/full/full/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "p. 58, Antonio de León Pinelo",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via archive.org"
+    },
+    "reuseRights": "http://rightsstatements.org/vocab/NKC/1.0/",
+    "sourceLicense": "No notice of copyright",
+    "image_url": "https://ia903105.us.archive.org/BookReader/BookReaderImages.php?id=questionmoralsie00lenp&itemPath=%2F19%2Fitems%2Fquestionmoralsie00lenp&server=ia903105.us.archive.org&page=n133_w434",
+    "file_name": "3cff643fd985c29f359c9280babadf8515aaf31b3fc8c145905c2d73ae54a002",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Entry for chicha in index, Antonio de León Pinelo",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via archive.org"
+    },
+    "reuseRights": "http://rightsstatements.org/vocab/NKC/1.0/",
+    "sourceLicense": "No notice of copyright",
+    "labelFormatted": "Entry for <em>chicha</em> in index, Antonio de León Pinelo",
+    "image_url": "https://ia903105.us.archive.org/BookReader/BookReaderImages.php?id=questionmoralsie00lenp&itemPath=%2F19%2Fitems%2Fquestionmoralsie00lenp&server=ia903105.us.archive.org&page=n270_w432",
+    "file_name": "605ea3db7d0fd8412cdabc7d41f06b12f1c00cf0217ebcfd0480f35f73b3aed9",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Louise von Panhuys, Sweet Cassava (_Süßer Maniok, Cassava_), 1816, watercolor, color pencil, 68.3 x 48.5 cm, Universitätsbibliothek, Frankfurt am Main.",
+    "requiredStatement": {
+      "attribution": "Universitätsbibliothek, Frankfurt am Main"
+    },
+    "title_formatted": "Louise von Panhuys, <em>Sweet Cassava</em> (<em>Süßer Maniok, Cassava</em>), 1816, watercolor, color pencil, 68.3 x 48.5 cm, Universitätsbibliothek, Frankfurt am Main.",
+    "hash": "2e643e3c",
+    "image_url": "http://sammlungen.ub.uni-frankfurt.de/panhuys/image/view/4989868?w=1000",
+    "file_name": "8a0426ea40506f651cbf0474cfb95ee5362375f6d8fbdfbe807a454fbb2e25e1",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Cassava processing in Benin, wall mural, March 7, 2015.",
+    "requiredStatement": {
+      "attribution": "CGIAR Research Program on Roots, Tubers and Bananas, Flickr"
+    },
+    "author": "D. Dufour",
+    "sourceLicense": "CC BY-NC-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "label_formatted": "<em>Cassava processing in Benin</em>, wall mural, March 7, 2015.",
+    "attribution_formatted": "CGIAR Research Program on Roots, Tubers and Bananas, Flickr",
+    "hash": "e16f91f6",
+    "file_name": "CassavaProc_RootsTubersBananas_Mural_Flickr",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Vitamin A Cassava, Nigeria, September 20, 2012.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/harvestplus/15321274771"
+    },
+    "author": "HarvestPlus",
+    "sourceLicense": "CC BY-NC 2.0",
+    "hash": "5e52af29",
+    "file_name": "Cassava_VitA_Nigeria_Flickr-standard-scale-2_00x-gigapixel",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Global distribution of cassava. Cassava’s native habitat is marked in green, and regions where cassava was introduced by humans are marked in orange.",
+    "hash": "81017ef7",
+    "file_name": "Cassava_distribution_map_4",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Fufu with palm nut soup and fish, April 5, 2011.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/56525796@N00/5614834827"
+    },
+    "author": "benketaro",
+    "sourceLicense": "CC BY 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "label_formatted": "<em>Fufu</em> with palm nut soup and fish, April 5, 2011.",
+    "hash": "7844162a",
+    "file_name": "Cassava_fufu_soup_fish_Flickr",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Cassava grater, WaiWai people, Guyana.",
+    "requiredStatement": {
+      "attribution": "Horniman Museum and Gardens via Flickr",
+      "url": "https://live-fts.flickr.com/photos/hornimanmuseum/42433325461/"
+    },
+    "sourceLicense": "CC BY-NC 2.0",
+    "label_formatted": "<em>Cassava grater</em>, WaiWai people, Guyana.",
+    "hash": "6b293c63",
+    "file_name": "Cassava_grater_medium",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Cassava leaves, September 22, 2009",
+    "requiredStatement": {
+      "attribution": "©2009CIAT/NeilPalmer, Flickr",
+      "url": "https://www.flickr.com/photos/ciat/3945716612/"
+    },
+    "author": "CIAT",
+    "sourceLicense": "CC BY-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-sa/4.0",
+    "hash": "a92a8554",
+    "file_name": "Cassava_leaf_Flickr",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Cassava tubers, October 13, 2007.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/the_ewan/1677948073"
+    },
+    "author": "The Ewan",
+    "sourceLicense": "CC BY-NC-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "hash": "06d9b34e",
+    "file_name": "Cassava_tuber_ground_Flickr",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Njideka Akunyili Crosby, Obodo (Country/City/Town/Ancestral Village), outdoor mural, MOCA Grand Avenue, Los Angeles, CA, September 30, 2018.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/waltarrrrr/31539113728/in/photolist-2b67q2W-Q41cGU"
+    },
+    "author": "waltarrrrr",
+    "sourceLicense": "CC BY-NC-ND 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "label_formatted": "Njideka Akunyili Crosby, <em>Obodo (Country/City/Town/Ancestral Village)</em>, outdoor mural, MOCA Grand Avenue, Los Angeles, CA, September 30, 2018.",
+    "hash": "61a0fe67",
+    "file_name": "Crosby_Cassava_Mural_Flickr",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Jar Depicting the Botanical Frog, Moche, Early Intermediate Period, 100–800 CE, ceramic, 27.5 cm x 17 cm x 21 cm",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks Research Library and Collection, Washington, D.C.",
+      "url": "http://museum.doaks.org/objects-1/info/22560"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "label_formatted": "<em>Jar Depicting the Botanical Frog</em>, Moche, Early Intermediate Period, 100–800 CE, ceramic, 27.5 cm x 17 cm x 21 cm",
+    "hash": "40346d8a",
+    "file_name": "Jar-depicting-the-botanical-frog",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Production of Cassava, after Food and Agriculture Organization of the United Nations.",
+    "author": "Rachel Hirsch",
+    "hash": "f20175b8",
+    "file_name": "Screen_Shot_2021-01-06_at_12.02.11_PM",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Disaggregated cassava production in sub-Saharan Africa and associated data sources. Density of cassava production layer (tonnes per approx. 1 km2) (a). Cassava production data sources and administrative resolution of production census data in each of the countries (b): FAO (fao.org/faostat), Resakss (resakss.org), Agro-MAPS (kids.fao.org/agromaps/) and IITA (personal correspondence with the International Institute of Tropical Agriculture in Ibadan, Nigeria). Basemap source: Esri, DeLorme, HERE, MapmyIndia.",
+    "requiredStatement": {
+      "attribution": "Szyniszewska, A.M. CassavaMap, a fine-resolution disaggregation of cassava production and harvested area in Africa in 2014. Sci Data 7, 159 (2020). https://doi.org/10.1038/s41597-020-0501-z, CC BY 4.0"
+    },
+    "attribution_formatted": "Szyniszewska, A.M. CassavaMap, a fine-resolution disaggregation of cassava production and harvested area in Africa in 2014. <em>Sci Data</em> 7, 159 (2020). https://doi.org/10.1038/s41597-020-0501-z, CC BY 4.0",
+    "summary": "(a). Cassava production data sources and administrative resolution of production census data in each of the countries (b): FAO (fao.org/faostat), Resakss (resakss.org), Agro-MAPS (kids.fao.org/agromaps/) and IITA (personal correspondence with the International Institute of Tropical Agriculture in Ibadan, Nigeria). Basemap source: Esri, DeLorme, HERE, MapmyIndia.",
+    "hash": "a10a17c5",
+    "image_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-020-0501-z/MediaObjects/41597_2020_501_Fig1_HTML.png?as=webp",
+    "file_name": "a662fa58c1954858a44103880681a72ae457b202071acf3436dc4b368ba2826f",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Probably Carib [Guyana], Basket sieve or sifter for manioc (cassava)_, circa 1910, Guyana, cane, wood, cordage, dye/dyes, eyed, twill-plaited, 31.5 x 31.5 x 5 cm, National Museum of the American Indian, Smithsonian Institution, CC0",
+    "requiredStatement": {
+      "attribution": "National Museum of the American Indian, Smithsonian Institution"
+    },
+    "title_formatted": "Probably Carib [Guyana], <em>Basket sieve or sifter for manioc (cassava)</em>, circa 1910, Guyana, cane, wood, cordage, dye/dyes, eyed, twill-plaited, 31.5 x 31.5 x 5 cm, National Museum of the American Indian, Smithsonian Institution, CC0",
+    "hash": "c937108d",
+    "image_url": "https://americanindian.si.edu/webmultimedia/4007/939/012.700x700.jpg",
+    "file_name": "a75660b3ac3a78a70dfa34f1d780b6e1bedffa5cd942abf7516e3fbb74c4a913",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "p. 58, Antonio de León Pinelo",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via archive.org"
+    },
+    "attribute": "John Carter Brown Library, Biodiversity Heritage Library",
+    "hash": "3cff643f",
+    "image_url": "https://ia903105.us.archive.org/BookReader/BookReaderImages.php?id=questionmoralsie00lenp&itemPath=%2F19%2Fitems%2Fquestionmoralsie00lenp&server=ia903105.us.archive.org&page=n133_w434",
+    "file_name": "a843ff2ad97faaa09471438907ea8f11b1989986ea413689f5f2b7df9d632193",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "“Inquiries and Directions for the Antilles, or Caribbee Islands,” No. 33, 634, Philosophical Transactions of Royal Society of London_, 1668, 230.",
+    "requiredStatement": {
+      "attribution": "University of California Libraries via archive.org"
+    },
+    "attribute": "University of California Libraries, Archive.org",
+    "title_formatted": "“Inquiries and Directions for the Antilles, or Caribbee Islands,” No. 33, 634, <em>Philosophical Transactions of Royal Society of London</em>, 1668, 230.",
+    "hash": "e8abab40",
+    "image_url": "https://ia800302.us.archive.org/BookReader/BookReaderImages.php?id=philosophicaltra01royarich&itemPath=%2F9%2Fitems%2Fphilosophicaltra01royarich&server=ia800302.us.archive.org&page=n263_w702",
+    "file_name": "b2b80e4f3b05cdb04ffcff6586bd101ac2f60ec2dd0cddc9a375aaa820756dfa",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Louise von Panhuys, Bitter Poisonous Manioc, Cassava (_Bittere giftige Maniok, Cassava_), 1816, watercolor, color pencil, 67.9 x 48.4 cm, Universitätsbibliothek, Frankfurt am Main.",
+    "requiredStatement": {
+      "attribution": "Universitätsbibliothek, Frankfurt am Main"
+    },
+    "primary": "true",
+    "title_formatted": "Louise von Panhuys, <em>Bitter Poisonous Manioc, Cassava</em> (<em>Bittere giftige Maniok, Cassava</em>), 1816, watercolor, color pencil, 67.9 x 48.4 cm, Universitätsbibliothek, Frankfurt am Main.",
+    "hash": "5d2bcb26",
+    "image_url": "http://sammlungen.ub.uni-frankfurt.de/panhuys/image/view/4989873?w=1000",
+    "file_name": "fdb5dab1e66a26e81289a38bf318aedc193556010494a20e5255e6022512be30",
+    "parent_directory": "cassava"
+  },
+  {
+    "label": "Cinnamon, from a medieval Arabian manuscript of Dioscorides’s De Materia medica (first century CE).",
+    "requiredStatement": {
+      "attribution": "Bibliothèque nationale de France via BnF Gallica",
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b8422959z/f272.item#"
+    },
+    "source": "Arabian manuscript of Dioscorides’s _De Materia medica_ (first century CE), ms. Arabe 2850",
+    "summary": "Translated in Arabic by an unknown scribe in Spain (twelfth-thirteenth century), and currently in the Bibliothèque Nationale de France, ms. Arabe 2850, f. 129b.",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Cinnamon, from a medieval Arabian manuscript of Dioscorides’s <em>De Materia medica</em> (first century CE).",
+    "hash": "8f1c29fc",
+    "file_name": "18040817",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "“Carua” in the Hortus Indicus Malabaricus (vol. 1, p. 107–110 and fig. 57).",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via archive.org",
+      "url": "https://archive.org/details/mobot31753003370076/page/n177/mode/1up"
+    },
+    "source": "_Hortus Indicus Malabaricus_",
+    "author": "Hendrik Adriaan van Rheede tot Drakenstein (1636–1691)",
+    "summary": "This massive, 12-volume work on the flora of the Malabar coast was produced by a team of European and Indian scholars, supervised by Hendrik Adriaan van Rheede tot Drakenstein, and published between 1678 and 1703. The Indian botanist K.S. Manilal identified this species as Cinnamomum verum. Although this is the same species as the true cinnamon from Ceylon, Van Rheede's experiments with the oil from the root revealed differences between cinnamon from both locations.",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "“Carua” in the <em>Hortus Indicus Malabaricus</em> (vol. 1, p. 107–110 and fig. 57).",
+    "hash": "36436dcc",
+    "image_url": "https://ia801001.us.archive.org/BookReader/BookReaderImages.php?id=mobot31753003370076&itemPath=%2F18%2Fitems%2Fmobot31753003370076&server=ia801001.us.archive.org&page=n177_w685",
+    "file_name": "512894d1e080b704606357b7a359f0a2acb368985ca08adc478153f51c965c08",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "Cinnamon bark, in Carolus Clusius, Exoticorum Libri Decem ([Leiden]: Ex Officinâ Plantinianâ Raphelengii 1605) 171.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via archive.org",
+      "url": "https://archive.org/details/mobot31753000811387/page/n185/mode/1up"
+    },
+    "source": "_Exoticorum Libri Decem_ ([Leiden]: Ex Officinâ Plantinianâ Raphelengii 1605)",
+    "author": "Carolus Clusius (1526–1609)",
+    "summary": "Clusius adapted Orta’s work once more for this publication on exotic naturalia. Unhappy with the leaf image from his 1567 edition of Orta’s work, he left it out here, and only included the image of cinnamon bark.",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Cinnamon bark, in Carolus Clusius, <em>Exoticorum Libri Decem</em> ([Leiden]: Ex Officinâ Plantinianâ Raphelengii 1605) 171.",
+    "hash": "006f0108",
+    "image_url": "https://www.archive.org/download/mobot31753000811387/page/n185_w1131",
+    "file_name": "95342a4ec6b46ef75aa2426d3fc857ee23cfec5eb52ec947ae8b01362134fa48",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "Map of the cinnamon gardens with their main roads in the district of Kaliture.",
+    "requiredStatement": {
+      "attribution": "Nationaal Archief, The Hague",
+      "url": "https://www.nationaalarchief.nl/en/research/archive/4.VEL/invnr/939A/file/NL-HaNA_4.VEL_939A"
+    },
+    "summary": "This anonymous, eighteenth-century map shows 70 cinnamon gardens located immediately south of Colombo, between Kaliture (present-day Kalutara) and the mouth of the Bentotte (Bentota) river.",
+    "sourceLicense": "CC0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "hash": "3b6c7906",
+    "file_name": "NL-HaNA_4.VEL_935-groot",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "Drawing from 1720, showing the benefits that could be made from monocultures of cinnamon on temporary cleared fields (chenas).",
+    "requiredStatement": {
+      "attribution": "Nationaal Archief, The Hague",
+      "url": "https://www.nationaalarchief.nl/onderzoeken/archief/4.VEL/invnr/939A/file/NL-HaNA_4.VEL_939A"
+    },
+    "summary": "The image on the left shows a demarcated area of forest to be cultivated; the image in the middle shows the same field after the original vegetation was cleared; and the image on the right shows the chena as a monoculture of cinnamon. The text at the bottom is a calculation of the expected returns. A field with only five cinnamon trees could contain 135 trees after cultivation: a 27-fold increase. When this image was produced, however, the VOC was still very reluctant to abandon the wild harvest approach it had always adopted, and chena practices were dicouraged.",
+    "sourceLicense": "CC0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "label_formatted": "Drawing from 1720, showing the benefits that could be made from monocultures of cinnamon on temporary cleared fields (<em>chenas</em>).",
+    "hash": "dfe33422",
+    "file_name": "NL-HaNA_4.VEL_939A-groot_cropped",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "Cinnamon production (all species and varieties) by the top 5 cinnamon-producing countries, 1961–2019.",
+    "requiredStatement": {
+      "attribution": "These data were compared on and downloaded from the website of the Food and Agriculture Organization of the United Nations (FAO), http://www.fao.org/faostat/en/#compare, accessed: 02/18/2021."
+    },
+    "author": "Wouter Klein",
+    "summary": "These data were compared on and downloaded from the website of the Food and Agriculture Organization of the United Nations (FAO)",
+    "hash": "a48766ce",
+    "file_name": "cinnamon-production-chart",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "Cinnamon leaf and bark, in Garcia de Orta, Aromatum, et Simplicium aliquot Medicamentorum apud Indos nascentium Historia (Antverpiae: Ex officina Christophori Plantini 1567) 72.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via archive.org",
+      "url": "https://archive.org/details/mobot31753003488159/page/72/mode/1up"
+    },
+    "source": "_Aromatum, et Simplicium aliquot Medicamentorum apud Indos nascentium Historia_ (Antverpiae: Ex officina Christophori Plantini 1567)",
+    "author": "Garcia de Orta (1501?–1568)",
+    "summary": "The images were not in Orta’s original Portuguese publication of 1563, but they were added by the editor, Flemish botanist Carolus Clusius, for this Latin edition.",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Cinnamon leaf and bark, in Garcia de Orta, <em>Aromatum, et Simplicium aliquot Medicamentorum apud Indos nascentium Historia</em> (Antverpiae: Ex officina Christophori Plantini 1567) 72.",
+    "hash": "5b91b0c8",
+    "image_url": "https://www.archive.org/download/mobot31753003488159/page/n71_w314",
+    "file_name": "fc52a528633d7f26fa39d701f2b3e38f6982dcd56e607bcc0d97b86f00b6a16d",
+    "parent_directory": "cinnamon"
+  },
+  {
+    "label": "A 300-year old Cryptomeria stump flanks a hiking trail in the old growth forest on Yakushima Island. While most of Japan's cedars are planted as monocultures, the ones on Yakushima Island grow in a mixed community of epiphytes, mosses, shrubs, and trees. Image by authors, 2019.",
+    "sourceLicense": "Image by authors, no permission needed",
+    "file_name": "IMG_0548",
+    "parent_directory": "cryptomeria"
+  },
+  {
+    "label": "The size of tree trunks determines the types and sizes of lumber that can be milled. Image by authors, 2019.",
+    "file_name": "crypto-size",
+    "parent_directory": "cryptomeria"
+  },
+  {
+    "label": "Ditamo bianco' (Origanum dictamnus, dittany of Crete)",
+    "requiredStatement": {
+      "attribution": "Schoenberg Center for Electronic Text and Image, The University of Pennsylvania Libraries",
+      "url": "http://sceti.library.upenn.edu/sceti/ljs/PageLevel/index.cfm?ManID=ljs419&Page=61"
+    },
+    "author": "Anonymous",
+    "summary": "[Herbal containing 192 drawings of plants], in Italian and Latin. Manuscript on paper. Veneto? Italy, S. XV, Manuscript Number: ljs419",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "1cf3db70",
+    "image_url": "http://images.library.upenn.edu/mrsidsceti/bin/image_jpeg.pl?coll=schoenberg&subcoll=ljs419&image=ljs419_body0057.sid&level=2",
+    "file_name": "2314efcd51a8737c56c82eebde7123aef58754a932f461508100d0d2ae92907f",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Labiatae Origanum dictamnus",
+    "requiredStatement": {
+      "attribution": "Ulisse Aldrovandi Herbarium"
+    },
+    "author": "Ulisse Aldrovandi (1522–1605)",
+    "summary": "Labiatae Origanum dictamnus",
+    "sourceLicense": "Copyright (©): Permission granted to reproduce for personal and educational use only. Commercial copying, hiring, lending is prohibited.",
+    "hash": "c9e6ac8c",
+    "image_url": "http://137.204.21.141/ALDROVANDI/image/vol5fg169.JPG",
+    "file_name": "2a8d3ff777f06996b55f34312ded1dfaa6f513ef4d9ec770f15aae46843cd50a",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Aristotle’s Masterpiece by an unknown author was a bestselling book about sex and reproduction on both sides of the Atlantic Ocean from the late 17th to the early 20th century. It was first printed in London in 1684, and went through more than 100 editions.",
+    "requiredStatement": {
+      "attribution": "The Huntington Library, Art Collections, and Botanical Gardens",
+      "url": "https://www.huntington.org/verso/2018/08/aristotles-masterpiece"
+    },
+    "author": "Unknown",
+    "summary": "Aristotle’s Masterpiece by an unknown author was a bestselling book about sex and reproduction on both sides of the Atlantic Ocean from the late 17th to the early 20th century. It was first printed in London in 1684, and went through more than 100 editions.",
+    "hash": "e35740fd",
+    "image_url": "https://www.huntington.org/sites/default/files/uploads/2015/04/aristotlesmasterpiece-1.jpg",
+    "file_name": "2ca010564957e3fe45f3fefbcfa9c86992e25768e973dbacbc845c648492e8f6",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Drawing from a 13th-century manuscript of Pseudo-Apuleius's ''Herbarium'', depicting a pregnant woman in repose, while another holds an herb in one hand and prepares a concotion using a mortar and pestle with the other.",
+    "requiredStatement": {
+      "attribution": "Österreiche Nationalbibliothek",
+      "url": "https://digital.onb.ac.at/rep/osd/?10D7903E"
+    },
+    "author": "Unknown",
+    "hash": "adb88ded",
+    "image_url": "https://digital.onb.ac.at/rep/access/iiif/image/v2/5af078d29f16830c5724f778c6beb33d515d7a6fc0610e062f6737a170c1d34e339f9aefdef459ddebadfff555bbd0993bc3bba5aaaaca/full/,1000/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Rutaceae Dictamnus albus",
+    "requiredStatement": {
+      "attribution": "Ulisse Aldrovandi Herbarium"
+    },
+    "author": "Ulisse Aldrovandi (1522–1605)",
+    "summary": "Rutaceae Dictamnus albus",
+    "sourceLicense": "Copyright (©): Permission granted to reproduce for personal and educational use only. Commercial copying, hiring, lending is prohibited.",
+    "hash": "eeae632f",
+    "image_url": "http://137.204.21.141/ALDROVANDI/image/vol3fg165.JPG",
+    "file_name": "3d13c3c61f78f56bd9f063c11b4d82b6b3e75af49952951faee9697313541875",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Gerard,Herball, 1597, p. 54",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/57081035#page/80/mode/1up"
+    },
+    "author": "John Gerard (1545–1612)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Gerard,<em>Herball</em>, 1597, p. 54",
+    "hash": "f67a1481",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/57081035",
+    "file_name": "4bb3c78e2e1333105e02a67a0d2f5a0177e016c75724ff1518d2d83c03bacf3d",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Labiatae Ballota pseudodictamnus",
+    "requiredStatement": {
+      "attribution": "Ulisse Aldrovandi Herbarium"
+    },
+    "author": "Ulisse Aldrovandi (1522–1605)",
+    "summary": "Labiatae Ballota pseudodictamnus",
+    "sourceLicense": "Copyright (©): Permission granted to reproduce for personal and educational use only. Commercial copying, hiring, lending is prohibited.",
+    "hash": "bb11348a",
+    "image_url": "http://137.204.21.141/ALDROVANDI/image/vol1fg158.JPG",
+    "file_name": "7c876b6f3affb2130639db6ed6361ddcf97a767b5819cf10927c56ff090e5fe8",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Culpeper, London Dispensatory, 1683, p. 57",
+    "requiredStatement": {
+      "attribution": "The British Library via Google Books",
+      "url": "https://books.google.com/books?id=t5VkAAAAcAAJ&pg=PA57#v=onepage&q&f=false"
+    },
+    "source": "_Pharmacopœia Londinensis; or the London Dispensatory_",
+    "author": "Nicholas Culpeper (1616–1654)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Culpeper, <em>London Dispensatory</em>, 1683, p. 57",
+    "hash": "3e344ec3",
+    "image_url": "https://books.google.com/books/content?id=t5VkAAAAcAAJ&hl=it&pg=PA57&img=1&zoom=3&sig=ACfU3U3zAYl4AAJA1qvylzr9fGNwR67pVA&w=1025",
+    "file_name": "7e25fdfa02e23b5b46df0c7e7730ce657a6cea88a82c993fb02bfaf3e173d094",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Matthiol, I discorsi, 1558, p. 377",
+    "requiredStatement": {
+      "attribution": "Francis A. Countway Library of Medicine (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/35673708#page/481/mode/1up"
+    },
+    "author": "Pietro Andrea Mattioli (1500–1577)",
+    "summary": "I discorsi",
+    "sourceLicense": "Copyright information not provided by BHL",
+    "label_formatted": "Matthiol, <em>I discorsi</em>, 1558, p. 377",
+    "description_formatted": "<em>I discorsi</em>",
+    "hash": "11291328",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/35673708",
+    "file_name": "afbd1deeedc7804bdf1f69a72bc054b50ce82a5beb83f7bda4cbe75f5714f66e",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Durante, Herbarium nuovo, p. 159",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library (archive.org) via BHL"
+    },
+    "author": "Castore Durante (1529–1590)",
+    "summary": "Herbario nuovo",
+    "sourceLicense": "Copyright information not provided by BHL",
+    "label_formatted": "Durante, <em>Herbarium nuovo</em>, p. 159",
+    "description_formatted": "<em>Herbario nuovo</em>",
+    "hash": "7ff62ed3",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/49828671",
+    "file_name": "d0c2175ee300d0ec3031c699fc3c28729c8fbc5a90eaea5ca367165f2437d513",
+    "parent_directory": "dittany"
+  },
+  {
+    "label": "Red-figured Amphora, side B: Ladon the Hesperian Dragon or Hydra, Attica. ca. 500 BCE, clay, H. 47.5 cm.",
+    "requiredStatement": {
+      "attribution": "State Hermitage Museum"
+    },
+    "sourceLicense": "© Copyright: The State Hermitage permits the use of the pictures of items from its collections for personal, educational and information purposes.",
+    "hash": "73c6f88e",
+    "image_url": "https://www.hermitagemuseum.org/wps/wcm/connect/fd9ab969-0bdd-4a29-a0e2-31de64c18cbe/WOA_IMAGE_1.jpg?MOD=AJPERES&741c0ea7-f4d8-4b40-a9b1-47bd9849fa21",
+    "file_name": "45a005cbd95f77cd2ae2ec3f11b724a48fc269497d7224d3f331013775d874e5",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "label": "D. draco",
+    "summary": "Herbarium specimen at the Real Jardín Botánico de Madrid.",
+    "requiredStatement": {
+      "attribution": "Herbario del Real Jardín Botánico de Madrid."
+    },
+    "author": "Anderson, Kalinoski, Mertehikian",
+    "hash": "c9b0e816",
+    "file_name": "923a4fd5cd19774b9251274f6c0edbf8f355bdb575101414f54cff74c404fc4e",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "label": "Dragon's Blood Tree, Socotra Island, Yemen, 2013.",
+    "requiredStatement": {
+      "attribution": "Rod Waddington, Flickr"
+    },
+    "sourceLicense": "CC BY-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-sa/4.0",
+    "hash": "b4b41f7a",
+    "file_name": "Dragons_blood_tree_Flickr__Rod_Waddington_CC_BY_SA_2.0",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "label": "An image of the Draco arbor in Gerard's Herball, p. 1524.",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute via archive.org and BHL",
+      "url": "https://www.biodiversitylibrary.org/page/51906905#page/1567/mode/1up"
+    },
+    "source": "_The Herball, or Generall Histoire of Plantes_, (London: 1633)",
+    "author": "John Gerard (1545–1612)",
+    "sourceLicense": "Not in copyright",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "An image of the <em>Draco arbor</em> in Gerard's <em>Herball</em>, p. 1524.",
+    "hash": "e956ccf4",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/51906905",
+    "file_name": "a2f712a0de4cc85c1dbc51c46a2937f223db11debca16dd08348234cb540c1b1",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "label": "Draco arbor in Parkinson, Theatrum Botanicum, (London, 1640), p. 1531",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute via archive.org and BHL",
+      "url": "https://www.biodiversitylibrary.org/page/56601428#page/1555/mode/1up"
+    },
+    "source": "_Theatrum Botanicum_",
+    "author": "John Parkinson (1567–1650)",
+    "summary": "The image of the Draco arbor in Parkinson's Theatrum Botanicum is the same as in Gerard's herbal, probably being the only illustration available in England at the time. John Parkinson, Theatrum Botanicum, (London, 1640), 1532.",
+    "sourceLicense": "Not in copyright",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Draco arbor</em> in Parkinson, <em>Theatrum Botanicum</em>, (London, 1640), p. 1531",
+    "description_formatted": "The image of the <em>Draco arbor</em> in Parkinson's <em>Theatrum Botanicum</em> is the same as in Gerard's herbal, probably being the only illustration available in England at the time. John Parkinson, <em>Theatrum Botanicum</em>, (London, 1640), 1532.",
+    "hash": "445cd642",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/56601428",
+    "file_name": "b29673bd016ac3a6e02314d37b9712f996da8f798f3438ea44c8aea699440cda",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "label": "Vedic Tale of the Elephant and the Dragon. Giraldus Cambrensis, Bestiary, (England: c.1225–1250), f58",
+    "requiredStatement": {
+      "attribution": "British Library",
+      "url": "http://searcharchives.bl.uk/IAMS_VU2:IAMS040-002050594"
+    },
+    "source": "A bestiary with additions from Gerald of Wales's _Topographia Hibernica_ (Harley MS 4751)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Vedic Tale of the Elephant and the Dragon. Giraldus Cambrensis, <em>Bestiary</em>, (England: c.1225–1250), f58",
+    "hash": "76c4ad04",
+    "file_name": "e1637c277aec8ab1f77a9717561584e57eda0ed96e72f1033f17811858df1552",
+    "parent_directory": "dragon-tree"
+  },
+  {
+    "summary": "",
+    "created": "2013-03-21T15:23:01.000Z",
+    "orientation": 1,
+    "file_name": "Berberis",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "orientation": 1,
+    "file_name": "Darlingtonia_Illustration",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "file_name": "Darlingtonia_californica",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "created": "2007-08-05T20:26:16.000Z",
+    "orientation": 1,
+    "file_name": "Darlingtonia_photo",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "created": "2015-06-04T15:52:09.000Z",
+    "orientation": 1,
+    "file_name": "En_Tibi_Herbarium_Tomato_Specimen",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "orientation": 1,
+    "file_name": "Long-Leafed_Sage",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "created": "2019-03-28T14:05:50.000Z",
+    "file_name": "Narrowleaf_Silkgrass",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "orientation": 1,
+    "file_name": "Parica",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "summary": "",
+    "created": "2015-12-29T16:10:15.000Z",
+    "orientation": 1,
+    "file_name": "Rauwolf",
+    "parent_directory": "five-specimens"
+  },
+  {
+    "label": "Panoplites Jardini",
+    "requiredStatement": {
+      "attribution": "Smithsonian Institution Libraries via Biodiversity Heritage Library",
+      "url": "https://www.biodiversitylibrary.org/item/108332#page/286/mode/1up"
+    },
+    "source": "John Gould, _A monograph of the Trochilidæ, or family of humming-birds_, vol. 2, London, Printed by Taylor and Francis, 1861.",
+    "author": "Henry Constantine Richter (1821–1902)",
+    "summary": "\"The plant is a species of heliconia.\"",
+    "sourceLicense": "Not in copyright",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Panoplites Jardini</em>",
+    "hash": "60127535",
+    "image_url": "https://ia800500.us.archive.org/BookReader/BookReaderImages.php?id=monographTrochi2Goul&itemPath=%2F12%2Fitems%2FmonographTrochi2Goul&server=ia800500.us.archive.org&page=n285_w1713",
+    "file_name": "0fde6a3ba98039b4031f7cab0c7f90aae20e9cd0cf50fd74539472afc7b18adf",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Bryan Poole, Heliconia caribeae with male hummingbirds, 2008, colored etching, National Museum of Natural History, Smithsonian Institution.",
+    "requiredStatement": {
+      "attribution": "National Museum of Natural History, Smithsonian Institution",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/amazonian-entanglements/heliconia-caribaea"
+    },
+    "sourceLicense": "Courtesy of Smithsonian Institution",
+    "author": "Bryan Poole (b. 1953)",
+    "label_formatted": "Bryan Poole, <em>Heliconia caribeae</em> with male hummingbirds, 2008, colored etching, National Museum of Natural History, Smithsonian Institution.",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/amazonian-entanglements/heliconia-caribaea/@@images/image",
+    "file_name": "221d243f9fe35bac3687bee3f298330e6e6d28f9f399b362b73091732f3d8705",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Caroline Maschek, Angraecum sesquipedale, 1884–91, 31.5 × 24 cm, with additional sheet of thin paper measuring 28.5 × 24 cm, gouache on tinted Bristol paper, Dumbarton Oaks Research Library and Collection.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/mixed-media/angraecum-sesquipedale"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "author": "Caroline Maschek (1857–1938)",
+    "label_formatted": "Caroline Maschek, <em>Angraecum sesquipedale</em>, 1884–91, 31.5 × 24 cm, with additional sheet of thin paper measuring 28.5 × 24 cm, gouache on tinted Bristol paper, Dumbarton Oaks Research Library and Collection.",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/mixed-media/angraecum-sesquipedale/@@images/image",
+    "file_name": "3dce50c31bfb1d288846b98151678c99ab28a0cb2d3adf9863a96a8df44d39b3",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Margaret Mee, Heliconia, 1964, gouache, Dumbarton Oaks",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/plant-portraits/4/"
+    },
+    "author": "Margaret Mee (1909–1988)",
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "label_formatted": "Margaret Mee, <em>Heliconia</em>, 1964, gouache, Dumbarton Oaks",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/plant-portraits/4/@@images/image",
+    "file_name": "6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Curtis’ Botanical Magazine, Heliconia  psittacorum, via BHL",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library, via BHL"
+    },
+    "label_formatted": "Curtis’ Botanical Magazine, <em>Heliconia  psittacorum</em>, via BHL",
+    "hash": "1a295fa6",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/469080",
+    "file_name": "93bbd51f14e401374a756da94f68c04095c49b5f2d29d591b780502975ffa161",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Heliconia chartacea var. meeana W.J. Kress, W. John Kress and Monica M. Carlsen, Waimea Arboretum and Botanical Garden, Honolulu, HI.",
+    "requiredStatement": {
+      "attribution": "Smithsonian National Museum of Natural History",
+      "url": "https://www.si.edu/search/collection-images?edan_q=heliconia%2Bchartacea%2Bmeeana&oa=1&edan_fq%5B0%5D=media_usage:CC0&searchResults=1&id=nmnhbotany_10305313"
+    },
+    "sourceLicense": "CC0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "label_formatted": "<em>Heliconia chartacea</em> var. <em>meeana</em> W.J. Kress, W. John Kress and Monica M. Carlsen, Waimea Arboretum and Botanical Garden, Honolulu, HI.",
+    "image_url": "https://ids.si.edu/ids/deliveryService?irn=13685663&max_w=800&id=https://collections.nmnh.si.edu/media/?irn=13685663",
+    "file_name": "9dba274dc83f4ce1e8ce920a4002cc01fca6781d7cb92d329d84edf83bb2ba88",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Margaret Mee, Heliconia  psittacorum, Dumbarton Oaks",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "label_formatted": "Margaret Mee, <em>Heliconia  psittacorum</em>, Dumbarton Oaks",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/plant-portraits/19/@@images/image",
+    "file_name": "9e2150175720dd19ebdd668211e7d131911455bde0239f87a7facf760e697cfa",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Heliconia psittacorum, Curtis's Botanical Magazine, 1800, Missouri Botanical Garden, Peter H. Raven Library",
+    "requiredStatement": {
+      "attribution": "Peter H. Raven Library, Missouri Botanical Garden via archive.org",
+      "url": "https://archive.org/details/mobot31753002719653/page/502/mode/2up"
+    },
+    "author": "William Curtis (1746–1799)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "<em>Heliconia psittacorum</em>, <em>Curtis's Botanical Magazine</em>, 1800, Missouri Botanical Garden, Peter H. Raven Library",
+    "hash": "86dfe7f3",
+    "image_url": "https://ia800605.us.archive.org/BookReader/BookReaderImages.php?id=mobot31753002719653&itemPath=%2F12%2Fitems%2Fmobot31753002719653&server=ia800605.us.archive.org&page=n159_w377",
+    "file_name": "a9919aeb2181b0526f1b36dc5a4ce0259c09bc4240ded7931c0d805734157c13",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Bryan Poole, Heliconia bihai with female hummingbirds, 2008, colored etching, National Museum of Natural History, Smithsonian Institution.",
+    "requiredStatement": {
+      "attribution": "National Museum of Natural History, Smithsonian Institution",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/amazonian-entanglements/heliconia-bihai"
+    },
+    "sourceLicense": "Courtesy of Smithsonian Institution",
+    "author": "Bryan Poole (b. 1953)",
+    "label_formatted": "Bryan Poole, <em>Heliconia bihai</em> with female hummingbirds, 2008, colored etching, National Museum of Natural History, Smithsonian Institution.",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/amazonian-entanglements/heliconia-bihai/@@images/image",
+    "file_name": "cb65cce25544e0bffb576540c1ad7a9a043c7813f9549da7fe48a99a88a8269a",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Heliconia chartacea var. meeana",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "author": "Alice Tangerini, 1992, drawing",
+    "hash": "d3008518",
+    "file_name": "ce1ku",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Heliconia chartacea var. meeana W.J. Kress, W. John Kress and Monica M. Carlsen, Waimea Arboretum and Botanical Garden, Honolulu, HI.",
+    "requiredStatement": {
+      "attribution": "Smithsonian National Museum of Natural History",
+      "url": "https://www.si.edu/search/collection-images?edan_q=heliconia%2Bchartacea%2Bmeeana&oa=1&edan_fq%5B0%5D=media_usage:CC0&searchResults=1&id=nmnhbotany_10305313"
+    },
+    "sourceLicense": "CC0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "label_formatted": "<em>Heliconia chartacea</em> var. <em>meeana</em> W.J. Kress, W. John Kress and Monica M. Carlsen, Waimea Arboretum and Botanical Garden, Honolulu, HI.",
+    "image_url": "https://ids.si.edu/ids/deliveryService?irn=13685658&max_w=800&id=https://collections.nmnh.si.edu/media/?irn=13685658",
+    "file_name": "f2ba18739d3f9021806dfc4333af8c1f72a40f80f8e20e8083c6f0997d6c0679",
+    "parent_directory": "heliconia"
+  },
+  {
+    "label": "Receipt book of Rebeckah Winche [manuscript].",
+    "requiredStatement": {
+      "attribution": "Folger Shakespeare Library, LUNA: Folger Manuscript Transcriptions Collection",
+      "url": "https://luna.folger.edu/luna/servlet/detail/FOLGER~3~3~31~260067?qvq=q%3Adittany%3Bsort%3Acall_number%2Cmpsortorder1%3Blc%3AFOLGER~3~3&mi=6&trs=10"
+    },
+    "author": "Rebeckah Winche (–1713)",
+    "sourceLicense": "CC-BY-SA-4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-sa/4.0",
+    "hash": "c9e01dc3",
+    "file_name": "112269",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Pelargonium alchemilloides (L.) L'Hér.",
+    "requiredStatement": {
+      "attribution": "Naturalis Biodiversity Center"
+    },
+    "hash": "18b0fcd6",
+    "file_name": "11654__Botany_U_1336491",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Menthe changed into a Mint Plant",
+    "requiredStatement": {
+      "attribution": "Warburg Institute"
+    },
+    "author": "Johann Ulrich Kraus (1655–1719)",
+    "hash": "a7e9c1ec",
+    "file_name": "AWARBURGIG_10311762574_minthe",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Aloë Americana: heeft gebloeid in des universiteits Kruyd-Hof tot Leiden, 1698, Rare Book Collection, Dumbarton Oaks",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks",
+      "url": "http://id.lib.harvard.edu/alma/99153773004403941/catalog"
+    },
+    "author": "Jan Swijnen (1450–1510) [engraver] ",
+    "hash": "600a164e",
+    "file_name": "Aloe_Americana_Leiden_DO",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Banana Cart in New York City, 1902",
+    "requiredStatement": {
+      "attribution": "Courtesy of the Library of Congress",
+      "url": "https://www.loc.gov/item/2008678154/"
+    },
+    "author": "Detroit Photographic Co.",
+    "sourceLicense": "No usage notes",
+    "hash": "93ff6d48",
+    "file_name": "Banana_Cart_NYC_1902_LOC",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Banana Across Modern Languages",
+    "requiredStatement": {
+      "attribution": ""
+    },
+    "author": "Ashley Buchanan",
+    "hash": "ff3076c8",
+    "file_name": "Banana_Languages",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Parts of the Banana Plant",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden via Plantillustrations.org",
+      "url": "http://www.plantillustrations.org/illustration.php?id_illustration=58516&id_taxon=0&mobile=0&SID=fsaqig640uafl0u2med22k8vnl&language=English&thumbnails_selectable=0&selected_thumbnail=0&query_type=artist&query_broad_or_restricted=broad&group=0&lay_out=0&uhd=0"
+    },
+    "author": "Georg Dionysius Ehret (1708–1770); Ashley Buchanan",
+    "hash": "7f25b2d9",
+    "file_name": "Banana_Plant_Parts",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Reproductive Life Cycle of Cacao",
+    "hash": "0b9293b4",
+    "file_name": "CacaoReprod",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Bowl with Anthropomorphic Cacao Trees from Early Classic Maya Period. Scholars have shown the central figure represents the Maize God as an embodied cacao tree. See: Simon Martin, \"Cacao in Ancient Maya Religion: First Fruit from the Maize Tree and Other Tales from the Underworld,\" in Chocolate in Mesoamerica, ed. Cameron McNeil (University Press of Florida, 2009), 154–83.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "hash": "a82a69fb",
+    "file_name": "CacaoVessel",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Cacauaxochitl as depicted in  Dumbarton Oaks's Badianus reproductions",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "hash": "a393460b",
+    "file_name": "CacauaxochitlBadianus",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Clusius and his network",
+    "hash": "9f52cd1c",
+    "file_name": "Clusius_Network_copy",
+    "parent_directory": "images"
+  },
+  {
+    "label": "An edible and seedless Cavendish banana next to its ancestor the wild Musa acuminata",
+    "requiredStatement": {
+      "attribution": "",
+      "url": "https://www.musarama.org/photo-322-Domestication_of_the_banana"
+    },
+    "author": "Angelique D'Hont/CIRAD",
+    "hash": "a1eab062",
+    "file_name": "Domestication_of_the_banana",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Maya God L with cacao symbolism seated in merchant regalia",
+    "requiredStatement": {
+      "attribution": "Cleveland Museum of Art"
+    },
+    "hash": "97857061",
+    "file_name": "GodLVessel",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Coloured engraving of Corn mint after J.Sowerby, 1810. Wellcome Collection",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/a6fen9pc"
+    },
+    "author": "James Sowerby",
+    "summary": "Credit: Corn mint (Mentha arvensis): flowering stem, roots and floral segments. Coloured engraving after J. Sowerby, 1810. Credit: Wellcome Collection. Attribution 4.0 International (CC BY 4.0)",
+    "hash": "9653661c",
+    "file_name": "MenthaArvensisSowerby",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Milpa Cycle",
+    "hash": "0a861b5a",
+    "file_name": "MilpaCycle",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Alice Tangerini, Heliconia chartacea var. meeana, detail",
+    "requiredStatement": {
+      "attribution": "Alice Tangerini / Smithsonian Institution",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/mixed-media/heliconia-chartacea-var-meeana"
+    },
+    "source": "_John J. Wurdack Festschrift, BioLlania Edición Especial no. 6_ by L. J. Dorr, B. Stergios\n        \n    ",
+    "author": "Alice Tangerini (b. 1949)",
+    "summary": "Alice Tangerini (b. 1949), 1992, 11 1/2 × 15 3/8 in., drawing, pen and ink on Cronaflex Drafting film. Loan, Alice Tangerini / Smithsonian Institution",
+    "sourceLicense": "Courtesy of Alice Tangerini / Smithsonian Institution",
+    "label_formatted": "Alice Tangerini, <em>Heliconia chartacea var. meeana</em>, detail",
+    "hash": "84e73ecb",
+    "file_name": "Tangerini_Heliconia_chartacea_var._meeana_detail_frame_gray",
+    "parent_directory": "images"
+  },
+  {
+    "label": "_Gongbi line drawing is a genre that places great emphasis on the meticulous and realistic representation of the natural world, in this case a pelargonium. Tianzhu Kui (_Pelargonium_), in Jin, Jiancheng, and Xun Zhang, Chinese Gongbi Line Drawing of Hundred Flowers (Autumn and Winter)_, Tianjin Yangliuqing Fine Arts Press, 2005.",
+    "requiredStatement": {
+      "attribution": "Chinese Gongbi Line Drawing of Hundred Flowers (Autumn and Winter)"
+    },
+    "title_formatted": "<em>Gongbi</em> line drawing is a genre that places great emphasis on the meticulous and realistic representation of the natural world, in this case a pelargonium. <em>Tianzhu Kui</em> (<em>Pelargonium</em>), in Jin, Jiancheng, and Xun Zhang, <em>Chinese Gongbi Line Drawing of Hundred Flowers (Autumn and Winter)</em>, Tianjin Yangliuqing Fine Arts Press, 2005.",
+    "summary": "Gongbi line drawing is a genre that places great emphasis on the meticulous and realistic representation of the natural world, in this case a pelargonium.",
+    "hash": "a4a03fd2",
+    "file_name": "Tianzhu_Kui",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Tlapalcacauatl as depicted in  Dumbarton Oaks's Badianus reproductions",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks"
+    },
+    "hash": "6d440b00",
+    "file_name": "TlapalcacautlBadianus",
+    "parent_directory": "images"
+  },
+  {
+    "label": "The vitamin C in lemon and oranges compared to the needles and bark of several conifers",
+    "requiredStatement": {
+      "attribution": ""
+    },
+    "hash": "2aaed4b8",
+    "file_name": "Vitamin_C_in_conifers",
+    "parent_directory": "images"
+  },
+  {
+    "label": "The eight families of the order Zingiberales showing the relationship of bananas (Musaceae) and heliconias (Heliconiaceae).",
+    "sourceLicense": "Courtesy of John Kress",
+    "hash": "164a4689",
+    "file_name": "eight_families_order_Zingiberales-gigapixel-standard-scale-2_00x",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Photograph of John Kress (center) and team with the newly found Heliconia.",
+    "requiredStatement": {
+      "attribution": "Courtesy of John Kress",
+      "url": "https://www.doaks.org/resources/online-exhibits/margaret-mee-portraits-of-plants/essays-interviews-resources/kress-interview"
+    },
+    "sourceLicense": "Courtesy of John Kress",
+    "label_formatted": "Photograph of John Kress (center) and team with the newly found <em>Heliconia</em>.",
+    "hash": "abef3c66",
+    "file_name": "heliconia_Kress_and_team_with_heliconia_DO-standard-scale-2_00x-gigapixel",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Map showing regions of South America and the South Pacific where heliconias grow as native plants. After Plants of the World Online.",
+    "hash": "19c521e7",
+    "file_name": "map_heliconia_distribution_native_SA_SP",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Distribution of heliconias showing native (green) and introduced (purple) with pollinators.",
+    "hash": "71f543aa",
+    "file_name": "map_heliconia_pollinators_hummingbird_bat_ltblue",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Margaret Mee, Heliconia uaupénsis, © Copyright The Board of Trustees of the Royal Botanic Gardens, Kew",
+    "requiredStatement": {
+      "attribution": "Royal Botanic Gardens, Kew"
+    },
+    "author": "Margaret Mee (1909–1988)",
+    "sourceLicense": "© Copyright The Board of Trustees of the Royal Botanic Gardens, Kew",
+    "label_formatted": "Margaret Mee, <em>Heliconia uaupénsis</em>, © Copyright The Board of Trustees of the Royal Botanic Gardens, Kew",
+    "hash": "4d194fe2",
+    "file_name": "mee_heliconia_uaupensis_RoyalBotanicGardenKew",
+    "parent_directory": "images"
+  },
+  {
+    "label": "A mint plant with a moth or butterfly, c.1830. Wellcome Collection",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/bzrzvf4w"
+    },
+    "author": "John Curtis (1791–1862)",
+    "summary": "Credit: A mint plant (Mentha species) with an associated moth or butterfly and its anatomical segments. Coloured etching, c. 1830. Credit: Wellcome Collection. Attribution 4.0 International (CC BY 4.0)",
+    "sourceLicense": "(CC BY 4.0)",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "8f8cd572",
+    "file_name": "menthaWellcome1",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Pennyroyal and creeping thyme: entire flowering plants, coloured etching by C. Pierre, c.1865, after P. Naudin. Wellcome Collection",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/uya3z94k"
+    },
+    "author": "C. Pierre, after Philibert Naudin",
+    "summary": "Credit: Pennyroyal (Mentha pulegium) and creeping thyme (Thymus serpyllum): entire flowering plants. Coloured etching by C. Pierre, c. 1865, after P. Naudin. Credit: Wellcome Collection. Attribution 4.0 International (CC BY 4.0)",
+    "sourceLicense": "(CC BY 4.0)",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "0883d3d0",
+    "file_name": "pennyroyal&thymeWellcome",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Clear glass shop round for pennyroyal water, England, 1850–51. Science Museum, London",
+    "requiredStatement": {
+      "attribution": "Science Museum, London",
+      "url": "https://wellcomecollection.org/works/tvyskabk"
+    },
+    "author": "Unknown",
+    "summary": "Clear glass shop round for Pennyroyal water, England, 1850-1. Credit: Science Museum, London. Attribution 4.0 International (CC BY 4.0)",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "3baa35c2",
+    "file_name": "pennyroyalwaterwellcome",
+    "parent_directory": "images"
+  },
+  {
+    "label": "Comparison between Maize and Teosinte, Nicolle Rager Fuller, National Science Foundation, public domain.",
+    "requiredStatement": {
+      "attribution": "National Science Foundation via Research.gov"
+    },
+    "hash": "a6f00a64",
+    "image_url": "https://nsf.gov/news/mmg/media/images/maize1_h.jpg",
+    "file_name": "4614001e695a239ebb2c971840cffa1780df8763a65513d47f97e70ae9ee3f51",
+    "parent_directory": "maize"
+  },
+  {
+    "label": "Florence, Biblioteca Nazionale Centrale, MS Magliabechiano XIII.3 (Codex Magliabechiano), fols. 78r and 33r.",
+    "requiredStatement": {
+      "attribution": "Ministry of Culture & Central Library, Florence"
+    },
+    "sourceLicense": "public domain",
+    "hash": "12d510f8",
+    "file_name": "6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d",
+    "parent_directory": "maize"
+  },
+  {
+    "label": "Protests against Monsanto in Guatemala, 2014",
+    "requiredStatement": {
+      "attribution": "Cristina Chiquin, Mujeres Ixchel"
+    },
+    "sourceLicense": "public domain",
+    "hash": "91a2de2f",
+    "image_url": "https://comunitariapress.files.wordpress.com/2014/08/dsc_2271.jpg",
+    "file_name": "86ec9cb397196fd0ffe3bb203ed6f10a7dca12259a4234b1afe7185db05da325",
+    "parent_directory": "maize"
+  },
+  {
+    "label": "Protests against Monsanto in Guatemala, 2014",
+    "requiredStatement": {
+      "attribution": "Cristina Chiquin, Mujeres Ixchel"
+    },
+    "sourceLicense": "public domain",
+    "hash": "9c26fd58",
+    "image_url": "https://comunitariapress.files.wordpress.com/2014/08/dsc_2204.jpg",
+    "file_name": "ae972ab362bf22b1cce43a9678d5de92e91755b3bbbf784a94f71c8ef456bfaf",
+    "parent_directory": "maize"
+  },
+  {
+    "label": "Whistle with the Maize God emerging from a flower, 600–900 CE, Mexico, Mesoamerica, Maya, ceramic, pigment, 20.7 x 5.1 x 3.8 cm.",
+    "requiredStatement": {
+      "attribution": "The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979, Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/312915?ft=Young+Maya+Maize+God&amp;offset=0&amp;rpp=40&amp;pos=7"
+    },
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "4b8fbde2",
+    "image_url": "https://images.metmuseum.org/CRDImages/ao/original/DT9946.jpg",
+    "file_name": "c86bb754a4422136fa653bc9da3e9d6cb8e05dddbf4c2483c7b3263a8cdd8c53",
+    "parent_directory": "maize"
+  },
+  {
+    "label": "Protests against Monsanto in Guatemala, 2014. The sign translates to: 'I don't want transgenics on the field nor my plate.'",
+    "requiredStatement": {
+      "attribution": "Cristina Chiquin, Mujeres Ixchel"
+    },
+    "sourceLicense": "public domain",
+    "hash": "f684cc26",
+    "image_url": "https://comunitariapress.files.wordpress.com/2014/08/dsc_2323.jpg",
+    "file_name": "d8d0dbd3d2bbe25e66aae6e4b8e333c318210fd42555f29cb20bc1b8b3235d92",
+    "parent_directory": "maize"
+  },
+  {
+    "label": null,
+    "summary": null,
+    "requiredStatement": {
+      "attribution": null,
+      "url": null
+    },
+    "reuseRights": "http://rightsstatements.org/vocab/NKC/1.0/",
+    "author": null,
+    "labelFormatted": null,
+    "sourceLicense": null,
+    "hash": null,
+    "image_url": null,
+    "file_name": "template",
+    "parent_directory": "media"
+  },
+  {
+    "label": "William Turner, A new herball, 1551 (BHL)",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/56877891"
+    },
+    "author": "William Turner (1508?–1568)",
+    "sourceLicense": "CC PDM 1.0",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "William Turner, <em>A new herball</em>, 1551 (BHL)",
+    "hash": "895fd5e2",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/56877891",
+    "file_name": "365336ea36f9adabad98299e63ee2f04706cf255a5be33f7430a39a8aeac8d51",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "Drawing from a thirteenth-century manuscript Pseudo-Apuleius Herbarius depicting the preparation of a medicine using pennyroyal",
+    "requiredStatement": {
+      "attribution": "Österreichische Nationalbibliothek",
+      "url": "https://onb.digital/result/10D79627"
+    },
+    "author": "Unknown",
+    "label_formatted": "Drawing from a thirteenth-century manuscript <em>Pseudo-Apuleius Herbarius</em> depicting the preparation of a medicine using pennyroyal",
+    "hash": "f645211c",
+    "image_url": "https://digital.onb.ac.at/rep/access/iiif/image/v2/5af078d29f16830c5724f179b4beb33d515d7b64c56e03062f6737a07bc4dd4b339f9aefdef459ddebadfff555bbd0993bc3bbbda7b36d/full/,1000/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "John Parkinson, Theatrum Botanicum, 1640, p. 32",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/256142#page/62/mode/1up"
+    },
+    "source": "*Theatrum Botanicum*: The Theater of Plants",
+    "author": "John Parkinson",
+    "sourceLicense": "Not in copyright; no usage notes",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "John Parkinson, <em>Theatrum Botanicum</em>, 1640, p. 32",
+    "hash": "660445ad",
+    "image_url": "https://biodiversitylibrary.org/pageimage/56599908",
+    "file_name": "3bfaeacd70d6058169c1806d2c8f0e9f302c4f3840f839093d0b63abd879c508",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "John Parkinson, Theatrum Botanicum, 1640, p. 31",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/256142#page/61/mode/1up"
+    },
+    "source": "*Theatrum Botanicum*: The Theater of Plants",
+    "author": "John Parkinson",
+    "sourceLicense": "Not in copyright; no usage notes",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "John Parkinson, <em>Theatrum Botanicum</em>, 1640, p. 31",
+    "hash": "04da4088",
+    "image_url": "https://biodiversitylibrary.org/pageimage/56599909",
+    "file_name": "86118187ec9638bf63d67a1dece8072e192d44edebafc3fb476f7290d501d2c6",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "John Gerard,Generall historie of plantes, 1633, p. 680",
+    "requiredStatement": {
+      "attribution": "Research Library, The Getty Research Institute (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/item/212577#page/724/mode/1up"
+    },
+    "author": "John Gerard",
+    "label_formatted": "John Gerard,<em>Generall historie of plantes</em>, 1633, p. 680",
+    "hash": "317b3164",
+    "image_url": "https://biodiversitylibrary.org/pageimage/51906062",
+    "file_name": "c2b4b49b237071200e04c267d9e84778059a3bd12a3de5ecc5b02790d7c470af",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "Peppermint",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/99527366@N00/3864989885"
+    },
+    "sourceLicense": "CC BY 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "8985d30f",
+    "image_url": "https://live.staticflickr.com/2468/3864989885_a902bf7699_h.jpg",
+    "file_name": "dbbf1a0568923cdcdedad2fe7c4f67112ebc7637fa5e4ce497617d19e946c456",
+    "parent_directory": "mint"
+  },
+  {
+    "label": "Beech-Nut Brand Peanut Butter, September 1920, published in St. Nicholas, Information and Science Library, University of North Carolina at Chapel Hill via Internet Archive, no known copyright restrictions.",
+    "requiredStatement": {
+      "attribution": "Information and Science Library, University of North Carolina at Chapel Hill via Internet Archive"
+    },
+    "hash": "13e49890",
+    "image_url": "https://ia803005.us.archive.org/BookReader/BookReaderImages.php?zip=/28/items/stnicholasserial4721dodg/stnicholasserial4721dodg_jp2.zip&file=stnicholasserial4721dodg_jp2/stnicholasserial4721dodg_0742.jp2&id=stnicholasserial4721dodg&scale=2&rotate=0",
+    "file_name": "979d093a0a23109148c4111dae4b0190b835e02657c6ad9e1a79d1ae89bd09b2",
+    "parent_directory": "peanut"
+  },
+  {
+    "label": "Pea-nut Sellers in Savannah–(From a Sketch by Lloyd Mifflin, Jun.), Harper’s Weekly, vol. 14, no. 707, July 16, 1870, The Lincoln Foundation Collection, Internet Archive, copyright not evaluated.",
+    "requiredStatement": {
+      "attribution": "The Lincoln Foundation Collection via Internet Archive"
+    },
+    "hash": "5dd69c36",
+    "image_url": "https://ia800309.us.archive.org/BookReader/BookReaderImages.php?zip=/17/items/harpersweeklyv14bonn/harpersweeklyv14bonn_jp2.zip&file=harpersweeklyv14bonn_jp2/harpersweeklyv14bonn_0463.jp2&id=harpersweeklyv14bonn&scale=2&rotate=0",
+    "file_name": "9a69cdb4424d76504773d03ad66e4d75617f8b2ea6d0391f80ccf6a3b9017162",
+    "parent_directory": "peanut"
+  },
+  {
+    "label": "Yearbook of the United States Department of Agriculture, United States, Department of Agriculture, Washington, G.P.O, 1895, Internet Archive via BHL, not in copyright.",
+    "requiredStatement": {
+      "attribution": "Internet Archive via BHL "
+    },
+    "hash": "280bc3a1",
+    "image_url": "https://ia802704.us.archive.org/BookReader/BookReaderImages.php?id=yearbook189500unit&itemPath=%2F29%2Fitems%2Fyearbook189500unit&server=ia802704.us.archive.org&page=n205_w2019",
+    "file_name": "a3b76f8e2daa3c13092cb23c92bcb2ce20a32aa7c4c65b86bc125aed4e0a7a46",
+    "parent_directory": "peanut"
+  },
+  {
+    "label": "Peanuts and jujube dates, Qing dynasty, 18th century, China, carving in chalcedony, H. 2.9 cm, Gift of Heber R. Bishop, 1902, Metropolitan Museum of Art, public domain.",
+    "requiredStatement": {
+      "attribution": "Metropolitan Museum of Art"
+    },
+    "hash": "9f562d62",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/44155/196170/main-image",
+    "file_name": "ebbe39c6f4ac29da3fa900cb4bd73810ea24dfd8270a2a24efc917fc674b887c",
+    "parent_directory": "peanut"
+  },
+  {
+    "label": "Inca Garcilaso de la Vega, Comentarios Reales de los Incas, 1609, The John Carter Brown Library, Brown University via Internet Archive, public domain.",
+    "requiredStatement": {
+      "attribution": "The John Carter Brown Library, Brown University via Internet Archive"
+    },
+    "hash": "dd37053e",
+    "image_url": "https://ia600202.us.archive.org/BookReader/BookReaderImages.php?zip=/29/items/primerapartedelo00vega/primerapartedelo00vega_jp2.zip&file=primerapartedelo00vega_jp2/primerapartedelo00vega_0444.jp2&id=primerapartedelo00vega&scale=2&rotate=0",
+    "file_name": "f5f3bb9774c7ed2fbeb6029f29ba095cc3f22a9287c2f3acb3b0e1616906fb1f",
+    "parent_directory": "peanut"
+  },
+  {
+    "label": "Eduard Gaertner, The Family of Mr. Westfal in the Conservatory_, 1836, oil on canvas, 23.8 x 20 cm, Purchase, funds from various donors, by exchange, 2007, Metropolitan Museum of Art, public domain",
+    "requiredStatement": {
+      "attribution": "The Metropolitan Museum of Art"
+    },
+    "title_formatted": "Eduard Gaertner, <em>The Family of Mr. Westfal in the Conservatory</em>, 1836, oil on canvas, 23.8 x 20 cm, Purchase, funds from various donors, by exchange, 2007, Metropolitan Museum of Art, public domain",
+    "hash": "a8871432",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP152116.jpg",
+    "file_name": "08412e188602616eb0586fab331a1fede501b89d58c0112647b8ed4dfa6ecc50",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_Pelargonium zonale foliis variegatis. Miss Pollock (E. G. Henderson)_, Illustrirte Garten-Zeitung_, The LuEsther T Mertz Library, the New York Botanical Garden, Biodiversity Heritage Library",
+    "requiredStatement": {
+      "attribution": "The LuEsther T Mertz Library, the New York Botanical Garden via BHL and archive.or"
+    },
+    "reuseRights": "http://rightsstatements.org/vocab/NKC/1.0/",
+    "labelFormatted": "<em>Pelargonium zonale foliis variegatis. Miss Pollock (E. G. Henderson)</em>, <em>Illustrirte Garten-Zeitung</em>, The LuEsther T Mertz Library, the New York Botanical Garden, Biodiversity Heritage Library",
+    "sourceLicense": "Not in copyright",
+    "image_url": "https://ia800901.us.archive.org/BookReader/BookReaderImages.php?id=illustriertegart08cour&itemPath=%2F4%2Fitems%2Fillustriertegart08cour&server=ia800901.us.archive.org&page=n118_w1253",
+    "file_name": "09e2316efadd0a33176f9dddf68a41a90e265aa9e1d42d26f0a240d86588fead",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Shirley Hubberd’s Victorian garden plans, including bedding pelargoniums",
+    "requiredStatement": {
+      "attribution": "Biodiversity Heritage Library"
+    },
+    "hash": "edcec958",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55342041",
+    "file_name": "0a8847b67df62d110a5fc8e46aa2864e119541b539ba5dfd39a1a22ae5980b74",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_Wardian Case_, from Shirley Hibberd, Rustic Adornments for Homes of Taste_, Groombridge, 1870, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, New York Public Library, Public Domain",
+    "requiredStatement": {
+      "attribution": "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, New York Public Library"
+    },
+    "primary": "true",
+    "title_formatted": "<em>Wardian Case</em>, from Shirley Hibberd, <em>Rustic Adornments for Homes of Taste</em>, Groombridge, 1870, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Picture Collection, New York Public Library, Public Domain",
+    "hash": "d2fa8d75",
+    "image_url": "https://images.nypl.org/index.php?id=835246&t=w",
+    "file_name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Image of geranium “stock house” in 1910 geranium catalogue",
+    "requiredStatement": {
+      "attribution": "Biodiversity Heritage Library"
+    },
+    "rotate": "270",
+    "hash": "86976044",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/47651101",
+    "file_name": "543377d5e89cea88c677e6d4af6f9a713c34ab8fd5237e4cf1006081a801d7e6",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_On the Conveyance of Plants and Seeds on Ship-Board_, Nathaniel Bagshaw Ward, On the Growth of Plants in Closely Glazed Cases_, London, J. Van Voorst, 1852, Dumbarton Oaks",
+    "primary": "true",
+    "title_formatted": "<em>On the Conveyance of Plants and Seeds on Ship-Board</em>, Nathaniel Bagshaw Ward, <em>On the Growth of Plants in Closely Glazed Cases</em>, London, J. Van Voorst, 1852, Dumbarton Oaks",
+    "hash": "0af530bd",
+    "image_url": "https://www.doaks.org/resources/online-exhibits/botany-of-empire/plant-transportation/on-the-growth-of-plants-in-closely-glazed-cases/@@images/image",
+    "file_name": "6105d6cc76af400325e94d588ce511be5bfdbb73b437dc51eca43917d7a43e3d",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Title page, chromolithograph from Edward Adveno Brooke, The Gardens of England, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "sourceLicense": "Public domain",
+    "image_url": "https://ia801904.us.archive.org/BookReader/BookReaderImages.php?id=gardensEngland00Broo&itemPath=%2F12%2Fitems%2FgardensEngland00Broo&server=ia801904.us.archive.org&page=n8_w617",
+    "file_name": "7bb7b2497e60ddb143c61e1d2a292b1fd6c309d48e014234f85106312f67188e",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Upper and Lower Terrace Gardens, Bowood, chromolithograph from Edward Adveno Brooke, The Gardens of England, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "sourceLicense": "Public domain",
+    "image_url": "https://ia801904.us.archive.org/BookReader/BookReaderImages.php?id=gardensEngland00Broo&itemPath=%2F12%2Fitems%2FgardensEngland00Broo&server=ia801904.us.archive.org&page=n38_w1026",
+    "file_name": "9cf040f20798d94ea05d64813ec7922c3d2f7a6c0e65ec294115aa7ee7cbd982",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Charles Dickens with his daughters, Mamie Dickens and Catherine ('Katey') Elizabeth Macready Perugini (née Dickens), after Joseph Athanase Aufray, after a photograph by Mason &amp; Co (Robert Hindry Mason), photogravure, published 18 December 1869.",
+    "requiredStatement": {
+      "attribution": "National Portrait Gallery, London",
+      "url": "https://www.npg.org.uk/collections/search/portrait/mw36453/Charles-Dickens-with-his-["
+    },
+    "author": "Joseph Athanase Aufray (1836–1885); Mason & Co (Robert Hindry Mason) (active 1858–1872)",
+    "summary": "Potted scarlet “geraniums,” believed to be zonal pelargonium \"Mrs. Pollock,\" displayed beneath bay windows.",
+    "sourceLicense": "CC BY-NC-ND 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "label_formatted": "<em>Charles Dickens with his daughters, Mamie Dickens and Catherine ('Katey') Elizabeth Macready Perugini (née Dickens)</em>, after Joseph Athanase Aufray, after a photograph by Mason &amp; Co (Robert Hindry Mason), photogravure, published 18 December 1869.",
+    "hash": "73b28e92",
+    "file_name": "Charles-Dickens-with-his-daughters-Mamie-Dickens-and-Catherine-Katey-Elizabeth-Macready-Perugini-ne-Dickens",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Flower bed of red pelargoniums, Charles Dickens' Birthplace Museum, Portsmouth, England, 2017.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/40305917@N00/37251868762"
+    },
+    "author": "Mark Hooper",
+    "sourceLicense": "CC BY-NC-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "hash": "67513740",
+    "file_name": "Pelargonium_CharlesDickensMuseum_FLICKR",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Window with portrait of Dickens encircled by a wreath, Charles Dickens' Birthplace Museum, Portsmouth, England, 2010.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/44356659@N00/5300199763"
+    },
+    "author": "Fred Rockwood",
+    "summary": "In remembrance of the author and his adoration for the pelargonium, The Dickens Fellowship lays an ivy-and-red-flower wreath at his grave every year on the anniversary of his death.",
+    "sourceLicense": "CC BY-SA 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-sa/4.0",
+    "hash": "843bce86",
+    "file_name": "Pelargonium_CharlesDickensWindow_FLICKR",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Samuel William Reynolds, Queen Adelaide (Princess Adelaide of Saxe-Meiningen), pub. 1831 by Martin Colnaghi, after Sir William Beechey, mezzotint, 644 x 435 mm (plate), National Portrait Gallery, London",
+    "requiredStatement": {
+      "attribution": "National Portrait Gallery, London",
+      "url": "https://www.npg.org.uk/collections/search/portrait/mw145041/Queen-Adelaide-Princess-Adelaide-of-Saxe-Meiningen"
+    },
+    "author": "Samuel William Reynold (1773–1835)",
+    "sourceLicense": "CC BY-NC-ND 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "label_formatted": "Samuel William Reynolds, <em>Queen Adelaide (Princess Adelaide of Saxe-Meiningen)</em>, pub. 1831 by Martin Colnaghi, after Sir William Beechey, mezzotint, 644 x 435 mm (plate), National Portrait Gallery, London",
+    "hash": "c00f141c",
+    "file_name": "Pelargonium_QueenAdelaide_Europeana",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Pelargoniums bloom in garden vases, Bowood House, village of Derry Hill, England, 2015.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/50638285@N00/20568653295"
+    },
+    "author": "alh1",
+    "sourceLicense": "CC BY-NC-ND 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "hash": "715316cf",
+    "file_name": "Pelargoniums_BowoodHouse_FLICKR",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Johannes Hendrikus Antonius Maria Lutz, Portrait, 1907-16, glass, 90 x 120 mm, Rijksmuseum, public domain",
+    "requiredStatement": {
+      "attribution": "Rijksmuseum",
+      "url": "http://hdl.handle.net/10934/RM0001.COLLECT.540610"
+    },
+    "author": "Johannes Hendrikus Antonius Maria Lutz",
+    "sourceLicense": "Public domain",
+    "file_name": "Pelargoniums_RP-F-2013-85-14",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_Geranium triste [_Pelargonium triste_], Jacques-Philippe Cornut, Canadensium Plantarum_, Paris, Venundantur apud Simonem Le Moyne, 1635, Biblioteca Digital",
+    "requiredStatement": {
+      "attribution": "Biblioteca Digital, Real Jardín Botánico"
+    },
+    "title_formatted": "<em>Geranium triste</em> [<em>Pelargonium triste</em>], Jacques-Philippe Cornut, <em>Canadensium Plantarum</em>, Paris, Venundantur apud Simonem Le Moyne, 1635, Biblioteca Digital",
+    "hash": "fa4c1c96",
+    "image_url": "https://raw.githubusercontent.com/kristanmhanson/plant-humanities/develop/docs/pelargonium/Pelargonium_geranium%20triste_COR_Canad_Pl_000126.jpg",
+    "file_name": "a3d95f4a7d9ba8e41a77e5827cb17d330cc8e6c61faccd3473ebf230d64c44ed",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "The Parterre, Harewood Wood, Nr. Leeds, chromolithograph from Edward Adveno Brooke, The Gardens of England, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "sourceLicense": "Public domain",
+    "image_url": "https://ia801904.us.archive.org/BookReader/BookReaderImages.php?id=gardensEngland00Broo&itemPath=%2F12%2Fitems%2FgardensEngland00Broo&server=ia801904.us.archive.org&page=n106_w1034",
+    "file_name": "a41e027536d2fdaec8316eb55115a0a4f575ad3e7c21ca88dd5fd9c5f5079861",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_Pelargonium zonale foliis variegatis. Miss Pollock (E. G. Henderson)_, Illustrirte Garten-Zeitung_, The LuEsther T Mertz Library, the New York Botanical Garden, Biodiversity Heritage Library",
+    "requiredStatement": {
+      "attribution": "The LuEsther T Mertz Library, the New York Botanical Garden via BHL and archive.org"
+    },
+    "title_formatted": "<em>Pelargonium zonale foliis variegatis. Miss Pollock (E. G. Henderson)</em>, <em>Illustrirte Garten-Zeitung</em>, The LuEsther T Mertz Library, the New York Botanical Garden, Biodiversity Heritage Library",
+    "hash": "e86a63ac",
+    "image_url": "https://ia800901.us.archive.org/BookReader/BookReaderImages.php?id=illustriertegart08cour&itemPath=%2F4%2Fitems%2Fillustriertegart08cour&server=ia800901.us.archive.org&page=n120_w927",
+    "file_name": "b50fd34d0a26f23938016ddd2e03708990b03ab25e493193657dd8d21d790eaa",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Shirley Hibberd’s Victorian garden plans, including bedding pelargoniums, in The amateur’s flower garden",
+    "requiredStatement": {
+      "attribution": "Smithsonian Libraries via BHL",
+      "url": "https://archive.org/details/amateursflowerga00hibb/page/19/mode/1up"
+    },
+    "source": "_The amateur's flower garden_",
+    "author": "Shirley Hibberd (1825–1890)",
+    "sourceLicense": "Not in copyright",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Shirley Hibberd’s Victorian garden plans, including bedding pelargoniums, in <em>The amateur’s flower garden</em>",
+    "hash": "72c45a34",
+    "image_url": "https://ia800109.us.archive.org/BookReader/BookReaderImages.php?id=amateursflowerga00hibb&itemPath=%2F9%2Fitems%2Famateursflowerga00hibb&server=ia800109.us.archive.org&page=n30_w374",
+    "file_name": "cb529b3830f8d1f52a546d3086792af301b28a2bd20aeb951f99e7211ef1de4d",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "This moralizing novel recounts how Jenny overcomes economic disadvantages and familial hardships while caring for her precious pelargonium; its growth exemplifies the virtue of being nurturing. Frontispiece, Jenny’s Geranium, or, The Prize Flower of a London Court_, S.W. Partridge & Co, c. 1869. Children’s Book Collection. Library Special Collections, Charles E. Young Research Library, UCLA.",
+    "requiredStatement": {
+      "attribution": "Children’s Book Collection. Library Special Collections, Charles E. Young Research Library, UCLA."
+    },
+    "title_formatted": "This moralizing novel recounts how Jenny overcomes economic disadvantages and familial hardships while caring for her precious pelargonium; its growth exemplifies the virtue of being nurturing. Frontispiece, <em>Jenny’s Geranium, or, The Prize Flower of a London Court</em>, S.W. Partridge &amp; Co, c. 1869. Children’s Book Collection. Library Special Collections, Charles E. Young Research Library, UCLA.",
+    "summary": "This moralizing novel recounts how Jenny overcomes economic disadvantages and familial hardships while caring for her precious pelargonium; its growth exemplifies the virtue of being nurturing.",
+    "hash": "29636b92",
+    "image_url": "https://ia802704.us.archive.org/BookReader/BookReaderImages.php?zip=/2/items/jennysgeraniumor00bostiala/jennysgeraniumor00bostiala_jp2.zip&file=jennysgeraniumor00bostiala_jp2/jennysgeraniumor00bostiala_0008.jp2&id=jennysgeraniumor00bostiala&scale=2&rotate=0",
+    "file_name": "ddff2e4c6414474c4e26eb9510bfc60cdb259916647cf0bffb48afffa259d2f2",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Illustration of a pelargonium, Caroline M. Kirkland, The Book of Flowers_, London: Saunders and Otley, 18--, University of Toronto, Biodiversity Heritage Library.",
+    "requiredStatement": {
+      "attribution": "University of Toronto - Thomas Fisher Rare Book Library via archive.org"
+    },
+    "primary": "true",
+    "title_formatted": "Illustration of a pelargonium, Caroline M. Kirkland, <em>The Book of Flowers</em>, London: Saunders and Otley, 18--, University of Toronto, Biodiversity Heritage Library.",
+    "hash": "f8ede66b",
+    "image_url": "https://ia802903.us.archive.org/BookReader/BookReaderImages.php?id=bookofflowers00kirk&itemPath=%2F7%2Fitems%2Fbookofflowers00kirk&server=ia802903.us.archive.org&page=n89_w1012",
+    "file_name": "de89fcfb5672b1807bec8b486fa05e02af8882595b188b2b0bc9efbcae258b43",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "The Colonnade, Alton Gardens, chromolithograph from Edward Adveno Brooke, The Gardens of England, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "sourceLicense": "Public domain",
+    "image_url": "https://ia801904.us.archive.org/BookReader/BookReaderImages.php?id=gardensEngland00Broo&itemPath=%2F12%2Fitems%2FgardensEngland00Broo&server=ia801904.us.archive.org&page=n44_w1021",
+    "file_name": "e2f0b16d50e2dacb60cf19c5cc6ec1767b3c812d93379370c6e8c3bbb7ec32a5",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Eugène Blondelet, Plant de géranium rouge (Red Geranium Plant), 1907-1920, photograph, Source gallica.bnf.fr / BnF",
+    "requiredStatement": {
+      "attribution": "Bibliothèque nationale de France via BnF Gallica"
+    },
+    "title_formatted": "Eugène Blondelet, <em>Plant de géranium rouge</em> (Red Geranium Plant), 1907-1920, photograph, Source gallica.bnf.fr / BnF",
+    "hash": "8f19722e",
+    "image_url": "https://gallica.bnf.fr/ark:/12148/btv1b6904421n/f2.highres",
+    "file_name": "e4ab4e3b1493d5a997b4e51cdefbaa10570ef3ea9432bd72e7b6a89654ceb7f6",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "James Tissot, Spring Morning_, ca. 1875, oil on canvas, 55.9 x 42.5 cm, Gift of Mrs. Charles Wrightsman, 2009, Metropolitan Museum of Art, public domain",
+    "primary": "true",
+    "title_formatted": "James Tissot, <em>Spring Morning</em>, ca. 1875, oil on canvas, 55.9 x 42.5 cm, Gift of Mrs. Charles Wrightsman, 2009, Metropolitan Museum of Art, public domain",
+    "hash": "57360500",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/440729/802157/main-image",
+    "file_name": "ebbe39c6f4ac29da3fa900cb4bd73810ea24dfd8270a2a24efc917fc674b887c",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Seymour Joseph Guy, The Contest for the Bouquet: The Family of Robert Gordon in Their New York Dining-Room_, 1866, oil on canvas, 62.5 x 74.9 cm, Purchase, Gift of William E. Dodge, by exchange, and Lila Acheson Wallace Gift, 1992, Metropolitan Museum of Art, public domain",
+    "requiredStatement": {
+      "attribution": "The Metropolitan Museum of Art"
+    },
+    "title_formatted": "Seymour Joseph Guy, <em>The Contest for the Bouquet: The Family of Robert Gordon in Their New York Dining-Room</em>, 1866, oil on canvas, 62.5 x 74.9 cm, Purchase, Gift of William E. Dodge, by exchange, and Lila Acheson Wallace Gift, 1992, Metropolitan Museum of Art, public domain",
+    "hash": "2da00260",
+    "image_url": "https://images.metmuseum.org/CRDImages/ad/original/DT2030.jpg",
+    "file_name": "ed3d584111595aed7b4e0cd1e14f0fed9ee630e58226fbdc68b9ecfee02ac96e",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "E. Buckman, engraved by W. B. Gardener, The Flower-Market. Covent-Garden._, 1873, paper and ink, published in Extra Supplement to the Illustrated London News_, April 26, 1873.",
+    "requiredStatement": {
+      "attribution": "Garden Musuem Collection"
+    },
+    "title_formatted": "E. Buckman, engraved by W. B. Gardener, <em>The Flower-Market. Covent-Garden.</em>, 1873, paper and ink, published in <em>Extra Supplement to the Illustrated London News</em>, April 26, 1873.",
+    "hash": "8961cdc3",
+    "image_url": "https://dyvdnmp0itmzz.cloudfront.net/wp-content/uploads/2019/11/17200527/gm0_2002-031-1500x1005.jpg",
+    "file_name": "fa70f5a6f0b7f5fe2e73ba0bf614bb3542744b699f68302afa65c3ba10591ee7",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "_The Parterre, Harewood Wood, Nr. Leeds_, chromolithograph from Edward Adveno Brooke, The Gardens of England_, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "requiredStatement": {
+      "attribution": "Smithsonian Libraries via BHL and archive.org"
+    },
+    "rotate": "90",
+    "title_formatted": "<em>The Parterre, Harewood Wood, Nr. Leeds</em>, chromolithograph from Edward Adveno Brooke, <em>The Gardens of England</em>, London: T. McLean, [1858?], Smithsonian Libraries, Biodiversity Heritage Library.",
+    "hash": "a41e0275",
+    "image_url": "https://ia801904.us.archive.org/BookReader/BookReaderImages.php?id=gardensEngland00Broo&itemPath=%2F12%2Fitems%2FgardensEngland00Broo&server=ia801904.us.archive.org&page=n106_w1034",
+    "file_name": "fa9ba1ececf054721048a67ff142de9eece8f03e79c90a4a47a235a48e143b2a",
+    "parent_directory": "pelargonium"
+  },
+  {
+    "label": "Holotype of Inula taquetii H.Lév. [family COMPOSITAE]",
+    "taxon name": "Helianthus tuberosus",
+    "wikidata entity": "https://www.wikidata.org/entity/Q146190",
+    "jstor entity": "https://kg.jstor.org/entity/Q484061",
+    "global plants id": "10.5555/al.ap.specimen.e00417225",
+    "summary": "Holotype of Inula taquetii H.Lév. [family COMPOSITAE]",
+    "specimen type": "Holotype",
+    "collector": "Taquet, Emile Joseph (Pere)",
+    "location collected": "South Korea",
+    "date collected": "1910-10-03",
+    "herbarium": "Royal Botanic Garden Edinburgh",
+    "hash": "8b80d82f",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/06/gpi-e-typspe-01-34/e0005/e00417225.jp2",
+    "file_name": "1cd9573f130a51c3ff992c245b134da0ef837ac5e21a9275ca9a952ea9b8dcf8",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Crispijn van de Passe, Hortus floridus_, 1614-16, CC BY-NC-SA 4.0, Biblioteca del Real Jardín Botánico, RJB-CSIC: https://bibdigital.rjb.csic.es",
+    "requiredStatement": {
+      "attribution": "Biblioteca del Real Jardín Botánico, RJB-CSIC: https://bibdigital.rjb.csic.es"
+    },
+    "title_formatted": "Crispijn van de Passe, <em>Hortus floridus</em>, 1614-16, CC BY-NC-SA 4.0, Biblioteca del Real Jardín Botánico, RJB-CSIC: https://bibdigital.rjb.csic.es",
+    "hash": "aaf3bfa8",
+    "image_url": "https://bibdigital.rjb.csic.es/i/?IIIF=/0c/21/4f/74/0c214f74-b475-4efc-ba0c-0b5c745e3f71/iiif/4817_000147.tif/8.210526315789474,5.47329650092081,2225.0526315789475,1477.7900552486187/!813,540/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Holotype of Helianthus giganteus L. var. resiniferus Farw. [family ASTERACEAE]",
+    "taxon name": "Helianthus giganteus",
+    "wikidata entity": "https://www.wikidata.org/entity/Q12212017",
+    "jstor entity": "https://kg.jstor.org/entity/Q107401",
+    "global plants id": "10.5555/al.ap.specimen.blh0000162",
+    "summary": "Holotype of Helianthus giganteus L. var. resiniferus Farw. [family ASTERACEAE]",
+    "specimen type": "Holotype",
+    "collector": "O.A. Farwell",
+    "location collected": "United States of America",
+    "date collected": "1914-08-23",
+    "hash": "8c69d87d",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/16/gpi-blh-typspe-01-01/blh0002/blh0000162.jp2",
+    "file_name": "3ddce6ee33ccc72f30e4162bdc89565af86beb5d9f7c7a0c35d09cd741e93afe",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Holotype of Helianthus annuus L. subsp. texanus Heiser [family ASTERACEAE]",
+    "taxon name": "Helianthus annuus",
+    "wikidata entity": "https://www.wikidata.org/entity/Q171497",
+    "jstor entity": "https://kg.jstor.org/entity/Q896530",
+    "global plants id": "10.5555/al.ap.specimen.ind1000014",
+    "summary": "Holotype of Helianthus annuus L. subsp. texanus Heiser [family ASTERACEAE]",
+    "specimen type": "Holotype",
+    "collector": "C.B. Heiser, Jr.",
+    "location collected": "United States of America",
+    "date collected": "1949-07-17",
+    "hash": "1f86dc20",
+    "image_url": "https://iiif.juncture-digital.org/gp-proxy/jp2/fpx/13/gpi-ind-typspe-01-01/ind0004/ind1000014.jp2",
+    "file_name": "5df0d4c47f127d1de15183cc03a917f0a50b27a5383feb0582169a27823f089f",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "_Flos Solis maior_, in Basilius Besler, Hortus Eystettensis vol. 2, 1613, Neurenberg, Teylers Museum, CC-BY-NC",
+    "requiredStatement": {
+      "attribution": "Teylers Museum"
+    },
+    "title_formatted": "<em>Flos Solis maior</em>, in Basilius Besler, <em>Hortus Eystettensis</em> vol. 2, 1613, Neurenberg, Teylers Museum, CC-BY-NC",
+    "hash": "30cc2872",
+    "image_url": "http://beeld.teylersmuseum.nl/Digital_Library/Emags/149b_439-2/pubData/source/images/zoompages/zoompage86.jpg",
+    "file_name": "81b2d5fbce4c498f189ec2632742dc0e062737f432cd9b428b0f12ad64b907cb",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Nicolás Monardes, Histoire des simples médicamens apportés de l'Amerique, desquels on se sert en la medecine_, 1619, trans. Anthoine Colin, Missouri Botanical Garden, Biodiversity Heritage Library",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via archive.org"
+    },
+    "title_formatted": "Nicolás Monardes, <em>Histoire des simples médicamens apportés de l'Amerique, desquels on se sert en la medecine</em>, 1619, trans. Anthoine Colin, Missouri Botanical Garden, Biodiversity Heritage Library",
+    "hash": "ea9333b3",
+    "image_url": "https://ia600500.us.archive.org/BookReader/BookReaderImages.php?id=mobot31753003488126&itemPath=%2F3%2Fitems%2Fmobot31753003488126&server=ia600500.us.archive.org&page=n193_w363",
+    "file_name": "95758d7655acf869692ea94a87f4dc33683af659c269c69542b494d504577f3d",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Adriaen Collaert, Sunflower and Other Flowers_, 8 from set of 24, Florilegium_, 1570-before 1618, published by Theodoor Galle and Philips Galle, possibly Netherlands, engraving, 178 × 126 mm, Rijksmuseum, Amsterdam, public domain",
+    "requiredStatement": {
+      "attribution": "Rijksmuseum"
+    },
+    "title_formatted": "Adriaen Collaert, <em>Sunflower and Other Flowers</em>, 8 from set of 24, <em>Florilegium</em>, 1570-before 1618, published by Theodoor Galle and Philips Galle, possibly Netherlands, engraving, 178 × 126 mm, Rijksmuseum, Amsterdam, public domain",
+    "hash": "7aacc84c",
+    "image_url": "https://raw.githubusercontent.com/kristanmhanson/plant-humanities/develop/images/sunflower_Collaert_Rijksmuseum_RP-P-BI-5997.jpg",
+    "file_name": "9a3c05cb1275eb07da74803ec2eb9cb1f895402c143180b840c64f47a7e60564",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Flos Solis maior, in Basilius Besler, Hortus Eystettensis vol. 2, 1613, Neurenberg, Teylers Museum.",
+    "requiredStatement": {
+      "attribution": "Teylers Museum",
+      "url": "http://beeld.teylersmuseum.nl/Digital_Library/Emags/149b_439-2/page_86.html"
+    },
+    "source": "_Hortus Eystettensis_",
+    "author": "Basilius Besler (1561–1629)",
+    "sourceLicense": "CC BY-NC 3.0 NL",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "label_formatted": "<em>Flos Solis maior</em>, in Basilius Besler, <em>Hortus Eystettensis</em> vol. 2, 1613, Neurenberg, Teylers Museum.",
+    "hash": "1736aedd",
+    "file_name": "Bessler_FlosSolis_Tylers_cropped",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Carolus Linnaeus, Critica botanica, Lugduni Batavorum: Apud Conradum Wishoff, 1737, p. 97 ",
+    "requiredStatement": {
+      "attribution": "Biblioteca del Real Jardín Botánico, RJB-CSIC: https://bibdigital.rjb.csic.es",
+      "url": "bibdigital.rjb.csic.es/idviewer/11541/113"
+    },
+    "source": "_Critica botanica_",
+    "author": "Carl Linnaeus (1707–1778)",
+    "sourceLicense": "CC BY-NC-SA 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "label_formatted": "Carolus Linnaeus, <em>Critica botanica</em>, Lugduni Batavorum: Apud Conradum Wishoff, 1737, p. 97 ",
+    "hash": "d246e9b5",
+    "file_name": "LINN_Critica_botanica_97-standard-scale-2_00x-gigapixel",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Carolus Linnaeus, Critica botanica, Lugduni Batavorum: Apud Conradum Wishoff, 1737, p. 98",
+    "requiredStatement": {
+      "attribution": "Biblioteca del Real Jardín Botánico, RJB-CSIC: https://bibdigital.rjb.csic.es",
+      "url": "bibdigital.rjb.csic.es/idviewer/11541/114"
+    },
+    "source": "_Critica botanica_",
+    "author": "Carl Linnaeus (1707–1778)",
+    "sourceLicense": "CC BY-NC-SA 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "label_formatted": "Carolus Linnaeus, <em>Critica botanica</em>, Lugduni Batavorum: Apud Conradum Wishoff, 1737, p. 98",
+    "hash": "8ea3d014",
+    "file_name": "LINN_Critica_botanica_98-gigapixel-standard-scale-2_00x",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Francesco Bartolozzi, after Annibale Carracci, Clytia (Clytie), 1772, published by John Boydell, London, etching/engraving, 511 × 458 mm, Rijksmuseum, Amsterdam",
+    "requiredStatement": {
+      "attribution": "Rijksmuseum",
+      "url": "http://hdl.handle.net/10934/RM0001.COLLECT.75380"
+    },
+    "author": "Francesco Bartolozzi (1727–1815)",
+    "sourceLicense": "CC0 1.0",
+    "image_url": "https://raw.githubusercontent.com/JSTOR-Labs/plant-humanities/main/sunflower/Sunflower_Clytie_Rijksmuseum_RP-P-OB-5381.jpg",
+    "file_name": "Sunflower_Clytie_Rijksmuseum_RP-P-OB-5381",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Vincent van Gogh, Sunflowers_, 1887, The Metropolitan Museum of Art, New York, Rogers Fund, 1949, CC0",
+    "requiredStatement": {
+      "attribution": "Metropolitan Museum of Art"
+    },
+    "primary": "true",
+    "title_formatted": "Vincent van Gogh, <em>Sunflowers</em>, 1887, The Metropolitan Museum of Art, New York, Rogers Fund, 1949, CC0",
+    "hash": "dab20e04",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP229743.jpg",
+    "file_name": "b66401b651f23b66f7c4988d0e630b84d17e6ed01c8cb0635df454098192e460",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Francisco Hernández, Nova plantarum, animalium et mineralium Mexicanorum historia_, 1651, John Carter Brown Library, Internet Archive",
+    "requiredStatement": {
+      "attribution": "John Carter Brown Library via archive.org"
+    },
+    "primary": "true",
+    "title_formatted": "Francisco Hernández, <em>Nova plantarum, animalium et mineralium Mexicanorum historia</em>, 1651, John Carter Brown Library, Internet Archive",
+    "hash": "1ac2b1be",
+    "image_url": "https://ia800805.us.archive.org/BookReader/BookReaderImages.php?id=novaplantarumani00hern&itemPath=%2F5%2Fitems%2Fnovaplantarumani00hern&server=ia800805.us.archive.org&page=n245_w820",
+    "file_name": "bf7a923830e19da68efe20f82fa2c68ce1bf052877e1dec6f5aa6eddfc897053",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Jose L. Panero, Capitulum cross section diagram_, © Creative Commons",
+    "primary": "true",
+    "title_formatted": "Jose L. Panero, <em>Capitulum cross section diagram</em>, © Creative Commons",
+    "hash": "c1925b33",
+    "image_url": "http://tolweb.org/tree/ToLimages/treeoflifecomphead3.jpg",
+    "file_name": "c9af4ef7cdba5625295358865ad8c5c1616c215aa86685a9676c666da9b80b79",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "While living in Arles, Van Gogh made seven paintings of sunflowers. Vincent van Gogh, Sunflowers_, 1888, oil on canvas, 92 x 73 cm, Bayerische Staatsgemäldesammlungen - Neue Pinakothek, München, CC BY-SA 4.0",
+    "requiredStatement": {
+      "attribution": "Bayerische Staatsgemäldesammlungen - Neue Pinakothek, Munich"
+    },
+    "primary": "true",
+    "title_formatted": "While living in Arles, Van Gogh made seven paintings of sunflowers. Vincent van Gogh, <em>Sunflowers</em>, 1888, oil on canvas, 92 x 73 cm, Bayerische Staatsgemäldesammlungen - Neue Pinakothek, München, CC BY-SA 4.0",
+    "summary": "While living in Arles, Van Gogh made seven paintings of sunflowers.",
+    "hash": "c97d83b2",
+    "image_url": "https://res.cloudinary.com/tne/image/authenticated/s--cR0YrnfB--/q_80/artworks/VINCENT-VAN-GOGH_SONNENBLUMEN_CC-BY-SA_BSTGS_8672.jpg",
+    "file_name": "f19309193d3b1c5a7a0528e1b929db2fa02e985df8110ecc5a3c273ac5f322cc",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "Jan van Vianen, Emblemes d'Amour (Emblems of Love), 1686, etching, 145 × 95 mm, Rijksmuseum, Amsterdam",
+    "requiredStatement": {
+      "attribution": "Rijksmuseum",
+      "url": "http://hdl.handle.net/10934/RM0001.COLLECT.188263"
+    },
+    "author": "Jan van Vianen",
+    "sourceLicense": "CC0 1.0",
+    "reuseRights": "https://creativecommons.org/publicdomain/zero/1.0",
+    "hash": "c88fc038",
+    "file_name": "sunflower_Vianen_Rijksmuseum_RP-P-1908-3593",
+    "parent_directory": "sunflower"
+  },
+  {
+    "label": "J. Bouvier, after W. Tayler, A female Anglo-Indian at her toilet being attended by three Indian servants, 1842, color lithograph with watercolor, 27.4 x 21.8 cm.",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection"
+    },
+    "sourceLicense": "CC BY-NC 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "f857fbaa",
+    "image_url": "https://iiif.wellcomecollection.org/image/b11916606_V0019937-LS-LS.jp2/full/2048%2C/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Nicolas de Larmessin II, possibly after, Personifications of medicine, pharmacy and surgery, oil on canvas, 141.5 x 124 cm.",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection"
+    },
+    "sourceLicense": "CC BY-NC 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "image_url": "https://iiif.wellcomecollection.org/image/b12023747_V0017117.JP2/full/1338%2C/0/default.jpg",
+    "file_name": "4a6618d8e6704e21276f2647dd472450cbafdba566c17e78295e0d644577c665",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Old Tamarind Trees, published in Joseph Hooker, Himalayan Journals, vol. 1, London, John Murray, 1854.",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection"
+    },
+    "sourceLicense": "Public Domain Mark 1.0",
+    "image_url": "https://iiif.wellcomecollection.org/image/b28125800_0001_0057.jp2/full/2048%2C/0/default.jpg",
+    "file_name": "7b3776538515dfff49afa8e5b8a74fb8e9ee77fb09402df588a234847afb5b8b",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Marianne North, African Baobab Trees, a Large Tamarind, the God Aiyanar and His Two Wives, c.1878, oil on board, 24.6 x 35.5 cm.",
+    "requiredStatement": {
+      "attribution": "The Board of Trustees of the Royal Botanic Gardens, Kew, Marianne North Gallery via Art UK"
+    },
+    "sourceLicense": "CC BY-NC 3.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "9c4b846e",
+    "image_url": "https://d3d00swyhr67nd.cloudfront.net/w1200h1200/collection/LSW/RBGM/LSW_RBGM_MN_CD3_279-001.jpg",
+    "file_name": "84b741c2fb35725c09a80c84b005ecdca13903cc961b4daf2a77a57a20703cf6",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Bishndas, Babur supervising the laying out of a Kabul garden, Bãburnãma, c. 1590, opaque watercolor on paper, 21.7 × 14.3 cm.",
+    "requiredStatement": {
+      "attribution": "Victoria and Albert Museum",
+      "url": "https://collections.vam.ac.uk/item/O17687/painting-bishndas/?carousel-image=2006BD6093"
+    },
+    "source": "Bãburnãma",
+    "author": "Bishndas",
+    "sourceLicense": "©Victoria and Albert Museum, London",
+    "hash": "5c735396",
+    "file_name": "Babur_supervising_laying_out_Victoria_Albert_Mus_copyright_Victoria_Albert_Museum",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Tamarind Tree, Bãburnãma (Vaki’at-i Baburi), 1590, Or. 3714 Vol. 4 f.397.",
+    "requiredStatement": {
+      "attribution": "British Library",
+      "url": "http://www.bl.uk/onlinegallery/onlineex/remarkmanu/babur/index.html"
+    },
+    "sourceLicense": "©The British Library Board (Or. 3714)",
+    "file_name": "Mughal_style_tamarind_Brit_Lib_copyright_The_British_Library",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Shipping Container, redware, H. 15 inches, artifact SB1.0426.",
+    "requiredStatement": {
+      "attribution": "Strawbery Banke Museum, Portsmouth, New Hampshire",
+      "url": "https://strawberybanke.pastperfectonline.com/webobject/5E32AF9F-3720-4E2C-90CA-394352408547"
+    },
+    "summary": "Storage vessel that could have been used to ship and store tamarind. Manufactured in England or the Caribbean. Reconstructed. ",
+    "sourceLicense": "copyright",
+    "hash": "73533eac",
+    "file_name": "container_strawbery_banke_copyright_Strawbery_Banke_Museum_2017",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "Sweet tamarind, 2007.",
+    "requiredStatement": {
+      "attribution": "Flickr",
+      "url": "https://www.flickr.com/photos/88491991@N00/382694744"
+    },
+    "author": "Malcolm Smith",
+    "sourceLicense": "CC BY-NC-ND 2.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+    "hash": "bf29a6c6",
+    "file_name": "sweet_tamarind_seeds_Flicker_CC_BY_NC_ND_2.0",
+    "parent_directory": "tamarind"
+  },
+  {
+    "label": "A Recipe for Frangas Incapadas",
+    "requiredStatement": {
+      "attribution": "LUNA: Folger Digital Image Collection",
+      "url": "https://luna.folger.edu/luna/servlet/detail/FOLGERCM1~6~6~1238679~252196:Receipt-book--manuscript-?sort=call_number%2Cmpsortorder1%2Ccd_title%2Cimprint"
+    },
+    "source": "_Receipt book_ [manuscript]",
+    "sourceLicense": "CC BY-SA 4.0",
+    "hash": "c5d6008b",
+    "image_url": "https://luna.folger.edu/MediaManager/srvr?mediafile=/Size3/FOLGERCM1~6~6/751/164057.jpg",
+    "file_name": "13271512667e5c835444bee9212cc1f582b824a993d1f975b21ee816f16e9bff",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Eliza Acton p. xi",
+    "requiredStatement": {
+      "attribution": "Google Books",
+      "url": "https://books.google.com/books?id=kXsCAAAAYAAJ&dq=Eliza%20Acton's%20Modern%20Cookery&hl=en&pg=PR11#v=onepage&q&f=false"
+    },
+    "source": "_Modern Cookery, for Private Families_",
+    "author": "Eliza Acton (1799–1859)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "9fbbf553",
+    "image_url": "https://books.google.com/books/content?id=kXsCAAAAYAAJ&pg=PR11&img=1&zoom=3&hl=en&sig=ACfU3U3YWAg3a5OEQEJZpZoFw3eQ6h3Vow&ci=10%2C55%2C981%2C1463&edge=0",
+    "file_name": "32c7e850b1e545773d5470c481e9d58fb03ed2812e6f55d2373e4981ac575e6d",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Title Page from Eliza Acton's Modern Cookery",
+    "requiredStatement": {
+      "attribution": "Google Books",
+      "url": "https://books.google.com/books?id=kXsCAAAAYAAJ&dq=Eliza%20Acton's%20Modern%20Cookery&hl=en&pg=PR3#v=onepage&q&f=false"
+    },
+    "source": "_Modern Cookery, for Private Families_",
+    "author": "Eliza Acton (1799–1859)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "aa25adca",
+    "image_url": "https://books.google.com/books/content?id=kXsCAAAAYAAJ&pg=PR3&img=1&zoom=3&hl=en&sig=ACfU3U1J2feQl57pWbCO3Vl90qKUSfC5Nw&ci=4%2C6%2C987%2C1531&edge=0",
+    "file_name": "86f3c4d6539a2053b7a2840d601aed46ef3155774462e3c155f6861a186a956e",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "A Recipe for Indian Lile",
+    "requiredStatement": {
+      "attribution": "LUNA: Folger Digital Image Collection",
+      "url": "https://luna.folger.edu/luna/servlet/detail/FOLGER~3~3~3203~262388:Medicinal,-household-and-cookery-re?sort=call_number%2Cmpsortorder1&qvq=q:indian%20lile;sort:call_number%2Cmpsortorder1;lc:FOLGER~3~3&mi=0&trs=1"
+    },
+    "source": "_Medicinal, household and cookery receipts_ [manuscript].",
+    "sourceLicense": "CC BY-SA 4.0",
+    "hash": "36c360ce",
+    "image_url": "https://luna.folger.edu/MediaManager/srvr?mediafile=/Size3/FOLGER~3~3/1036/144664.jpg",
+    "file_name": "aad07a90276f685369f052ff8465ebecf70f6724c6bf50cb5535fa658ca1e50f",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Turmeric in Robert John Thornton's Herbal",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/55999435#page/43/mode/1up"
+    },
+    "source": "_A Family Herbal_",
+    "author": "Robert John Thornton (1768?–1837)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "15b4aef3",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55999435",
+    "file_name": "be19a86bb0de42d2ed606cbbb84609f5f9d5ceef747ef254367e5e16b58e9f88",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Turmeric as Represented in William Woodville's herbal",
+    "requiredStatement": {
+      "attribution": "King's College London, Foyle Special Collections Library (archive.org) via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/48537187#page/166/mode/1up"
+    },
+    "source": "_Medical botany_",
+    "author": "William Woodville (1752–1805)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "34a6c723",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/48537187",
+    "file_name": "ce97a36cccd50d88d6dcb5e084dfc40564b96310f560d975a0f49dd6d5f17e6e",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Whitaker's peerage, baronetage, knightage, and companionage p. 801",
+    "requiredStatement": {
+      "attribution": "Allen County Public Library Genealogy Center via archive.org",
+      "url": "https://archive.org/details/whitakerspeerage00unse_16/page/n801/mode/1up?"
+    },
+    "source": "_Whitaker's Peerage, Baronetage, Knightage, and Companionage_",
+    "author": "Joseph Whitaker (1820–1895) ",
+    "sourceLicense": "No copyright listed",
+    "label_formatted": "<em>Whitaker's peerage, baronetage, knightage, and companionage</em> p. 801",
+    "hash": "f4e1d18e",
+    "image_url": "https://ia800602.us.archive.org/BookReader/BookReaderImages.php?zip=/20/items/whitakerspeerage00unse_16/whitakerspeerage00unse_16_jp2.zip&file=whitakerspeerage00unse_16_jp2/whitakerspeerage00unse_16_0816.jp2&id=whitakerspeerage00unse_16&scale=1&rotate=0",
+    "file_name": "de3d502bfa4c2d0bc73316aab73ad18ca699bbe7a97598be57df48e7c269cedf",
+    "parent_directory": "turmeric"
+  },
+  {
+    "label": "Linnaeus often included small sketches in his correspondence describing Dionaea muscipula. Letter 21 November 1768, Uppsala to Nicolaas Laurens Burman, Amsterdam.",
+    "requiredStatement": {
+      "attribution": "Uppsala University Library via Alvin"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Linnaeus often included small sketches in his correspondence describing Dionaea muscipula.",
+    "hash": "1d01aa33",
+    "image_url": "https://www.alvin-portal.org/alvin/attachment/download/alvin-record:232622/ATTACHMENT-0003.tiff",
+    "file_name": "0d815c2d6f08392977c2319aa901cdf2a0e4a04fff7313905ff7d31574331868",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "This image shows two carnivorous plants (Sarracenia and Dionaea) in a romanticized landscape. American Bog Plants, Thomas Sutherland, engraver, 1806, pub. in Robert John Thornton, New illustration of the sexual system of Carolus von Linnaeus: and the temple of Flora, or garden of nature, London, 1807.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "This image shows two carnivorous plants (Sarracenia and Dionaea) in a romanticized landscape.",
+    "hash": "f9956624",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/307056",
+    "file_name": "193d23cc7efe2e21d498129eb525a44674689869eb91c54a256663bc637f0ee7",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "On Silene and Drosera, pub. in Erasmus Darwin, The botanic garden, London, printed for J. Johnson, 1794–1795.",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Silene1",
+    "hash": "37215e33",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55098697",
+    "file_name": "2fa701922d03ac1706a9979eec07438e4793defd43a742485e737b6d1dd6e388",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "This dramatized incarnation of the Venus flytrap features a tangle of flowers, ignored by potential pollinators as they appear to throw themselves into its maws. Dracontium pertusum and Dionaea muscipula, pub. in Thomas Green, The universal herbal, 1820?.",
+    "requiredStatement": {
+      "attribution": "Wellcome Collection"
+    },
+    "sourceLicense": "public domain",
+    "summary": "This dramatized incarnation of the Venus flytrap features a tangle of flowers, ignored by potential pollinators as they appear to throw themselves into its maws.",
+    "hash": "36c50ae9",
+    "image_url": "https://iiif.wellcomecollection.org/image/L0025495/full/2048%2C/0/default.jpg",
+    "file_name": "37a8eec1ce19687d132fe29051dca629d164e2c4958ba141d5f4133a33f0688f",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Figure and botanical description of Dionaea muscipula (Venus flytrap), John Roberts, engraver, pub. in John Ellis, Directions for bringing over seeds and plants..., 1770.",
+    "requiredStatement": {
+      "attribution": "Smithsonian Libraries via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "The first published illustration of the Venus flytrap embraced its violent allure.",
+    "hash": "ee2f9f85",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/48674418",
+    "file_name": "4a51d9d0455865e00a677924540385e7f86dc398f2514094bba96235497cef72",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Sacrificed to a man-eating plant, American Weekly, September 26, 1920, pub. in Sophia Prior, Carnivorous plants and “the man eating tree,” Chicago, Field Museum of Natural History, 1939.",
+    "requiredStatement": {
+      "attribution": "University Library, University of Illinois Urbana Champaign via BHL",
+      "url": "https://www.biodiversitylibrary.org/page/4259330#page/31/mode/1up"
+    },
+    "source": "Carnivorous plants and \"the man eating tree\"",
+    "author": "Sophia Prior",
+    "summary": "Man-eating plants became a popular feature of Anglo-American science-fiction and horror genres by the early twentieth century.",
+    "sourceLicense": "CC BY-NC-SA 3.0. In copyright. Digitized with the permission of the rights holder.",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+    "hash": "15665c62",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/4259330",
+    "file_name": "5895dd63a12ce255c9a1bcd2342bf98bca044dab266e58674c30ff8542aa10e5",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Dionaea muscipula; or, Venus’s Fly-trap, pub. in Robert John Thornton, New illustration of the sexual system of Carolus von Linnaeus: and the temple of Flora, or garden of nature, London, 1807.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL"
+    },
+    "summary": "Poetic description of Dionaea and Sarracenia.",
+    "sourceLicense": "public domain",
+    "hash": "1e282ef3",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/307061",
+    "file_name": "650f06f1882a64f4683ebb2d53d4b0b01b026c85527bbd9594bb9942cc403326",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Natural history illustrator Sydenham Edwards (1768—1819) was the first to note that the spines of Dionaea’s leaves were the only sensitive parts of the plant. Sydenham Edwards, Dionaea muscipula (Venus’s Fly-trap), engraving, pub. in Curtis’s Botanical Magazine, 1804.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Natural history illustrator Sydenham Edwards was the first to note that the spines of Dionaea’s leaves were the only sensitive parts of the plant.",
+    "hash": "3731a938",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/471203",
+    "file_name": "792184c840e06b2fbb3359f0411f0187856e483fa2733355d5b4acc1f0777730",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Sydenham Edwards, Dionaea muscipula (Venus’s Fly-trap), engraving, pub. in Curtis’s Botanical Magazine, 1804.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical Garden, Peter H. Raven Library via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Edwards illustration of flytrap",
+    "hash": "9ff63a7d",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/471202",
+    "file_name": "98cf38996e85ab9ea65c2f319deb3646c9f1f666d5eacca0ebf540ede28d807d",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Dionaea muscipula trapping mechanism, pub. in Charles Darwin, Insectivorous plants, London, J. Murray, 1875.",
+    "requiredStatement": {
+      "attribution": "Royal College of Physicians in Edinburgh (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Dionaea trapping mechanism",
+    "hash": "571c19db",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/46794379",
+    "file_name": "9cde295e39c0c399c8c3b18ae402a24913002fdc04ecf39bda57f386f0b16c3f",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Sundew (Drosera rotundifolia) trapping mechanism, pub. in Charles Darwin, Insectivorous plants, London, J. Murray, 1875.",
+    "requiredStatement": {
+      "attribution": "Royal College of Physicians in Edinburgh (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Drosera rotundifolia trapping mechanism",
+    "hash": "fabd41c7",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/46794102",
+    "file_name": "9ce9e977a14f502a096d13d786219fa7a263ad1061c32950037e2666c20d14aa",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "William Bartram, Nelumbo lutea, American lotus and Dionaea muscipula, Venus flytrap, 1767, pen and ink on paper.",
+    "requiredStatement": {
+      "attribution": "Botany Library at the Natural History Museum, London",
+      "url": "https://nhm.primo.exlibrisgroup.com/permalink/44NHM_INST/1afpmgq/alma9927128602081"
+    },
+    "author": "William Bartram (1739–1823)",
+    "sourceLicense": "© Copyright Trustees of the Natural History Museum, London",
+    "file_name": "Bartram_Nelumbo_lutea_NHML_copyright_Trustees_of_the_Natural_History_Museum_London",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "L-R: Pitcher plant (Sarracenia purpurea), Venus flytrap (Dionaea muscipula), Sundew (Drosera capensis). Plants With Bite exhibit at the Royal Botanic Garden, Sydney, 2020.",
+    "requiredStatement": {
+      "attribution": "John Schaefer",
+      "url": "https://www.rbgsyd.nsw.gov.au/The-Calyx/Plants-with-Bite-at-The-Calyx"
+    },
+    "author": "John Schaefer",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "c9328a9a",
+    "file_name": "Dionaea_muscipula_John_Schaefer_1_CC_BY_4.0",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "The Venus flytrap (Dionaea muscipula) in bloom, Royal Botanic Garden, Sydney, 2020.",
+    "requiredStatement": {
+      "attribution": "John Schaefer",
+      "url": "https://www.rbgsyd.nsw.gov.au/The-Calyx/Plants-with-Bite-at-The-Calyx"
+    },
+    "author": "John Schaefer",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "hash": "88a5bd65",
+    "file_name": "Dionaea_muscipula_John_Schaefer_2_CC_BY_4.0",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Venus flytrap (Dionaea muscipula). Plants With Bite exhibit at the Royal Botanic Garden, Sydney, 2020.",
+    "author": "John Schaefer",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "requiredStatement": {
+      "url": "https://www.rbgsyd.nsw.gov.au/The-Calyx/Plants-with-Bite-at-The-Calyx"
+    },
+    "hash": "7e9fc239",
+    "file_name": "Dionaea_muscipula_John_Schaefer_3_CC_BY_4.0",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Plants With Bite exhibit at the Royal Botanic Garden, Sydney, 2020.",
+    "author": "John Schaefer",
+    "sourceLicense": "CC BY 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by/4.0",
+    "requiredStatement": {
+      "url": "https://www.rbgsyd.nsw.gov.au/The-Calyx/Plants-with-Bite-at-The-Calyx"
+    },
+    "hash": "6d541d08",
+    "file_name": "Dionaea_muscipula_John_Schaefer_4_CC_BY_4.0",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Glass model of Dionaea muscipula by Leopold and Rudolf Blaschka, 1890.",
+    "requiredStatement": {
+      "attribution": "The Archives of Rudolf and Leopold Blaschka and the Ware Collection of Blaschka Glass Models of Plants, Harvard University Herbaria",
+      "url": "https://hmnh.harvard.edu/glass-flowers"
+    },
+    "author": "Leopold Blaschka (1822–1895); Rudolf Blaschka (1857–1939)",
+    "sourceLicense": "© Copyright President and Fellows of Harvard College",
+    "hash": "ba35b500",
+    "file_name": "Glass_model_Dionaea_muscipula_Harvard_Univ_Herbaria_copyright_President_and_Fellows_of_Harvard_College",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Grave of Justina Davis Nash, who remarried to Abner Nash, Governor of North Carolina during the Britain occupation of Halifax (1781). Colonial Churchyard, Halifax, North Carolina.",
+    "requiredStatement": {
+      "attribution": "Julia Mortenson",
+      "url": "https://www.findagrave.com/memorial/35539715/justina-nash"
+    },
+    "source": "Find a Grave, database and images, memorial page for Justina Davis Nash (1745–6 Dec 1771), Find a Grave Memorial ID 35539715, citing Colonial Churchyard, Halifax, Halifax County, North Carolina, USA ; Maintained by Richard Parker (contributor 47021994) .",
+    "author": "Julia Mortenson",
+    "sourceLicense": "CC BY-NC 4.0",
+    "reuseRights": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+    "hash": "337f027b",
+    "file_name": "Justina_Davis_Nash_Grave_Julia_Mortenson_CC_BY_NC",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "William Young, Mentha (No. 7), Gleditsia (No. 6), and Youngsonia (No.8), 1767, watercolor on paper, 378 x 234 mm.",
+    "requiredStatement": {
+      "attribution": "Library and Archives, Natural History Museum, London",
+      "url": "https://nhm.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma9932323902081&context=L&vid=44NHM_INST:44NHM_V1&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,william%20young&mode=basic"
+    },
+    "author": "William Young (1742–1785) ",
+    "summary": "Earliest surviving illustration of Dionaea muscipula (Venus flytrap).",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "hash": "5b97d862",
+    "file_name": "Mentha_Gleditsia_Youngsonia_Nat_Hist_Mus_London_public_domain",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Venus Fly Trap drawing with John Ellis’ original manuscript description, 1769, pen and ink, and gray wash, 15 ¼ x 19 ¾ inches (sheet), London.",
+    "requiredStatement": {
+      "attribution": "Oak Spring Garden Foundation, Upperville, Virginia",
+      "url": "https://o90016.eos-intl.net/O90016/OPAC/Details/Record.aspx?BibCode=972371"
+    },
+    "sourceLicense": "© Copyright Oak Spring Garden Foundation",
+    "file_name": "Venus_Fly_Trap_Ellis_Oak_Spring_Garden_Foundation_Upperville_Virginia_copyright",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "The German botanist and illustrator Otto Schmeil was among those who emphasized the relationship between the Venus flytrap’s physiology and ecology in his work. Otto Schmeil, Drosera rotundifolia and Pinguicula vulgaris, pub. in Lehrbuch der Botanik, Leipzig, Quelle & Meyer, 1911.",
+    "requiredStatement": {
+      "attribution": "University of Toronto - Gerstein Science Information Centre via BHL"
+    },
+    "sourceLicense": "not in copyright",
+    "summary": "The German botanist and illustrator Otto Schmeil was among those who emphasized the relationship between the plant’s physiology and ecology in his work. ",
+    "hash": "74db9e24",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/22537862",
+    "file_name": "a1a384ea23376ac3dd2f4799b9f21723404d12943ad62f39c365319794ac70ab",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Erasmus Darwin’s stanza on the sundew beautifully illustrates the tone of the work as a whole. On Silene and Drosera, pub. in Erasmus Darwin, The botanic garden, London, printed for J. Johnson, 1794–1795.",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Erasmus Darwin’s stanza on the sundew beautifully illustrates the tone of the work as a whole.",
+    "hash": "d0a629d9",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55098708",
+    "file_name": "ae8e027c202f166f8ea2abfa80dea8b8a0176b140d7bac63ad723c8a1dae5f49",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "On Silene and Drosera, pub. in Erasmus Darwin, The botanic garden, London, printed for J. Johnson, 1794–1795.",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Drosera2",
+    "hash": "6953655e",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55098709",
+    "file_name": "b878d8116d254bdeacf0e60aec95a916b8089d518f9aa09adfeb235a9f70d583",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Dionaea muscipula (Venus Flytrap), pub. in Erasmus Darwin, The botanic garden, London, printed for J. Johnson, 1794–1795.",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Ellis illustration of flytrap",
+    "hash": "f3098fc9",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55098696",
+    "file_name": "b89e443b12a5e2d3a5172a9c45822b2c491dfc8b5d8b1b8dbf990d09838bde37",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "An unusually chaste illustration of the Venus flytrap, when compared to lionized contemporary images. Pierre-Joseph Redouté, Dionaea muscipula, pub. in Étienne Pierre Ventenat, Jardin de La Malmaison, Paris, 1803.",
+    "requiredStatement": {
+      "attribution": "Smithsonian Libraries via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "An unusually chaste illustration of the Venus flytrap, when compared to lionized contemporary images.",
+    "hash": "b50f26b7",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/43441942",
+    "file_name": "e3899335e913c60fb34c5fd8d0b21ae399e8d684afe86ab809533386189a03db",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "On Silene and Drosera, pub. in Erasmus Darwin, The botanic garden, London, printed for J. Johnson, 1794–1795.",
+    "requiredStatement": {
+      "attribution": "Wellcome Library (archive.org) via BHL"
+    },
+    "sourceLicense": "public domain",
+    "summary": "Silene2",
+    "hash": "ce7f664a",
+    "image_url": "https://www.biodiversitylibrary.org/pageimage/55098698",
+    "file_name": "f697620d6f511f71ac57c0937cb8aacd7ea30e3d2f48eeab3fa589e8050fde66",
+    "parent_directory": "venus-flytrap"
+  },
+  {
+    "label": "Watermelon in the Tacuinum Sanitatis, c. 1390–1400.",
+    "requiredStatement": {
+      "attribution": "Bibliothèque Nationale de France",
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b105380445/f105.item"
+    },
+    "source": "_Tacuinum Sanitatis_",
+    "summary": "Bibliothèque nationale de France. Département des Manuscrits. NAL 1673",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Watermelon in the <em>Tacuinum Sanitatis</em>, c. 1390–1400.",
+    "hash": "c76937ec",
+    "image_url": "https://gallica.bnf.fr/ark:/12148/btv1b105380445/f105.highres",
+    "file_name": "24fbed52e86696cb37140f6f620904e670da4591568f870a2c4ffa8cae09072e",
+    "parent_directory": "watermelon"
+  },
+  {
+    "label": "“Anguriae” in Mathiolli’s Dioscorides.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical garden via BHL and archive.org",
+      "url": "https://archive.org/details/mobot31753000819224/page/397/mode/1up"
+    },
+    "source": "_Commentarii in VI. libros Pedacii Dioscoridis_",
+    "author": "Pietro Andrea Mattioli (1501 – c. 1577)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "“Anguriae” in Mathiolli’s <em>Dioscorides</em>.",
+    "hash": "49330782",
+    "image_url": "https://www.archive.org/download/mobot31753000819224/page/n512_w299",
+    "file_name": "3e27120be13105fa9eb8f2192865431b3d4a049968650d89560a44ee70d0b59a",
+    "parent_directory": "watermelon"
+  },
+  {
+    "label": "‘Satsubari, the Second of the Sixteen Arhats.’ Japan, early fourteenth century.",
+    "requiredStatement": {
+      "attribution": "The Metropolitan Museum of Art"
+    },
+    "hash": "f6d42910",
+    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-12232-006.jpg",
+    "file_name": "7d16df5a9fb02bda51652ef1e1f915e6aa57140b0298cfc1d34adb38e9c5fc6c",
+    "parent_directory": "watermelon"
+  },
+  {
+    "label": "‘Plants and insects’ by Shin Saimdang.",
+    "requiredStatement": {
+      "attribution": "Harvard Art Museums"
+    },
+    "hash": "1ef452c4",
+    "image_url": "https://ids.lib.harvard.edu/ids/view/18731783?width=3000&height=3000",
+    "file_name": "c5b3b1cb6c555d3b462659c8b5e94e4dadd6c1946ead061f7c26c30f78e2cb82",
+    "parent_directory": "watermelon"
+  },
+  {
+    "label": "Citrull cocumber in Gerard’s Herball.",
+    "requiredStatement": {
+      "attribution": "Missouri Botanical garden via BHL and archive.org",
+      "url": "https://archive.org/details/mobot31753000817756/page/913/mode/1up"
+    },
+    "source": "_The herball, or, Generall historie of plantes_",
+    "author": "John Gerard (1545–1612)",
+    "sourceLicense": "Public domain",
+    "reuseRights": "https://creativecommons.org/publicdomain/mark/1.0",
+    "label_formatted": "Citrull cocumber in Gerard’s <em>Herball</em>.",
+    "hash": "70363273",
+    "image_url": "https://www.archive.org/download/mobot31753000817756/page/n949_w320",
+    "file_name": "cd5f23691da4afad6982b09719aa8ca78e524fa35be6dcad7dced4e0bf1685b2",
+    "parent_directory": "watermelon"
+  },
+  {
+    "label": "Watercolours of fruits from Asia, early 19th century. South East Asia. Dumbarton Oaks collection.",
+    "requiredStatement": {
+      "attribution": "Dumbarton Oaks",
+      "url": "https://www.doaks.org/resources/rare-books/album-of-chinese-watercolors-of-asian-fruits/"
+    },
+    "sourceLicense": "Courtesy of Dumbarton Oaks",
+    "hash": "4f9f8da5",
+    "image_url": "https://www.doaks.org/resources/rare-books/album-of-chinese-watercolors-of-asian-fruits/013717125-album-pl-0015.jpg/@@images/image/zoom",
+    "file_name": "d21bb537725d603ee2dbadf9c3d1e291a6b7aed215d36a34e58a1a3b0daa5084",
+    "parent_directory": "watermelon"
+  }
+]
