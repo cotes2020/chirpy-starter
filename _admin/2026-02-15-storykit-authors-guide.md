@@ -6,6 +6,9 @@ date: 2026-02-15
 toc: true
 mermaid: true
 order: 12
+storykit:
+    mode: flat
+    toolbar: false
 ---
 
 # StoryKit Authoring Guide

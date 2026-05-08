@@ -9,6 +9,9 @@ media_subpath: /assets/img
 permalink: /admin/text-and-typography
 toc: true
 order: 2
+storykit:
+    mode: flat
+    toolbar: false
 ---
 
 ## Headings

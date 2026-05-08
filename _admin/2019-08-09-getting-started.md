@@ -9,6 +9,9 @@ media_subpath: /assets/img
 permalink: /admin/getting-started
 toc: true
 order: 1
+storykit:
+    mode: flat
+    toolbar: false
 ---
 
 ## Creating a Site Repository
