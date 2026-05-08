@@ -390,7 +390,7 @@ script_includes:
     const mainWrapper = document.getElementById('main-wrapper');
     let mode_toggle = ('{{ page.storykit.mode_toggle }}' || '{{ site.storykit.mode_toggle }}' || 'true').toLowerCase() === 'true';
     let mode = mode_toggle
-      ? localStorage.getItem('postViewMode') || '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat'
+      ? '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat' || localStorage.getItem('postViewMode') 
       : '{{ page.storykit.mode }}' || '{{ site.storykit.mode }}' || 'flat';
     mode = mode === 'col1' || mode === 'flat' ? 'flat' : 'col2';
     let doAutoFloat = ('{{ page.storykit.auto_float }}' || '{{ site.storykit.auto_float }}' || 'true').toLowerCase() === 'true';
