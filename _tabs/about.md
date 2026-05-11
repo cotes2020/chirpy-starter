@@ -20,8 +20,7 @@ into the past and illuminate burning issues of today, including legacies of colo
 displacement. Climate change, habitat loss, and accelerated species extinctions add to the
 urgency of acknowledging the vital importance of plants.
 
-The Lab features approximately 50 peer-reviewed cultural histories that reflect the multiple
-characters and significance of plants to humans. The visual essays are created using Juncture, an
+With a rolling publication cycle, he Lab features peer-reviewed narratives that reflect the multiple characters and significance of plants to humans. The visual essays are created using Juncture, an
 open-source tool developed by JSTOR Labs and led by Ron Snyder. The narratives integrate a
 wide variety of primary sources, from herbarium specimens and early modern herbals to
 horticultural treatises and botanical illustrations. They are enhanced by digital elements such as
@@ -34,18 +33,16 @@ Plants and People courses.
 
 As a visitor of the Lab, you will discover fascinating stories of plants from around the world.
 Consider [cassava]({{ site.baseurl }}/cassava): poisonous when eaten raw, it was rendered harmless by Indigenous methods
-of processing this plant into food, so that today it is a diet staple of more than 600 million people.
+of processing it into food, so that today it is a diet staple of more than 600 million people.
 You can use an interactive map to follow cassava’s travels from the Americas, where it was
 already cultivated in 8000 BCE, to its global distribution today. Beautiful images—from a
 remarkable ceramic by a Moche artist living in present-day Peru to a colored print by the
-eighteenth-century naturalist Maria Sibylla Merian—allow us to reconstruct this story. The
-narratives are written and curated by a [team](https://www.doaks.org/research/plant-humanities-initiative/index/) 
-of fellows, interns, summer participants, plant
-scientists, and faculty collaborators—including our extraordinary post-docs over the years,
-Ashley Buchanan, Lucas Mertehikian, Kristan Hanson, and Émile Levesque-Jalbert.
+eighteenth-century naturalist Maria Sibylla Merian—allow us to reconstruct this story. 
 
-The Lab is the flagship implementation of [Juncture]({{ site.baseurl }}/about-juncture), an open-source tool that enables users to
-create subject-specific multidisciplinary and multimedia websites. For beginners, the tool can be
+The narratives are written and curated by a [team](https://www.doaks.org/research/plant-humanities-initiative/index/) 
+of fellows, interns, summer participants, plant scientists, and faculty collaborators, and edited by our postdoctoral fellow: : Ashley Buchanan (2019-2022), Kristan Hanson (2020-2023), Lucas Mertehikian (2022-2023), Genie Yoo (2024-2025), and Emile Levesque-Jalbert (2025-2026).
+
+The Lab is the flagship implementation of [Juncture]({{ site.baseurl }}/about-juncture), an open-source tool that enables users to create subject-specific multidisciplinary and multimedia websites. For beginners, the tool can be
 relatively simple, but as digital skills improve, users can incorporate more complex visualizations. 
 Since the technology is standard and open source, skills developed using Juncture
 are transferable to other digital endeavors.
@@ -96,7 +93,7 @@ year.
 
 The roots of the Plant Humanities Initiative go back to a conference organized at Dumbarton
 Oaks in 2013, and a subsequent publication edited by Batsaki, Tchikine, and Sarah Burke-
-Cahalan, The *[Botany of Empire in the Long Eighteenth Century](https://www.hup.harvard.edu/books/9780884024163)* (Dumbarton Oaks/Harvard
+Cahalan, *[The Botany of Empire in the Long Eighteenth Century](https://www.hup.harvard.edu/books/9780884024163)* (Dumbarton Oaks/Harvard
 University Press) 2016. The conference and publication centered the plant as agent of human
 histories, in keeping with the more-than-human turn in the humanities. It also set out our
 comparative, interdisciplinary approach with an emphasis on primary sources and special
@@ -113,6 +110,9 @@ scholarly community. Upcoming publications include a volume of *[Plant Humanitie
 edited by Batsaki and Tchikine (Dumbarton Oaks/Harvard University Press, 2026), and the first
 *Handbook for Plant Humanities* edited by Batsaki and Sir Peter Crane, forthcoming in 2027 by
 Bloomsbury Academic.
+
+Yota Batsaki  
+April 15, 2026
 
 **Further Reading**
 
