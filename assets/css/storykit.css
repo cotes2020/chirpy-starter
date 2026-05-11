@@ -342,7 +342,6 @@ div figcaption {
     /* padding-top: 1em; */
     align-items: start;
     background: var(--main-bg);
-    margin-top: 2em;
 }
 
 .col2 .active {
@@ -701,10 +700,6 @@ iframe[class*="embed"].float.left {
     width: 50% !important;
     float: left;
     margin: 0 1rem 0.5rem 0;
-}
-
-.col2 iframe[class*="embed"] {
-    width: 100% !important;
 }
 
 iframe[src^="https://cdn.knightlab.com/"] {
