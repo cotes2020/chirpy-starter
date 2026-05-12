@@ -67,7 +67,7 @@ storykit:
   }
   .steps li {
     counter-increment: steps;
-    display: flex;
+    /* display: flex; */
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -83,10 +83,11 @@ storykit:
     color: #fff;
     font-weight: 700;
     font-size: 0.85rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-top: 0.1em;
+    margin-right: 1em;
   }
   .tip {
     padding: 1rem 1.25rem;
@@ -102,7 +103,7 @@ storykit:
   }
 </style>
 
-## Step 1 — Add Bookmarklet to Browser
+## Add Bookmarklet to Browser
 
 <div class="bookmarklet-wrap">
 
@@ -134,30 +135,6 @@ storykit:
   </div>
 
 </div>
-
-## Step 2 — Add a GitHub Token (PAT)
-
-Without a token, GitHub limits you to a handful of preview loads per hour. Adding a token raises this to 5,000 — effectively unlimited for normal use.
-
-**Create the token:**
-
-1. Go to [github.com/settings/tokens/new](https://github.com/settings/tokens/new) *(sign in if prompted)*
-2. In the **Note** field type: `Jekyll Preview`
-3. Under **Expiration** choose `No expiration`
-4. Scroll down — **do not check any boxes**
-5. Click **Generate token**
-6. **Copy the token** that appears — it starts with `ghp_`
-
-> ⚠️ You won't be able to see this token again after you leave the page. Copy it now.
-
-**Save the token in the preview tool:**
-
-1. Open your preview page at [{{ site.url }}{{ site.baseurl }}/preview]({{ site.url }}{{ site.baseurl }}/preview)
-2. Click the **⚙ Config** button in the top bar
-3. Enter `1` and press OK
-4. Paste your token and press OK
-
-> ✅ The token is saved in your browser. You won't need to enter it again unless you clear your browser data or switch to a different browser.
 
 ---
 ---
