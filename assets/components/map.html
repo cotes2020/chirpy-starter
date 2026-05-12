@@ -321,7 +321,7 @@
     }
 
     function setCaption(caption) {
-      captionTitleEl.innerHTML = mdToHtml(caption);
+      captionTitleEl.innerHTML = mdToHtml(decodeURIComponent(String(caption)).replace(/_/g, " "));
     }
 
     function parseAspectRatio(value) {
@@ -352,10 +352,11 @@
         aspectRatio = parseAspectRatio(raw);
       }
       let width = mapEl.clientWidth;
+      width = mainEl.clientWidth;
       if (iframe && width) {
         let captionHeight = captionTitleEl.clientHeight || parseInt(captionTitleEl?.style.height?.slice(0, -2)) || 0;
         let containerHeight = width / aspectRatio + captionHeight + 20;
-        // console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
+        console.log('setting container height', { aspectRatio, width, captionHeight, containerHeight });
         if (!iframe.style.width) iframe.style.width = '100%';
         iframe.style.height = `${containerHeight}px`;
       }

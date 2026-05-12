@@ -845,7 +845,7 @@
 
     // Caption init
     if (cfg.caption) {
-      els.captionText.innerHTML = decodeHtml(mdToHtml(cfg.caption));
+      els.captionText.innerHTML = decodeHtml(mdToHtml(decodeURIComponent(String(cfg.caption)).replace(/_/g, " ")));
       if (cfg.attribution) els.captionText.innerHTML += `<br><small>${cfg.attribution}</small>`
       els.caption.style.display = "block";
       updateIframeAspectTip(); // caption affects wrap height
