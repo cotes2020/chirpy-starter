@@ -164,22 +164,21 @@ Without a token, GitHub limits you to a handful of preview loads per hour. Addin
 
 
 <script>
-(function() {
-  const previewUrl = '{{ site.url }}{{ site.baseurl }}/preview';
+  (function() {
+    const serviceUrl = 'https://storykit-preview.netlify.app';
 
-  const code = `(function(){
-  var m=location.href.match(/github\\.com\\/([^/]+)\\/([^/]+)\\/blob\\/([^/]+)\\/(.+\\.md)/);
-  if(!m)return alert('Navigate to a .md file in GitHub first');
-  var p=JSON.stringify({o:m[1],r:m[2],ref:m[3],p:m[4]});
-  window.open('${previewUrl}#'+encodeURIComponent(p),'_blank');
-})();`;
+    const code = `(function(){
+    var m=location.href.match(/github\\.com\\/([^/]+)\\/([^/]+)\\/blob\\/([^/]+)\\/(.+\\.md)/);
+    if(!m)return alert('Navigate to a .md file in GitHub first');
+    window.open('${serviceUrl}/'+m[1]+'/'+m[2]+'/'+m[4]+'?branch='+encodeURIComponent(m[3]),'_blank');
+  })();`;
 
-  const link = document.getElementById('bookmarklet-link');
-  link.href = 'javascript:' + code;
+    const link = document.getElementById('bookmarklet-link');
+    link.href = 'javascript:' + code;
 
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('Drag this button to your bookmarks bar instead of clicking it.');
-  });
-})();
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Drag this button to your bookmarks bar instead of clicking it.');
+    });
+  })();
 </script>
