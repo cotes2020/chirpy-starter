@@ -684,17 +684,17 @@ iframe.left {
     margin-right: auto;
 }
 
-figure.float,
-sl-tab-group.float,
-iframe[class*="embed"].float {
+.col1 figure.float,
+.col1 sl-tab-group.float,
+.col1 iframe[class*="embed"].float {
     float: right;
     width: 50% !important;
     margin: 0 0 0.5rem 1rem;
 }
 
-figure.float.left,
-sl-tab-group.float.left,
-iframe[class*="embed"].float.left {
+.col1 figure.float.left,
+.col1 sl-tab-group.float.left,
+.col1 iframe[class*="embed"].float.left {
     width: 50% !important;
     float: left;
     margin: 0 1rem 0.5rem 0;
@@ -834,4 +834,10 @@ iframe[src^="https://cdn.knightlab.com/"] {
 
 header img {
     width: 100%;
+}
+
+.preview #sidebar-trigger,
+.preview #search-trigger,
+.preview #search {
+    display: none;
 }
