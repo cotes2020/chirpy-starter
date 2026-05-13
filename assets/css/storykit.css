@@ -834,6 +834,7 @@ iframe[src^="https://cdn.knightlab.com/"] {
 
 header img {
     width: 100%;
+    object-fit: cover;
 }
 
 .preview #sidebar-trigger,
