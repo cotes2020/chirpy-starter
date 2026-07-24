@@ -19,7 +19,7 @@ categories: ["Gardens & Aesthetics", "Ornamental Cultivation"]
 
 # An Old Symbol Still Stands
 
-In the center of Kyiv is the [Independence Monument](Q3917633) comprising a triumphal column, at the top of which is the statue of the Slavic goddess [Berehynia](Q2622635), the orante, or blessed mother, of Ukraine. She holds a branch of the _guelder rose_ bush in her [outstretched arms](img1/zoomto/pct:43.93,35.36,21.20,13.19). Standing proudly, with the gold-plated plant displayed for all the city to see, the monument shows how symbolic the flowering bush has become for a nation experiencing invasion and war.[^1]
+In the center of Kyiv is the [Independence Monument](Q3917633) comprising a triumphal column, at the top of which is the statue of the Slavic goddess [Berehynia](Q2622635), the orante, or blessed mother, of Ukraine. She holds a branch of the _guelder rose_ bush in her [outstretched arms](img1/zoomto/pct:19.89,6.65,15.89,19.94). Standing proudly, with the gold-plated plant displayed for all the city to see, the monument shows how symbolic the flowering bush has become for a nation experiencing invasion and war.[^1]
 
 {% include embed/image.html id="img1" src="wc:Maidan_Nezalezhnosti2.jpg" caption="The female figure that crowns this tall marble column is Berehynia, a folkloric female spirit associated with the protection of home or homeland. Image credit: Wikimedia commons." aspect="1" %}
 
